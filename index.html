@@ -610,9 +610,12 @@
     }
 
     function renderSummary(payload) {
+      const currentNote = payload.totals.otherTeu > 0
+        ? `${formatNumber(payload.bookingCount)} 条 Booking（含 OTHER ${formatNumber(payload.totals.otherTeu)} TEU）`
+        : `${formatNumber(payload.bookingCount)} 条 Booking`;
       const items = [
         { label: 'TOTAL ALLOCATION', value: formatNumber(payload.totals.allocation), sub: 'TEU', className: '' },
-        { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: `${formatNumber(payload.bookingCount)} 条 Booking` },
+        { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: currentNote },
         { label: 'REMAINING GAP', value: formatNumber(payload.totals.gap), sub: 'TEU', className: 'is-gap' },
       ];
 
@@ -638,6 +641,10 @@
 
 
     function renderCategories(rows, totals) {
+      const displayCurrent = totals.displayCurrent ?? totals.current;
+      const displayGap = totals.displayGap ?? totals.gap;
+      const displayCompletionRate = totals.displayCompletionRate ?? totals.completionRate;
+      const totalRowStatus = displayCompletionRate < 30 ? '需加紧' : '推进中';
       const bodyRows = rows.map(row => {
         const rate = Number(row.completionRate || 0);
         return `
@@ -662,15 +669,15 @@
         <tr class="total-row">
           <td class="pol">TOTAL</td>
           <td>${formatNumber(totals.allocation)}</td>
-          <td>${formatNumber(totals.current)}</td>
-          <td>${formatNumber(totals.gap)}</td>
-          <td>${formatPercent(totals.completionRate)}</td>
+          <td>${formatNumber(displayCurrent)}</td>
+          <td>${formatNumber(displayGap)}</td>
+          <td>${formatPercent(displayCompletionRate)}</td>
           <td>
             <div class="progress-wrap">
-              <div class="progress"><span class="${progressClass(totals.completionRate)}" style="width:${Math.max(0, Math.min(totals.completionRate, 100))}%"></span></div>
+              <div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div>
             </div>
           </td>
-          <td><span class="status ${statusClass(totals.completionRate < 30 ? '需加紧' : '推进中')}">${totals.completionRate < 30 ? '需加紧' : '推进中'}</span></td>
+          <td><span class="status ${statusClass(totalRowStatus)}">${totalRowStatus}</span></td>
         </tr>
       `;
 
