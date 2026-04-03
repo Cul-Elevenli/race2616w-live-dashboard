@@ -751,8 +751,8 @@
       renderSummary(payload);
       renderCategories(payload.categoryRows || [], payload.totals || {});
       renderPods(payload.topPods || []);
-      renderNotes(payload.notes || []);
       renderDetails(payload.rows || []);
+
     }
 
     async function loadData() {
