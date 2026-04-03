@@ -508,14 +508,8 @@
       </div>
     </div>
 
-    <div class="note-box" style="margin-top:18px;">
-      <strong>补充说明：</strong><br>
-      1. 这个版本保留了你喜欢的上一版视觉结构，但数据改成从公开 JSON 动态读取。<br>
-      2. 页面可自动刷新最新 JSON；真正时效仍然取决于后台同步频率。<br>
-      3. 如果你确认这个方向，我后面可以再继续把它精修到更像正式对外版报告。
-    </div>
-
     <div class="footer">
+
       <span>本页用于快速核对主流 POD 分布</span>
       <span>Preview Version</span>
     </div>
@@ -648,10 +642,11 @@
         const rate = Number(row.completionRate || 0);
         return `
           <tr>
-            <td class="pol">${row.code}</td>
+            <td class="pol">${row.label || row.code}</td>
             <td>${formatNumber(row.allocation)}</td>
             <td>${formatNumber(row.current)}</td>
             <td>${formatNumber(row.gap)}</td>
+
             <td>${formatPercent(rate)}</td>
             <td>
               <div class="progress-wrap">
@@ -692,9 +687,15 @@
     }
 
     function renderNotes(notes) {
-      document.getElementById('ruleText').textContent = 'SUL = Office 以 UL 开头的 booking；KR = 所有 KR 开头的 POL；TW = 所有 TW 开头的 POL；TEU 按 20ft + 2×40ft 计算。';
-      document.getElementById('notesList').innerHTML = (notes || []).map(note => `<li>${note}</li>`).join('');
+      const ruleTextEl = document.getElementById('ruleText');
+      const notesListEl = document.getElementById('notesList');
+      if (!ruleTextEl || !notesListEl) return;
+      const ruleText = currentPayload?.ruleText || '归类规则已改为仅按 POL 统计：精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA；其余 KR 开头归入 KR，TW 开头归入 TW；TEU 按 20ft + 2×40ft 计算。';
+      ruleTextEl.textContent = ruleText;
+      notesListEl.innerHTML = (notes || []).map(note => `<li>${note}</li>`).join('');
     }
+
+
 
     function rowMatchesKeyword(row, keyword) {
       return [

@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-04-03T03:46:04.959Z",
+  "generatedAt": "2026-04-03T06:03:32.522Z",
   "sourceUpdatedAt": "2026-04-03T02:51:04.260Z",
   "refreshPlan": "建议后台每 10 分钟同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
   "bookingCount": 119,
+  "ruleText": "归类规则已改为仅按 POL 统计：精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA；其余 KR 开头归入 KR，TW 开头归入 TW；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
     "current": 541,
@@ -17,62 +18,70 @@
   "categoryRows": [
     {
       "code": "CNXGG",
+      "label": "CNXGG",
       "allocation": 400,
-      "current": 0,
-      "gap": 400,
-      "completionRate": 0,
-      "status": "未开始"
+      "current": 76,
+      "gap": 324,
+      "completionRate": 19,
+      "status": "需加紧"
     },
     {
       "code": "CNTAO",
-      "allocation": 1040,
-      "current": 389,
-      "gap": 651,
-      "completionRate": 37.4,
+      "label": "CNTAO",
+      "allocation": 1160,
+      "current": 437,
+      "gap": 723,
+      "completionRate": 37.7,
       "status": "推进中"
     },
     {
       "code": "CNSHA",
-      "allocation": 740,
+      "label": "CNSHA",
+      "allocation": 860,
       "current": 0,
-      "gap": 740,
+      "gap": 860,
       "completionRate": 0,
       "status": "未开始"
     },
     {
       "code": "CNNGB",
-      "allocation": 770,
+      "label": "CNNGB",
+      "allocation": 890,
       "current": 0,
-      "gap": 770,
+      "gap": 890,
       "completionRate": 0,
       "status": "未开始"
     },
     {
       "code": "CNNAS",
-      "allocation": 820,
+      "label": "CNNAS",
+      "allocation": 940,
       "current": 0,
-      "gap": 820,
+      "gap": 940,
       "completionRate": 0,
       "status": "未开始"
     },
     {
       "code": "CNSHK",
-      "allocation": 740,
+      "label": "CNSHK",
+      "allocation": 860,
       "current": 0,
-      "gap": 740,
+      "gap": 860,
       "completionRate": 0,
       "status": "未开始"
     },
     {
       "code": "CNXMN",
+      "label": "CNXMN",
       "allocation": 160,
-      "current": 0,
-      "gap": 160,
-      "completionRate": 0,
-      "status": "未开始"
+      "current": 4,
+      "gap": 156,
+      "completionRate": 2.5,
+      "status": "需加紧"
     },
     {
       "code": "CNSWA",
+      "label": "CNSWA (via NAS)",
       "allocation": 110,
       "current": 0,
       "gap": 110,
@@ -81,6 +90,7 @@
     },
     {
       "code": "KR",
+      "label": "KR (via TAO)",
       "allocation": 60,
       "current": 4,
       "gap": 56,
@@ -89,19 +99,12 @@
     },
     {
       "code": "TW",
+      "label": "TW",
       "allocation": 60,
       "current": 20,
       "gap": 40,
       "completionRate": 33.3,
       "status": "推进中"
-    },
-    {
-      "code": "SUL",
-      "allocation": 600,
-      "current": 128,
-      "gap": 472,
-      "completionRate": 21.3,
-      "status": "需加紧"
     }
   ],
   "topPods": [
@@ -147,8 +150,8 @@
     }
   ],
   "notes": [
-    "SUL = Office 以 UL 开头的 booking。",
-    "KR = 所有 KR 开头的 POL；TW = 所有 TW 开头的 POL。",
+    "当前 allocation 已按你最新表格更新，总 Allocation = 5,500 TEU，且不再单列 SUL。",
+    "归类规则已改为仅按 POL 统计：KR = 所有 KR 开头的 POL；TW = 所有 TW 开头的 POL。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
@@ -165,7 +168,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "F"
     },
     {
@@ -195,7 +198,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1005,7 +1008,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXMN",
       "status": "W"
     },
     {
@@ -1110,7 +1113,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1185,7 +1188,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1260,7 +1263,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1290,7 +1293,7 @@
       "ft20": 6,
       "ft40": 0,
       "teu": 6,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1305,7 +1308,7 @@
       "ft20": 6,
       "ft40": 0,
       "teu": 6,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1320,7 +1323,7 @@
       "ft20": 4,
       "ft40": 0,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1335,7 +1338,7 @@
       "ft20": 4,
       "ft40": 0,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1365,7 +1368,7 @@
       "ft20": 4,
       "ft40": 0,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1410,7 +1413,7 @@
       "ft20": 0,
       "ft40": 10,
       "teu": 20,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1425,7 +1428,7 @@
       "ft20": 6,
       "ft40": 1,
       "teu": 8,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1440,7 +1443,7 @@
       "ft20": 6,
       "ft40": 0,
       "teu": 6,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1455,7 +1458,7 @@
       "ft20": 4,
       "ft40": 0,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1485,7 +1488,7 @@
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1500,7 +1503,7 @@
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1515,7 +1518,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1530,7 +1533,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1545,7 +1548,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1560,7 +1563,7 @@
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1575,7 +1578,7 @@
       "ft20": 1,
       "ft40": 1,
       "teu": 3,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1590,7 +1593,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1605,7 +1608,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1620,7 +1623,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1665,7 +1668,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "SUL",
+      "category": "CNTAO",
       "status": "W"
     },
     {
@@ -1830,7 +1833,7 @@
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
@@ -1875,7 +1878,7 @@
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "SUL",
+      "category": "CNXGG",
       "status": "W"
     },
     {
