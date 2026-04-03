@@ -30,12 +30,11 @@
     }
     .page {
       width: 1120px;
-      min-height: 792px;
       margin: 0 auto 28px;
       background: #fff;
       border: 1px solid #d7e1ea;
       box-shadow: 0 12px 30px rgba(23, 54, 93, 0.08);
-      padding: 26px 30px 24px;
+      padding: 26px 30px 18px;
       position: relative;
     }
     .page-hidden {
@@ -370,20 +369,13 @@
       display: none;
     }
     .footer {
-      position: absolute;
-      left: 30px;
-      right: 30px;
-      bottom: 18px;
+      margin-top: 16px;
       display: flex;
       justify-content: space-between;
       color: #708090;
       font-size: 12px;
       border-top: 1px solid #e3ebf3;
       padding-top: 10px;
-    }
-    .footer.static {
-      position: static;
-      margin-top: 16px;
     }
     .watermark {
       position: absolute;
@@ -419,13 +411,9 @@
       <div class="notice">仅供内部参考 · For Internal Reference Only</div>
       <div class="subtitle">Public Live View · 近实时数据快照</div>
       <div class="meta">
-
         <div><strong>VVD:</strong> <span id="meta-vvd">RACE2616W</span></div>
         <div><strong>Voyage:</strong> <span id="meta-voyage">2616W</span></div>
         <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        <div><strong>后台同步建议:</strong> <span id="refresh-plan">10 分钟一次</span></div>
-        <div><strong>Last Updated:</strong> <span id="meta-updated">加载中...</span></div>
-        <div><strong>Source Updated:</strong> <span id="meta-source">加载中...</span></div>
       </div>
     </header>
 
@@ -462,9 +450,10 @@
 
 
     <div class="footer">
-      <span>本公开页读取 JSON 快照展示，样式沿用上一版 PDF 风格</span>
+      <span></span>
       <span>RACE Service Live View</span>
     </div>
+
   </section>
 
   <section class="page">
@@ -491,8 +480,7 @@
     </div>
 
     <div class="footer">
-
-      <span>本页用于快速核对主流 POD 分布</span>
+      <span></span>
       <span>Preview Version</span>
     </div>
   </section>
@@ -710,12 +698,10 @@
     function renderMeta(payload) {
       document.getElementById('meta-vvd').textContent = payload.vvd || '-';
       document.getElementById('meta-voyage').textContent = payload.voyage || '-';
-      document.getElementById('meta-updated').textContent = formatDateTime(payload.generatedAt);
-      document.getElementById('meta-source').textContent = formatDateTime(payload.sourceUpdatedAt);
-      document.getElementById('refresh-plan').textContent = (payload.refreshPlan || '建议后台每 10 分钟同步一次').replace('建议后台每 ', '').replace('同步一次', '');
       document.getElementById('booking-chip').textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
       document.getElementById('pod-count').textContent = formatNumber((payload.topPods || []).length);
     }
+
 
     function renderAll(payload) {
       currentPayload = payload;
