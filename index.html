@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RACE2616W Public Live View</title>
+  <style>
+    :root {
+      --navy: #17365d;
+      --blue: #2f75b5;
+      --light-blue: #dbeaf7;
+      --border: #9fbad0;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #eef3f8;
+      --warning: #f59e0b;
+      --good: #10b981;
+      --idle: #cbd5e1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+    button, input {
+      font: inherit;
+    }
+    .page {
+      width: 1120px;
+      min-height: 792px;
+      margin: 0 auto 28px;
+      background: #fff;
+      border: 1px solid #d7e1ea;
+      box-shadow: 0 12px 30px rgba(23, 54, 93, 0.08);
+      padding: 26px 30px 24px;
+      position: relative;
+    }
+    .page-hidden {
+      display: none;
+    }
+
+    .header {
+      border-bottom: 3px solid var(--navy);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .title {
+      margin: 0;
+      color: var(--navy);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .notice {
+      margin-top: 6px;
+      color: #8a3b12;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .subtitle {
+      margin-top: 6px;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .meta {
+      margin-top: 8px;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .toolbar-bar {
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      border: 1px solid #d5e3f0;
+      border-radius: 10px;
+      background: #f8fbfe;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 16px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(23, 54, 93, 0.16);
+    }
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e9f1f8;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .search {
+      min-width: 320px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      background: #fff;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .summary-card {
+      border: 1px solid #d7dee9;
+      border-radius: 14px;
+      background: #f2f4f7;
+      padding: 22px 18px 20px;
+      text-align: center;
+      min-height: 146px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+    .summary-card .label {
+      color: #8090af;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+    .summary-card .value {
+      margin-top: 12px;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .summary-card .value.is-good {
+      color: #2f7f5f;
+    }
+    .summary-card .value.is-gap {
+      color: #d90000;
+    }
+    .summary-card .subvalue {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 14px;
+      color: #8090af;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+    .summary-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .completion-strip {
+      border-radius: 10px;
+      padding: 6px 0 4px;
+      margin-bottom: 22px;
+    }
+    .completion-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #4b5563;
+    }
+    .completion-percent {
+      color: #d90000;
+      font-size: 16px;
+    }
+    .completion-track {
+      width: 100%;
+      height: 16px;
+      border-radius: 999px;
+      background: #dfe5eb;
+      overflow: hidden;
+      position: relative;
+    }
+    .completion-fill {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d9480f 0%, #f59e0b 100%);
+    }
+    .completion-extra {
+      margin-top: 7px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .section-title {
+      background: linear-gradient(90deg, var(--navy), var(--blue));
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 8px 8px 0 0;
+      margin-top: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main-table {
+      border: 1px solid var(--border);
+      border-top: 0;
+      font-size: 14px;
+    }
+    .main-table thead th {
+      background: #e9f1f8;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .main-table tbody td {
+      border: 1px solid var(--border);
+      padding: 9px 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .main-table tbody tr:nth-child(even) {
+      background: #f8fbfe;
+    }
+    .main-table tbody tr.total-row {
+      background: #dbeaf7;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .pol {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    .progress {
+      width: 110px;
+      height: 8px;
+      border-radius: 999px;
+      background: #e5edf5;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress > span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
+    .p-idle { background: var(--idle); }
+    .p-warning { background: var(--warning); }
+    .p-good { background: var(--good); }
+    .status {
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      min-width: 72px;
+    }
+    .status-idle { background: #eef2f7; color: #64748b; }
+    .status-warning { background: #fff3d6; color: #b45309; }
+    .status-good { background: #dcfce7; color: #047857; }
+    .note-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border: 1px solid #d5e3f0;
+      border-radius: 8px;
+      background: #f8fbfe;
+      color: #465467;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .note-box ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+    .pod-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .pod-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pod-card h3 {
+      margin: 0;
+      padding: 12px 14px;
+      background: #e9f1f8;
+      color: var(--navy);
+      font-size: 16px;
+    }
+    .pod-table td {
+      border-bottom: 1px solid #e6eef5;
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+    .pod-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .rank {
+      width: 52px;
+      color: var(--blue);
+      font-weight: 700;
+      text-align: center;
+    }
+    .teu {
+      text-align: right;
+      font-weight: 700;
+      color: var(--navy);
+      width: 110px;
+    }
+    .detail-table-wrap {
+      border: 1px solid var(--border);
+      border-top: 0;
+      max-height: 470px;
+      overflow: auto;
+    }
+    .detail-table {
+      min-width: 1100px;
+      font-size: 13px;
+    }
+    .detail-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: #e9f1f8;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .detail-table tbody td {
+      border: 1px solid #d8e5f0;
+      padding: 8px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .detail-table tbody tr:nth-child(even) {
+      background: #f8fbfe;
+    }
+    .align-left {
+      text-align: left !important;
+    }
+    .empty {
+      padding: 24px 12px;
+      text-align: center;
+      color: var(--muted);
+      display: none;
+    }
+    .footer {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      color: #708090;
+      font-size: 12px;
+      border-top: 1px solid #e3ebf3;
+      padding-top: 10px;
+    }
+    .footer.static {
+      position: static;
+      margin-top: 16px;
+    }
+    .watermark {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      font-size: 82px;
+      font-weight: 800;
+      color: rgba(23, 54, 93, 0.035);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+    @media (max-width: 980px) {
+      body { padding: 10px; overflow-x: auto; }
+      .page { width: 1120px; min-height: auto; }
+      .pod-grid { grid-template-columns: 1fr; }
+      .footer { position: static; margin-top: 16px; }
+    }
+
+    @media (max-width: 720px) {
+      .search { min-width: 100%; width: 100%; }
+      .toolbar-bar { align-items: stretch; }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="watermark">RACE2616W UPDATE</div>
+    <header class="header">
+      <h1 class="title">RACE2616W Daily Booking Update</h1>
+      <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+      <div class="subtitle">Public Live View · 近实时数据快照</div>
+      <div class="meta">
+
+        <div><strong>VVD:</strong> <span id="meta-vvd">RACE2616W</span></div>
+        <div><strong>Voyage:</strong> <span id="meta-voyage">2616W</span></div>
+        <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        <div><strong>后台同步建议:</strong> <span id="refresh-plan">10 分钟一次</span></div>
+        <div><strong>Last Updated:</strong> <span id="meta-updated">加载中...</span></div>
+        <div><strong>Source Updated:</strong> <span id="meta-source">加载中...</span></div>
+      </div>
+    </header>
+
+    <div class="toolbar-bar">
+      <div class="toolbar-left">
+        <button class="btn" id="reloadBtn">立即刷新页面数据</button>
+        <span class="chip">对外只显示非敏感字段</span>
+        <span class="chip" id="booking-chip">Booking 0 条</span>
+      </div>
+      <div class="toolbar-right">
+        <span class="chip">页面版式：PDF 风格</span>
+      </div>
+    </div>
+
+    <div class="summary-grid" id="summaryGrid"></div>
+    <div class="completion-strip" id="completionStrip"></div>
+
+    <div class="section-title">各口岸舱位分配与完成进度</div>
+
+    <table class="main-table">
+      <thead>
+        <tr>
+          <th>口岸 (POL)</th>
+          <th>分配舱位<br>(TEU)</th>
+          <th>当前订舱<br>(TEU)</th>
+          <th>差距<br>(TEU)</th>
+          <th>完成率</th>
+          <th>进度</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody id="categoryBody"></tbody>
+    </table>
+
+    <div class="note-box">
+      <strong>说明：</strong>
+      <span id="ruleText">加载中...</span>
+      <ul id="notesList"></ul>
+    </div>
+
+    <div class="footer">
+      <span>本公开页读取 JSON 快照展示，样式沿用上一版 PDF 风格</span>
+      <span>RACE Service Live View</span>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="watermark">POD TOP 10</div>
+    <header class="header">
+      <h1 class="title">目的地分布 (POD) - Top 10</h1>
+      <div class="subtitle">RACE2616W Latest Distribution Snapshot</div>
+      <div class="meta">
+        <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+        <div><strong>唯一 POD:</strong> <span id="pod-count">-</span></div>
+        <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+      </div>
+    </header>
+
+    <div class="pod-grid">
+      <div class="pod-card">
+        <h3>Top 1 - Top 5</h3>
+        <table class="pod-table"><tbody id="podLeft"></tbody></table>
+      </div>
+      <div class="pod-card">
+        <h3>Top 6 - Top 10</h3>
+        <table class="pod-table"><tbody id="podRight"></tbody></table>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:18px;">
+      <strong>补充说明：</strong><br>
+      1. 这个版本保留了你喜欢的上一版视觉结构，但数据改成从公开 JSON 动态读取。<br>
+      2. 页面可自动刷新最新 JSON；真正时效仍然取决于后台同步频率。<br>
+      3. 如果你确认这个方向，我后面可以再继续把它精修到更像正式对外版报告。
+    </div>
+
+    <div class="footer">
+      <span>本页用于快速核对主流 POD 分布</span>
+      <span>Preview Version</span>
+    </div>
+  </section>
+
+  <section class="page page-hidden">
+    <div class="watermark">BOOKING DETAILS</div>
+
+    <header class="header">
+      <h1 class="title">Booking Detail Snapshot</h1>
+      <div class="subtitle">公开明细页（默认隐藏 shipper 等敏感字段）</div>
+      <div class="meta">
+        <div><strong>筛选说明:</strong> 支持 Booking / BL / Office / POL / POD / Status</div>
+        <div><strong>当前显示:</strong> <span id="visibleCount">0</span> 条</div>
+      </div>
+    </header>
+
+    <div class="toolbar-bar">
+      <div class="toolbar-left">
+        <input id="keywordInput" class="search" placeholder="搜索 Booking / BL / Office / POL / POD / Status" />
+      </div>
+      <div class="toolbar-right">
+        <span class="chip">公开版默认不展示客户敏感信息</span>
+      </div>
+    </div>
+
+    <div class="section-title">Booking 明细</div>
+    <div class="detail-table-wrap">
+      <table class="detail-table">
+        <thead>
+          <tr>
+            <th>Booking No</th>
+            <th>BL No</th>
+            <th>Office</th>
+            <th>POR</th>
+            <th>POL</th>
+            <th>POD</th>
+            <th>DEL</th>
+            <th>20ft</th>
+            <th>40ft</th>
+            <th>TEU</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="detailBody"></tbody>
+      </table>
+      <div class="empty" id="emptyState">没有匹配到符合筛选条件的 booking。</div>
+    </div>
+
+    <div class="footer static">
+      <span>对外发布时只需同时上传 HTML + JSON</span>
+      <span>Public Static Page</span>
+    </div>
+  </section>
+
+  <script>
+    let currentPayload = null;
+
+    const summaryGrid = document.getElementById('summaryGrid');
+    const completionStrip = document.getElementById('completionStrip');
+    const categoryBody = document.getElementById('categoryBody');
+    const podLeft = document.getElementById('podLeft');
+    const podRight = document.getElementById('podRight');
+
+    const detailBody = document.getElementById('detailBody');
+    const emptyState = document.getElementById('emptyState');
+    const keywordInput = document.getElementById('keywordInput');
+
+    function formatNumber(value) {
+      return new Intl.NumberFormat('en-US').format(value || 0);
+    }
+
+    function formatPercent(value) {
+      return `${Number(value || 0).toFixed(1)}%`;
+    }
+
+    function statusClass(text) {
+      if (text === '推进中') return 'status-good';
+      if (text === '需加紧') return 'status-warning';
+      return 'status-idle';
+    }
+
+    function progressClass(rate) {
+      if (rate <= 0) return 'p-idle';
+      if (rate < 30) return 'p-warning';
+      return 'p-good';
+    }
+
+    function formatDateTime(value) {
+      if (!value) return '-';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return new Intl.DateTimeFormat('zh-CN', {
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+      }).format(date);
+    }
+
+    function renderSummary(payload) {
+      const items = [
+        { label: 'TOTAL ALLOCATION', value: formatNumber(payload.totals.allocation), sub: 'TEU', className: '' },
+        { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: `${formatNumber(payload.bookingCount)} 条 Booking` },
+        { label: 'REMAINING GAP', value: formatNumber(payload.totals.gap), sub: 'TEU', className: 'is-gap' },
+      ];
+
+      summaryGrid.innerHTML = items.map(item => `
+        <div class="summary-card">
+          <div class="label">${item.label}</div>
+          <div class="value ${item.className}">${item.value}<span class="subvalue">${item.sub}</span></div>
+          <div class="summary-note">${item.note || '&nbsp;'}</div>
+        </div>
+      `).join('');
+
+      completionStrip.innerHTML = `
+        <div class="completion-head">
+          <span>Overall Completion</span>
+          <span class="completion-percent">${formatPercent(payload.totals.completionRate)}</span>
+        </div>
+        <div class="completion-track">
+          <span class="completion-fill" style="width:${Math.max(0, Math.min(payload.totals.completionRate, 100))}%"></span>
+        </div>
+        <div class="completion-extra">20ft ${formatNumber(payload.totals.ft20)} / 40ft ${formatNumber(payload.totals.ft40)}</div>
+      `;
+    }
+
+
+    function renderCategories(rows, totals) {
+      const bodyRows = rows.map(row => {
+        const rate = Number(row.completionRate || 0);
+        return `
+          <tr>
+            <td class="pol">${row.code}</td>
+            <td>${formatNumber(row.allocation)}</td>
+            <td>${formatNumber(row.current)}</td>
+            <td>${formatNumber(row.gap)}</td>
+            <td>${formatPercent(rate)}</td>
+            <td>
+              <div class="progress-wrap">
+                <div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div>
+              </div>
+            </td>
+            <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
+          </tr>
+        `;
+      }).join('');
+
+      const totalRow = `
+        <tr class="total-row">
+          <td class="pol">TOTAL</td>
+          <td>${formatNumber(totals.allocation)}</td>
+          <td>${formatNumber(totals.current)}</td>
+          <td>${formatNumber(totals.gap)}</td>
+          <td>${formatPercent(totals.completionRate)}</td>
+          <td>
+            <div class="progress-wrap">
+              <div class="progress"><span class="${progressClass(totals.completionRate)}" style="width:${Math.max(0, Math.min(totals.completionRate, 100))}%"></span></div>
+            </div>
+          </td>
+          <td><span class="status ${statusClass(totals.completionRate < 30 ? '需加紧' : '推进中')}">${totals.completionRate < 30 ? '需加紧' : '推进中'}</span></td>
+        </tr>
+      `;
+
+      categoryBody.innerHTML = bodyRows + totalRow;
+    }
+
+    function renderPods(rows) {
+      const left = rows.slice(0, 5);
+      const right = rows.slice(5, 10);
+      podLeft.innerHTML = left.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('');
+      podRight.innerHTML = right.length
+        ? right.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('')
+        : '<tr><td colspan="3" style="padding:12px 14px;color:#6b7280;">当前不足 10 个 POD</td></tr>';
+    }
+
+    function renderNotes(notes) {
+      document.getElementById('ruleText').textContent = 'SUL = Office 以 UL 开头的 booking；KR = 所有 KR 开头的 POL；TW = 所有 TW 开头的 POL；TEU 按 20ft + 2×40ft 计算。';
+      document.getElementById('notesList').innerHTML = (notes || []).map(note => `<li>${note}</li>`).join('');
+    }
+
+    function rowMatchesKeyword(row, keyword) {
+      return [
+        row.bookingNo, row.blNo, row.office, row.por,
+        row.pol, row.pod, row.delivery, row.category, row.status
+      ].join(' ').toLowerCase().includes(keyword);
+    }
+
+    function renderDetails(rows) {
+      const keyword = keywordInput.value.trim().toLowerCase();
+      const filtered = keyword ? rows.filter(row => rowMatchesKeyword(row, keyword)) : rows;
+      detailBody.innerHTML = filtered.map(row => `
+        <tr>
+          <td class="align-left">${row.bookingNo}</td>
+          <td class="align-left">${row.blNo}</td>
+          <td>${row.office}</td>
+          <td>${row.por}</td>
+          <td>${row.pol}</td>
+          <td>${row.pod}</td>
+          <td>${row.delivery}</td>
+          <td>${formatNumber(row.ft20)}</td>
+          <td>${formatNumber(row.ft40)}</td>
+          <td><strong>${formatNumber(row.teu)}</strong></td>
+          <td>${row.category}</td>
+          <td>${row.status}</td>
+        </tr>
+      `).join('');
+
+      emptyState.style.display = filtered.length ? 'none' : 'block';
+      document.getElementById('visibleCount').textContent = formatNumber(filtered.length);
+    }
+
+    function renderMeta(payload) {
+      document.getElementById('meta-vvd').textContent = payload.vvd || '-';
+      document.getElementById('meta-voyage').textContent = payload.voyage || '-';
+      document.getElementById('meta-updated').textContent = formatDateTime(payload.generatedAt);
+      document.getElementById('meta-source').textContent = formatDateTime(payload.sourceUpdatedAt);
+      document.getElementById('refresh-plan').textContent = (payload.refreshPlan || '建议后台每 10 分钟同步一次').replace('建议后台每 ', '').replace('同步一次', '');
+      document.getElementById('booking-chip').textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
+      document.getElementById('pod-count').textContent = formatNumber((payload.topPods || []).length);
+    }
+
+    function renderAll(payload) {
+      currentPayload = payload;
+      renderMeta(payload);
+      renderSummary(payload);
+      renderCategories(payload.categoryRows || [], payload.totals || {});
+      renderPods(payload.topPods || []);
+      renderNotes(payload.notes || []);
+      renderDetails(payload.rows || []);
+    }
+
+    async function loadData() {
+      const response = await fetch(`RACE2616W_public_data.json?t=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      renderAll(payload);
+    }
+
+    keywordInput.addEventListener('input', () => {
+      if (currentPayload) renderDetails(currentPayload.rows || []);
+    });
+
+    document.getElementById('reloadBtn').addEventListener('click', async () => {
+      const button = document.getElementById('reloadBtn');
+      button.disabled = true;
+      button.textContent = '刷新中...';
+      try {
+        await loadData();
+      } finally {
+        button.disabled = false;
+        button.textContent = '立即刷新页面数据';
+      }
+    });
+
+    loadData().catch(error => {
+      document.getElementById('meta-updated').textContent = '加载失败';
+      document.getElementById('meta-source').textContent = error.message;
+    });
+
+    setInterval(() => {
+      loadData().catch(() => {});
+    }, 60000);
+  </script>
+</body>
+</html>
