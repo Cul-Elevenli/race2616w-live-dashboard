@@ -724,17 +724,7 @@
       if (currentPayload) renderDetails(currentPayload.rows || []);
     });
 
-    document.getElementById('reloadBtn').addEventListener('click', async () => {
-      const button = document.getElementById('reloadBtn');
-      button.disabled = true;
-      button.textContent = '刷新中...';
-      try {
-        await loadData();
-      } finally {
-        button.disabled = false;
-        button.textContent = '立即刷新页面数据';
-      }
-    });
+
 
     loadData().catch(error => {
       document.getElementById('meta-updated').textContent = '加载失败';
