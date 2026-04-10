@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-04-10T14:11:10.753Z",
-  "sourceUpdatedAt": "2026-04-10T14:11:10.203Z",
+  "generatedAt": "2026-04-10T16:10:42.658Z",
+  "sourceUpdatedAt": "2026-04-10T16:10:42.154Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
-  "bookingCount": 1206,
+  "bookingCount": 1207,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA，或 KR / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 5637,
-    "gap": 137,
+    "current": 5639,
+    "gap": 139,
     "completionRate": 102.5,
-    "ft20": 855,
+    "ft20": 857,
     "ft40": 2391,
-    "teu": 5637,
-    "displayCurrent": 5637,
-    "displayGap": 137,
+    "teu": 5639,
+    "displayCurrent": 5639,
+    "displayGap": 139,
     "displayCompletionRate": 102.5,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
   },
   "transshipmentSummary": {
-    "totalCnTsBookingCount": 82,
-    "totalCnTsTeu": 266,
+    "totalCnTsBookingCount": 83,
+    "totalCnTsTeu": 268,
     "mergedBookingCount": 40,
     "mergedTeu": 120,
     "mergedByCategory": {
       "CNNAS": 120
     },
-    "retainedBookingCount": 42,
-    "retainedTeu": 146,
+    "retainedBookingCount": 43,
+    "retainedTeu": 148,
     "retainedByCategory": {
       "CNSWA": 26,
-      "CNXMN": 50,
+      "CNXMN": 52,
       "KR": 8,
       "TW": 62
     }
@@ -97,9 +97,9 @@
       "code": "CNXMN",
       "label": "CNXMN",
       "allocation": 160,
-      "current": 50,
-      "gap": -110,
-      "completionRate": 31.3,
+      "current": 52,
+      "gap": -108,
+      "completionRate": 32.5,
       "status": "推进中"
     },
     {
@@ -139,7 +139,7 @@
     {
       "rank": 2,
       "pod": "SAJED",
-      "teu": 1066
+      "teu": 1068
     },
     {
       "rank": 3,
@@ -187,7 +187,7 @@
     "归类规则：若 booking 原始 POL 已有单独分类（含 CNXMN / KR / TW 等），则保留在原 POL bucket；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "本次共有 40 条 booking（120 TEU）因原始 POL 无单独分类且存在中国 T/S Port，被并入对应中国口岸的 POL 统计。",
-    "另有 42 条 booking（146 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "另有 43 条 booking（148 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
@@ -4129,7 +4129,7 @@
       "ft40": 7,
       "teu": 14,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 198,
@@ -4149,7 +4149,7 @@
       "ft40": 6,
       "teu": 12,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 199,
@@ -4169,7 +4169,7 @@
       "ft40": 6,
       "teu": 12,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 200,
@@ -4189,7 +4189,7 @@
       "ft40": 6,
       "teu": 12,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 201,
@@ -4209,7 +4209,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 202,
@@ -4229,7 +4229,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 203,
@@ -4249,7 +4249,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 204,
@@ -4269,7 +4269,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNXGG",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 205,
@@ -24309,6 +24309,26 @@
       "ft40": 5,
       "teu": 10,
       "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 1207,
+      "bookingNo": "CULVXMN2601110",
+      "blNo": "CULVXMN2601110",
+      "office": "ULXMN",
+      "pol": "CNXMN",
+      "por": "CNXMN",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "CNSHK",
+      "tsPost": "INMUN",
+      "tsCnPort": "CNSHK",
+      "baseCategory": "CNXMN",
+      "tsMergeApplied": false,
+      "ft20": 2,
+      "ft40": 0,
+      "teu": 2,
+      "category": "CNXMN",
       "status": "W"
     }
   ]
