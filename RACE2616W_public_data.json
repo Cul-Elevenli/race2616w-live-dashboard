@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-04-13T04:10:29.631Z",
-  "sourceUpdatedAt": "2026-04-13T04:10:29.362Z",
+  "generatedAt": "2026-04-13T05:10:23.993Z",
+  "sourceUpdatedAt": "2026-04-13T05:10:23.721Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
-  "bookingCount": 1263,
+  "bookingCount": 1266,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA，或 KR / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 5791,
-    "gap": 291,
-    "completionRate": 105.3,
-    "ft20": 897,
-    "ft40": 2447,
-    "teu": 5791,
-    "displayCurrent": 5791,
-    "displayGap": 291,
-    "displayCompletionRate": 105.3,
+    "current": 5796,
+    "gap": 296,
+    "completionRate": 105.4,
+    "ft20": 898,
+    "ft40": 2449,
+    "teu": 5796,
+    "displayCurrent": 5796,
+    "displayGap": 296,
+    "displayCompletionRate": 105.4,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -79,9 +79,9 @@
       "code": "CNNAS",
       "label": "CNNAS",
       "allocation": 940,
-      "current": 568,
-      "gap": -372,
-      "completionRate": 60.4,
+      "current": 573,
+      "gap": -367,
+      "completionRate": 61,
       "status": "推进中"
     },
     {
@@ -134,7 +134,7 @@
     {
       "rank": 1,
       "pod": "AEKLF",
-      "teu": 3002
+      "teu": 3005
     },
     {
       "rank": 2,
@@ -169,7 +169,7 @@
     {
       "rank": 8,
       "pod": "DJJIB",
-      "teu": 176
+      "teu": 178
     },
     {
       "rank": 9,
@@ -489,7 +489,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 16,
@@ -25448,6 +25448,66 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 1264,
+      "bookingNo": "CULVNAS2613290",
+      "blNo": "CULVNAS2613290",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 1265,
+      "bookingNo": "CULVNAS2613294",
+      "blNo": "CULVNAS2613294",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "DJJIB",
+      "delivery": "DJJIB",
+      "tsPrev": "-",
+      "tsPost": "INMUN",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 1266,
+      "bookingNo": "CULVNAS2613295",
+      "blNo": "CULVNAS2613295",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
       "category": "CNNAS",
       "status": "W"
     }
