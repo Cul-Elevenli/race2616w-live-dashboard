@@ -1,41 +1,41 @@
 {
-  "generatedAt": "2026-04-14T05:11:53.403Z",
-  "sourceUpdatedAt": "2026-04-14T05:11:53.070Z",
+  "generatedAt": "2026-04-14T06:12:22.737Z",
+  "sourceUpdatedAt": "2026-04-14T06:12:22.257Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
-  "bookingCount": 1456,
+  "bookingCount": 1461,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA，或 KR / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 6448,
-    "gap": 948,
-    "completionRate": 117.2,
-    "ft20": 944,
-    "ft40": 2752,
-    "teu": 6448,
-    "displayCurrent": 6448,
-    "displayGap": 948,
-    "displayCompletionRate": 117.2,
+    "current": 6457,
+    "gap": 957,
+    "completionRate": 117.4,
+    "ft20": 945,
+    "ft40": 2756,
+    "teu": 6457,
+    "displayCurrent": 6457,
+    "displayGap": 957,
+    "displayCompletionRate": 117.4,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
   },
   "transshipmentSummary": {
-    "totalCnTsBookingCount": 116,
-    "totalCnTsTeu": 434,
+    "totalCnTsBookingCount": 117,
+    "totalCnTsTeu": 436,
     "mergedBookingCount": 42,
     "mergedTeu": 118,
     "mergedByCategory": {
       "CNNAS": 118
     },
-    "retainedBookingCount": 74,
-    "retainedTeu": 316,
+    "retainedBookingCount": 75,
+    "retainedTeu": 318,
     "retainedByCategory": {
       "CNSWA": 90,
       "CNXMN": 156,
       "KR": 8,
-      "TW": 62
+      "TW": 64
     }
   },
   "categoryRows": [
@@ -61,9 +61,9 @@
       "code": "CNSHA",
       "label": "CNSHA",
       "allocation": 860,
-      "current": 1318,
-      "gap": 458,
-      "completionRate": 153.3,
+      "current": 1325,
+      "gap": 465,
+      "completionRate": 154.1,
       "status": "推进中"
     },
     {
@@ -124,9 +124,9 @@
       "code": "TW",
       "label": "TW",
       "allocation": 60,
-      "current": 62,
-      "gap": 2,
-      "completionRate": 103.3,
+      "current": 64,
+      "gap": 4,
+      "completionRate": 106.7,
       "status": "推进中"
     }
   ],
@@ -134,12 +134,12 @@
     {
       "rank": 1,
       "pod": "AEKLF",
-      "teu": 3649
+      "teu": 3657
     },
     {
       "rank": 2,
       "pod": "SAJED",
-      "teu": 1252
+      "teu": 1253
     },
     {
       "rank": 3,
@@ -187,7 +187,7 @@
     "归类规则：若 booking 原始 POL 已有单独分类（含 CNXMN / KR / TW 等），则保留在原 POL bucket；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "本次共有 42 条 booking（118 TEU）因原始 POL 无单独分类且存在中国 T/S Port，被并入对应中国口岸的 POL 统计。",
-    "另有 74 条 booking（316 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "另有 75 条 booking（318 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
@@ -29309,6 +29309,106 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNGB",
+      "status": "W"
+    },
+    {
+      "id": 1457,
+      "bookingNo": "CULVKHH2601207",
+      "blNo": "CULVKHH2601207",
+      "office": "CUTPE",
+      "pol": "TWKHH",
+      "por": "TWKHH",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "CNNAS",
+      "tsCnPort": "CNNAS",
+      "baseCategory": "TW",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "TW",
+      "status": "W"
+    },
+    {
+      "id": 1458,
+      "bookingNo": "CULVSHA2607944",
+      "blNo": "CULVSHA2607944",
+      "office": "ULSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 1459,
+      "bookingNo": "CULVSHA2607947",
+      "blNo": "CULVSHA2607947",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "INMUN",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 1460,
+      "bookingNo": "CULVSHA2607949",
+      "blNo": "CULVSHA2607949",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 1461,
+      "bookingNo": "CULVSHA2607950",
+      "blNo": "CULVSHA2607950",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHA",
       "status": "W"
     }
   ]
