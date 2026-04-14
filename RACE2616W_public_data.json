@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-04-14T09:59:25.227Z",
-  "sourceUpdatedAt": "2026-04-14T09:59:24.883Z",
+  "generatedAt": "2026-04-14T10:11:24.465Z",
+  "sourceUpdatedAt": "2026-04-14T10:11:24.184Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
-  "bookingCount": 1524,
+  "bookingCount": 1525,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA，或 KR / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 6508,
-    "gap": 1008,
-    "completionRate": 118.3,
-    "ft20": 966,
-    "ft40": 2771,
-    "teu": 6508,
-    "displayCurrent": 6508,
-    "displayGap": 1008,
-    "displayCompletionRate": 118.3,
+    "current": 6516,
+    "gap": 1016,
+    "completionRate": 118.5,
+    "ft20": 962,
+    "ft40": 2777,
+    "teu": 6516,
+    "displayCurrent": 6516,
+    "displayGap": 1016,
+    "displayCompletionRate": 118.5,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -70,9 +70,9 @@
       "code": "CNNGB",
       "label": "CNNGB",
       "allocation": 890,
-      "current": 865,
-      "gap": -25,
-      "completionRate": 97.2,
+      "current": 873,
+      "gap": -17,
+      "completionRate": 98.1,
       "status": "推进中"
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "code": "CNXMN",
-      "label": "CNXMN (via SHK)",
+      "label": "CNXMN",
       "allocation": 160,
       "current": 164,
       "gap": 4,
@@ -134,7 +134,7 @@
     {
       "rank": 1,
       "pod": "AEKLF",
-      "teu": 3729
+      "teu": 3737
     },
     {
       "rank": 2,
@@ -29625,8 +29625,8 @@
       "tsCnPort": "-",
       "baseCategory": "CNSHK",
       "tsMergeApplied": false,
-      "ft20": 4,
-      "ft40": 1,
+      "ft20": 0,
+      "ft40": 3,
       "teu": 6,
       "category": "CNSHK",
       "status": "W"
@@ -30668,6 +30668,26 @@
       "ft20": 0,
       "ft40": 7,
       "teu": 14,
+      "category": "CNNGB",
+      "status": "W"
+    },
+    {
+      "id": 1525,
+      "bookingNo": "CULVNGB2611398",
+      "blNo": "CULVNGB2611398",
+      "office": "CUNGB",
+      "pol": "CNNGB",
+      "por": "CNNGB",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNNGB",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 4,
+      "teu": 8,
       "category": "CNNGB",
       "status": "W"
     }
