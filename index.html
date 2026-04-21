@@ -359,7 +359,17 @@
     </section>
   </div>
 
+  <style>
+    /* 截图模式：展开所有内容，不限制高度 */
+    .screenshot-mode .detail-table-wrap { max-height: none !important; overflow: visible !important; }
+  </style>
+
   <script>
+    // ===== 截图模式检测 =====
+    if (new URLSearchParams(location.search).has('screenshot')) {
+      document.documentElement.classList.add('screenshot-mode');
+    }
+
     // ===== Vessel 配置 =====
     const VESSELS = {
       RACE2616W: { jsonFile: 'RACE2616W_public_data.json', prefix: 'RACE' },
