@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T01:33:18.830Z",
+  "generatedAt": "2026-04-22T02:09:01.738Z",
   "sourceUpdatedAt": "2026-04-22T01:26:27.356Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "XPBL2618W",
@@ -14,53 +14,50 @@
     "ft20": 573,
     "ft40": 1642,
     "teu": 3857,
-    "displayCurrent": 3799,
-    "displayGap": -5001,
-    "displayCompletionRate": 43.2,
-    "otherBookingCount": 12,
-    "otherTeu": 58,
-    "otherPols": [
-      "CNXGG",
-      "THLCH"
-    ]
+    "displayCurrent": 3857,
+    "displayGap": -4943,
+    "displayCompletionRate": 43.8,
+    "otherBookingCount": 0,
+    "otherTeu": 0,
+    "otherPols": []
   },
   "categoryRows": [
     {
       "code": "CNTAO",
       "label": "CNTAO",
-      "allocation": 1980,
+      "allocation": 1700,
       "current": 1616,
-      "gap": -364,
-      "completionRate": 81.6,
+      "gap": -84,
+      "completionRate": 95.1,
       "status": "推进中",
       "etd": "2026-04-30"
     },
     {
       "code": "CNSHA",
       "label": "CNSHA",
-      "allocation": 1630,
+      "allocation": 1550,
       "current": 744,
-      "gap": -886,
-      "completionRate": 45.6,
+      "gap": -806,
+      "completionRate": 48,
       "status": "推进中",
       "etd": "2026-05-03"
     },
     {
       "code": "CNNGB",
       "label": "CNNGB",
-      "allocation": 1430,
-      "current": 815,
-      "gap": -615,
-      "completionRate": 57,
+      "allocation": 1450,
+      "current": 839,
+      "gap": -611,
+      "completionRate": 57.9,
       "status": "推进中",
       "etd": "2026-05-05"
     },
     {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 1580,
+      "allocation": 1500,
       "current": 0,
-      "gap": -1580,
+      "gap": -1500,
       "completionRate": 0,
       "status": "未开始",
       "etd": "2026-05-12"
@@ -68,39 +65,39 @@
     {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 1430,
-      "current": 0,
-      "gap": -1430,
-      "completionRate": 0,
-      "status": "未开始",
+      "allocation": 1450,
+      "current": 34,
+      "gap": -1416,
+      "completionRate": 2.3,
+      "status": "需加紧",
       "etd": "2026-05-09"
     },
     {
       "code": "CNXMN",
       "label": "CNXMN",
-      "allocation": 200,
+      "allocation": 600,
       "current": 468,
-      "gap": 268,
-      "completionRate": 234,
+      "gap": -132,
+      "completionRate": 78,
       "status": "推进中",
       "etd": "2026-05-08"
     },
     {
       "code": "CNSWA",
       "label": "CNSWA (via NAS)",
-      "allocation": 150,
+      "allocation": 100,
       "current": 12,
-      "gap": -138,
-      "completionRate": 8,
+      "gap": -88,
+      "completionRate": 12,
       "status": "需加紧"
     },
     {
       "code": "VNHPH",
       "label": "VNHPH (via NAS)",
-      "allocation": 50,
+      "allocation": 100,
       "current": 4,
-      "gap": -46,
-      "completionRate": 8,
+      "gap": -96,
+      "completionRate": 4,
       "status": "需加紧"
     },
     {
@@ -114,7 +111,7 @@
     },
     {
       "code": "JP",
-      "label": "JP (via TAO)",
+      "label": "JP (via NAS)",
       "allocation": 100,
       "current": 69,
       "gap": -31,
@@ -196,8 +193,7 @@
     "Allocation 合计 8,800 TEU。",
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；KR/TW/JP 按 POL 前缀归类；via NAS 的归入对应 NAS bucket；via TAO 的归入对应 TAO bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
-    "公开页默认不展示 shipper 等敏感客户字段。",
-    "当前总 booking 中含 12 条未落入 allocation bucket 的 OTHER booking（58 TEU），POL：CNXGG, THLCH。"
+    "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
     {
@@ -575,7 +571,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "F"
     },
     {
@@ -10511,7 +10507,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -10529,7 +10525,7 @@
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -10547,7 +10543,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -10565,7 +10561,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -10583,7 +10579,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -14903,7 +14899,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "W"
     },
     {
@@ -15605,7 +15601,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "W"
     },
     {
@@ -16883,7 +16879,7 @@
       "ft20": 4,
       "ft40": 0,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNSHK",
       "status": "W"
     },
     {
@@ -17027,7 +17023,7 @@
       "ft20": 6,
       "ft40": 0,
       "teu": 6,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "W"
     },
     {
@@ -17099,7 +17095,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "W"
     },
     {
@@ -17135,7 +17131,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNNGB",
       "status": "W"
     },
     {
