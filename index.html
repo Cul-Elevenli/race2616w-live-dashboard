@@ -83,11 +83,12 @@
       margin-bottom: 22px; background: #fafcfe;
     }
     .region-row { display: flex; gap: 40px; align-items: center; }
-    .region-block { flex: 1; display: flex; align-items: baseline; gap: 14px; }
-    .region-label { font-size: 17px; font-weight: 800; color: var(--navy); min-width: 100px; letter-spacing: 0.5px; }
+    .region-block { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+    .region-label { font-size: 20px; font-weight: 900; color: var(--navy); min-width: 100px; letter-spacing: 0.5px; }
+    .region-block:not([style]) .region-label { text-transform: uppercase; }
     .region-value { font-size: 32px; font-weight: 800; color: var(--navy); }
     .region-value .subvalue { font-size: 14px; font-weight: 500; color: #8090af; margin-left: 6px; }
-    .region-meta { font-size: 13px; color: var(--muted); margin-left: auto; white-space: nowrap; }
+    .region-meta { font-size: 13px; color: var(--muted); white-space: nowrap; }
     .section-title { background: linear-gradient(90deg, var(--navy), var(--blue)); color: #fff; padding: 10px 14px; font-size: 16px; font-weight: 700; border-radius: 8px 8px 0 0; margin-top: 6px; }
     table { width: 100%; border-collapse: collapse; }
     .main-table { border: 1px solid var(--border); border-top: 0; font-size: 14px; }
