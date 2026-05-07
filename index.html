@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
   <title>Booking Live Dashboard</title>
   <style>
     :root {
@@ -86,12 +83,11 @@
       margin-bottom: 22px; background: #fafcfe;
     }
     .region-row { display: flex; gap: 40px; align-items: center; }
-    .region-block { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-    .region-label { font-size: 20px; font-weight: 900; color: var(--navy); min-width: 100px; letter-spacing: 0.5px; }
-    .region-block:not([style]) .region-label { text-transform: uppercase; }
+    .region-block { flex: 1; display: flex; align-items: baseline; gap: 14px; }
+    .region-label { font-size: 17px; font-weight: 800; color: var(--navy); min-width: 100px; letter-spacing: 0.5px; }
     .region-value { font-size: 32px; font-weight: 800; color: var(--navy); }
     .region-value .subvalue { font-size: 14px; font-weight: 500; color: #8090af; margin-left: 6px; }
-    .region-meta { font-size: 13px; color: var(--muted); white-space: nowrap; }
+    .region-meta { font-size: 13px; color: var(--muted); margin-left: auto; white-space: nowrap; }
     .section-title { background: linear-gradient(90deg, var(--navy), var(--blue)); color: #fff; padding: 10px 14px; font-size: 16px; font-weight: 700; border-radius: 8px 8px 0 0; margin-top: 6px; }
     table { width: 100%; border-collapse: collapse; }
     .main-table { border: 1px solid var(--border); border-top: 0; font-size: 14px; }
@@ -547,9 +543,6 @@
       'Red Sea': ['SAJED', 'SDPZU', 'EGSOK', 'YEADE', 'DJJIB', 'JOAQJ'],
     };
 
-    // Sharjah ICD：按 DEL 字段匹配，后续增加条件只需往数组加即可
-    const SHARJAH_ICD_DEL_CODES = ['AESCT'];
-
     function renderRegionStrip(prefix, payload) {
       const el = document.getElementById('regionStrip-' + prefix);
       if (!el) return;
@@ -576,24 +569,6 @@
             <span class="region-meta">${bookingCount} bk · 20ft ${ft20} / 40ft ${ft40}</span>
           </div>`;
       });
-
-      // Sharjah ICD 统计（按 DEL 匹配）
-      const sharjahSet = new Set(SHARJAH_ICD_DEL_CODES);
-      const sharjahRows = rows.filter(r => {
-        const del = (r.delivery || '').substring(0, 5);
-        return sharjahSet.has(del);
-      });
-      const sharjahTeu = sharjahRows.reduce((s, r) => s + (r.teu || 0), 0);
-      const sharjahCount = sharjahRows.length;
-      const sharjahFt20 = sharjahRows.reduce((s, r) => s + (r.ft20 || 0), 0);
-      const sharjahFt40 = sharjahRows.reduce((s, r) => s + (r.ft40 || 0), 0);
-      blocksHtml += `
-          <div class="region-block" style="border-left:3px solid #d97706;">
-            <span class="region-label">Sharjah ICD</span>
-            <span class="region-value">${formatNumber(sharjahTeu)}<span class="subvalue">TEU</span></span>
-            <span class="region-meta">${sharjahCount} bk · 20ft ${sharjahFt20} / 40ft ${sharjahFt40}</span>
-          </div>`;
-
       el.innerHTML = `<div class="region-row">${blocksHtml}</div>`;
     }
 
