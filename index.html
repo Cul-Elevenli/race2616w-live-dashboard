@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>Booking Live Dashboard</title>
+  <title>RACE2616W Public Live View</title>
   <style>
     :root {
       --navy: #17365d;
@@ -28,7 +25,9 @@
       color: var(--text);
       padding: 24px;
     }
-    button, input { font: inherit; }
+    button, input {
+      font: inherit;
+    }
     .page {
       width: 1120px;
       margin: 0 auto 28px;
@@ -38,15 +37,44 @@
       padding: 26px 30px 18px;
       position: relative;
     }
+    .page-hidden {
+      display: none;
+    }
+
     .header {
       border-bottom: 3px solid var(--navy);
       padding-bottom: 14px;
       margin-bottom: 18px;
     }
-    .title { margin: 0; color: var(--navy); font-size: 28px; font-weight: 700; letter-spacing: 0.3px; }
-    .notice { margin-top: 6px; color: #8a3b12; font-size: 13px; font-weight: 700; letter-spacing: 0.2px; }
-    .subtitle { margin-top: 6px; color: var(--blue); font-size: 15px; font-weight: 600; }
-    .meta { margin-top: 8px; display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font-size: 13px; }
+    .title {
+      margin: 0;
+      color: var(--navy);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .notice {
+      margin-top: 6px;
+      color: #8a3b12;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+    .subtitle {
+      margin-top: 6px;
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .meta {
+      margin-top: 8px;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
     .toolbar-bar {
       margin-bottom: 16px;
       padding: 12px 14px;
@@ -59,478 +87,487 @@
       align-items: center;
       justify-content: space-between;
     }
-    .toolbar-left, .toolbar-right { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-    .chip { padding: 8px 12px; border-radius: 999px; background: #e9f1f8; color: var(--navy); font-size: 12px; font-weight: 700; }
-    .search { min-width: 320px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; outline: none; background: #fff; }
-    .summary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 18px; }
+    .toolbar-left, .toolbar-right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 16px;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(23, 54, 93, 0.16);
+    }
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e9f1f8;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .search {
+      min-width: 320px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      background: #fff;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
     .summary-card {
-      border: 1px solid #d7dee9; border-radius: 14px; background: #f2f4f7;
-      padding: 22px 18px 20px; text-align: center; min-height: 146px;
-      display: flex; flex-direction: column; justify-content: center;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      border: 1px solid #d7dee9;
+      border-radius: 14px;
+      background: #f2f4f7;
+      padding: 22px 18px 20px;
+      text-align: center;
+      min-height: 146px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
     }
-    .summary-card .label { color: #8090af; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
-    .summary-card .value { margin-top: 12px; font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; }
-    .summary-card .value.is-good { color: #2f7f5f; }
-    .summary-card .value.is-gap { color: #d90000; }
-    .summary-card .subvalue { display: inline-block; margin-left: 6px; font-size: 14px; color: #8090af; font-weight: 500; vertical-align: middle; }
-    .summary-note { margin-top: 8px; font-size: 12px; color: var(--muted); font-weight: 500; }
-    .completion-strip { border-radius: 10px; padding: 6px 0 4px; margin-bottom: 22px; }
-    .completion-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; font-size: 14px; font-weight: 700; color: #4b5563; }
-    .completion-percent { color: #d90000; font-size: 16px; }
-    .completion-track { width: 100%; height: 16px; border-radius: 999px; background: #dfe5eb; overflow: hidden; position: relative; }
-    .completion-fill { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #d9480f 0%, #f59e0b 100%); }
-    .completion-extra { margin-top: 7px; font-size: 12px; color: var(--muted); }
-    .region-strip {
-      border: 1px solid #d7e1ea; border-radius: 10px; padding: 18px 22px;
-      margin-bottom: 22px; background: #fafcfe;
+    .summary-card .label {
+      color: #8090af;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
     }
-    .region-row { display: flex; gap: 40px; align-items: center; }
-    .region-block { flex: 1; display: flex; flex-direction: column; gap: 2px; }
-    .region-label { font-size: 20px; font-weight: 900; color: var(--navy); min-width: 100px; letter-spacing: 0.5px; }
-    .region-block:not([style]) .region-label { text-transform: uppercase; }
-    .region-value { font-size: 32px; font-weight: 800; color: var(--navy); }
-    .region-value .subvalue { font-size: 14px; font-weight: 500; color: #8090af; margin-left: 6px; }
-    .region-meta { font-size: 13px; color: var(--muted); white-space: nowrap; }
-    .section-title { background: linear-gradient(90deg, var(--navy), var(--blue)); color: #fff; padding: 10px 14px; font-size: 16px; font-weight: 700; border-radius: 8px 8px 0 0; margin-top: 6px; }
-    table { width: 100%; border-collapse: collapse; }
-    .main-table { border: 1px solid var(--border); border-top: 0; font-size: 14px; }
-    .main-table thead th { background: #e9f1f8; color: var(--navy); border: 1px solid var(--border); padding: 10px 8px; text-align: center; font-weight: 700; }
-    .main-table tbody td { border: 1px solid var(--border); padding: 9px 8px; text-align: center; vertical-align: middle; }
-    .main-table tbody tr:nth-child(even) { background: #f8fbfe; }
-    .main-table tbody tr.total-row { background: #dbeaf7; font-weight: 700; color: var(--navy); }
-    .pol { font-weight: 700; letter-spacing: 0.3px; }
-    .etd-cell { white-space: nowrap; }
-    .etd-tag { display: inline-block; font-size: 11px; font-weight: 600; color: #1565c0; background: #e3f0ff; border-radius: 4px; padding: 1px 6px; letter-spacing: 0.3px; }
-    .etd-none { color: #aaa; background: transparent; font-weight: 400; }
-    .progress-wrap { display: flex; align-items: center; gap: 8px; justify-content: center; }
-    .progress { width: 110px; height: 8px; border-radius: 999px; background: #e5edf5; overflow: hidden; position: relative; }
-    .progress > span { display: block; height: 100%; border-radius: 999px; }
+    .summary-card .value {
+      margin-top: 12px;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .summary-card .value.is-good {
+      color: #2f7f5f;
+    }
+    .summary-card .value.is-gap {
+      color: #d90000;
+    }
+    .summary-card .subvalue {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 14px;
+      color: #8090af;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+    .summary-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .completion-strip {
+      border-radius: 10px;
+      padding: 6px 0 4px;
+      margin-bottom: 22px;
+    }
+    .completion-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #4b5563;
+    }
+    .completion-percent {
+      color: #d90000;
+      font-size: 16px;
+    }
+    .completion-track {
+      width: 100%;
+      height: 16px;
+      border-radius: 999px;
+      background: #dfe5eb;
+      overflow: hidden;
+      position: relative;
+    }
+    .completion-fill {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d9480f 0%, #f59e0b 100%);
+    }
+    .completion-extra {
+      margin-top: 7px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .section-title {
+      background: linear-gradient(90deg, var(--navy), var(--blue));
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 8px 8px 0 0;
+      margin-top: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main-table {
+      border: 1px solid var(--border);
+      border-top: 0;
+      font-size: 14px;
+    }
+    .main-table thead th {
+      background: #e9f1f8;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      padding: 10px 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .main-table tbody td {
+      border: 1px solid var(--border);
+      padding: 9px 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .main-table tbody tr:nth-child(even) {
+      background: #f8fbfe;
+    }
+    .main-table tbody tr.total-row {
+      background: #dbeaf7;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .pol {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    .progress {
+      width: 110px;
+      height: 8px;
+      border-radius: 999px;
+      background: #e5edf5;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress > span {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
     .p-idle { background: var(--idle); }
     .p-warning { background: var(--warning); }
     .p-good { background: var(--good); }
-    .status { font-weight: 700; padding: 4px 8px; border-radius: 999px; display: inline-block; min-width: 72px; }
+    .status {
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      min-width: 72px;
+    }
     .status-idle { background: #eef2f7; color: #64748b; }
     .status-warning { background: #fff3d6; color: #b45309; }
     .status-good { background: #dcfce7; color: #047857; }
-    .pod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
-    .pod-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #fff; }
-    .pod-card h3 { margin: 0; padding: 12px 14px; background: #e9f1f8; color: var(--navy); font-size: 16px; }
-    .pod-table td { border-bottom: 1px solid #e6eef5; padding: 12px 14px; font-size: 15px; }
-    .pod-table tr:last-child td { border-bottom: 0; }
-    .rank { width: 52px; color: var(--blue); font-weight: 700; text-align: center; }
-    .teu { text-align: right; font-weight: 700; color: var(--navy); width: 110px; }
-    .detail-table-wrap { border: 1px solid var(--border); border-top: 0; max-height: 470px; overflow: auto; }
-    .detail-table { min-width: 1100px; font-size: 13px; }
-    .detail-table thead th { position: sticky; top: 0; z-index: 2; background: #e9f1f8; color: var(--navy); border: 1px solid var(--border); padding: 10px 8px; text-align: center; }
-    .detail-table tbody td { border: 1px solid #d8e5f0; padding: 8px 8px; text-align: center; white-space: nowrap; }
-    .detail-table tbody tr:nth-child(even) { background: #f8fbfe; }
-    .align-left { text-align: left !important; }
-    .empty { padding: 24px 12px; text-align: center; color: var(--muted); display: none; }
-    .footer { margin-top: 16px; display: flex; justify-content: space-between; color: #708090; font-size: 12px; border-top: 1px solid #e3ebf3; padding-top: 10px; }
-    .watermark {
-      position: absolute; top: 52%; left: 50%;
-      transform: translate(-50%, -50%) rotate(-20deg);
-      font-size: 82px; font-weight: 800;
-      color: rgba(23, 54, 93, 0.035);
-      pointer-events: none; user-select: none; white-space: nowrap;
-    }
-    .page-hidden { display: none; }
 
-    /* Tab 样式 */
-    .tab-bar {
-      width: 1120px;
-      margin: 0 auto 0;
-      display: flex;
-      gap: 0;
-      background: var(--navy);
-      border: 2px solid var(--navy);
-      border-radius: 14px 14px 0 0;
+    .pod-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .pod-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
       overflow: hidden;
-    }
-    .tab-btn {
-      flex: 1;
-      padding: 16px 20px;
-      border: none;
-      background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.6);
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      position: relative;
-      letter-spacing: 0.3px;
-    }
-    .tab-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
-    .tab-btn.active {
       background: #fff;
-      color: var(--navy);
-      border-radius: 12px 12px 0 0;
     }
-    .tab-btn.active .tab-vvd { color: var(--blue); font-weight: 600; }
-    .tab-vvd { display: block; font-size: 13px; font-weight: 500; margin-top: 3px; }
-    .tab-btn + .tab-btn { border-left: 1px solid rgba(255,255,255,0.15); }
-    .tab-btn.active + .tab-btn { border-left-color: var(--navy); }
-
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-
+    .pod-card h3 {
+      margin: 0;
+      padding: 12px 14px;
+      background: #e9f1f8;
+      color: var(--navy);
+      font-size: 16px;
+    }
+    .pod-table td {
+      border-bottom: 1px solid #e6eef5;
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+    .pod-table tr:last-child td {
+      border-bottom: 0;
+    }
+    .rank {
+      width: 52px;
+      color: var(--blue);
+      font-weight: 700;
+      text-align: center;
+    }
+    .teu {
+      text-align: right;
+      font-weight: 700;
+      color: var(--navy);
+      width: 110px;
+    }
+    .detail-table-wrap {
+      border: 1px solid var(--border);
+      border-top: 0;
+      max-height: 470px;
+      overflow: auto;
+    }
+    .detail-table {
+      min-width: 1100px;
+      font-size: 13px;
+    }
+    .detail-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: #e9f1f8;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .detail-table tbody td {
+      border: 1px solid #d8e5f0;
+      padding: 8px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .detail-table tbody tr:nth-child(even) {
+      background: #f8fbfe;
+    }
+    .align-left {
+      text-align: left !important;
+    }
+    .empty {
+      padding: 24px 12px;
+      text-align: center;
+      color: var(--muted);
+      display: none;
+    }
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      color: #708090;
+      font-size: 12px;
+      border-top: 1px solid #e3ebf3;
+      padding-top: 10px;
+    }
+    .watermark {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      font-size: 82px;
+      font-weight: 800;
+      color: rgba(23, 54, 93, 0.035);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
     @media (max-width: 980px) {
       body { padding: 10px; overflow-x: auto; }
       .page { width: 1120px; min-height: auto; }
-      .tab-bar { width: 1120px; }
       .pod-grid { grid-template-columns: 1fr; }
+      .footer { position: static; margin-top: 16px; }
     }
+
+    @media (max-width: 720px) {
+      .search { min-width: 100%; width: 100%; }
+      .toolbar-bar { align-items: stretch; }
+    }
+
   </style>
 </head>
 <body>
-
-  <!-- Tab 切换栏（新增船放第一个） -->
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="CUHC2620W" onclick="switchTab('CUHC2620W')">
-      CUHC2620W
-      <span class="tab-vvd">CUHC</span>
-    </button>
-    <button class="tab-btn" data-tab="XPBL2618W" onclick="switchTab('XPBL2618W')">
-      XPBL2618W
-      <span class="tab-vvd">EXPRESS BERLIN</span>
-    </button>
-    <button class="tab-btn" data-tab="RACE2616W" onclick="switchTab('RACE2616W')">
-      RACE2616W
-      <span class="tab-vvd">RACINE</span>
-    </button>
-  </div>
-
-  <!-- ====== RACE2616W 面板 ====== -->
-  <div class="tab-panel" id="panel-RACE2616W">
-
-    <section class="page">
-      <div class="watermark" id="wm-RACE">RACE2616W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-RACE">CGX service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-RACE">RACE2616W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-RACE">2616W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-RACE">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
+  <section class="page">
+    <div class="watermark">RACE2616W UPDATE</div>
+    <header class="header">
+      <h1 class="title">RACE2616W Daily Booking Update</h1>
+      <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+      <div class="subtitle">Public Live View · 近实时数据快照</div>
+      <div class="meta">
+        <div><strong>VVD:</strong> <span id="meta-vvd">RACE2616W</span></div>
+        <div><strong>Voyage:</strong> <span id="meta-voyage">2616W</span></div>
+        <div><strong>公开页刷新:</strong> 每 60 秒</div>
       </div>
+    </header>
 
-      <div class="summary-grid" id="summaryGrid-RACE"></div>
-      <div class="completion-strip" id="completionStrip-RACE"></div>
-      <div class="region-strip" id="regionStrip-RACE"></div>
+    <div class="toolbar-bar">
+      <div class="toolbar-left">
+        <span class="chip">对外只显示非敏感字段</span>
+        <span class="chip" id="booking-chip">Booking 0 条</span>
+      </div>
+      <div class="toolbar-right">
+        <span class="chip">页面版式：PDF 风格</span>
+      </div>
+    </div>
 
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
+    <div class="summary-grid" id="summaryGrid"></div>
+    <div class="completion-strip" id="completionStrip"></div>
+
+    <div class="section-title">各口岸舱位分配与完成进度</div>
+
+    <table class="main-table">
+      <thead>
+        <tr>
+          <th>口岸 (POL)</th>
+          <th>分配舱位<br>(TEU)</th>
+          <th>当前订舱<br>(TEU)</th>
+          <th>差距<br>(TEU)</th>
+          <th>完成率</th>
+          <th>进度</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody id="categoryBody"></tbody>
+    </table>
+
+
+    <div class="footer">
+      <span></span>
+      <span>RACE Service Live View</span>
+    </div>
+
+  </section>
+
+  <section class="page">
+    <div class="watermark">POD TOP 10</div>
+    <header class="header">
+      <h1 class="title">目的地分布 (POD) - Top 10</h1>
+      <div class="subtitle">RACE2616W Latest Distribution Snapshot</div>
+      <div class="meta">
+        <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+        <div><strong>唯一 POD:</strong> <span id="pod-count">-</span></div>
+        <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+      </div>
+    </header>
+
+    <div class="pod-grid">
+      <div class="pod-card">
+        <h3>Top 1 - Top 5</h3>
+        <table class="pod-table"><tbody id="podLeft"></tbody></table>
+      </div>
+      <div class="pod-card">
+        <h3>Top 6 - Top 10</h3>
+        <table class="pod-table"><tbody id="podRight"></tbody></table>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span></span>
+      <span>Preview Version</span>
+    </div>
+  </section>
+
+  <section class="page page-hidden">
+    <div class="watermark">BOOKING DETAILS</div>
+
+    <header class="header">
+      <h1 class="title">Booking Detail Snapshot</h1>
+      <div class="subtitle">公开明细页（默认隐藏 shipper 等敏感字段）</div>
+      <div class="meta">
+        <div><strong>筛选说明:</strong> 支持 Booking / BL / Office / POL / POD / Status</div>
+        <div><strong>当前显示:</strong> <span id="visibleCount">0</span> 条</div>
+      </div>
+    </header>
+
+    <div class="toolbar-bar">
+      <div class="toolbar-left">
+        <input id="keywordInput" class="search" placeholder="搜索 Booking / BL / Office / POL / POD / Status" />
+      </div>
+      <div class="toolbar-right">
+        <span class="chip">公开版默认不展示客户敏感信息</span>
+      </div>
+    </div>
+
+    <div class="section-title">Booking 明细</div>
+    <div class="detail-table-wrap">
+      <table class="detail-table">
         <thead>
           <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
+            <th>Booking No</th>
+            <th>BL No</th>
+            <th>Office</th>
+            <th>POR</th>
+            <th>POL</th>
+            <th>POD</th>
+            <th>DEL</th>
+            <th>20ft</th>
+            <th>40ft</th>
+            <th>TEU</th>
+            <th>Category</th>
+            <th>Status</th>
           </tr>
         </thead>
-        <tbody id="categoryBody-RACE"></tbody>
+        <tbody id="detailBody"></tbody>
       </table>
+      <div class="empty" id="emptyState">没有匹配到符合筛选条件的 booking。</div>
+    </div>
 
-      <div class="footer">
-        <span id="footer-time-RACE">--</span>
-        <span>RACE Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">POD TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-RACE">目的地分布 (POD) - Top 10</h1>
-        <div class="subtitle">RACE2616W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 POD:</strong> <span id="pod-count-RACE">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-RACE"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-RACE"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== XPBL2618W 面板 ====== -->
-  <div class="tab-panel active" id="panel-XPBL2618W">
-
-    <section class="page">
-      <div class="watermark" id="wm-XPBL">XPBL2618W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-XPBL">CGX service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-XPBL">XPBL2618W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-XPBL">2618W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-XPBL">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-XPBL"></div>
-      <div class="completion-strip" id="completionStrip-XPBL"></div>
-      <div class="region-strip" id="regionStrip-XPBL"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-XPBL"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-XPBL">--</span>
-        <span>XPBL Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">POD TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-XPBL">目的地分布 (POD) - Top 10</h1>
-        <div class="subtitle">XPBL2618W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 POD:</strong> <span id="pod-count-XPBL">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-XPBL"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-XPBL"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== CUHC2620W 面板 ====== -->
-  <div class="tab-panel" id="panel-CUHC2620W">
-
-    <section class="page">
-      <div class="watermark" id="wm-CUHC">CUHC2620W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-CUHC">CGX service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-CUHC">CUHC2620W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-CUHC">2620W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-CUHC">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-CUHC"></div>
-      <div class="completion-strip" id="completionStrip-CUHC"></div>
-      <div class="region-strip" id="regionStrip-CUHC"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-CUHC"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-CUHC">--</span>
-        <span>CUHC Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">POD TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-CUHC">目的地分布 (POD) - Top 10</h1>
-        <div class="subtitle">CUHC2620W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 POD:</strong> <span id="pod-count-CUHC">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-CUHC"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-CUHC"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <style>
-    /* 截图模式：展开所有内容，不限制高度，压缩间距以适配视口 */
-    .screenshot-mode .detail-table-wrap { max-height: none !important; overflow: visible !important; }
-    .screenshot-mode .pod-table td { padding: 6px 14px !important; font-size: 13px !important; }
-    .screenshot-mode .pod-card h3 { padding: 6px 14px !important; font-size: 14px !important; }
-    .screenshot-mode .footer { margin-top: 6px !important; padding-top: 4px !important; }
-    .screenshot-mode .pod-card { margin-bottom: 0 !important; }
-    .screenshot-mode .pod-grid { gap: 8px !important; }
-    .screenshot-mode .page { padding-bottom: 8px !important; }
-    .screenshot-mode .header { padding: 16px 18px !important; min-height: 120px !important; }
-    .screenshot-mode .completion-strip { padding: 10px 18px !important; }
-    .screenshot-mode .summary-grid { gap: 6px !important; }
-    .screenshot-mode .region-strip { padding: 10px 18px !important; }
-  </style>
+    <div class="footer static">
+      <span>对外发布时只需同时上传 HTML + JSON</span>
+      <span>Public Static Page</span>
+    </div>
+  </section>
 
   <script>
-    // ===== 截图模式检测 =====
-    if (new URLSearchParams(location.search).has('screenshot')) {
-      document.documentElement.classList.add('screenshot-mode');
-    }
+    let currentPayload = null;
 
-    // ===== 截图模式：数据加载完后调整视口高度 =====
-    function adjustScreenshotHeight() {
-      if (!document.documentElement.classList.contains('screenshot-mode')) return;
-      const scrollH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-      const fullH = scrollH + 40; // 额外 padding
-      // 用 viewport meta 或 CSS 变量让内容适配
-      document.documentElement.style.setProperty('--screenshot-height', fullH + 'px');
-      console.log('[screenshot] content height:', fullH);
-    }
+    const summaryGrid = document.getElementById('summaryGrid');
+    const completionStrip = document.getElementById('completionStrip');
+    const categoryBody = document.getElementById('categoryBody');
+    const podLeft = document.getElementById('podLeft');
+    const podRight = document.getElementById('podRight');
 
-    // ===== Vessel 配置 =====
-    const VESSELS = {
-      RACE2616W: { jsonFile: 'RACE2616W_public_data.json', prefix: 'RACE' },
-      XPBL2618W: { jsonFile: 'XPBL2618W_public_data.json', prefix: 'XPBL' },
-      CUHC2620W: { jsonFile: 'CUHC2620W_public_data.json', prefix: 'CUHC' },
-    };
+    const detailBody = document.getElementById('detailBody');
+    const emptyState = document.getElementById('emptyState');
+    const keywordInput = document.getElementById('keywordInput');
 
-    let currentTab = 'XPBL2618W';
-    const payloads = {};
-
-    // ===== Tab 切换 =====
-    function switchTab(vvd) {
-      currentTab = vvd;
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === vvd);
-      });
-      document.querySelectorAll('.tab-panel').forEach(panel => {
-        panel.classList.toggle('active', panel.id === 'panel-' + vvd);
-      });
-      // 更新 URL hash 以便截图时知道当前 Tab
-      history.replaceState(null, '', '#' + vvd);
-    }
-
-    // 从 URL 参数或 hash 自动切换 Tab（供截图使用）
-    (function() {
-      const params = new URLSearchParams(window.location.search);
-      const hash = window.location.hash.replace('#', '');
-      const tabParam = params.get('tab') || hash;
-      if (tabParam && VESSELS[tabParam]) {
-        switchTab(tabParam);
-      }
-    })();
-
-    // ===== 公共渲染函数 =====
     function formatNumber(value) {
       return new Intl.NumberFormat('en-US').format(value || 0);
     }
+
     function formatPercent(value) {
       return `${Number(value || 0).toFixed(1)}%`;
     }
+
     function statusClass(text) {
       if (text === '推进中') return 'status-good';
       if (text === '需加紧') return 'status-warning';
       return 'status-idle';
     }
+
     function progressClass(rate) {
       if (rate <= 0) return 'p-idle';
       if (rate < 30) return 'p-warning';
       return 'p-good';
     }
+
     function formatDateTime(value) {
       if (!value) return '-';
       const date = new Date(value);
@@ -541,9 +578,7 @@
       }).format(date);
     }
 
-    function renderSummary(prefix, payload) {
-      const el = document.getElementById('summaryGrid-' + prefix);
-      const strip = document.getElementById('completionStrip-' + prefix);
+    function renderSummary(payload) {
       const currentNote = payload.totals.otherTeu > 0
         ? `${formatNumber(payload.bookingCount)} 条 Booking（含 OTHER ${formatNumber(payload.totals.otherTeu)} TEU）`
         : `${formatNumber(payload.bookingCount)} 条 Booking`;
@@ -552,14 +587,16 @@
         { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: currentNote },
         { label: 'REMAINING GAP', value: formatNumber(payload.totals.gap), sub: 'TEU', className: 'is-gap' },
       ];
-      el.innerHTML = items.map(item => `
+
+      summaryGrid.innerHTML = items.map(item => `
         <div class="summary-card">
           <div class="label">${item.label}</div>
           <div class="value ${item.className}">${item.value}<span class="subvalue">${item.sub}</span></div>
           <div class="summary-note">${item.note || '&nbsp;'}</div>
         </div>
       `).join('');
-      strip.innerHTML = `
+
+      completionStrip.innerHTML = `
         <div class="completion-head">
           <span>Overall Completion</span>
           <span class="completion-percent">${formatPercent(payload.totals.completionRate)}</span>
@@ -571,158 +608,131 @@
       `;
     }
 
-    function renderCategories(prefix, rows, totals) {
+
+    function renderCategories(rows, totals) {
       const displayCurrent = totals.displayCurrent ?? totals.current;
       const displayGap = totals.displayGap ?? totals.gap;
       const displayCompletionRate = totals.displayCompletionRate ?? totals.completionRate;
       const totalRowStatus = displayCompletionRate < 30 ? '需加紧' : '推进中';
-      const body = document.getElementById('categoryBody-' + prefix);
-      const sortedRows = [...rows].sort((a, b) => {
-        if (a.etd && b.etd) return a.etd.localeCompare(b.etd);
-        if (a.etd) return -1;
-        if (b.etd) return 1;
-        return 0;
-      });
-      const bodyRows = sortedRows.map(row => {
+      const bodyRows = rows.map(row => {
         const rate = Number(row.completionRate || 0);
-        const etdDisplay = row.etd ? `<span class="etd-tag">${row.etd}</span>` : '<span class="etd-tag etd-none">—</span>';
-        return `<tr>
-          <td class="pol">${row.label || row.code}</td>
-          <td class="etd-cell">${etdDisplay}</td>
-          <td>${formatNumber(row.allocation)}</td>
-          <td>${formatNumber(row.current)}</td>
-          <td>${formatNumber(row.gap)}</td>
-          <td>${formatPercent(rate)}</td>
-          <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div></td>
-          <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
-        </tr>`;
+        return `
+          <tr>
+            <td class="pol">${row.label || row.code}</td>
+            <td>${formatNumber(row.allocation)}</td>
+            <td>${formatNumber(row.current)}</td>
+            <td>${formatNumber(row.gap)}</td>
+
+            <td>${formatPercent(rate)}</td>
+            <td>
+              <div class="progress-wrap">
+                <div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div>
+              </div>
+            </td>
+            <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
+          </tr>
+        `;
       }).join('');
-      const totalRow = `<tr class="total-row">
-        <td class="pol">TOTAL</td>
-        <td></td>
-        <td>${formatNumber(totals.allocation)}</td>
-        <td>${formatNumber(displayCurrent)}</td>
-        <td>${formatNumber(displayGap)}</td>
-        <td>${formatPercent(displayCompletionRate)}</td>
-        <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div></div></td>
-        <td><span class="status ${statusClass(totalRowStatus)}">${totalRowStatus}</span></td>
-      </tr>`;
-      body.innerHTML = bodyRows + totalRow;
+
+      const totalRow = `
+        <tr class="total-row">
+          <td class="pol">TOTAL</td>
+          <td>${formatNumber(totals.allocation)}</td>
+          <td>${formatNumber(displayCurrent)}</td>
+          <td>${formatNumber(displayGap)}</td>
+          <td>${formatPercent(displayCompletionRate)}</td>
+          <td>
+            <div class="progress-wrap">
+              <div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div>
+            </div>
+          </td>
+          <td><span class="status ${statusClass(totalRowStatus)}">${totalRowStatus}</span></td>
+        </tr>
+      `;
+
+      categoryBody.innerHTML = bodyRows + totalRow;
     }
 
-    function renderPods(prefix, rows) {
+    function renderPods(rows) {
       const left = rows.slice(0, 5);
       const right = rows.slice(5, 10);
-      document.getElementById('podLeft-' + prefix).innerHTML = left.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('');
-      document.getElementById('podRight-' + prefix).innerHTML = right.length
+      podLeft.innerHTML = left.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('');
+      podRight.innerHTML = right.length
         ? right.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('')
         : '<tr><td colspan="3" style="padding:12px 14px;color:#6b7280;">当前不足 10 个 POD</td></tr>';
     }
 
-    function renderMeta(prefix, payload) {
-      const vvd = payload.vvd || '-';
-      document.getElementById('meta-vvd-' + prefix).textContent = vvd;
-      document.getElementById('meta-voyage-' + prefix).textContent = payload.voyage || '-';
-      document.getElementById('booking-chip-' + prefix).textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
-      document.getElementById('pod-count-' + prefix).textContent = formatNumber((payload.topPods || []).length);
-      document.getElementById('footer-time-' + prefix).textContent = '数据更新: ' + formatDateTime(payload.generatedAt);
-      document.title = 'CGX service Booking Update / Live Dashboard';
+    function rowMatchesKeyword(row, keyword) {
+
+      return [
+        row.bookingNo, row.blNo, row.office, row.por,
+        row.pol, row.pod, row.delivery, row.category, row.status
+      ].join(' ').toLowerCase().includes(keyword);
     }
 
-    // ===== Middle East & Red Sea 统计 =====
-    const REGION_PODS = {
-      'Middle East': ['AEJEA', 'AEKLF', 'OMSOH', 'AESCT', 'SADMM', 'SARUH'],
-      'Red Sea': ['SAJED', 'SDPZU', 'EGSOK', 'YEADE', 'DJJIB', 'JOAQJ'],
-    };
+    function renderDetails(rows) {
+      const keyword = keywordInput.value.trim().toLowerCase();
+      const filtered = keyword ? rows.filter(row => rowMatchesKeyword(row, keyword)) : rows;
+      detailBody.innerHTML = filtered.map(row => `
+        <tr>
+          <td class="align-left">${row.bookingNo}</td>
+          <td class="align-left">${row.blNo}</td>
+          <td>${row.office}</td>
+          <td>${row.por}</td>
+          <td>${row.pol}</td>
+          <td>${row.pod}</td>
+          <td>${row.delivery}</td>
+          <td>${formatNumber(row.ft20)}</td>
+          <td>${formatNumber(row.ft40)}</td>
+          <td><strong>${formatNumber(row.teu)}</strong></td>
+          <td>${row.category}</td>
+          <td>${row.status}</td>
+        </tr>
+      `).join('');
 
-    // Sharjah ICD：按 DEL 字段匹配，后续增加条件只需往数组加即可
-    const SHARJAH_ICD_DEL_CODES = ['AESCT'];
-
-    function renderRegionStrip(prefix, payload) {
-      const el = document.getElementById('regionStrip-' + prefix);
-      if (!el) return;
-      const rows = payload.rows || [];
-      let blocksHtml = '';
-      Object.entries(REGION_PODS).forEach(([regionName, podList]) => {
-        const podSet = new Set(podList);
-        // 优先匹配 DEL (delivery)，如果不匹配再匹配 POD
-        const matchedRows = rows.filter(r => {
-          const del = r.delivery || '';
-          const pod = r.pod || '';
-          // DEL 字段可能带后缀如 AEJEAAT02，取前5位匹配
-          const delBase = del.substring(0, 5);
-          return podSet.has(delBase) || podSet.has(pod);
-        });
-        const totalTeu = matchedRows.reduce((s, r) => s + (r.teu || 0), 0);
-        const bookingCount = matchedRows.length;
-        const ft20 = matchedRows.reduce((s, r) => s + (r.ft20 || 0), 0);
-        const ft40 = matchedRows.reduce((s, r) => s + (r.ft40 || 0), 0);
-        blocksHtml += `
-          <div class="region-block">
-            <span class="region-label">${regionName}</span>
-            <span class="region-value">${formatNumber(totalTeu)}<span class="subvalue">TEU</span></span>
-            <span class="region-meta">${bookingCount} bk · 20ft ${ft20} / 40ft ${ft40}</span>
-          </div>`;
-      });
-
-      // Sharjah ICD 统计（按 DEL 匹配）
-      const sharjahSet = new Set(SHARJAH_ICD_DEL_CODES);
-      const sharjahRows = rows.filter(r => {
-        const del = (r.delivery || '').substring(0, 5);
-        return sharjahSet.has(del);
-      });
-      const sharjahTeu = sharjahRows.reduce((s, r) => s + (r.teu || 0), 0);
-      const sharjahCount = sharjahRows.length;
-      const sharjahFt20 = sharjahRows.reduce((s, r) => s + (r.ft20 || 0), 0);
-      const sharjahFt40 = sharjahRows.reduce((s, r) => s + (r.ft40 || 0), 0);
-      blocksHtml += `
-          <div class="region-block" style="border-left:3px solid #d97706;">
-            <span class="region-label">Sharjah ICD</span>
-            <span class="region-value">${formatNumber(sharjahTeu)}<span class="subvalue">TEU</span></span>
-            <span class="region-meta">${sharjahCount} bk · 20ft ${sharjahFt20} / 40ft ${sharjahFt40}</span>
-          </div>`;
-
-      el.innerHTML = `<div class="region-row">${blocksHtml}</div>`;
+      emptyState.style.display = filtered.length ? 'none' : 'block';
+      document.getElementById('visibleCount').textContent = formatNumber(filtered.length);
     }
 
-    function renderVessel(vvd, payload) {
-      const prefix = VESSELS[vvd].prefix;
-      payloads[vvd] = payload;
-      renderMeta(prefix, payload);
-      renderSummary(prefix, payload);
-      renderRegionStrip(prefix, payload);
-      renderCategories(prefix, payload.categoryRows || [], payload.totals || {});
-      renderPods(prefix, payload.topPods || []);
+    function renderMeta(payload) {
+      document.getElementById('meta-vvd').textContent = payload.vvd || '-';
+      document.getElementById('meta-voyage').textContent = payload.voyage || '-';
+      document.getElementById('booking-chip').textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
+      document.getElementById('pod-count').textContent = formatNumber((payload.topPods || []).length);
     }
 
-    // ===== 数据加载 =====
-    async function loadVessel(vvd) {
-      const config = VESSELS[vvd];
-      const response = await fetch(`${config.jsonFile}?t=${Date.now()}`, { cache: 'no-store' });
+
+    function renderAll(payload) {
+      currentPayload = payload;
+      renderMeta(payload);
+      renderSummary(payload);
+      renderCategories(payload.categoryRows || [], payload.totals || {});
+      renderPods(payload.topPods || []);
+      renderDetails(payload.rows || []);
+
+    }
+
+    async function loadData() {
+      const response = await fetch(`RACE2616W_public_data.json?t=${Date.now()}`, { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const payload = await response.json();
-      renderVessel(vvd, payload);
+      renderAll(payload);
     }
 
-    async function loadAll() {
-      const results = await Promise.allSettled(
-        Object.keys(VESSELS).map(vvd => loadVessel(vvd))
-      );
-      results.forEach((result, i) => {
-        if (result.status === 'rejected') {
-          console.warn(`加载 ${Object.keys(VESSELS)[i]} 失败:`, result.reason.message);
-        }
-      });
-    }
+    keywordInput.addEventListener('input', () => {
+      if (currentPayload) renderDetails(currentPayload.rows || []);
+    });
 
-    // 初始化
-    loadAll().then(() => {
-      // 截图模式：数据加载完成后等一小段时间让 DOM 完全渲染，然后调整高度
-      if (document.documentElement.classList.contains('screenshot-mode')) {
-        setTimeout(adjustScreenshotHeight, 500);
-      }
-    }).catch(console.error);
-    setInterval(loadAll, 60000);
+
+
+    loadData().catch(error => {
+      document.getElementById('meta-updated').textContent = '加载失败';
+      document.getElementById('meta-source').textContent = error.message;
+    });
+
+    setInterval(() => {
+      loadData().catch(() => {});
+    }, 60000);
   </script>
 </body>
 </html>
