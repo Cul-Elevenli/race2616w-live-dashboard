@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-05-08T12:09:44.036Z",
-  "sourceUpdatedAt": "2026-05-08T12:09:43.715Z",
+  "generatedAt": "2026-05-08T13:10:04.689Z",
+  "sourceUpdatedAt": "2026-05-08T13:10:04.359Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2616W",
   "voyage": "2616W",
-  "bookingCount": 1168,
+  "bookingCount": 1167,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNXGG / CNTAO / CNSHA / CNNGB / CNNAS / CNSHK / CNXMN / CNSWA，或 KR / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 5508,
-    "gap": 8,
+    "current": 5504,
+    "gap": 4,
     "completionRate": 100.1,
-    "ft20": 756,
+    "ft20": 752,
     "ft40": 2376,
-    "teu": 5508,
+    "teu": 5504,
     "displayCurrent": 5496,
     "displayGap": -4,
     "displayCompletionRate": 99.9,
-    "otherBookingCount": 3,
-    "otherTeu": 12,
+    "otherBookingCount": 2,
+    "otherTeu": 8,
     "otherPols": [
       "MYPKG",
       "THLCH"
@@ -137,7 +137,7 @@
     {
       "rank": 1,
       "pod": "AEKLF",
-      "teu": 3260
+      "teu": 3256
     },
     {
       "rank": 2,
@@ -191,7 +191,7 @@
     "TEU 计算口径：20ft + 2 × 40ft。",
     "本次共有 47 条 booking（106 TEU）因原始 POL 无单独分类且存在中国 T/S Port，被并入对应中国口岸的 POL 统计。",
     "另有 46 条 booking（176 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
-    "当前总 booking 中含 3 条未落入 allocation bucket 的 OTHER booking（12 TEU），POL：MYPKG, THLCH。",
+    "当前总 booking 中含 2 条未落入 allocation bucket 的 OTHER booking（8 TEU），POL：MYPKG, THLCH。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
@@ -22437,26 +22437,6 @@
     },
     {
       "id": 1113,
-      "bookingNo": "CULVLCH2601973",
-      "blNo": "CULVLCH2601973",
-      "office": "SDGTH",
-      "pol": "THLCH",
-      "por": "THLCH",
-      "pod": "AEKLF",
-      "delivery": "AEJEA",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
-      "baseCategory": "OTHER",
-      "tsMergeApplied": false,
-      "ft20": 4,
-      "ft40": 0,
-      "teu": 4,
-      "category": "OTHER",
-      "status": "F"
-    },
-    {
-      "id": 1114,
       "bookingNo": "CULVSHK2614013",
       "blNo": "CULVSHK2614013",
       "office": "CUSNZ",
@@ -22476,7 +22456,7 @@
       "status": "F"
     },
     {
-      "id": 1115,
+      "id": 1114,
       "bookingNo": "CULVSHK2616988",
       "blNo": "CULVSHK2616988",
       "office": "CUSNZ",
@@ -22496,7 +22476,7 @@
       "status": "F"
     },
     {
-      "id": 1116,
+      "id": 1115,
       "bookingNo": "CULVSHK2616989",
       "blNo": "CULVSHK2616989",
       "office": "CUSNZ",
@@ -22516,7 +22496,7 @@
       "status": "F"
     },
     {
-      "id": 1117,
+      "id": 1116,
       "bookingNo": "CULVSHA2608829",
       "blNo": "CULVSHA2608829",
       "office": "CUSHA",
@@ -22536,7 +22516,7 @@
       "status": "F"
     },
     {
-      "id": 1118,
+      "id": 1117,
       "bookingNo": "CULVSHA2609603",
       "blNo": "CULVSHA2609603",
       "office": "CUSHA",
@@ -22556,7 +22536,7 @@
       "status": "F"
     },
     {
-      "id": 1119,
+      "id": 1118,
       "bookingNo": "CULVSHK2617127",
       "blNo": "CULVSHK2617127",
       "office": "ULSNZ",
@@ -22576,7 +22556,7 @@
       "status": "F"
     },
     {
-      "id": 1120,
+      "id": 1119,
       "bookingNo": "CULVSHK2613204",
       "blNo": "CULVSHK2613204",
       "office": "CUSNZ",
@@ -22596,7 +22576,7 @@
       "status": "F"
     },
     {
-      "id": 1121,
+      "id": 1120,
       "bookingNo": "CULVSHK2614864",
       "blNo": "CULVSHK2614864",
       "office": "CUSNZ",
@@ -22616,7 +22596,7 @@
       "status": "F"
     },
     {
-      "id": 1122,
+      "id": 1121,
       "bookingNo": "CULVSHK2617476",
       "blNo": "CULVSHK2617476",
       "office": "ULSNZ",
@@ -22636,7 +22616,7 @@
       "status": "F"
     },
     {
-      "id": 1123,
+      "id": 1122,
       "bookingNo": "CULVSHK2617508",
       "blNo": "CULVSHK2617508",
       "office": "CUSNZ",
@@ -22656,7 +22636,7 @@
       "status": "F"
     },
     {
-      "id": 1124,
+      "id": 1123,
       "bookingNo": "CULVSHK2617510",
       "blNo": "CULVSHK2617510",
       "office": "CUSNZ",
@@ -22676,7 +22656,7 @@
       "status": "F"
     },
     {
-      "id": 1125,
+      "id": 1124,
       "bookingNo": "CULVSHK2617529",
       "blNo": "CULVSHK2617529",
       "office": "ULSNZ",
@@ -22696,7 +22676,7 @@
       "status": "F"
     },
     {
-      "id": 1126,
+      "id": 1125,
       "bookingNo": "CULVSHK2614061",
       "blNo": "CULVSHK2614061",
       "office": "CUSNZ",
@@ -22716,7 +22696,7 @@
       "status": "F"
     },
     {
-      "id": 1127,
+      "id": 1126,
       "bookingNo": "CULVSHK2614680",
       "blNo": "CULVSHK2614680",
       "office": "CUSNZ",
@@ -22736,7 +22716,7 @@
       "status": "F"
     },
     {
-      "id": 1128,
+      "id": 1127,
       "bookingNo": "CULVSHK2613533",
       "blNo": "CULVSHK2613533",
       "office": "CUSNZ",
@@ -22756,7 +22736,7 @@
       "status": "F"
     },
     {
-      "id": 1129,
+      "id": 1128,
       "bookingNo": "CULVSHK2613278",
       "blNo": "CULVSHK2613278",
       "office": "CUSNZ",
@@ -22776,7 +22756,7 @@
       "status": "F"
     },
     {
-      "id": 1130,
+      "id": 1129,
       "bookingNo": "CULVSHK2617786",
       "blNo": "CULVSHK2617786",
       "office": "CUSNZ",
@@ -22796,7 +22776,7 @@
       "status": "F"
     },
     {
-      "id": 1131,
+      "id": 1130,
       "bookingNo": "CULVSHK2617787",
       "blNo": "CULVSHK2617787",
       "office": "CUSNZ",
@@ -22816,7 +22796,7 @@
       "status": "F"
     },
     {
-      "id": 1132,
+      "id": 1131,
       "bookingNo": "CULVSHK2617788",
       "blNo": "CULVSHK2617788",
       "office": "CUSNZ",
@@ -22836,7 +22816,7 @@
       "status": "F"
     },
     {
-      "id": 1133,
+      "id": 1132,
       "bookingNo": "CULVSHK2617791",
       "blNo": "CULVSHK2617791",
       "office": "CUSNZ",
@@ -22856,7 +22836,7 @@
       "status": "F"
     },
     {
-      "id": 1134,
+      "id": 1133,
       "bookingNo": "CULVSHK2617800",
       "blNo": "CULVSHK2617800",
       "office": "CUSNZ",
@@ -22876,7 +22856,7 @@
       "status": "F"
     },
     {
-      "id": 1135,
+      "id": 1134,
       "bookingNo": "CULVSHK2617801",
       "blNo": "CULVSHK2617801",
       "office": "CUSNZ",
@@ -22896,7 +22876,7 @@
       "status": "F"
     },
     {
-      "id": 1136,
+      "id": 1135,
       "bookingNo": "CULVSHK2617803",
       "blNo": "CULVSHK2617803",
       "office": "CUSNZ",
@@ -22916,7 +22896,7 @@
       "status": "F"
     },
     {
-      "id": 1137,
+      "id": 1136,
       "bookingNo": "CULVSHK2617805",
       "blNo": "CULVSHK2617805",
       "office": "CUSNZ",
@@ -22936,7 +22916,7 @@
       "status": "F"
     },
     {
-      "id": 1138,
+      "id": 1137,
       "bookingNo": "CULVSHK2617806",
       "blNo": "CULVSHK2617806",
       "office": "CUSNZ",
@@ -22956,7 +22936,7 @@
       "status": "F"
     },
     {
-      "id": 1139,
+      "id": 1138,
       "bookingNo": "CULVSHK2617807",
       "blNo": "CULVSHK2617807",
       "office": "CUSNZ",
@@ -22976,7 +22956,7 @@
       "status": "F"
     },
     {
-      "id": 1140,
+      "id": 1139,
       "bookingNo": "CULVSHK2617808",
       "blNo": "CULVSHK2617808",
       "office": "CUSNZ",
@@ -22996,7 +22976,7 @@
       "status": "F"
     },
     {
-      "id": 1141,
+      "id": 1140,
       "bookingNo": "CULVSHK2617912",
       "blNo": "CULVSHK2617912",
       "office": "CUSNZ",
@@ -23016,7 +22996,7 @@
       "status": "F"
     },
     {
-      "id": 1142,
+      "id": 1141,
       "bookingNo": "CULVSHK2617972",
       "blNo": "CULVSHK2617972",
       "office": "ULSNZ",
@@ -23036,7 +23016,7 @@
       "status": "F"
     },
     {
-      "id": 1143,
+      "id": 1142,
       "bookingNo": "CULVSHK2617975",
       "blNo": "CULVSHK2617975",
       "office": "ULSNZ",
@@ -23056,7 +23036,7 @@
       "status": "F"
     },
     {
-      "id": 1144,
+      "id": 1143,
       "bookingNo": "CULVSHK2617977",
       "blNo": "CULVSHK2617977",
       "office": "ULSNZ",
@@ -23076,7 +23056,7 @@
       "status": "F"
     },
     {
-      "id": 1145,
+      "id": 1144,
       "bookingNo": "CULVSHK2618050",
       "blNo": "CULVSHK2618050",
       "office": "ULSNZ",
@@ -23096,7 +23076,7 @@
       "status": "F"
     },
     {
-      "id": 1146,
+      "id": 1145,
       "bookingNo": "CULVSHK2613261",
       "blNo": "CULVSHK2613261",
       "office": "CUSNZ",
@@ -23116,7 +23096,7 @@
       "status": "F"
     },
     {
-      "id": 1147,
+      "id": 1146,
       "bookingNo": "CULVSHK2614845",
       "blNo": "CULVSHK2614845",
       "office": "CUSNZ",
@@ -23136,7 +23116,7 @@
       "status": "F"
     },
     {
-      "id": 1148,
+      "id": 1147,
       "bookingNo": "CULVSHK2617178",
       "blNo": "CULVSHK2617178",
       "office": "CUSNZ",
@@ -23156,7 +23136,7 @@
       "status": "F"
     },
     {
-      "id": 1149,
+      "id": 1148,
       "bookingNo": "CULVSHK2613254",
       "blNo": "CULVSHK2613254",
       "office": "CUSNZ",
@@ -23176,7 +23156,7 @@
       "status": "F"
     },
     {
-      "id": 1150,
+      "id": 1149,
       "bookingNo": "CULVSHK2618224",
       "blNo": "CULVSHK2618224",
       "office": "ULSNZ",
@@ -23196,7 +23176,7 @@
       "status": "F"
     },
     {
-      "id": 1151,
+      "id": 1150,
       "bookingNo": "CULVSHK2613511",
       "blNo": "CULVSHK2613511",
       "office": "CUSNZ",
@@ -23216,7 +23196,7 @@
       "status": "F"
     },
     {
-      "id": 1152,
+      "id": 1151,
       "bookingNo": "CULVSHK2614868",
       "blNo": "CULVSHK2614868",
       "office": "CUSNZ",
@@ -23236,7 +23216,7 @@
       "status": "F"
     },
     {
-      "id": 1153,
+      "id": 1152,
       "bookingNo": "CULVSHK2614795",
       "blNo": "CULVSHK2614795",
       "office": "CUSNZ",
@@ -23256,7 +23236,7 @@
       "status": "F"
     },
     {
-      "id": 1154,
+      "id": 1153,
       "bookingNo": "CULVSHK2616158",
       "blNo": "CULVSHK2616158",
       "office": "CUSNZ",
@@ -23276,7 +23256,7 @@
       "status": "F"
     },
     {
-      "id": 1155,
+      "id": 1154,
       "bookingNo": "CULVSHK2614831",
       "blNo": "CULVSHK2614831",
       "office": "CUSNZ",
@@ -23296,7 +23276,7 @@
       "status": "F"
     },
     {
-      "id": 1156,
+      "id": 1155,
       "bookingNo": "CULVSHK2616172",
       "blNo": "CULVSHK2616172",
       "office": "CUSNZ",
@@ -23316,7 +23296,7 @@
       "status": "F"
     },
     {
-      "id": 1157,
+      "id": 1156,
       "bookingNo": "CULVSHK2614654",
       "blNo": "CULVSHK2614654",
       "office": "CUSNZ",
@@ -23336,7 +23316,7 @@
       "status": "F"
     },
     {
-      "id": 1158,
+      "id": 1157,
       "bookingNo": "CULVSHK2613417",
       "blNo": "CULVSHK2613417",
       "office": "CUSNZ",
@@ -23356,7 +23336,7 @@
       "status": "F"
     },
     {
-      "id": 1159,
+      "id": 1158,
       "bookingNo": "CULVSHK2615234",
       "blNo": "CULVSHK2615234",
       "office": "ULSNZ",
@@ -23376,7 +23356,7 @@
       "status": "F"
     },
     {
-      "id": 1160,
+      "id": 1159,
       "bookingNo": "CULVSHK2617403",
       "blNo": "CULVSHK2617403",
       "office": "ULSNZ",
@@ -23396,7 +23376,7 @@
       "status": "F"
     },
     {
-      "id": 1161,
+      "id": 1160,
       "bookingNo": "CULVSHK2618758",
       "blNo": "CULVSHK2618758",
       "office": "ULSNZ",
@@ -23416,7 +23396,7 @@
       "status": "F"
     },
     {
-      "id": 1162,
+      "id": 1161,
       "bookingNo": "CULVSHK2614727",
       "blNo": "CULVSHK2614727",
       "office": "ULSNZ",
@@ -23436,7 +23416,7 @@
       "status": "F"
     },
     {
-      "id": 1163,
+      "id": 1162,
       "bookingNo": "CULVSHK2614918",
       "blNo": "CULVSHK2614918",
       "office": "ULSNZ",
@@ -23456,7 +23436,7 @@
       "status": "F"
     },
     {
-      "id": 1164,
+      "id": 1163,
       "bookingNo": "CULVSHK2614616",
       "blNo": "CULVSHK2614616",
       "office": "ULSNZ",
@@ -23476,7 +23456,7 @@
       "status": "F"
     },
     {
-      "id": 1165,
+      "id": 1164,
       "bookingNo": "CULVSHK2616671",
       "blNo": "CULVSHK2616671",
       "office": "ULSNZ",
@@ -23496,7 +23476,7 @@
       "status": "F"
     },
     {
-      "id": 1166,
+      "id": 1165,
       "bookingNo": "CULVTAO2604264",
       "blNo": "CULVTAO2604264",
       "office": "CUTAO",
@@ -23516,7 +23496,7 @@
       "status": "F"
     },
     {
-      "id": 1167,
+      "id": 1166,
       "bookingNo": "CULVTAO2606393",
       "blNo": "CULVTAO2606393",
       "office": "CUTAO",
@@ -23536,7 +23516,7 @@
       "status": "F"
     },
     {
-      "id": 1168,
+      "id": 1167,
       "bookingNo": "CULVPKG2600709",
       "blNo": "CULVPKG2600709",
       "office": "CUPKG",
