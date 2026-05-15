@@ -6,9 +6,9 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta property="og:title" content="CGX service Booking" />
-  <meta property="og:description" content="CGX service Live Booking Dashboard" />
-  <title>CGX service Booking</title>
+  <meta property="og:title" content="CGX & REX service Booking" />
+  <meta property="og:description" content="CGX & REX service Live Booking Dashboard" />
+  <title>CGX & REX service Booking</title>
   <style>
     :root {
       --navy: #17365d;
@@ -21,6 +21,8 @@
       --warning: #f59e0b;
       --good: #10b981;
       --idle: #cbd5e1;
+      --rex-navy: #5b2c1a;
+      --rex-blue: #b5652f;
     }
     * { box-sizing: border-box; }
     body {
@@ -139,7 +141,22 @@
     }
     .page-hidden { display: none; }
 
-    /* Tab 样式 */
+    /* Tab 组样式 */
+    .service-group {
+      width: 1120px;
+      margin: 0 auto;
+    }
+    .service-group + .service-group {
+      margin-top: 40px;
+    }
+    .service-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      padding: 10px 18px 0;
+    }
     .tab-bar {
       width: 1120px;
       margin: 0 auto 0;
@@ -149,6 +166,10 @@
       border: 2px solid var(--navy);
       border-radius: 14px 14px 0 0;
       overflow: hidden;
+    }
+    .tab-bar.rex-bar {
+      background: var(--rex-navy);
+      border-color: var(--rex-navy);
     }
     .tab-btn {
       flex: 1;
@@ -169,10 +190,15 @@
       color: var(--navy);
       border-radius: 12px 12px 0 0;
     }
+    .tab-bar.rex-bar .tab-btn.active {
+      color: var(--rex-navy);
+    }
     .tab-btn.active .tab-vvd { color: var(--blue); font-weight: 600; }
+    .tab-bar.rex-bar .tab-btn.active .tab-vvd { color: var(--rex-blue); }
     .tab-vvd { display: block; font-size: 13px; font-weight: 500; margin-top: 3px; }
     .tab-btn + .tab-btn { border-left: 1px solid rgba(255,255,255,0.15); }
     .tab-btn.active + .tab-btn { border-left-color: var(--navy); }
+    .tab-bar.rex-bar .tab-btn.active + .tab-btn { border-left-color: var(--rex-navy); }
 
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -181,26 +207,124 @@
       body { padding: 10px; overflow-x: auto; }
       .page { width: 1120px; min-height: auto; }
       .tab-bar { width: 1120px; }
+      .service-group { width: 1120px; }
       .pod-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Tab 切换栏（新增船放第一个） -->
-  <div class="tab-bar">
-    <button class="tab-btn active" data-tab="CUHC2620W" onclick="switchTab('CUHC2620W')">
-      CUHC2620W
-      <span class="tab-vvd">CUHC</span>
-    </button>
-    <button class="tab-btn" data-tab="XPBL2618W" onclick="switchTab('XPBL2618W')">
-      XPBL2618W
-      <span class="tab-vvd">EXPRESS BERLIN</span>
-    </button>
-    <button class="tab-btn" data-tab="RACE2616W" onclick="switchTab('RACE2616W')">
-      RACE2616W
-      <span class="tab-vvd">RACINE</span>
-    </button>
+  <!-- ====== CGX Service ====== -->
+  <div class="service-group">
+    <div class="service-label">CGX Service</div>
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="CUHC2620W" onclick="switchTab('CUHC2620W')">
+        CUHC2620W
+        <span class="tab-vvd">CUHC</span>
+      </button>
+      <button class="tab-btn" data-tab="XPBL2618W" onclick="switchTab('XPBL2618W')">
+        XPBL2618W
+        <span class="tab-vvd">EXPRESS BERLIN</span>
+      </button>
+      <button class="tab-btn" data-tab="RACE2616W" onclick="switchTab('RACE2616W')">
+        RACE2616W
+        <span class="tab-vvd">RACINE</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== REX Service ====== -->
+  <div class="service-group">
+    <div class="service-label">REX Service</div>
+    <div class="tab-bar rex-bar">
+      <button class="tab-btn" data-tab="BZCF2621W" onclick="switchTab('BZCF2621W')">
+        BZCF2621W
+        <span class="tab-vvd">BZ CHONGFU</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== BZCF2621W 面板 ====== -->
+  <div class="tab-panel" id="panel-BZCF2621W">
+
+    <section class="page">
+      <div class="watermark" id="wm-BZCF">BZCF2621W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-BZCF">REX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-BZCF">BZCF2621W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-BZCF">2621W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-BZCF">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-BZCF"></div>
+      <div class="completion-strip" id="completionStrip-BZCF"></div>
+      <div class="region-strip" id="regionStrip-BZCF"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-BZCF"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-BZCF">--</span>
+        <span>REX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-BZCF">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">BZCF2621W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-BZCF">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-BZCF"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-BZCF"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
   </div>
 
   <!-- ====== RACE2616W 面板 ====== -->
@@ -252,7 +376,7 @@
 
       <div class="footer">
         <span id="footer-time-RACE">--</span>
-        <span>RACE Service Live View</span>
+        <span>CGX Service Live View</span>
       </div>
     </section>
 
@@ -287,7 +411,7 @@
   </div>
 
   <!-- ====== XPBL2618W 面板 ====== -->
-  <div class="tab-panel active" id="panel-XPBL2618W">
+  <div class="tab-panel" id="panel-XPBL2618W">
 
     <section class="page">
       <div class="watermark" id="wm-XPBL">XPBL2618W UPDATE</div>
@@ -335,7 +459,7 @@
 
       <div class="footer">
         <span id="footer-time-XPBL">--</span>
-        <span>XPBL Service Live View</span>
+        <span>CGX Service Live View</span>
       </div>
     </section>
 
@@ -418,7 +542,7 @@
 
       <div class="footer">
         <span id="footer-time-CUHC">--</span>
-        <span>CUHC Service Live View</span>
+        <span>CGX Service Live View</span>
       </div>
     </section>
 
@@ -477,20 +601,20 @@
     function adjustScreenshotHeight() {
       if (!document.documentElement.classList.contains('screenshot-mode')) return;
       const scrollH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-      const fullH = scrollH + 40; // 额外 padding
-      // 用 viewport meta 或 CSS 变量让内容适配
+      const fullH = scrollH + 40;
       document.documentElement.style.setProperty('--screenshot-height', fullH + 'px');
       console.log('[screenshot] content height:', fullH);
     }
 
     // ===== Vessel 配置 =====
     const VESSELS = {
+      BZCF2621W: { jsonFile: 'BZCF2621W_public_data.json', prefix: 'BZCF' },
       RACE2616W: { jsonFile: 'RACE2616W_public_data.json', prefix: 'RACE' },
       XPBL2618W: { jsonFile: 'XPBL2618W_public_data.json', prefix: 'XPBL' },
       CUHC2620W: { jsonFile: 'CUHC2620W_public_data.json', prefix: 'CUHC' },
     };
 
-    let currentTab = 'XPBL2618W';
+    let currentTab = 'CUHC2620W';
     const payloads = {};
 
     // ===== Tab 切换 =====
@@ -502,7 +626,6 @@
       document.querySelectorAll('.tab-panel').forEach(panel => {
         panel.classList.toggle('active', panel.id === 'panel-' + vvd);
       });
-      // 更新 URL hash 以便截图时知道当前 Tab
       history.replaceState(null, '', '#' + vvd);
     }
 
@@ -628,7 +751,7 @@
       document.getElementById('booking-chip-' + prefix).textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
       document.getElementById('pod-count-' + prefix).textContent = formatNumber((payload.topPods || []).length);
       document.getElementById('footer-time-' + prefix).textContent = '数据更新: ' + formatDateTime(payload.generatedAt);
-      document.title = 'CGX service Booking Update / Live Dashboard';
+      document.title = 'CGX & REX service Booking Update / Live Dashboard';
     }
 
     // ===== Middle East & Red Sea 统计 =====
@@ -637,7 +760,6 @@
       'Red Sea': ['SAJED', 'SDPZU', 'EGSOK', 'YEADE', 'DJJIB', 'JOAQJ'],
     };
 
-    // Sharjah ICD：按 DEL 字段匹配，后续增加条件只需往数组加即可
     const SHARJAH_ICD_DEL_CODES = ['AESCT'];
 
     function renderRegionStrip(prefix, payload) {
@@ -647,11 +769,9 @@
       let blocksHtml = '';
       Object.entries(REGION_PODS).forEach(([regionName, podList]) => {
         const podSet = new Set(podList);
-        // 优先匹配 DEL (delivery)，如果不匹配再匹配 POD
         const matchedRows = rows.filter(r => {
           const del = r.delivery || '';
           const pod = r.pod || '';
-          // DEL 字段可能带后缀如 AEJEAAT02，取前5位匹配
           const delBase = del.substring(0, 5);
           return podSet.has(delBase) || podSet.has(pod);
         });
@@ -667,7 +787,6 @@
           </div>`;
       });
 
-      // Sharjah ICD 统计（按 DEL 匹配）
       const sharjahSet = new Set(SHARJAH_ICD_DEL_CODES);
       const sharjahRows = rows.filter(r => {
         const del = (r.delivery || '').substring(0, 5);
@@ -699,7 +818,6 @@
         console.log('[renderVessel]', vvd, 'OK, prefix=', prefix, 'payload.totals=', payload.totals);
       } catch(e) {
         console.error('[renderVessel]', vvd, 'FAILED:', e.message);
-        // 在对应 tab 面板里显示错误信息
         const panel = document.getElementById('panel-' + vvd);
         if (panel) {
           let errDiv = panel.querySelector('.render-error');
@@ -724,7 +842,6 @@
         renderVessel(vvd, payload);
       } catch(e) {
         console.error('[loadVessel]', vvd, 'FAILED:', e.message);
-        // 在对应 tab 面板里显示错误信息
         const panel = document.getElementById('panel-' + vvd);
         if (panel) {
           let errDiv = panel.querySelector('.render-error');
@@ -752,7 +869,6 @@
 
     // 初始化
     loadAll().then(() => {
-      // 截图模式：数据加载完成后等一小段时间让 DOM 完全渲染，然后调整高度
       if (document.documentElement.classList.contains('screenshot-mode')) {
         setTimeout(adjustScreenshotHeight, 500);
       }
