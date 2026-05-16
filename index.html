@@ -648,6 +648,12 @@
       const tabParam = params.get('tab') || hash;
       if (tabParam && VESSELS[tabParam]) {
         switchTab(tabParam);
+      } else {
+        // 默认激活第一个有 active 的 tab-btn 对应的面板
+        const activeBtn = document.querySelector('.tab-btn.active');
+        if (activeBtn && activeBtn.dataset.tab) {
+          switchTab(activeBtn.dataset.tab);
+        }
       }
     })();
 
