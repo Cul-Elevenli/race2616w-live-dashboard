@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-16T16:12:00.068Z",
-  "sourceUpdatedAt": "2026-05-16T16:09:25.219Z",
+  "generatedAt": "2026-05-18T00:55:11.306Z",
+  "sourceUpdatedAt": "2026-05-18T00:47:47.905Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "XPBL2618W",
   "voyage": "2618W",
@@ -8,17 +8,17 @@
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；KR/TW/JP 按 POL 前缀归类；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 8800,
-    "current": 8869,
-    "gap": 69,
+    "current": 8871,
+    "gap": 71,
     "completionRate": 100.8,
-    "ft20": 1073,
+    "ft20": 1075,
     "ft40": 3898,
-    "teu": 8869,
+    "teu": 8871,
     "displayCurrent": 8860,
     "displayGap": 60,
     "displayCompletionRate": 100.7,
-    "otherBookingCount": 6,
-    "otherTeu": 9,
+    "otherBookingCount": 7,
+    "otherTeu": 11,
     "otherPols": [
       "THSCS"
     ]
@@ -196,7 +196,7 @@
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；KR/TW/JP 按 POL 前缀归类；via NAS 的归入对应 NAS bucket；via TAO 的归入对应 TAO bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。",
-    "当前总 booking 中含 6 条未落入 allocation bucket 的 OTHER booking（9 TEU），POL：THSCS。"
+    "当前总 booking 中含 7 条未落入 allocation bucket 的 OTHER booking（11 TEU），POL：THSCS。"
   ],
   "rows": [
     {
@@ -1975,15 +1975,15 @@
       "por": "THSCS",
       "pod": "INNSA",
       "delivery": "INNSA",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
+      "tsPrev": "-",
+      "tsPost": "CNNAS",
       "baseCategory": "OTHER",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
       "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 95,
