@@ -1331,8 +1331,9 @@
       document.getElementById('triggerVvd').textContent = vvd;
       document.getElementById('triggerSub').textContent = meta.name || '';
       const badge = document.getElementById('triggerBadge');
-      badge.textContent = meta.service === 'rex' ? 'REX' : 'CGX';
-      badge.className   = 'vdt-badge' + (meta.service === 'rex' ? ' rex' : '');
+      const svcUpper = (meta.service || 'cgx').toUpperCase();
+      badge.textContent = svcUpper;
+      badge.className   = 'vdt-badge' + (meta.service ? ' ' + meta.service : '');
 
       // 更新下拉项选中状态
       document.querySelectorAll('#dropdownList .vdp-item').forEach(item => {
@@ -1489,11 +1490,14 @@
     };
 
     const SHARJAH_ICD_DEL_CODES = ['AESCT'];
+    const NAF_DEL_CODES = ['LYMRA', 'LYBEM', 'ALGER'];
 
-    function renderRegionStrip(prefix, payload) {
+    function renderRegionStrip(prefix, payload, vvd) {
       const el = document.getElementById('regionStrip-' + prefix);
       if (!el) return;
       const rows = payload.rows || [];
+      const meta = VESSEL_META[vvd] || {};
+      const service = meta.service || 'cgx';
       let blocksHtml = '';
       Object.entries(REGION_PODS).forEach(([regionName, podList]) => {
         const podSet = new Set(podList);
@@ -1515,21 +1519,41 @@
           </div>`;
       });
 
-      const sharjahSet = new Set(SHARJAH_ICD_DEL_CODES);
-      const sharjahRows = rows.filter(r => {
-        const del = (r.delivery || '').substring(0, 5);
-        return sharjahSet.has(del);
-      });
-      const sharjahTeu = sharjahRows.reduce((s, r) => s + (r.teu || 0), 0);
-      const sharjahCount = sharjahRows.length;
-      const sharjahFt20 = sharjahRows.reduce((s, r) => s + (r.ft20 || 0), 0);
-      const sharjahFt40 = sharjahRows.reduce((s, r) => s + (r.ft40 || 0), 0);
-      blocksHtml += `
+      if (service === 'aem') {
+        // AEM Service：NAF 区域（LYMRA / LYBEM / ALGER）
+        const nafSet = new Set(NAF_DEL_CODES);
+        const nafRows = rows.filter(r => {
+          const del = (r.delivery || '').substring(0, 5);
+          return nafSet.has(del);
+        });
+        const nafTeu = nafRows.reduce((s, r) => s + (r.teu || 0), 0);
+        const nafCount = nafRows.length;
+        const nafFt20 = nafRows.reduce((s, r) => s + (r.ft20 || 0), 0);
+        const nafFt40 = nafRows.reduce((s, r) => s + (r.ft40 || 0), 0);
+        blocksHtml += `
+          <div class="region-block" style="border-left:3px solid #d97706;">
+            <span class="region-label">NAF</span>
+            <span class="region-value">${formatNumber(nafTeu)}<span class="subvalue">TEU</span></span>
+            <span class="region-meta">${nafCount} bk · 20ft ${nafFt20} / 40ft ${nafFt40}</span>
+          </div>`;
+      } else {
+        // CGX / REX：Sharjah ICD
+        const sharjahSet = new Set(SHARJAH_ICD_DEL_CODES);
+        const sharjahRows = rows.filter(r => {
+          const del = (r.delivery || '').substring(0, 5);
+          return sharjahSet.has(del);
+        });
+        const sharjahTeu = sharjahRows.reduce((s, r) => s + (r.teu || 0), 0);
+        const sharjahCount = sharjahRows.length;
+        const sharjahFt20 = sharjahRows.reduce((s, r) => s + (r.ft20 || 0), 0);
+        const sharjahFt40 = sharjahRows.reduce((s, r) => s + (r.ft40 || 0), 0);
+        blocksHtml += `
           <div class="region-block" style="border-left:3px solid #d97706;">
             <span class="region-label">Sharjah ICD</span>
             <span class="region-value">${formatNumber(sharjahTeu)}<span class="subvalue">TEU</span></span>
             <span class="region-meta">${sharjahCount} bk · 20ft ${sharjahFt20} / 40ft ${sharjahFt40}</span>
           </div>`;
+      }
 
       el.innerHTML = `<div class="region-row">${blocksHtml}</div>`;
     }
@@ -1540,7 +1564,7 @@
         payloads[vvd] = payload;
         renderMeta(prefix, payload);
         renderSummary(prefix, payload);
-        renderRegionStrip(prefix, payload);
+        renderRegionStrip(prefix, payload, vvd);
         renderCategories(prefix, payload.categoryRows || [], payload.totals || {});
         renderPods(prefix, payload.topPods || []);
         console.log('[renderVessel]', vvd, 'OK, prefix=', prefix, 'payload.totals=', payload.totals);
