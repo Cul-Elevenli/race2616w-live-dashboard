@@ -141,73 +141,166 @@
     }
     .page-hidden { display: none; }
 
-    /* Tab 组样式 */
-    .tab-groups {
+    /* ====== 下拉选择器导航样式 ====== */
+    .vessel-nav {
       width: 1120px;
-      margin: 0 auto;
+      margin: 0 auto 0;
+      background: var(--navy);
+      border-radius: 14px 14px 0 0;
+      padding: 14px 20px 0;
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
+      align-items: flex-end;
+      gap: 24px;
     }
-    .service-group {
-      flex: 1;
-      min-width: 0;
-    }
-    .service-label {
-      font-size: 12px;
+    .nav-brand {
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #fff;
-      background: var(--navy);
-      padding: 6px 14px;
-      border-radius: 8px 8px 0 0;
-      display: inline-block;
+      padding-bottom: 12px;
+      white-space: nowrap;
     }
-    .service-group.rex-group .service-label {
-      background: var(--rex-navy);
-    }
-    .tab-bar {
+    .nav-selector-wrap {
+      flex: 1;
       display: flex;
-      gap: 0;
-      background: var(--navy);
-      border: 2px solid var(--navy);
-      border-radius: 0 14px 0 0;
+      align-items: flex-end;
+      gap: 16px;
+    }
+    /* 自定义下拉容器 */
+    .vessel-dropdown {
+      position: relative;
+      min-width: 340px;
+    }
+    .vessel-dropdown-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: 10px 10px 0 0;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .vessel-dropdown-trigger:hover { background: rgba(255,255,255,0.18); }
+    .vessel-dropdown-trigger.open {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .vdt-left { display: flex; flex-direction: column; gap: 1px; }
+    .vdt-vvd { color: #fff; font-size: 17px; font-weight: 700; letter-spacing: 0.3px; line-height: 1.2; }
+    .vdt-sub { color: rgba(255,255,255,0.6); font-size: 11px; font-weight: 500; letter-spacing: 0.3px; }
+    .vdt-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 2px 7px; border-radius: 999px;
+      background: var(--blue); color: #fff;
+    }
+    .vdt-badge.rex { background: var(--rex-blue); }
+    .vdt-arrow {
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .vessel-dropdown-trigger.open .vdt-arrow { transform: rotate(180deg); }
+
+    /* 下拉面板 */
+    .vessel-dropdown-panel {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 8px 24px rgba(23,54,93,0.18);
+      z-index: 100;
       overflow: hidden;
     }
-    .tab-bar.rex-bar {
-      background: var(--rex-navy);
-      border-color: var(--rex-navy);
-      border-radius: 0 14px 0 0;
+    .vessel-dropdown-panel.open { display: block; }
+    .vdp-search-wrap {
+      padding: 10px 10px 6px;
+      border-bottom: 1px solid #eef2f8;
     }
-    .tab-btn {
-      flex: 1;
-      padding: 16px 20px;
-      border: none;
-      background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.6);
-      font-size: 18px;
+    .vdp-search {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      outline: none;
+      background: #f8fbfe;
+      color: var(--text);
+      box-sizing: border-box;
+    }
+    .vdp-search:focus { border-color: var(--blue); background: #fff; }
+    .vdp-group-label {
+      padding: 7px 12px 4px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #f2f6fb;
+    }
+    .vdp-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: background 0.12s;
+      border-bottom: 1px solid #f0f4f9;
+    }
+    .vdp-item:last-child { border-bottom: none; }
+    .vdp-item:hover { background: #eef5fd; }
+    .vdp-item.selected { background: #dbeaf7; }
+    .vdp-item.hidden { display: none; }
+    .vdp-vvd { font-weight: 700; font-size: 14px; color: var(--navy); min-width: 110px; }
+    .vdp-name { font-size: 12px; color: var(--muted); flex: 1; }
+    .vdp-svc {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.8px;
+      padding: 2px 7px; border-radius: 999px;
+    }
+    .vdp-svc.cgx { background: #dbeaf7; color: var(--navy); }
+    .vdp-svc.rex { background: #f4e4da; color: var(--rex-navy); }
+    .vdp-no-result {
+      padding: 14px; text-align: center; color: var(--muted); font-size: 13px; display: none;
+    }
+
+    /* 快速跳转芯片区 */
+    .nav-chips {
+      display: flex;
+      gap: 6px;
+      flex-wrap: nowrap;
+      padding-bottom: 10px;
+      overflow-x: auto;
+    }
+    .nav-chip {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.65);
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s;
-      position: relative;
+      white-space: nowrap;
+      transition: all 0.15s;
       letter-spacing: 0.3px;
     }
-    .tab-btn:hover { background: rgba(255,255,255,0.15); color: #fff; }
-    .tab-btn.active {
+    .nav-chip:hover { background: rgba(255,255,255,0.18); color: #fff; border-color: rgba(255,255,255,0.5); }
+    .nav-chip.active {
       background: #fff;
       color: var(--navy);
-      border-radius: 12px 12px 0 0;
+      border-color: #fff;
     }
-    .tab-bar.rex-bar .tab-btn.active {
-      color: var(--rex-navy);
-    }
-    .tab-btn.active .tab-vvd { color: var(--blue); font-weight: 600; }
-    .tab-bar.rex-bar .tab-btn.active .tab-vvd { color: var(--rex-blue); }
-    .tab-vvd { display: block; font-size: 13px; font-weight: 500; margin-top: 3px; }
-    .tab-btn + .tab-btn { border-left: 1px solid rgba(255,255,255,0.15); }
-    .tab-btn.active + .tab-btn { border-left-color: var(--navy); }
-    .tab-bar.rex-bar .tab-btn.active + .tab-btn { border-left-color: var(--rex-navy); }
+    .nav-chip.active.rex { color: var(--rex-navy); }
 
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -215,45 +308,165 @@
     @media (max-width: 980px) {
       body { padding: 10px; overflow-x: auto; }
       .page { width: 1120px; min-height: auto; }
-      .tab-bar { width: auto; }
-      .tab-groups { width: 1120px; }
-      .service-group { width: auto; }
+      .vessel-nav { width: 1120px; }
       .pod-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <div class="tab-groups">
-    <!-- ====== CGX Service ====== -->
-    <div class="service-group">
-      <div class="service-label">CGX Service</div>
-      <div class="tab-bar">
-        <button class="tab-btn active" data-tab="CUHC2620W" onclick="switchTab('CUHC2620W')">
-          CUHC2620W
-          <span class="tab-vvd">CUHC</span>
-        </button>
-        <button class="tab-btn" data-tab="XPBL2618W" onclick="switchTab('XPBL2618W')">
-          XPBL2618W
-          <span class="tab-vvd">EXPRESS BERLIN</span>
-        </button>
-        <button class="tab-btn" data-tab="RACE2616W" onclick="switchTab('RACE2616W')">
-          RACE2616W
-          <span class="tab-vvd">RACINE</span>
-        </button>
-      </div>
-    </div>
+  <!-- ====== 下拉导航 ====== -->
+  <div class="vessel-nav" id="vesselNav">
+    <div class="nav-brand">CGX &amp; REX</div>
 
-    <!-- ====== REX Service ====== -->
-    <div class="service-group rex-group">
-      <div class="service-label">REX Service</div>
-      <div class="tab-bar rex-bar">
-        <button class="tab-btn" data-tab="BZCF2621W" onclick="switchTab('BZCF2621W')">
-          BZCF2621W
-          <span class="tab-vvd">BZ CHONGFU</span>
-        </button>
+    <div class="nav-selector-wrap">
+      <!-- 自定义可搜索下拉 -->
+      <div class="vessel-dropdown" id="vesselDropdown">
+        <div class="vessel-dropdown-trigger" id="dropdownTrigger" onclick="toggleDropdown()">
+          <div class="vdt-left">
+            <span class="vdt-vvd" id="triggerVvd">RACE2623W</span>
+            <span class="vdt-sub" id="triggerSub">RACINE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="vdt-badge" id="triggerBadge">CGX</span>
+            <span class="vdt-arrow">▼</span>
+          </div>
+        </div>
+
+        <div class="vessel-dropdown-panel" id="dropdownPanel">
+          <div class="vdp-search-wrap">
+            <input class="vdp-search" id="vesselSearch" type="text" placeholder="搜索船名、VVD..." oninput="filterDropdown(this.value)" autocomplete="off" />
+          </div>
+
+          <div id="dropdownList">
+            <!-- CGX -->
+            <div class="vdp-group-label" data-group="CGX">CGX Service</div>
+            <div class="vdp-item selected" data-vvd="RACE2623W" data-service="cgx" data-name="RACINE" onclick="selectVessel('RACE2623W')">
+              <span class="vdp-vvd">RACE2623W</span>
+              <span class="vdp-name">RACINE</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="CUHC2620W" data-service="cgx" data-name="CUHC" onclick="selectVessel('CUHC2620W')">
+              <span class="vdp-vvd">CUHC2620W</span>
+              <span class="vdp-name">CUHC</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="XPBL2618W" data-service="cgx" data-name="EXPRESS BERLIN" onclick="selectVessel('XPBL2618W')">
+              <span class="vdp-vvd">XPBL2618W</span>
+              <span class="vdp-name">EXPRESS BERLIN</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="RACE2616W" data-service="cgx" data-name="RACINE" onclick="selectVessel('RACE2616W')">
+              <span class="vdp-vvd">RACE2616W</span>
+              <span class="vdp-name">RACINE</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
+
+            <!-- REX -->
+            <div class="vdp-group-label" data-group="REX">REX Service</div>
+            <div class="vdp-item" data-vvd="BZCF2621W" data-service="rex" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2621W')">
+              <span class="vdp-vvd">BZCF2621W</span>
+              <span class="vdp-name">BZ CHONGFU</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
+
+            <div class="vdp-no-result" id="noResult">无匹配结果</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 快速跳转芯片 -->
+      <div class="nav-chips" id="navChips">
+        <button class="nav-chip active" data-tab="RACE2623W" onclick="selectVessel('RACE2623W')">RACE2623W</button>
+        <button class="nav-chip" data-tab="CUHC2620W" onclick="selectVessel('CUHC2620W')">CUHC2620W</button>
+        <button class="nav-chip" data-tab="XPBL2618W" onclick="selectVessel('XPBL2618W')">XPBL2618W</button>
+        <button class="nav-chip" data-tab="RACE2616W" onclick="selectVessel('RACE2616W')">RACE2616W</button>
+        <button class="nav-chip rex" data-tab="BZCF2621W" onclick="selectVessel('BZCF2621W')">BZCF2621W</button>
       </div>
     </div>
+  </div>
+
+  <!-- ====== RACE2623W 面板 ====== -->
+  <div class="tab-panel active" id="panel-RACE2623W">
+
+    <section class="page">
+      <div class="watermark" id="wm-RACE2623">RACE2623W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-RACE2623">CGX service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-RACE2623">RACE2623W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-RACE2623">2623W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-RACE2623">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-RACE2623"></div>
+      <div class="completion-strip" id="completionStrip-RACE2623"></div>
+      <div class="region-strip" id="regionStrip-RACE2623"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-RACE2623"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-RACE2623">--</span>
+        <span>CGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-RACE2623">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">RACE2623W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-RACE2623">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-RACE2623"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-RACE2623"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
   </div>
 
   <!-- ====== BZCF2621W 面板 ====== -->
@@ -620,40 +833,114 @@
 
     // ===== Vessel 配置 =====
     const VESSELS = {
+      RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623' },
       BZCF2621W: { jsonFile: 'BZCF2621W_public_data.json', prefix: 'BZCF' },
       RACE2616W: { jsonFile: 'RACE2616W_public_data.json', prefix: 'RACE' },
       XPBL2618W: { jsonFile: 'XPBL2618W_public_data.json', prefix: 'XPBL' },
       CUHC2620W: { jsonFile: 'CUHC2620W_public_data.json', prefix: 'CUHC' },
     };
 
-    let currentTab = 'CUHC2620W';
+    let currentTab = 'RACE2623W';
     const payloads = {};
 
-    // ===== Tab 切换 =====
-    function switchTab(vvd) {
-      currentTab = vvd;
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === vvd);
+    // ===== 下拉导航逻辑 =====
+    const VESSEL_META = {
+      RACE2623W: { name: 'RACINE',        service: 'cgx' },
+      CUHC2620W: { name: 'CUHC',          service: 'cgx' },
+      XPBL2618W: { name: 'EXPRESS BERLIN',service: 'cgx' },
+      RACE2616W: { name: 'RACINE',        service: 'cgx' },
+      BZCF2621W: { name: 'BZ CHONGFU',   service: 'rex' },
+    };
+
+    function toggleDropdown() {
+      const trigger = document.getElementById('dropdownTrigger');
+      const panel   = document.getElementById('dropdownPanel');
+      const isOpen  = panel.classList.toggle('open');
+      trigger.classList.toggle('open', isOpen);
+      if (isOpen) {
+        const inp = document.getElementById('vesselSearch');
+        inp.value = '';
+        filterDropdown('');
+        setTimeout(() => inp.focus(), 50);
+      }
+    }
+
+    function closeDropdown() {
+      document.getElementById('dropdownPanel').classList.remove('open');
+      document.getElementById('dropdownTrigger').classList.remove('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const dd = document.getElementById('vesselDropdown');
+      if (dd && !dd.contains(e.target)) closeDropdown();
+    });
+
+    function filterDropdown(q) {
+      const items = document.querySelectorAll('#dropdownList .vdp-item');
+      const groups = document.querySelectorAll('#dropdownList .vdp-group-label');
+      const kw = q.trim().toLowerCase();
+      let visibleCount = 0;
+      // 先显示所有 group label，再按结果隐藏空组
+      groups.forEach(g => g.style.display = '');
+      items.forEach(item => {
+        const vvd  = (item.dataset.vvd  || '').toLowerCase();
+        const name = (item.dataset.name || '').toLowerCase();
+        const svc  = (item.dataset.service || '').toLowerCase();
+        const match = !kw || vvd.includes(kw) || name.includes(kw) || svc.includes(kw);
+        item.classList.toggle('hidden', !match);
+        if (match) visibleCount++;
       });
+      // 如果某分组下所有 item 都隐藏，隐藏该分组 label
+      groups.forEach(g => {
+        const svcName = g.dataset.group.toLowerCase();
+        const hasVisible = [...items].some(i => i.dataset.service === svcName.toLowerCase() && !i.classList.contains('hidden'));
+        g.style.display = hasVisible ? '' : 'none';
+      });
+      document.getElementById('noResult').style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    function selectVessel(vvd) {
+      currentTab = vvd;
+      closeDropdown();
+
+      // 更新触发器显示
+      const meta = VESSEL_META[vvd] || {};
+      document.getElementById('triggerVvd').textContent = vvd;
+      document.getElementById('triggerSub').textContent = meta.name || '';
+      const badge = document.getElementById('triggerBadge');
+      badge.textContent = meta.service === 'rex' ? 'REX' : 'CGX';
+      badge.className   = 'vdt-badge' + (meta.service === 'rex' ? ' rex' : '');
+
+      // 更新下拉项选中状态
+      document.querySelectorAll('#dropdownList .vdp-item').forEach(item => {
+        item.classList.toggle('selected', item.dataset.vvd === vvd);
+      });
+
+      // 更新快速芯片选中状态
+      document.querySelectorAll('#navChips .nav-chip').forEach(chip => {
+        chip.classList.toggle('active', chip.dataset.tab === vvd);
+      });
+
+      // 切换面板
       document.querySelectorAll('.tab-panel').forEach(panel => {
         panel.classList.toggle('active', panel.id === 'panel-' + vvd);
       });
+
       history.replaceState(null, '', '#' + vvd);
     }
 
-    // 从 URL 参数或 hash 自动切换 Tab（供截图使用）
+    // switchTab 保持兼容（截图等内部调用）
+    function switchTab(vvd) { selectVessel(vvd); }
+
+    // 从 URL 参数或 hash 自动切换（供截图使用）
     (function() {
-      const params = new URLSearchParams(window.location.search);
-      const hash = window.location.hash.replace('#', '');
+      const params   = new URLSearchParams(window.location.search);
+      const hash     = window.location.hash.replace('#', '');
       const tabParam = params.get('tab') || hash;
       if (tabParam && VESSELS[tabParam]) {
-        switchTab(tabParam);
+        selectVessel(tabParam);
       } else {
-        // 默认激活第一个有 active 的 tab-btn 对应的面板
-        const activeBtn = document.querySelector('.tab-btn.active');
-        if (activeBtn && activeBtn.dataset.tab) {
-          switchTab(activeBtn.dataset.tab);
-        }
+        selectVessel('RACE2623W');
       }
     })();
 
