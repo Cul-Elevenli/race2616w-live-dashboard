@@ -247,7 +247,21 @@
       text-transform: uppercase;
       color: var(--muted);
       background: #f2f6fb;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
+    .vdp-group-label::before {
+      content: '▼';
+      font-size: 8px;
+      transition: transform 0.2s;
+    }
+    .vdp-group-label.collapsed::before {
+      transform: rotate(-90deg);
+    }
+    .vdp-item.group-hidden { display: none; }
     .vdp-item {
       display: flex;
       align-items: center;
@@ -364,6 +378,11 @@
 
             <!-- REX -->
             <div class="vdp-group-label" data-group="REX">REX Service</div>
+            <div class="vdp-item" data-vvd="H7282620W" data-service="rex" data-name="ZHI YING HE SHUN" onclick="selectVessel('H7282620W')">
+              <span class="vdp-vvd">H7282620W</span>
+              <span class="vdp-name">ZHI YING HE SHUN</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
             <div class="vdp-item" data-vvd="ZYHS2620W" data-service="rex" data-name="ZHI YING HE SHUN" onclick="selectVessel('ZYHS2620W')">
               <span class="vdp-vvd">ZYHS2620W</span>
               <span class="vdp-name">ZHI YING HE SHUN</span>
@@ -386,6 +405,7 @@
         <button class="nav-chip" data-tab="CUHC2620W" onclick="selectVessel('CUHC2620W')">CUHC2620W</button>
         <button class="nav-chip" data-tab="XPBL2618W" onclick="selectVessel('XPBL2618W')">XPBL2618W</button>
         <button class="nav-chip" data-tab="RACE2616W" onclick="selectVessel('RACE2616W')">RACE2616W</button>
+        <button class="nav-chip rex" data-tab="H7282620W" onclick="selectVessel('H7282620W')">H7282620W</button>
         <button class="nav-chip rex" data-tab="ZYHS2620W" onclick="selectVessel('ZYHS2620W')">ZYHS2620W</button>
         <button class="nav-chip rex" data-tab="BZCF2621W" onclick="selectVessel('BZCF2621W')">BZCF2621W</button>
       </div>
@@ -631,6 +651,89 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-BZCF"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ====== H7282620W 面板 ====== -->
+  <div class="tab-panel" id="panel-H7282620W">
+
+    <section class="page">
+      <div class="watermark" id="wm-H728">H7282620W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-H728">REX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-H728">H7282620W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-H728">2620W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-H728">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-H728"></div>
+      <div class="completion-strip" id="completionStrip-H728"></div>
+      <div class="region-strip" id="regionStrip-H728"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-H728"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-H728">--</span>
+        <span>REX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-H728">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">H7282620W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-H728">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-H728"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-H728"></tbody></table>
         </div>
       </div>
 
@@ -923,6 +1026,7 @@
     // ===== Vessel 配置 =====
     const VESSELS = {
       RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623' },
+      H7282620W: { jsonFile: 'H7282620W_public_data.json', prefix: 'H728' },
       ZYHS2620W: { jsonFile: 'ZYHS2620W_public_data.json', prefix: 'ZYHS' },
       BZCF2621W: { jsonFile: 'BZCF2621W_public_data.json', prefix: 'BZCF' },
       RACE2616W: { jsonFile: 'RACE2616W_public_data.json', prefix: 'RACE' },
@@ -939,6 +1043,7 @@
       CUHC2620W: { name: 'CUHC',          service: 'cgx' },
       XPBL2618W: { name: 'EXPRESS BERLIN',service: 'cgx' },
       RACE2616W: { name: 'RACINE',        service: 'cgx' },
+      H7282620W: { name: 'ZHI YING HE SHUN', service: 'rex' },
       ZYHS2620W: { name: 'ZHI YING HE SHUN', service: 'rex' },
       BZCF2621W: { name: 'BZ CHONGFU',   service: 'rex' },
     };
@@ -966,27 +1071,64 @@
       if (dd && !dd.contains(e.target)) closeDropdown();
     });
 
+    // ===== 服务组折叠/展开 =====
+    document.getElementById('dropdownList').addEventListener('click', function(e) {
+      const label = e.target.closest('.vdp-group-label');
+      if (!label) return;
+      const group = label.getAttribute('data-group');
+      toggleServiceGroup(group);
+    });
+
+    function toggleServiceGroup(groupName) {
+      const label = document.querySelector(`.vdp-group-label[data-group="${groupName}"]`);
+      if (!label) return;
+      const isCollapsed = label.classList.toggle('collapsed');
+      const items = document.querySelectorAll(`#dropdownList .vdp-item[data-service="${groupName.toLowerCase()}"]`);
+      items.forEach(item => item.classList.toggle('group-hidden', isCollapsed));
+    }
+
     function filterDropdown(q) {
-      const items = document.querySelectorAll('#dropdownList .vdp-item');
+      const items  = document.querySelectorAll('#dropdownList .vdp-item');
       const groups = document.querySelectorAll('#dropdownList .vdp-group-label');
       const kw = q.trim().toLowerCase();
+
+      // 搜索时自动展开所有分组
+      if (kw) {
+        groups.forEach(g => {
+          if (g.classList.contains('collapsed')) {
+            g.classList.remove('collapsed');
+            const svc = g.getAttribute('data-group').toLowerCase();
+            document.querySelectorAll(`#dropdownList .vdp-item[data-service="${svc}"]`)
+              .forEach(i => i.classList.remove('group-hidden'));
+          }
+        });
+      }
+
       let visibleCount = 0;
-      // 先显示所有 group label，再按结果隐藏空组
       groups.forEach(g => g.style.display = '');
+
       items.forEach(item => {
         const vvd  = (item.dataset.vvd  || '').toLowerCase();
         const name = (item.dataset.name || '').toLowerCase();
         const svc  = (item.dataset.service || '').toLowerCase();
         const match = !kw || vvd.includes(kw) || name.includes(kw) || svc.includes(kw);
         item.classList.toggle('hidden', !match);
-        if (match) visibleCount++;
+
+        const isGroupHidden = item.classList.contains('group-hidden');
+        if (match && !isGroupHidden) visibleCount++;
       });
+
       // 如果某分组下所有 item 都隐藏，隐藏该分组 label
       groups.forEach(g => {
-        const svcName = g.dataset.group.toLowerCase();
-        const hasVisible = [...items].some(i => i.dataset.service === svcName.toLowerCase() && !i.classList.contains('hidden'));
+        const svcName = g.getAttribute('data-group').toLowerCase();
+        const hasVisible = [...items].some(i =>
+          i.dataset.service === svcName &&
+          !i.classList.contains('hidden') &&
+          !i.classList.contains('group-hidden')
+        );
         g.style.display = hasVisible ? '' : 'none';
       });
+
       document.getElementById('noResult').style.display = visibleCount === 0 ? 'block' : 'none';
     }
 
