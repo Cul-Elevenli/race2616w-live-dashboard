@@ -1492,17 +1492,15 @@
       const left = rows.slice(0, 5);
       const right = rows.slice(5, 10);
 
-      // 按 pod 聚合 ft20 / ft40
+      // 按 delivery 聚合 ft20 / ft40（topPods 统计口径与 delivery 一致）
       const ftMap = {};
       (bookingRows || []).forEach(r => {
         if (r.excludeFromDisplay) return;
-        const pod = r.pod || '';
         const del = (r.delivery || '').substring(0, 5);
-        const key = pod || del;
-        if (!key) return;
-        if (!ftMap[key]) ftMap[key] = { ft20: 0, ft40: 0 };
-        ftMap[key].ft20 += (r.ft20 || 0);
-        ftMap[key].ft40 += (r.ft40 || 0);
+        if (!del) return;
+        if (!ftMap[del]) ftMap[del] = { ft20: 0, ft40: 0 };
+        ftMap[del].ft20 += (r.ft20 || 0);
+        ftMap[del].ft40 += (r.ft40 || 0);
       });
 
       const renderRow = row => {
