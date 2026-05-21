@@ -126,6 +126,7 @@
     .pod-table tr:last-child td { border-bottom: 0; }
     .rank { width: 52px; color: var(--blue); font-weight: 700; text-align: center; }
     .teu { text-align: right; font-weight: 700; color: var(--navy); width: 110px; }
+    .pod-ft { text-align: center; font-size: 13px; color: var(--muted); white-space: nowrap; width: 90px; }
     .detail-table-wrap { border: 1px solid var(--border); border-top: 0; max-height: 470px; overflow: auto; }
     .detail-table { min-width: 1100px; font-size: 13px; }
     .detail-table thead th { position: sticky; top: 0; z-index: 2; background: #e9f1f8; color: var(--navy); border: 1px solid var(--border); padding: 10px 8px; text-align: center; }
@@ -1487,13 +1488,32 @@
       body.innerHTML = bodyRows + totalRow;
     }
 
-    function renderPods(prefix, rows) {
+    function renderPods(prefix, rows, bookingRows) {
       const left = rows.slice(0, 5);
       const right = rows.slice(5, 10);
-      document.getElementById('podLeft-' + prefix).innerHTML = left.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('');
+
+      // 按 pod 聚合 ft20 / ft40
+      const ftMap = {};
+      (bookingRows || []).forEach(r => {
+        if (r.excludeFromDisplay) return;
+        const pod = r.pod || '';
+        const del = (r.delivery || '').substring(0, 5);
+        const key = pod || del;
+        if (!key) return;
+        if (!ftMap[key]) ftMap[key] = { ft20: 0, ft40: 0 };
+        ftMap[key].ft20 += (r.ft20 || 0);
+        ftMap[key].ft40 += (r.ft40 || 0);
+      });
+
+      const renderRow = row => {
+        const ft = ftMap[row.pod] || { ft20: 0, ft40: 0 };
+        return `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td><td class="pod-ft">${formatNumber(ft.ft20)} / ${formatNumber(ft.ft40)}</td></tr>`;
+      };
+
+      document.getElementById('podLeft-' + prefix).innerHTML = left.map(renderRow).join('');
       document.getElementById('podRight-' + prefix).innerHTML = right.length
-        ? right.map(row => `<tr><td class="rank">#${row.rank}</td><td>${row.pod}</td><td class="teu">${formatNumber(row.teu)} TEU</td></tr>`).join('')
-        : '<tr><td colspan="3" style="padding:12px 14px;color:#6b7280;">当前不足 10 个 POD</td></tr>';
+        ? right.map(renderRow).join('')
+        : '<tr><td colspan="4" style="padding:12px 14px;color:#6b7280;">当前不足 10 个 POD</td></tr>';
     }
 
     function renderMeta(prefix, payload) {
@@ -1589,7 +1609,7 @@
         renderSummary(prefix, payload);
         renderRegionStrip(prefix, payload, vvd);
         renderCategories(prefix, payload.categoryRows || [], payload.totals || {}, payload.rows || []);
-        renderPods(prefix, payload.topPods || []);
+        renderPods(prefix, payload.topPods || [], payload.rows || []);
         console.log('[renderVessel]', vvd, 'OK, prefix=', prefix, 'payload.totals=', payload.totals);
       } catch(e) {
         console.error('[renderVessel]', vvd, 'FAILED:', e.message);
