@@ -467,6 +467,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -550,6 +551,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -633,6 +635,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -716,6 +719,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -799,6 +803,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -882,6 +887,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -965,6 +971,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -1048,6 +1055,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -1131,6 +1139,7 @@
             <th>ETD</th>
             <th>分配舱位<br>(TEU)</th>
             <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
@@ -1422,13 +1431,25 @@
       `;
     }
 
-    function renderCategories(prefix, rows, totals) {
+    function renderCategories(prefix, categoryRows, totals, bookingRows) {
       const displayCurrent = totals.displayCurrent ?? totals.current;
       const displayGap = totals.displayGap ?? totals.gap;
       const displayCompletionRate = totals.displayCompletionRate ?? totals.completionRate;
       const totalRowStatus = displayCompletionRate < 30 ? '需加紧' : '推进中';
       const body = document.getElementById('categoryBody-' + prefix);
-      const sortedRows = [...rows].sort((a, b) => {
+
+      // 按 category 聚合 ft20 / ft40
+      const ftMap = {};
+      (bookingRows || []).forEach(r => {
+        if (r.excludeFromDisplay) return;
+        const cat = r.category;
+        if (!cat) return;
+        if (!ftMap[cat]) ftMap[cat] = { ft20: 0, ft40: 0 };
+        ftMap[cat].ft20 += (r.ft20 || 0);
+        ftMap[cat].ft40 += (r.ft40 || 0);
+      });
+
+      const sortedRows = [...categoryRows].sort((a, b) => {
         if (a.etd && b.etd) return a.etd.localeCompare(b.etd);
         if (a.etd) return -1;
         if (b.etd) return 1;
@@ -1437,22 +1458,27 @@
       const bodyRows = sortedRows.map(row => {
         const rate = Number(row.completionRate || 0);
         const etdDisplay = row.etd ? `<span class="etd-tag">${row.etd}</span>` : '<span class="etd-tag etd-none">—</span>';
+        const ft = ftMap[row.code] || { ft20: 0, ft40: 0 };
         return `<tr>
           <td class="pol">${row.label || row.code}</td>
           <td class="etd-cell">${etdDisplay}</td>
           <td>${formatNumber(row.allocation)}</td>
           <td>${formatNumber(row.current)}</td>
+          <td class="ft-cell">${formatNumber(ft.ft20)} / ${formatNumber(ft.ft40)}</td>
           <td>${formatNumber(row.gap)}</td>
           <td>${formatPercent(rate)}</td>
           <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div></td>
           <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
         </tr>`;
       }).join('');
+      const totalFt20 = (bookingRows || []).reduce((s, r) => s + (r.excludeFromDisplay ? 0 : (r.ft20 || 0)), 0);
+      const totalFt40 = (bookingRows || []).reduce((s, r) => s + (r.excludeFromDisplay ? 0 : (r.ft40 || 0)), 0);
       const totalRow = `<tr class="total-row">
         <td class="pol">TOTAL</td>
         <td></td>
         <td>${formatNumber(totals.allocation)}</td>
         <td>${formatNumber(displayCurrent)}</td>
+        <td class="ft-cell">${formatNumber(totalFt20)} / ${formatNumber(totalFt40)}</td>
         <td>${formatNumber(displayGap)}</td>
         <td>${formatPercent(displayCompletionRate)}</td>
         <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div></div></td>
@@ -1562,7 +1588,7 @@
         renderMeta(prefix, payload);
         renderSummary(prefix, payload);
         renderRegionStrip(prefix, payload, vvd);
-        renderCategories(prefix, payload.categoryRows || [], payload.totals || {});
+        renderCategories(prefix, payload.categoryRows || [], payload.totals || {}, payload.rows || []);
         renderPods(prefix, payload.topPods || []);
         console.log('[renderVessel]', vvd, 'OK, prefix=', prefix, 'payload.totals=', payload.totals);
       } catch(e) {
