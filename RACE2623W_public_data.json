@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-05-20T08:52:41.075Z",
-  "sourceUpdatedAt": "2026-05-20T08:46:02.925Z",
+  "generatedAt": "2026-05-21T00:54:01.624Z",
+  "sourceUpdatedAt": "2026-05-21T00:46:07.418Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
   "voyage": "2623W",
-  "bookingCount": 556,
+  "bookingCount": 588,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNTAO / CNSHA / CNNGB / CNSHK / CNNAS / CNXGG / CNXMN / CNSWA，或 VN / JP / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5700,
-    "current": 1767,
-    "gap": -3933,
-    "completionRate": 31,
-    "ft20": 369,
-    "ft40": 699,
-    "teu": 1767,
-    "displayCurrent": 1544,
-    "displayGap": -4156,
-    "displayCompletionRate": 27.1,
-    "otherBookingCount": 68,
-    "otherTeu": 223,
+    "current": 1850,
+    "gap": -3850,
+    "completionRate": 32.5,
+    "ft20": 380,
+    "ft40": 735,
+    "teu": 1850,
+    "displayCurrent": 1619,
+    "displayGap": -4081,
+    "displayCompletionRate": 28.4,
+    "otherBookingCount": 74,
+    "otherTeu": 231,
     "otherPols": [
       "THLCH"
     ]
   },
   "transshipmentSummary": {
-    "totalCnTsBookingCount": 343,
-    "totalCnTsTeu": 1045,
+    "totalCnTsBookingCount": 345,
+    "totalCnTsTeu": 1047,
     "mergedBookingCount": 1,
     "mergedTeu": 4,
     "mergedByCategory": {
       "CNSHK": 4
     },
-    "retainedBookingCount": 342,
-    "retainedTeu": 1041,
+    "retainedBookingCount": 344,
+    "retainedTeu": 1043,
     "retainedByCategory": {
-      "CNXGG": 142,
+      "CNXGG": 140,
       "CNXMN": 58,
       "JP": 744,
-      "TW": 56,
+      "TW": 60,
       "VN": 41
     }
   },
@@ -56,9 +56,9 @@
       "code": "CNSHA",
       "label": "CNSHA",
       "allocation": 1017,
-      "current": 125,
-      "gap": -892,
-      "completionRate": 12.3,
+      "current": 147,
+      "gap": -870,
+      "completionRate": 14.5,
       "status": "需加紧",
       "etd": "2026-05-25"
     },
@@ -76,9 +76,9 @@
       "code": "CNSHK",
       "label": "CNSHK",
       "allocation": 1016,
-      "current": 61,
-      "gap": -955,
-      "completionRate": 6,
+      "current": 102,
+      "gap": -914,
+      "completionRate": 10,
       "status": "需加紧",
       "etd": "2026-06-18"
     },
@@ -86,9 +86,9 @@
       "code": "CNNAS",
       "label": "CNNAS",
       "allocation": 1016,
-      "current": 31,
-      "gap": -985,
-      "completionRate": 3.1,
+      "current": 41,
+      "gap": -975,
+      "completionRate": 4,
       "status": "需加紧",
       "etd": "2026-06-19"
     },
@@ -96,9 +96,9 @@
       "code": "CNXGG",
       "label": "CNXGG (via NGB)",
       "allocation": 100,
-      "current": 142,
-      "gap": 42,
-      "completionRate": 142,
+      "current": 140,
+      "gap": 40,
+      "completionRate": 140,
       "status": "推进中"
     },
     {
@@ -141,9 +141,9 @@
       "code": "TW",
       "label": "TW (via NAS)",
       "allocation": 50,
-      "current": 56,
-      "gap": 6,
-      "completionRate": 112,
+      "current": 60,
+      "gap": 10,
+      "completionRate": 120,
       "status": "推进中"
     }
   ],
@@ -151,22 +151,22 @@
     {
       "rank": 1,
       "pod": "AEJEA",
-      "teu": 913
+      "teu": 924
     },
     {
       "rank": 2,
       "pod": "AEKLF",
-      "teu": 621
+      "teu": 671
     },
     {
       "rank": 3,
       "pod": "AESCT",
-      "teu": 101
+      "teu": 122
     },
     {
       "rank": 4,
       "pod": "OMSOH",
-      "teu": 53
+      "teu": 54
     },
     {
       "rank": 5,
@@ -194,8 +194,8 @@
     "归类规则：若 booking 原始 POL 已有单独分类，则保留在原 POL bucket；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "本次共有 1 条 booking（4 TEU）因原始 POL 无单独分类且存在中国 T/S Port，被并入对应中国口岸的 POL 统计。",
-    "另有 342 条 booking（1041 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
-    "当前总 booking 中含 68 条未落入 allocation bucket 的 OTHER booking（223 TEU），POL：THLCH。",
+    "另有 344 条 booking（1043 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "当前总 booking 中含 74 条未落入 allocation bucket 的 OTHER booking（231 TEU），POL：THLCH。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
@@ -577,7 +577,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "JP",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 20,
@@ -757,7 +757,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "JP",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 29,
@@ -1857,7 +1857,7 @@
       "ft40": 2,
       "teu": 4,
       "category": "JP",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 84,
@@ -2757,7 +2757,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "JP",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 129,
@@ -2797,7 +2797,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "JP",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 131,
@@ -3354,8 +3354,8 @@
       "baseCategory": "JP",
       "tsMergeApplied": false,
       "ft20": 0,
-      "ft40": 2,
-      "teu": 4,
+      "ft40": 1,
+      "teu": 2,
       "category": "JP",
       "status": "W"
     },
@@ -6101,26 +6101,6 @@
     },
     {
       "id": 296,
-      "bookingNo": "CULVXGG2600528",
-      "blNo": "CULVXGG2600528",
-      "office": "ULTNJ",
-      "pol": "CNXGG",
-      "por": "CNXGG",
-      "pod": "AEKLF",
-      "delivery": "AEJEA",
-      "tsPrev": "CNNGB",
-      "tsPost": "-",
-      "tsCnPort": "CNNGB",
-      "baseCategory": "CNXGG",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 4,
-      "teu": 8,
-      "category": "CNXGG",
-      "status": "W"
-    },
-    {
-      "id": 297,
       "bookingNo": "CULVHPH2601768",
       "blNo": "CULVHPH2601768",
       "office": "CUHPH",
@@ -6140,7 +6120,7 @@
       "status": "F"
     },
     {
-      "id": 298,
+      "id": 297,
       "bookingNo": "CULVTAO2607244",
       "blNo": "CULVTAO2607244",
       "office": "ULTAO",
@@ -6160,7 +6140,7 @@
       "status": "W"
     },
     {
-      "id": 299,
+      "id": 298,
       "bookingNo": "CULVUKB2600223",
       "blNo": "CULVUKB2600223",
       "office": "BENJP",
@@ -6180,7 +6160,7 @@
       "status": "W"
     },
     {
-      "id": 300,
+      "id": 299,
       "bookingNo": "CULVTXG2601245",
       "blNo": "CULVTXG2601245",
       "office": "CUTPE",
@@ -6200,7 +6180,7 @@
       "status": "W"
     },
     {
-      "id": 301,
+      "id": 300,
       "bookingNo": "CULVLKB2600335",
       "blNo": "CULVLKB2600335",
       "office": "SDGTH",
@@ -6220,7 +6200,7 @@
       "status": "W"
     },
     {
-      "id": 302,
+      "id": 301,
       "bookingNo": "CULVXMN2601911",
       "blNo": "CULVXMN2601911",
       "office": "ULXMN",
@@ -6240,7 +6220,7 @@
       "status": "W"
     },
     {
-      "id": 303,
+      "id": 302,
       "bookingNo": "CULVXMN2601919",
       "blNo": "CULVXMN2601919",
       "office": "ULXMN",
@@ -6260,7 +6240,7 @@
       "status": "W"
     },
     {
-      "id": 304,
+      "id": 303,
       "bookingNo": "CULVYOK2600455",
       "blNo": "CULVYOK2600455",
       "office": "KWAJP",
@@ -6280,7 +6260,7 @@
       "status": "W"
     },
     {
-      "id": 305,
+      "id": 304,
       "bookingNo": "CULVYOK2600456",
       "blNo": "CULVYOK2600456",
       "office": "KWAJP",
@@ -6300,7 +6280,7 @@
       "status": "W"
     },
     {
-      "id": 306,
+      "id": 305,
       "bookingNo": "CULVNGO2600245",
       "blNo": "CULVNGO2600245",
       "office": "KWAJP",
@@ -6320,7 +6300,7 @@
       "status": "W"
     },
     {
-      "id": 307,
+      "id": 306,
       "bookingNo": "CULVYOK2600457",
       "blNo": "CULVYOK2600457",
       "office": "KWAJP",
@@ -6340,7 +6320,7 @@
       "status": "W"
     },
     {
-      "id": 308,
+      "id": 307,
       "bookingNo": "CULVLKB2600338",
       "blNo": "CULVLKB2600338",
       "office": "SDGTH",
@@ -6360,7 +6340,7 @@
       "status": "W"
     },
     {
-      "id": 309,
+      "id": 308,
       "bookingNo": "CULVLKB2600341",
       "blNo": "CULVLKB2600341",
       "office": "SDGTH",
@@ -6380,7 +6360,7 @@
       "status": "W"
     },
     {
-      "id": 310,
+      "id": 309,
       "bookingNo": "CULVLKB2600343",
       "blNo": "CULVLKB2600343",
       "office": "SDGTH",
@@ -6400,7 +6380,7 @@
       "status": "W"
     },
     {
-      "id": 311,
+      "id": 310,
       "bookingNo": "CULVLKB2600344",
       "blNo": "CULVLKB2600344",
       "office": "SDGTH",
@@ -6420,7 +6400,7 @@
       "status": "W"
     },
     {
-      "id": 312,
+      "id": 311,
       "bookingNo": "CULVUKB2600224",
       "blNo": "CULVUKB2600224",
       "office": "BENJP",
@@ -6440,7 +6420,7 @@
       "status": "W"
     },
     {
-      "id": 313,
+      "id": 312,
       "bookingNo": "CULVLKB2600346",
       "blNo": "CULVLKB2600346",
       "office": "SDGTH",
@@ -6460,7 +6440,7 @@
       "status": "W"
     },
     {
-      "id": 314,
+      "id": 313,
       "bookingNo": "CULVLKB2600349",
       "blNo": "CULVLKB2600349",
       "office": "SDGTH",
@@ -6480,7 +6460,7 @@
       "status": "W"
     },
     {
-      "id": 315,
+      "id": 314,
       "bookingNo": "CULVLCH2602469",
       "blNo": "CULVLCH2602469",
       "office": "SDGTH",
@@ -6500,7 +6480,7 @@
       "status": "W"
     },
     {
-      "id": 316,
+      "id": 315,
       "bookingNo": "CULVLKB2600353",
       "blNo": "CULVLKB2600353",
       "office": "SDGTH",
@@ -6520,7 +6500,7 @@
       "status": "W"
     },
     {
-      "id": 317,
+      "id": 316,
       "bookingNo": "CULVLKB2600354",
       "blNo": "CULVLKB2600354",
       "office": "SDGTH",
@@ -6540,7 +6520,7 @@
       "status": "W"
     },
     {
-      "id": 318,
+      "id": 317,
       "bookingNo": "CULVLCH2602484",
       "blNo": "CULVLCH2602484",
       "office": "SDGTH",
@@ -6560,7 +6540,7 @@
       "status": "W"
     },
     {
-      "id": 319,
+      "id": 318,
       "bookingNo": "CULVXMN2601932",
       "blNo": "CULVXMN2601932",
       "office": "ULXMN",
@@ -6580,7 +6560,7 @@
       "status": "W"
     },
     {
-      "id": 320,
+      "id": 319,
       "bookingNo": "CULVKHH2601703",
       "blNo": "CULVKHH2601703",
       "office": "CUTPE",
@@ -6600,7 +6580,7 @@
       "status": "F"
     },
     {
-      "id": 321,
+      "id": 320,
       "bookingNo": "CULVHKT2600007",
       "blNo": "CULVHKT2600007",
       "office": "KWAJP",
@@ -6620,7 +6600,7 @@
       "status": "W"
     },
     {
-      "id": 322,
+      "id": 321,
       "bookingNo": "CULVKHH2601708",
       "blNo": "CULVKHH2601708",
       "office": "CUTPE",
@@ -6640,7 +6620,7 @@
       "status": "W"
     },
     {
-      "id": 323,
+      "id": 322,
       "bookingNo": "CULVKEL2600802",
       "blNo": "CULVKEL2600802",
       "office": "CUTPE",
@@ -6660,7 +6640,7 @@
       "status": "W"
     },
     {
-      "id": 324,
+      "id": 323,
       "bookingNo": "CULVKHH2601710",
       "blNo": "CULVKHH2601710",
       "office": "CUTPE",
@@ -6680,7 +6660,7 @@
       "status": "W"
     },
     {
-      "id": 325,
+      "id": 324,
       "bookingNo": "CULVNAS2620656",
       "blNo": "CULVNAS2620656",
       "office": "CUGGZ",
@@ -6700,7 +6680,7 @@
       "status": "W"
     },
     {
-      "id": 326,
+      "id": 325,
       "bookingNo": "CULVLKB2600355",
       "blNo": "CULVLKB2600355",
       "office": "SDGTH",
@@ -6720,7 +6700,7 @@
       "status": "W"
     },
     {
-      "id": 327,
+      "id": 326,
       "bookingNo": "CULVLCH2602488",
       "blNo": "CULVLCH2602488",
       "office": "SDGTH",
@@ -6740,7 +6720,7 @@
       "status": "W"
     },
     {
-      "id": 328,
+      "id": 327,
       "bookingNo": "CULVLCH2602491",
       "blNo": "CULVLCH2602491",
       "office": "SDGTH",
@@ -6760,7 +6740,7 @@
       "status": "W"
     },
     {
-      "id": 329,
+      "id": 328,
       "bookingNo": "CULVHPH2601791",
       "blNo": "CULVHPH2601791",
       "office": "CUHPH",
@@ -6780,7 +6760,7 @@
       "status": "W"
     },
     {
-      "id": 330,
+      "id": 329,
       "bookingNo": "CULVHPH2601792",
       "blNo": "CULVHPH2601792",
       "office": "CUHPH",
@@ -6800,7 +6780,7 @@
       "status": "W"
     },
     {
-      "id": 331,
+      "id": 330,
       "bookingNo": "CULVNGO2600253",
       "blNo": "CULVNGO2600253",
       "office": "KWAJP",
@@ -6820,7 +6800,7 @@
       "status": "W"
     },
     {
-      "id": 332,
+      "id": 331,
       "bookingNo": "CULVLCH2602496",
       "blNo": "CULVLCH2602496",
       "office": "SDGTH",
@@ -6840,7 +6820,7 @@
       "status": "W"
     },
     {
-      "id": 333,
+      "id": 332,
       "bookingNo": "CULVLKB2600357",
       "blNo": "CULVLKB2600357",
       "office": "SDGTH",
@@ -6860,7 +6840,7 @@
       "status": "W"
     },
     {
-      "id": 334,
+      "id": 333,
       "bookingNo": "CULVTAO2607394",
       "blNo": "CULVTAO2607394",
       "office": "CUTAO",
@@ -6880,7 +6860,7 @@
       "status": "W"
     },
     {
-      "id": 335,
+      "id": 334,
       "bookingNo": "CULVLKB2600359",
       "blNo": "CULVLKB2600359",
       "office": "SDGTH",
@@ -6900,7 +6880,7 @@
       "status": "W"
     },
     {
-      "id": 336,
+      "id": 335,
       "bookingNo": "CULVNGO2600254",
       "blNo": "CULVNGO2600254",
       "office": "KWAJP",
@@ -6920,7 +6900,7 @@
       "status": "W"
     },
     {
-      "id": 337,
+      "id": 336,
       "bookingNo": "CULVLKB2600360",
       "blNo": "CULVLKB2600360",
       "office": "SDGTH",
@@ -6940,7 +6920,7 @@
       "status": "W"
     },
     {
-      "id": 338,
+      "id": 337,
       "bookingNo": "CULVSHA2612830",
       "blNo": "CULVSHA2612830",
       "office": "CUSHA",
@@ -6960,7 +6940,7 @@
       "status": "W"
     },
     {
-      "id": 339,
+      "id": 338,
       "bookingNo": "CULVSHA2612831",
       "blNo": "CULVSHA2612831",
       "office": "CUSHA",
@@ -6980,7 +6960,7 @@
       "status": "W"
     },
     {
-      "id": 340,
+      "id": 339,
       "bookingNo": "CULVKEL2600715",
       "blNo": "CULVKEL2600715",
       "office": "CUTPE",
@@ -7000,7 +6980,7 @@
       "status": "F"
     },
     {
-      "id": 341,
+      "id": 340,
       "bookingNo": "CULVKEL2600809",
       "blNo": "CULVKEL2600809",
       "office": "CUTPE",
@@ -7020,7 +7000,7 @@
       "status": "F"
     },
     {
-      "id": 342,
+      "id": 341,
       "bookingNo": "CULVSHA2612865",
       "blNo": "CULVSHA2612865",
       "office": "CUSHA",
@@ -7040,7 +7020,7 @@
       "status": "W"
     },
     {
-      "id": 343,
+      "id": 342,
       "bookingNo": "CULVSHA2612867",
       "blNo": "CULVSHA2612867",
       "office": "CUSHA",
@@ -7060,7 +7040,7 @@
       "status": "W"
     },
     {
-      "id": 344,
+      "id": 343,
       "bookingNo": "CULVLKB2600364",
       "blNo": "CULVLKB2600364",
       "office": "SDGTH",
@@ -7080,27 +7060,7 @@
       "status": "W"
     },
     {
-      "id": 345,
-      "bookingNo": "CULVSHA2612880",
-      "blNo": "CULVSHA2612880",
-      "office": "CUSHA",
-      "pol": "CNSHA",
-      "por": "CNSHA",
-      "pod": "AEKLF",
-      "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "MYPKG",
-      "tsCnPort": "-",
-      "baseCategory": "CNSHA",
-      "tsMergeApplied": false,
-      "ft20": 1,
-      "ft40": 0,
-      "teu": 1,
-      "category": "CNSHA",
-      "status": "W"
-    },
-    {
-      "id": 346,
+      "id": 344,
       "bookingNo": "CULVSHA2612885",
       "blNo": "CULVSHA2612885",
       "office": "CUSHA",
@@ -7120,7 +7080,7 @@
       "status": "W"
     },
     {
-      "id": 347,
+      "id": 345,
       "bookingNo": "CULVKEL2600810",
       "blNo": "CULVKEL2600810",
       "office": "CUTPE",
@@ -7140,7 +7100,7 @@
       "status": "W"
     },
     {
-      "id": 348,
+      "id": 346,
       "bookingNo": "CULVLKB2600365",
       "blNo": "CULVLKB2600365",
       "office": "SDGTH",
@@ -7160,7 +7120,7 @@
       "status": "W"
     },
     {
-      "id": 349,
+      "id": 347,
       "bookingNo": "CULVSHA2612898",
       "blNo": "CULVSHA2612898",
       "office": "CUSHA",
@@ -7180,7 +7140,7 @@
       "status": "W"
     },
     {
-      "id": 350,
+      "id": 348,
       "bookingNo": "CULVXGG2600551",
       "blNo": "CULVXGG2600551",
       "office": "ULTNJ",
@@ -7200,7 +7160,7 @@
       "status": "W"
     },
     {
-      "id": 351,
+      "id": 349,
       "bookingNo": "CULVSHA2612905",
       "blNo": "CULVSHA2612905",
       "office": "CUSHA",
@@ -7220,7 +7180,7 @@
       "status": "W"
     },
     {
-      "id": 352,
+      "id": 350,
       "bookingNo": "CULVSHA2612914",
       "blNo": "CULVSHA2612914",
       "office": "CUSHA",
@@ -7240,27 +7200,7 @@
       "status": "W"
     },
     {
-      "id": 353,
-      "bookingNo": "CULVSHA2612915",
-      "blNo": "CULVSHA2612915",
-      "office": "CUSHA",
-      "pol": "CNSHA",
-      "por": "CNSHA",
-      "pod": "AEKLF",
-      "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "MYPKG",
-      "tsCnPort": "-",
-      "baseCategory": "CNSHA",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 1,
-      "teu": 2,
-      "category": "CNSHA",
-      "status": "W"
-    },
-    {
-      "id": 354,
+      "id": 351,
       "bookingNo": "CULVNGO2600255",
       "blNo": "CULVNGO2600255",
       "office": "KWAJP",
@@ -7280,7 +7220,7 @@
       "status": "W"
     },
     {
-      "id": 355,
+      "id": 352,
       "bookingNo": "CULVSHA2612919",
       "blNo": "CULVSHA2612919",
       "office": "CUSHA",
@@ -7300,7 +7240,7 @@
       "status": "W"
     },
     {
-      "id": 356,
+      "id": 353,
       "bookingNo": "CULVSHA2612925",
       "blNo": "CULVSHA2612925",
       "office": "CUSHA",
@@ -7320,7 +7260,7 @@
       "status": "W"
     },
     {
-      "id": 357,
+      "id": 354,
       "bookingNo": "CULVSHA2612926",
       "blNo": "CULVSHA2612926",
       "office": "CUSHA",
@@ -7340,7 +7280,7 @@
       "status": "W"
     },
     {
-      "id": 358,
+      "id": 355,
       "bookingNo": "CULVSHA2612928",
       "blNo": "CULVSHA2612928",
       "office": "CUSHA",
@@ -7360,7 +7300,7 @@
       "status": "W"
     },
     {
-      "id": 359,
+      "id": 356,
       "bookingNo": "CULVSHA2612929",
       "blNo": "CULVSHA2612929",
       "office": "CUSHA",
@@ -7380,7 +7320,7 @@
       "status": "W"
     },
     {
-      "id": 360,
+      "id": 357,
       "bookingNo": "CULVSHA2612931",
       "blNo": "CULVSHA2612931",
       "office": "CUSHA",
@@ -7400,7 +7340,7 @@
       "status": "W"
     },
     {
-      "id": 361,
+      "id": 358,
       "bookingNo": "CULVSHA2612933",
       "blNo": "CULVSHA2612933",
       "office": "CUSHA",
@@ -7420,7 +7360,7 @@
       "status": "W"
     },
     {
-      "id": 362,
+      "id": 359,
       "bookingNo": "CULVXGG2600552",
       "blNo": "CULVXGG2600552",
       "office": "ULTNJ",
@@ -7440,7 +7380,7 @@
       "status": "W"
     },
     {
-      "id": 363,
+      "id": 360,
       "bookingNo": "CULVSHK2622551",
       "blNo": "CULVSHK2622551",
       "office": "CUSNZ",
@@ -7460,7 +7400,7 @@
       "status": "W"
     },
     {
-      "id": 364,
+      "id": 361,
       "bookingNo": "CULVSHK2622554",
       "blNo": "CULVSHK2622554",
       "office": "CUSNZ",
@@ -7480,7 +7420,7 @@
       "status": "W"
     },
     {
-      "id": 365,
+      "id": 362,
       "bookingNo": "CULVSHK2622555",
       "blNo": "CULVSHK2622555",
       "office": "CUSNZ",
@@ -7500,7 +7440,7 @@
       "status": "W"
     },
     {
-      "id": 366,
+      "id": 363,
       "bookingNo": "CULVSHK2622557",
       "blNo": "CULVSHK2622557",
       "office": "CUSNZ",
@@ -7520,7 +7460,7 @@
       "status": "W"
     },
     {
-      "id": 367,
+      "id": 364,
       "bookingNo": "CULVSHK2622558",
       "blNo": "CULVSHK2622558",
       "office": "CUSNZ",
@@ -7540,7 +7480,7 @@
       "status": "W"
     },
     {
-      "id": 368,
+      "id": 365,
       "bookingNo": "CULVHPH2601815",
       "blNo": "CULVHPH2601815",
       "office": "CUHPH",
@@ -7560,7 +7500,7 @@
       "status": "W"
     },
     {
-      "id": 369,
+      "id": 366,
       "bookingNo": "CULVXGG2600554",
       "blNo": "CULVXGG2600554",
       "office": "ULTNJ",
@@ -7580,7 +7520,7 @@
       "status": "W"
     },
     {
-      "id": 370,
+      "id": 367,
       "bookingNo": "CULVLCH2602516",
       "blNo": "CULVLCH2602516",
       "office": "SDGTH",
@@ -7600,7 +7540,7 @@
       "status": "W"
     },
     {
-      "id": 371,
+      "id": 368,
       "bookingNo": "CULVSHA2612970",
       "blNo": "CULVSHA2612970",
       "office": "CUSHA",
@@ -7620,7 +7560,7 @@
       "status": "W"
     },
     {
-      "id": 372,
+      "id": 369,
       "bookingNo": "CULVSHA2612971",
       "blNo": "CULVSHA2612971",
       "office": "CUSHA",
@@ -7640,7 +7580,7 @@
       "status": "W"
     },
     {
-      "id": 373,
+      "id": 370,
       "bookingNo": "CULVXGG2600557",
       "blNo": "CULVXGG2600557",
       "office": "ULTNJ",
@@ -7660,7 +7600,7 @@
       "status": "W"
     },
     {
-      "id": 374,
+      "id": 371,
       "bookingNo": "CULVLCH2602519",
       "blNo": "CULVLCH2602519",
       "office": "SDGTH",
@@ -7680,7 +7620,7 @@
       "status": "W"
     },
     {
-      "id": 375,
+      "id": 372,
       "bookingNo": "CULVLCH2602524",
       "blNo": "CULVLCH2602524",
       "office": "SDGTH",
@@ -7700,7 +7640,7 @@
       "status": "W"
     },
     {
-      "id": 376,
+      "id": 373,
       "bookingNo": "CULVSHA2612988",
       "blNo": "CULVSHA2612988",
       "office": "CUSHA",
@@ -7720,7 +7660,7 @@
       "status": "W"
     },
     {
-      "id": 377,
+      "id": 374,
       "bookingNo": "CULVSHA2612989",
       "blNo": "CULVSHA2612989",
       "office": "CUSHA",
@@ -7740,7 +7680,7 @@
       "status": "W"
     },
     {
-      "id": 378,
+      "id": 375,
       "bookingNo": "CULVSHA2612990",
       "blNo": "CULVSHA2612990",
       "office": "CUSHA",
@@ -7760,7 +7700,7 @@
       "status": "W"
     },
     {
-      "id": 379,
+      "id": 376,
       "bookingNo": "CULVTYN2600293",
       "blNo": "CULVTYN2600293",
       "office": "CUTPE",
@@ -7780,7 +7720,7 @@
       "status": "W"
     },
     {
-      "id": 380,
+      "id": 377,
       "bookingNo": "CULVHKT2600008",
       "blNo": "CULVHKT2600008",
       "office": "KWAJP",
@@ -7800,7 +7740,7 @@
       "status": "W"
     },
     {
-      "id": 381,
+      "id": 378,
       "bookingNo": "CULVYOK2600466",
       "blNo": "CULVYOK2600466",
       "office": "KWAJP",
@@ -7820,7 +7760,7 @@
       "status": "W"
     },
     {
-      "id": 382,
+      "id": 379,
       "bookingNo": "CULVNGB2618658",
       "blNo": "CULVNGB2618658",
       "office": "CUNGB",
@@ -7840,7 +7780,7 @@
       "status": "W"
     },
     {
-      "id": 383,
+      "id": 380,
       "bookingNo": "CULVNGB2618659",
       "blNo": "CULVNGB2618659",
       "office": "CUNGB",
@@ -7860,7 +7800,7 @@
       "status": "W"
     },
     {
-      "id": 384,
+      "id": 381,
       "bookingNo": "CULVNGB2618665",
       "blNo": "CULVNGB2618665",
       "office": "CUNGB",
@@ -7880,7 +7820,7 @@
       "status": "W"
     },
     {
-      "id": 385,
+      "id": 382,
       "bookingNo": "CULVNGB2618666",
       "blNo": "CULVNGB2618666",
       "office": "CUNGB",
@@ -7900,7 +7840,7 @@
       "status": "W"
     },
     {
-      "id": 386,
+      "id": 383,
       "bookingNo": "CULVNGB2618667",
       "blNo": "CULVNGB2618667",
       "office": "CUNGB",
@@ -7920,7 +7860,7 @@
       "status": "W"
     },
     {
-      "id": 387,
+      "id": 384,
       "bookingNo": "CULVNGB2618668",
       "blNo": "CULVNGB2618668",
       "office": "CUNGB",
@@ -7940,7 +7880,7 @@
       "status": "W"
     },
     {
-      "id": 388,
+      "id": 385,
       "bookingNo": "CULVNGB2618669",
       "blNo": "CULVNGB2618669",
       "office": "CUNGB",
@@ -7960,7 +7900,7 @@
       "status": "W"
     },
     {
-      "id": 389,
+      "id": 386,
       "bookingNo": "CULVNGB2618670",
       "blNo": "CULVNGB2618670",
       "office": "CUNGB",
@@ -7980,7 +7920,7 @@
       "status": "W"
     },
     {
-      "id": 390,
+      "id": 387,
       "bookingNo": "CULVNGB2618671",
       "blNo": "CULVNGB2618671",
       "office": "CUNGB",
@@ -8000,7 +7940,7 @@
       "status": "W"
     },
     {
-      "id": 391,
+      "id": 388,
       "bookingNo": "CULVNGB2618672",
       "blNo": "CULVNGB2618672",
       "office": "CUNGB",
@@ -8020,7 +7960,7 @@
       "status": "W"
     },
     {
-      "id": 392,
+      "id": 389,
       "bookingNo": "CULVNGB2618673",
       "blNo": "CULVNGB2618673",
       "office": "CUNGB",
@@ -8040,7 +7980,7 @@
       "status": "W"
     },
     {
-      "id": 393,
+      "id": 390,
       "bookingNo": "CULVNGB2618674",
       "blNo": "CULVNGB2618674",
       "office": "CUNGB",
@@ -8060,7 +8000,7 @@
       "status": "W"
     },
     {
-      "id": 394,
+      "id": 391,
       "bookingNo": "CULVNGB2618675",
       "blNo": "CULVNGB2618675",
       "office": "CUNGB",
@@ -8080,7 +8020,7 @@
       "status": "W"
     },
     {
-      "id": 395,
+      "id": 392,
       "bookingNo": "CULVNGB2618676",
       "blNo": "CULVNGB2618676",
       "office": "CUNGB",
@@ -8100,7 +8040,7 @@
       "status": "W"
     },
     {
-      "id": 396,
+      "id": 393,
       "bookingNo": "CULVXGG2600558",
       "blNo": "CULVXGG2600558",
       "office": "ULTNJ",
@@ -8120,7 +8060,7 @@
       "status": "W"
     },
     {
-      "id": 397,
+      "id": 394,
       "bookingNo": "CULVLKB2600370",
       "blNo": "CULVLKB2600370",
       "office": "SDGTH",
@@ -8140,7 +8080,7 @@
       "status": "W"
     },
     {
-      "id": 398,
+      "id": 395,
       "bookingNo": "CULVNGO2600257",
       "blNo": "CULVNGO2600257",
       "office": "BENJP",
@@ -8160,7 +8100,7 @@
       "status": "W"
     },
     {
-      "id": 399,
+      "id": 396,
       "bookingNo": "CULVTYO2600048",
       "blNo": "CULVTYO2600048",
       "office": "KWAJP",
@@ -8180,7 +8120,7 @@
       "status": "W"
     },
     {
-      "id": 400,
+      "id": 397,
       "bookingNo": "CULVXGG2600560",
       "blNo": "CULVXGG2600560",
       "office": "ULTNJ",
@@ -8200,7 +8140,7 @@
       "status": "W"
     },
     {
-      "id": 401,
+      "id": 398,
       "bookingNo": "CULVTYO2600049",
       "blNo": "CULVTYO2600049",
       "office": "BENJP",
@@ -8220,7 +8160,7 @@
       "status": "W"
     },
     {
-      "id": 402,
+      "id": 399,
       "bookingNo": "CULVXGG2600561",
       "blNo": "CULVXGG2600561",
       "office": "ULTNJ",
@@ -8240,7 +8180,7 @@
       "status": "W"
     },
     {
-      "id": 403,
+      "id": 400,
       "bookingNo": "CULVNGB2618704",
       "blNo": "CULVNGB2618704",
       "office": "CUNGB",
@@ -8260,7 +8200,7 @@
       "status": "W"
     },
     {
-      "id": 404,
+      "id": 401,
       "bookingNo": "CULVXGG2600562",
       "blNo": "CULVXGG2600562",
       "office": "ULTNJ",
@@ -8280,7 +8220,7 @@
       "status": "W"
     },
     {
-      "id": 405,
+      "id": 402,
       "bookingNo": "CULVLCH2602547",
       "blNo": "CULVLCH2602547",
       "office": "SDGTH",
@@ -8300,7 +8240,7 @@
       "status": "W"
     },
     {
-      "id": 406,
+      "id": 403,
       "bookingNo": "CULVHPH2601827",
       "blNo": "CULVHPH2601827",
       "office": "CUHPH",
@@ -8320,7 +8260,7 @@
       "status": "W"
     },
     {
-      "id": 407,
+      "id": 404,
       "bookingNo": "CULVXGG2600565",
       "blNo": "CULVXGG2600565",
       "office": "ULTNJ",
@@ -8340,7 +8280,7 @@
       "status": "W"
     },
     {
-      "id": 408,
+      "id": 405,
       "bookingNo": "CULVLCH2602549",
       "blNo": "CULVLCH2602549",
       "office": "SDGTH",
@@ -8360,7 +8300,7 @@
       "status": "W"
     },
     {
-      "id": 409,
+      "id": 406,
       "bookingNo": "CULVLCH2602550",
       "blNo": "CULVLCH2602550",
       "office": "SDGTH",
@@ -8380,7 +8320,7 @@
       "status": "W"
     },
     {
-      "id": 410,
+      "id": 407,
       "bookingNo": "CULVYOK2600468",
       "blNo": "CULVYOK2600468",
       "office": "KWAJP",
@@ -8400,7 +8340,7 @@
       "status": "W"
     },
     {
-      "id": 411,
+      "id": 408,
       "bookingNo": "CULVYOK2600469",
       "blNo": "CULVYOK2600469",
       "office": "KWAJP",
@@ -8420,7 +8360,7 @@
       "status": "W"
     },
     {
-      "id": 412,
+      "id": 409,
       "bookingNo": "CULVYOK2600470",
       "blNo": "CULVYOK2600470",
       "office": "KWAJP",
@@ -8440,7 +8380,7 @@
       "status": "W"
     },
     {
-      "id": 413,
+      "id": 410,
       "bookingNo": "CULVYOK2600471",
       "blNo": "CULVYOK2600471",
       "office": "KWAJP",
@@ -8460,7 +8400,7 @@
       "status": "W"
     },
     {
-      "id": 414,
+      "id": 411,
       "bookingNo": "CULVLCH2602551",
       "blNo": "CULVLCH2602551",
       "office": "SDGTH",
@@ -8480,7 +8420,7 @@
       "status": "W"
     },
     {
-      "id": 415,
+      "id": 412,
       "bookingNo": "CULVSHA2613087",
       "blNo": "CULVSHA2613087",
       "office": "CUSHA",
@@ -8500,7 +8440,7 @@
       "status": "W"
     },
     {
-      "id": 416,
+      "id": 413,
       "bookingNo": "CULVTAO2606765",
       "blNo": "CULVTAO2606765",
       "office": "CUTAO",
@@ -8520,7 +8460,7 @@
       "status": "W"
     },
     {
-      "id": 417,
+      "id": 414,
       "bookingNo": "CULVTAO2607577",
       "blNo": "CULVTAO2607577",
       "office": "CUTAO",
@@ -8540,7 +8480,7 @@
       "status": "W"
     },
     {
-      "id": 418,
+      "id": 415,
       "bookingNo": "CULVTAO2607578",
       "blNo": "CULVTAO2607578",
       "office": "CUTAO",
@@ -8560,7 +8500,7 @@
       "status": "W"
     },
     {
-      "id": 419,
+      "id": 416,
       "bookingNo": "CULVNAS2621614",
       "blNo": "CULVNAS2621614",
       "office": "CUGGZ",
@@ -8580,14 +8520,14 @@
       "status": "W"
     },
     {
-      "id": 420,
+      "id": 417,
       "bookingNo": "CULVNAS2621617",
       "blNo": "CULVNAS2621617",
       "office": "CUGGZ",
       "pol": "CNNAS",
       "por": "CNNAS",
       "pod": "AEKLF",
-      "delivery": "AEJEA",
+      "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
       "tsCnPort": "-",
@@ -8600,14 +8540,14 @@
       "status": "W"
     },
     {
-      "id": 421,
+      "id": 418,
       "bookingNo": "CULVNAS2621619",
       "blNo": "CULVNAS2621619",
       "office": "CUGGZ",
       "pol": "CNNAS",
       "por": "CNNAS",
       "pod": "AEKLF",
-      "delivery": "AEJEA",
+      "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
       "tsCnPort": "-",
@@ -8620,7 +8560,7 @@
       "status": "W"
     },
     {
-      "id": 422,
+      "id": 419,
       "bookingNo": "CULVNAS2621620",
       "blNo": "CULVNAS2621620",
       "office": "CUGGZ",
@@ -8640,14 +8580,14 @@
       "status": "W"
     },
     {
-      "id": 423,
+      "id": 420,
       "bookingNo": "CULVNAS2621621",
       "blNo": "CULVNAS2621621",
       "office": "CUGGZ",
       "pol": "CNNAS",
       "por": "CNNAS",
       "pod": "AEKLF",
-      "delivery": "AEJEA",
+      "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
       "tsCnPort": "-",
@@ -8660,7 +8600,7 @@
       "status": "W"
     },
     {
-      "id": 424,
+      "id": 421,
       "bookingNo": "CULVNAS2621623",
       "blNo": "CULVNAS2621623",
       "office": "CUGGZ",
@@ -8680,14 +8620,14 @@
       "status": "W"
     },
     {
-      "id": 425,
+      "id": 422,
       "bookingNo": "CULVNAS2621625",
       "blNo": "CULVNAS2621625",
       "office": "CUGGZ",
       "pol": "CNNAS",
       "por": "CNNAS",
       "pod": "AEKLF",
-      "delivery": "AEJEA",
+      "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
       "tsCnPort": "-",
@@ -8700,7 +8640,7 @@
       "status": "W"
     },
     {
-      "id": 426,
+      "id": 423,
       "bookingNo": "CULVNAS2621627",
       "blNo": "CULVNAS2621627",
       "office": "CUGGZ",
@@ -8720,7 +8660,7 @@
       "status": "W"
     },
     {
-      "id": 427,
+      "id": 424,
       "bookingNo": "CULVSHA2613088",
       "blNo": "CULVSHA2613088",
       "office": "CUSHA",
@@ -8740,7 +8680,7 @@
       "status": "W"
     },
     {
-      "id": 428,
+      "id": 425,
       "bookingNo": "CULVSHA2613089",
       "blNo": "CULVSHA2613089",
       "office": "CUSHA",
@@ -8760,7 +8700,7 @@
       "status": "W"
     },
     {
-      "id": 429,
+      "id": 426,
       "bookingNo": "CULVSHA2613090",
       "blNo": "CULVSHA2613090",
       "office": "CUSHA",
@@ -8780,7 +8720,7 @@
       "status": "W"
     },
     {
-      "id": 430,
+      "id": 427,
       "bookingNo": "CULVSHA2613091",
       "blNo": "CULVSHA2613091",
       "office": "CUSHA",
@@ -8800,7 +8740,7 @@
       "status": "W"
     },
     {
-      "id": 431,
+      "id": 428,
       "bookingNo": "CULVLKB2600375",
       "blNo": "CULVLKB2600375",
       "office": "SDGTH",
@@ -8820,7 +8760,7 @@
       "status": "W"
     },
     {
-      "id": 432,
+      "id": 429,
       "bookingNo": "CULVHPH2601831",
       "blNo": "CULVHPH2601831",
       "office": "CUHPH",
@@ -8840,7 +8780,7 @@
       "status": "W"
     },
     {
-      "id": 433,
+      "id": 430,
       "bookingNo": "CULVNAS2621640",
       "blNo": "CULVNAS2621640",
       "office": "CUGGZ",
@@ -8860,7 +8800,7 @@
       "status": "W"
     },
     {
-      "id": 434,
+      "id": 431,
       "bookingNo": "CULVNAS2621641",
       "blNo": "CULVNAS2621641",
       "office": "CUGGZ",
@@ -8880,7 +8820,7 @@
       "status": "W"
     },
     {
-      "id": 435,
+      "id": 432,
       "bookingNo": "CULVNAS2621642",
       "blNo": "CULVNAS2621642",
       "office": "CUGGZ",
@@ -8900,7 +8840,7 @@
       "status": "W"
     },
     {
-      "id": 436,
+      "id": 433,
       "bookingNo": "CULVYOK2600472",
       "blNo": "CULVYOK2600472",
       "office": "BENJP",
@@ -8920,7 +8860,7 @@
       "status": "W"
     },
     {
-      "id": 437,
+      "id": 434,
       "bookingNo": "CULVYOK2600473",
       "blNo": "CULVYOK2600473",
       "office": "BENJP",
@@ -8940,7 +8880,7 @@
       "status": "W"
     },
     {
-      "id": 438,
+      "id": 435,
       "bookingNo": "CULVLKB2600376",
       "blNo": "CULVLKB2600376",
       "office": "SDGTH",
@@ -8960,7 +8900,7 @@
       "status": "W"
     },
     {
-      "id": 439,
+      "id": 436,
       "bookingNo": "CULVLKB2600377",
       "blNo": "CULVLKB2600377",
       "office": "SDGTH",
@@ -8980,7 +8920,7 @@
       "status": "W"
     },
     {
-      "id": 440,
+      "id": 437,
       "bookingNo": "CULVLKB2600378",
       "blNo": "CULVLKB2600378",
       "office": "SDGTH",
@@ -9000,7 +8940,7 @@
       "status": "W"
     },
     {
-      "id": 441,
+      "id": 438,
       "bookingNo": "CULVLKB2600379",
       "blNo": "CULVLKB2600379",
       "office": "SDGTH",
@@ -9020,7 +8960,7 @@
       "status": "W"
     },
     {
-      "id": 442,
+      "id": 439,
       "bookingNo": "CULVHPH2601835",
       "blNo": "CULVHPH2601835",
       "office": "CUHPH",
@@ -9040,7 +8980,7 @@
       "status": "W"
     },
     {
-      "id": 443,
+      "id": 440,
       "bookingNo": "CULVLKB2600380",
       "blNo": "CULVLKB2600380",
       "office": "SDGTH",
@@ -9060,7 +9000,7 @@
       "status": "W"
     },
     {
-      "id": 444,
+      "id": 441,
       "bookingNo": "CULVLKB2600381",
       "blNo": "CULVLKB2600381",
       "office": "SDGTH",
@@ -9080,7 +9020,7 @@
       "status": "W"
     },
     {
-      "id": 445,
+      "id": 442,
       "bookingNo": "CULVLCH2602563",
       "blNo": "CULVLCH2602563",
       "office": "SDGTH",
@@ -9100,7 +9040,7 @@
       "status": "W"
     },
     {
-      "id": 446,
+      "id": 443,
       "bookingNo": "CULVLCH2602569",
       "blNo": "CULVLCH2602569",
       "office": "SDGTH",
@@ -9120,7 +9060,7 @@
       "status": "W"
     },
     {
-      "id": 447,
+      "id": 444,
       "bookingNo": "CULVXGG2600572",
       "blNo": "CULVXGG2600572",
       "office": "ULTNJ",
@@ -9140,7 +9080,7 @@
       "status": "W"
     },
     {
-      "id": 448,
+      "id": 445,
       "bookingNo": "CULVXGG2600575",
       "blNo": "CULVXGG2600575",
       "office": "ULTNJ",
@@ -9160,7 +9100,7 @@
       "status": "W"
     },
     {
-      "id": 449,
+      "id": 446,
       "bookingNo": "CULVXGG2600576",
       "blNo": "CULVXGG2600576",
       "office": "ULTNJ",
@@ -9180,7 +9120,7 @@
       "status": "W"
     },
     {
-      "id": 450,
+      "id": 447,
       "bookingNo": "CULVXGG2600577",
       "blNo": "CULVXGG2600577",
       "office": "ULTNJ",
@@ -9200,7 +9140,7 @@
       "status": "W"
     },
     {
-      "id": 451,
+      "id": 448,
       "bookingNo": "CULVXGG2600578",
       "blNo": "CULVXGG2600578",
       "office": "ULTNJ",
@@ -9220,7 +9160,7 @@
       "status": "W"
     },
     {
-      "id": 452,
+      "id": 449,
       "bookingNo": "CULVNGB2618884",
       "blNo": "CULVNGB2618884",
       "office": "CUNGB",
@@ -9240,7 +9180,7 @@
       "status": "W"
     },
     {
-      "id": 453,
+      "id": 450,
       "bookingNo": "CULVSHA2613206",
       "blNo": "CULVSHA2613206",
       "office": "CUSHA",
@@ -9260,7 +9200,7 @@
       "status": "W"
     },
     {
-      "id": 454,
+      "id": 451,
       "bookingNo": "CULVSHA2613211",
       "blNo": "CULVSHA2613211",
       "office": "CUSHA",
@@ -9280,7 +9220,7 @@
       "status": "W"
     },
     {
-      "id": 455,
+      "id": 452,
       "bookingNo": "CULVTAO2607698",
       "blNo": "CULVTAO2607698",
       "office": "CUTAO",
@@ -9300,7 +9240,7 @@
       "status": "W"
     },
     {
-      "id": 456,
+      "id": 453,
       "bookingNo": "CULVXGG2600581",
       "blNo": "CULVXGG2600581",
       "office": "ULTNJ",
@@ -9320,7 +9260,7 @@
       "status": "W"
     },
     {
-      "id": 457,
+      "id": 454,
       "bookingNo": "CULVTAO2607714",
       "blNo": "CULVTAO2607714",
       "office": "CUTAO",
@@ -9340,7 +9280,7 @@
       "status": "W"
     },
     {
-      "id": 458,
+      "id": 455,
       "bookingNo": "CULVNGO2600260",
       "blNo": "CULVNGO2600260",
       "office": "KWAJP",
@@ -9360,7 +9300,7 @@
       "status": "W"
     },
     {
-      "id": 459,
+      "id": 456,
       "bookingNo": "CULVLKB2600383",
       "blNo": "CULVLKB2600383",
       "office": "SDGTH",
@@ -9380,7 +9320,7 @@
       "status": "W"
     },
     {
-      "id": 460,
+      "id": 457,
       "bookingNo": "CULVLCH2602579",
       "blNo": "CULVLCH2602579",
       "office": "SDGTH",
@@ -9400,7 +9340,7 @@
       "status": "W"
     },
     {
-      "id": 461,
+      "id": 458,
       "bookingNo": "CULVLCH2602580",
       "blNo": "CULVLCH2602580",
       "office": "SDGTH",
@@ -9420,7 +9360,7 @@
       "status": "W"
     },
     {
-      "id": 462,
+      "id": 459,
       "bookingNo": "CULVOSA2600071",
       "blNo": "CULVOSA2600071",
       "office": "BENJP",
@@ -9440,7 +9380,7 @@
       "status": "W"
     },
     {
-      "id": 463,
+      "id": 460,
       "bookingNo": "CULVLKB2600384",
       "blNo": "CULVLKB2600384",
       "office": "SDGTH",
@@ -9460,7 +9400,7 @@
       "status": "W"
     },
     {
-      "id": 464,
+      "id": 461,
       "bookingNo": "CULVXGG2600582",
       "blNo": "CULVXGG2600582",
       "office": "ULTNJ",
@@ -9480,7 +9420,7 @@
       "status": "W"
     },
     {
-      "id": 465,
+      "id": 462,
       "bookingNo": "CULVUKB2600236",
       "blNo": "CULVUKB2600236",
       "office": "BENJP",
@@ -9500,7 +9440,7 @@
       "status": "W"
     },
     {
-      "id": 466,
+      "id": 463,
       "bookingNo": "CULVLCH2602581",
       "blNo": "CULVLCH2602581",
       "office": "SDGTH",
@@ -9520,7 +9460,7 @@
       "status": "W"
     },
     {
-      "id": 467,
+      "id": 464,
       "bookingNo": "CULVXGG2600583",
       "blNo": "CULVXGG2600583",
       "office": "ULTNJ",
@@ -9540,7 +9480,7 @@
       "status": "W"
     },
     {
-      "id": 468,
+      "id": 465,
       "bookingNo": "CULVXGG2600584",
       "blNo": "CULVXGG2600584",
       "office": "ULTNJ",
@@ -9560,7 +9500,7 @@
       "status": "W"
     },
     {
-      "id": 469,
+      "id": 466,
       "bookingNo": "CULVXGG2600585",
       "blNo": "CULVXGG2600585",
       "office": "ULTNJ",
@@ -9580,7 +9520,7 @@
       "status": "W"
     },
     {
-      "id": 470,
+      "id": 467,
       "bookingNo": "CULVLCH2602582",
       "blNo": "CULVLCH2602582",
       "office": "SDGTH",
@@ -9600,7 +9540,7 @@
       "status": "W"
     },
     {
-      "id": 471,
+      "id": 468,
       "bookingNo": "CULVTAO2607731",
       "blNo": "CULVTAO2607731",
       "office": "CUTAO",
@@ -9620,7 +9560,7 @@
       "status": "W"
     },
     {
-      "id": 472,
+      "id": 469,
       "bookingNo": "CULVTAO2607741",
       "blNo": "CULVTAO2607741",
       "office": "ULTAO",
@@ -9640,7 +9580,7 @@
       "status": "W"
     },
     {
-      "id": 473,
+      "id": 470,
       "bookingNo": "CULVHKT2600009",
       "blNo": "CULVHKT2600009",
       "office": "KWAJP",
@@ -9660,7 +9600,7 @@
       "status": "W"
     },
     {
-      "id": 474,
+      "id": 471,
       "bookingNo": "CULVTAO2607763",
       "blNo": "CULVTAO2607763",
       "office": "CUTAO",
@@ -9680,7 +9620,7 @@
       "status": "W"
     },
     {
-      "id": 475,
+      "id": 472,
       "bookingNo": "CULVLCH2602584",
       "blNo": "CULVLCH2602584",
       "office": "SDGTH",
@@ -9700,7 +9640,7 @@
       "status": "W"
     },
     {
-      "id": 476,
+      "id": 473,
       "bookingNo": "CULVSHA2613340",
       "blNo": "CULVSHA2613340",
       "office": "CUSHA",
@@ -9720,7 +9660,7 @@
       "status": "W"
     },
     {
-      "id": 477,
+      "id": 474,
       "bookingNo": "CULVTAO2607770",
       "blNo": "CULVTAO2607770",
       "office": "CUTAO",
@@ -9740,7 +9680,7 @@
       "status": "W"
     },
     {
-      "id": 478,
+      "id": 475,
       "bookingNo": "CULVTAO2607772",
       "blNo": "CULVTAO2607772",
       "office": "CUTAO",
@@ -9760,7 +9700,7 @@
       "status": "W"
     },
     {
-      "id": 479,
+      "id": 476,
       "bookingNo": "CULVSHA2613351",
       "blNo": "CULVSHA2613351",
       "office": "CUSHA",
@@ -9780,7 +9720,7 @@
       "status": "W"
     },
     {
-      "id": 480,
+      "id": 477,
       "bookingNo": "CULVTAO2607777",
       "blNo": "CULVTAO2607777",
       "office": "CUTAO",
@@ -9800,7 +9740,7 @@
       "status": "W"
     },
     {
-      "id": 481,
+      "id": 478,
       "bookingNo": "CULVTAO2607778",
       "blNo": "CULVTAO2607778",
       "office": "CUTAO",
@@ -9820,7 +9760,7 @@
       "status": "W"
     },
     {
-      "id": 482,
+      "id": 479,
       "bookingNo": "CULVSHA2613388",
       "blNo": "CULVSHA2613388",
       "office": "CUSHA",
@@ -9840,7 +9780,7 @@
       "status": "W"
     },
     {
-      "id": 483,
+      "id": 480,
       "bookingNo": "CULVSHA2613390",
       "blNo": "CULVSHA2613390",
       "office": "CUSHA",
@@ -9860,7 +9800,7 @@
       "status": "W"
     },
     {
-      "id": 484,
+      "id": 481,
       "bookingNo": "CULVHPH2601852",
       "blNo": "CULVHPH2601852",
       "office": "CUHPH",
@@ -9880,7 +9820,7 @@
       "status": "W"
     },
     {
-      "id": 485,
+      "id": 482,
       "bookingNo": "CULVSHA2613391",
       "blNo": "CULVSHA2613391",
       "office": "CUSHA",
@@ -9900,7 +9840,7 @@
       "status": "W"
     },
     {
-      "id": 486,
+      "id": 483,
       "bookingNo": "CULVSHA2613392",
       "blNo": "CULVSHA2613392",
       "office": "CUSHA",
@@ -9920,7 +9860,7 @@
       "status": "W"
     },
     {
-      "id": 487,
+      "id": 484,
       "bookingNo": "CULVHPH2601853",
       "blNo": "CULVHPH2601853",
       "office": "CUHPH",
@@ -9940,7 +9880,7 @@
       "status": "W"
     },
     {
-      "id": 488,
+      "id": 485,
       "bookingNo": "CULVLCH2602586",
       "blNo": "CULVLCH2602586",
       "office": "SDGTH",
@@ -9960,7 +9900,7 @@
       "status": "W"
     },
     {
-      "id": 489,
+      "id": 486,
       "bookingNo": "CULVXGG2600589",
       "blNo": "CULVXGG2600589",
       "office": "ULTNJ",
@@ -9980,7 +9920,7 @@
       "status": "W"
     },
     {
-      "id": 490,
+      "id": 487,
       "bookingNo": "CULVLKB2600388",
       "blNo": "CULVLKB2600388",
       "office": "SDGTH",
@@ -10000,7 +9940,7 @@
       "status": "W"
     },
     {
-      "id": 491,
+      "id": 488,
       "bookingNo": "CULVYOK2600490",
       "blNo": "CULVYOK2600490",
       "office": "BENJP",
@@ -10020,7 +9960,7 @@
       "status": "W"
     },
     {
-      "id": 492,
+      "id": 489,
       "bookingNo": "CULVLKB2600389",
       "blNo": "CULVLKB2600389",
       "office": "SDGTH",
@@ -10040,7 +9980,7 @@
       "status": "W"
     },
     {
-      "id": 493,
+      "id": 490,
       "bookingNo": "CULVLKB2600390",
       "blNo": "CULVLKB2600390",
       "office": "SDGTH",
@@ -10060,7 +10000,7 @@
       "status": "W"
     },
     {
-      "id": 494,
+      "id": 491,
       "bookingNo": "CULVOSA2600072",
       "blNo": "CULVOSA2600072",
       "office": "BENJP",
@@ -10080,7 +10020,7 @@
       "status": "W"
     },
     {
-      "id": 495,
+      "id": 492,
       "bookingNo": "CULVSHA2613414",
       "blNo": "CULVSHA2613414",
       "office": "CUSHA",
@@ -10100,7 +10040,7 @@
       "status": "W"
     },
     {
-      "id": 496,
+      "id": 493,
       "bookingNo": "CULVYOK2600495",
       "blNo": "CULVYOK2600495",
       "office": "KWAJP",
@@ -10120,7 +10060,7 @@
       "status": "W"
     },
     {
-      "id": 497,
+      "id": 494,
       "bookingNo": "CULVYOK2600496",
       "blNo": "CULVYOK2600496",
       "office": "KWAJP",
@@ -10140,7 +10080,7 @@
       "status": "W"
     },
     {
-      "id": 498,
+      "id": 495,
       "bookingNo": "CULVYOK2600497",
       "blNo": "CULVYOK2600497",
       "office": "KWAJP",
@@ -10160,7 +10100,7 @@
       "status": "W"
     },
     {
-      "id": 499,
+      "id": 496,
       "bookingNo": "CULVYOK2600498",
       "blNo": "CULVYOK2600498",
       "office": "KWAJP",
@@ -10180,7 +10120,7 @@
       "status": "W"
     },
     {
-      "id": 500,
+      "id": 497,
       "bookingNo": "CULVYOK2600499",
       "blNo": "CULVYOK2600499",
       "office": "KWAJP",
@@ -10200,7 +10140,7 @@
       "status": "W"
     },
     {
-      "id": 501,
+      "id": 498,
       "bookingNo": "CULVYOK2600500",
       "blNo": "CULVYOK2600500",
       "office": "KWAJP",
@@ -10220,7 +10160,7 @@
       "status": "W"
     },
     {
-      "id": 502,
+      "id": 499,
       "bookingNo": "CULVYOK2600501",
       "blNo": "CULVYOK2600501",
       "office": "KWAJP",
@@ -10240,7 +10180,7 @@
       "status": "W"
     },
     {
-      "id": 503,
+      "id": 500,
       "bookingNo": "CULVYOK2600502",
       "blNo": "CULVYOK2600502",
       "office": "KWAJP",
@@ -10260,7 +10200,7 @@
       "status": "W"
     },
     {
-      "id": 504,
+      "id": 501,
       "bookingNo": "CULVYOK2600503",
       "blNo": "CULVYOK2600503",
       "office": "KWAJP",
@@ -10280,7 +10220,7 @@
       "status": "W"
     },
     {
-      "id": 505,
+      "id": 502,
       "bookingNo": "CULVLCH2602605",
       "blNo": "CULVLCH2602605",
       "office": "SDGTH",
@@ -10300,7 +10240,7 @@
       "status": "W"
     },
     {
-      "id": 506,
+      "id": 503,
       "bookingNo": "CULVLCH2602607",
       "blNo": "CULVLCH2602607",
       "office": "SDGTH",
@@ -10308,8 +10248,8 @@
       "por": "THLCH",
       "pod": "AEKLF",
       "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "MYPKG",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
       "tsCnPort": "-",
       "baseCategory": "OTHER",
       "tsMergeApplied": false,
@@ -10320,7 +10260,7 @@
       "status": "W"
     },
     {
-      "id": 507,
+      "id": 504,
       "bookingNo": "CULVLCH2602610",
       "blNo": "CULVLCH2602610",
       "office": "SDGTH",
@@ -10340,7 +10280,7 @@
       "status": "W"
     },
     {
-      "id": 508,
+      "id": 505,
       "bookingNo": "CULVHKT2600010",
       "blNo": "CULVHKT2600010",
       "office": "KWAJP",
@@ -10360,7 +10300,7 @@
       "status": "W"
     },
     {
-      "id": 509,
+      "id": 506,
       "bookingNo": "CULVHKT2600011",
       "blNo": "CULVHKT2600011",
       "office": "KWAJP",
@@ -10380,7 +10320,7 @@
       "status": "W"
     },
     {
-      "id": 510,
+      "id": 507,
       "bookingNo": "CULVTYO2600050",
       "blNo": "CULVTYO2600050",
       "office": "KWAJP",
@@ -10400,7 +10340,7 @@
       "status": "W"
     },
     {
-      "id": 511,
+      "id": 508,
       "bookingNo": "CULVUKB2600238",
       "blNo": "CULVUKB2600238",
       "office": "BENJP",
@@ -10420,7 +10360,7 @@
       "status": "W"
     },
     {
-      "id": 512,
+      "id": 509,
       "bookingNo": "CULVYOK2600505",
       "blNo": "CULVYOK2600505",
       "office": "BENJP",
@@ -10440,7 +10380,7 @@
       "status": "W"
     },
     {
-      "id": 513,
+      "id": 510,
       "bookingNo": "CULVXMN2601998",
       "blNo": "CULVXMN2601998",
       "office": "ULXMN",
@@ -10460,7 +10400,7 @@
       "status": "W"
     },
     {
-      "id": 514,
+      "id": 511,
       "bookingNo": "CULVNGB2619168",
       "blNo": "CULVNGB2619168",
       "office": "ULNGB",
@@ -10480,7 +10420,7 @@
       "status": "W"
     },
     {
-      "id": 515,
+      "id": 512,
       "bookingNo": "CULVNGB2619171",
       "blNo": "CULVNGB2619171",
       "office": "ULNGB",
@@ -10500,7 +10440,7 @@
       "status": "W"
     },
     {
-      "id": 516,
+      "id": 513,
       "bookingNo": "CULVNAS2621893",
       "blNo": "CULVNAS2621893",
       "office": "CUGGZ",
@@ -10520,7 +10460,7 @@
       "status": "W"
     },
     {
-      "id": 517,
+      "id": 514,
       "bookingNo": "CULVXGG2600592",
       "blNo": "CULVXGG2600592",
       "office": "ULTNJ",
@@ -10528,19 +10468,19 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEKLF",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
-      "ft20": 6,
+      "ft20": 5,
       "ft40": 0,
-      "teu": 6,
+      "teu": 5,
       "category": "CNXGG",
       "status": "W"
     },
     {
-      "id": 518,
+      "id": 515,
       "bookingNo": "CULVNGB2619174",
       "blNo": "CULVNGB2619174",
       "office": "CUNGB",
@@ -10560,7 +10500,7 @@
       "status": "W"
     },
     {
-      "id": 519,
+      "id": 516,
       "bookingNo": "CULVNGB2619175",
       "blNo": "CULVNGB2619175",
       "office": "CUNGB",
@@ -10580,7 +10520,7 @@
       "status": "W"
     },
     {
-      "id": 520,
+      "id": 517,
       "bookingNo": "CULVXGG2600593",
       "blNo": "CULVXGG2600593",
       "office": "ULTNJ",
@@ -10588,19 +10528,19 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEKLF",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
-      "ft20": 4,
+      "ft20": 3,
       "ft40": 0,
-      "teu": 4,
+      "teu": 3,
       "category": "CNXGG",
       "status": "W"
     },
     {
-      "id": 521,
+      "id": 518,
       "bookingNo": "CULVXGG2600594",
       "blNo": "CULVXGG2600594",
       "office": "ULTNJ",
@@ -10608,8 +10548,8 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEKLF",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
@@ -10620,7 +10560,7 @@
       "status": "W"
     },
     {
-      "id": 522,
+      "id": 519,
       "bookingNo": "CULVBKK2600203",
       "blNo": "CULVBKK2600203",
       "office": "SDGTH",
@@ -10640,7 +10580,7 @@
       "status": "W"
     },
     {
-      "id": 523,
+      "id": 520,
       "bookingNo": "CULVKEL2600828",
       "blNo": "CULVKEL2600828",
       "office": "CUTPE",
@@ -10660,7 +10600,7 @@
       "status": "W"
     },
     {
-      "id": 524,
+      "id": 521,
       "bookingNo": "CULVTAO2607805",
       "blNo": "CULVTAO2607805",
       "office": "CUTAO",
@@ -10680,7 +10620,7 @@
       "status": "W"
     },
     {
-      "id": 525,
+      "id": 522,
       "bookingNo": "CULVLCH2602615",
       "blNo": "CULVLCH2602615",
       "office": "SDGTH",
@@ -10700,27 +10640,7 @@
       "status": "W"
     },
     {
-      "id": 526,
-      "bookingNo": "CULVXGG2600598",
-      "blNo": "CULVXGG2600598",
-      "office": "ULTNJ",
-      "pol": "CNXGG",
-      "por": "CNXGG",
-      "pod": "AEKLF",
-      "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
-      "tsCnPort": "CNNGB",
-      "baseCategory": "CNXGG",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 2,
-      "teu": 4,
-      "category": "CNXGG",
-      "status": "W"
-    },
-    {
-      "id": 527,
+      "id": 523,
       "bookingNo": "CULVNGB2619199",
       "blNo": "CULVNGB2619199",
       "office": "CUNGB",
@@ -10740,7 +10660,7 @@
       "status": "W"
     },
     {
-      "id": 528,
+      "id": 524,
       "bookingNo": "CULVXGG2600606",
       "blNo": "CULVXGG2600606",
       "office": "ULTNJ",
@@ -10748,8 +10668,8 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
@@ -10760,7 +10680,7 @@
       "status": "W"
     },
     {
-      "id": 529,
+      "id": 525,
       "bookingNo": "CULVXGG2600607",
       "blNo": "CULVXGG2600607",
       "office": "ULTNJ",
@@ -10768,8 +10688,8 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
@@ -10780,7 +10700,7 @@
       "status": "W"
     },
     {
-      "id": 530,
+      "id": 526,
       "bookingNo": "CULVLCH2602618",
       "blNo": "CULVLCH2602618",
       "office": "SDGTH",
@@ -10800,7 +10720,7 @@
       "status": "W"
     },
     {
-      "id": 531,
+      "id": 527,
       "bookingNo": "CULVYOK2600506",
       "blNo": "CULVYOK2600506",
       "office": "KWAJP",
@@ -10820,7 +10740,7 @@
       "status": "W"
     },
     {
-      "id": 532,
+      "id": 528,
       "bookingNo": "CULVTAO2607821",
       "blNo": "CULVTAO2607821",
       "office": "CUTAO",
@@ -10840,7 +10760,7 @@
       "status": "W"
     },
     {
-      "id": 533,
+      "id": 529,
       "bookingNo": "CULVSHA2613522",
       "blNo": "CULVSHA2613522",
       "office": "CUSHA",
@@ -10860,7 +10780,7 @@
       "status": "W"
     },
     {
-      "id": 534,
+      "id": 530,
       "bookingNo": "CULVOSA2600073",
       "blNo": "CULVOSA2600073",
       "office": "BENJP",
@@ -10880,7 +10800,7 @@
       "status": "W"
     },
     {
-      "id": 535,
+      "id": 531,
       "bookingNo": "CULVBKK2600207",
       "blNo": "CULVBKK2600207",
       "office": "SDGTH",
@@ -10900,7 +10820,7 @@
       "status": "W"
     },
     {
-      "id": 536,
+      "id": 532,
       "bookingNo": "CULVNGB2619230",
       "blNo": "CULVNGB2619230",
       "office": "CUNGB",
@@ -10920,7 +10840,7 @@
       "status": "W"
     },
     {
-      "id": 537,
+      "id": 533,
       "bookingNo": "CULVNGB2619231",
       "blNo": "CULVNGB2619231",
       "office": "CUNGB",
@@ -10940,7 +10860,7 @@
       "status": "W"
     },
     {
-      "id": 538,
+      "id": 534,
       "bookingNo": "CULVLCH2602622",
       "blNo": "CULVLCH2602622",
       "office": "SDGTH",
@@ -10960,7 +10880,7 @@
       "status": "W"
     },
     {
-      "id": 539,
+      "id": 535,
       "bookingNo": "CULVBKK2600208",
       "blNo": "CULVBKK2600208",
       "office": "SDGTH",
@@ -10980,7 +10900,7 @@
       "status": "W"
     },
     {
-      "id": 540,
+      "id": 536,
       "bookingNo": "CULVYOK2600508",
       "blNo": "CULVYOK2600508",
       "office": "KWAJP",
@@ -11000,7 +10920,7 @@
       "status": "W"
     },
     {
-      "id": 541,
+      "id": 537,
       "bookingNo": "CULVYOK2600509",
       "blNo": "CULVYOK2600509",
       "office": "KWAJP",
@@ -11020,7 +10940,7 @@
       "status": "W"
     },
     {
-      "id": 542,
+      "id": 538,
       "bookingNo": "CULVYOK2600510",
       "blNo": "CULVYOK2600510",
       "office": "KWAJP",
@@ -11040,7 +10960,7 @@
       "status": "W"
     },
     {
-      "id": 543,
+      "id": 539,
       "bookingNo": "CULVBKK2600209",
       "blNo": "CULVBKK2600209",
       "office": "SDGTH",
@@ -11060,7 +10980,7 @@
       "status": "W"
     },
     {
-      "id": 544,
+      "id": 540,
       "bookingNo": "CULVNAS2622091",
       "blNo": "CULVNAS2622091",
       "office": "CUGGZ",
@@ -11080,7 +11000,7 @@
       "status": "W"
     },
     {
-      "id": 545,
+      "id": 541,
       "bookingNo": "CULVXGG2600610",
       "blNo": "CULVXGG2600610",
       "office": "ULTNJ",
@@ -11088,8 +11008,8 @@
       "por": "CNXGG",
       "pod": "AEKLF",
       "delivery": "AEJEA",
-      "tsPrev": "-",
-      "tsPost": "CNNGB",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
       "tsCnPort": "CNNGB",
       "baseCategory": "CNXGG",
       "tsMergeApplied": false,
@@ -11100,7 +11020,7 @@
       "status": "W"
     },
     {
-      "id": 546,
+      "id": 542,
       "bookingNo": "CULVUKB2600241",
       "blNo": "CULVUKB2600241",
       "office": "BENJP",
@@ -11120,7 +11040,7 @@
       "status": "W"
     },
     {
-      "id": 547,
+      "id": 543,
       "bookingNo": "CULVNAS2622110",
       "blNo": "CULVNAS2622110",
       "office": "CUGGZ",
@@ -11140,7 +11060,7 @@
       "status": "W"
     },
     {
-      "id": 548,
+      "id": 544,
       "bookingNo": "CULVSHK2623069",
       "blNo": "CULVSHK2623069",
       "office": "CUSNZ",
@@ -11160,27 +11080,7 @@
       "status": "W"
     },
     {
-      "id": 549,
-      "bookingNo": "CULVSHA2613569",
-      "blNo": "CULVSHA2613569",
-      "office": "CUSHA",
-      "pol": "CNSHA",
-      "por": "CNSHA",
-      "pod": "AEKLF",
-      "delivery": "AEKLF",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
-      "baseCategory": "CNSHA",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 10,
-      "teu": 20,
-      "category": "CNSHA",
-      "status": "W"
-    },
-    {
-      "id": 550,
+      "id": 545,
       "bookingNo": "CULVNGO2600262",
       "blNo": "CULVNGO2600262",
       "office": "BENJP",
@@ -11200,7 +11100,7 @@
       "status": "W"
     },
     {
-      "id": 551,
+      "id": 546,
       "bookingNo": "CULVSHK2623077",
       "blNo": "CULVSHK2623077",
       "office": "CUSNZ",
@@ -11220,7 +11120,7 @@
       "status": "W"
     },
     {
-      "id": 552,
+      "id": 547,
       "bookingNo": "CULVSHK2623079",
       "blNo": "CULVSHK2623079",
       "office": "CUSNZ",
@@ -11240,7 +11140,7 @@
       "status": "W"
     },
     {
-      "id": 553,
+      "id": 548,
       "bookingNo": "CULVNGO2600263",
       "blNo": "CULVNGO2600263",
       "office": "KWAJP",
@@ -11260,7 +11160,7 @@
       "status": "W"
     },
     {
-      "id": 554,
+      "id": 549,
       "bookingNo": "CULVSHK2623087",
       "blNo": "CULVSHK2623087",
       "office": "CUSNZ",
@@ -11280,7 +11180,7 @@
       "status": "W"
     },
     {
-      "id": 555,
+      "id": 550,
       "bookingNo": "CULVSHK2623088",
       "blNo": "CULVSHK2623088",
       "office": "CUSNZ",
@@ -11300,7 +11200,7 @@
       "status": "W"
     },
     {
-      "id": 556,
+      "id": 551,
       "bookingNo": "CULVSHK2623089",
       "blNo": "CULVSHK2623089",
       "office": "CUSNZ",
@@ -11317,6 +11217,746 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 552,
+      "bookingNo": "CULVSHK2623093",
+      "blNo": "CULVSHK2623093",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 553,
+      "bookingNo": "CULVSHK2623094",
+      "blNo": "CULVSHK2623094",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 7,
+      "ft40": 0,
+      "teu": 7,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 554,
+      "bookingNo": "CULVSHK2623098",
+      "blNo": "CULVSHK2623098",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 2,
+      "teu": 4,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 555,
+      "bookingNo": "CULVLCH2602629",
+      "blNo": "CULVLCH2602629",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THLCH",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 556,
+      "bookingNo": "CULVNAS2622150",
+      "blNo": "CULVNAS2622150",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 557,
+      "bookingNo": "CULVNAS2622151",
+      "blNo": "CULVNAS2622151",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 558,
+      "bookingNo": "CULVYOK2600511",
+      "blNo": "CULVYOK2600511",
+      "office": "KWAJP",
+      "pol": "JPYOK",
+      "por": "JPYOK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "CNNAS",
+      "tsPost": "-",
+      "tsCnPort": "CNNAS",
+      "baseCategory": "JP",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "JP",
+      "status": "W"
+    },
+    {
+      "id": 559,
+      "bookingNo": "CULVSHA2613594",
+      "blNo": "CULVSHA2613594",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 560,
+      "bookingNo": "CULVNAS2622152",
+      "blNo": "CULVNAS2622152",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 561,
+      "bookingNo": "CULVSHA2613595",
+      "blNo": "CULVSHA2613595",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 562,
+      "bookingNo": "CULVSHA2613596",
+      "blNo": "CULVSHA2613596",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 563,
+      "bookingNo": "CULVNAS2622153",
+      "blNo": "CULVNAS2622153",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 564,
+      "bookingNo": "CULVNAS2622154",
+      "blNo": "CULVNAS2622154",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W"
+    },
+    {
+      "id": 565,
+      "bookingNo": "CULVTXG2601308",
+      "blNo": "CULVTXG2601308",
+      "office": "CUTPE",
+      "pol": "TWTXG",
+      "por": "TWTXG",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "CNNAS",
+      "tsCnPort": "CNNAS",
+      "baseCategory": "TW",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "TW",
+      "status": "W"
+    },
+    {
+      "id": 566,
+      "bookingNo": "CULVSHK2623102",
+      "blNo": "CULVSHK2623102",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 567,
+      "bookingNo": "CULVSHK2623103",
+      "blNo": "CULVSHK2623103",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 568,
+      "bookingNo": "CULVSHK2623104",
+      "blNo": "CULVSHK2623104",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 569,
+      "bookingNo": "CULVSHK2623105",
+      "blNo": "CULVSHK2623105",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 570,
+      "bookingNo": "CULVSHK2623106",
+      "blNo": "CULVSHK2623106",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 571,
+      "bookingNo": "CULVSHK2623107",
+      "blNo": "CULVSHK2623107",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 572,
+      "bookingNo": "CULVSHK2623109",
+      "blNo": "CULVSHK2623109",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 573,
+      "bookingNo": "CULVLCH2602631",
+      "blNo": "CULVLCH2602631",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THLCH",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 574,
+      "bookingNo": "CULVTXG2601309",
+      "blNo": "CULVTXG2601309",
+      "office": "CUTPE",
+      "pol": "TWTXG",
+      "por": "TWTXG",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "CNNAS",
+      "tsCnPort": "CNNAS",
+      "baseCategory": "TW",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "TW",
+      "status": "W"
+    },
+    {
+      "id": 575,
+      "bookingNo": "CULVSHK2623113",
+      "blNo": "CULVSHK2623113",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 576,
+      "bookingNo": "CULVSHA2613604",
+      "blNo": "CULVSHA2613604",
+      "office": "CUSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 10,
+      "teu": 20,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 577,
+      "bookingNo": "CULVSHK2623117",
+      "blNo": "CULVSHK2623117",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 578,
+      "bookingNo": "CULVSHK2623118",
+      "blNo": "CULVSHK2623118",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 579,
+      "bookingNo": "CULVSHK2623119",
+      "blNo": "CULVSHK2623119",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 580,
+      "bookingNo": "CULVSHK2623120",
+      "blNo": "CULVSHK2623120",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 581,
+      "bookingNo": "CULVSHK2623122",
+      "blNo": "CULVSHK2623122",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 582,
+      "bookingNo": "CULVSHK2623123",
+      "blNo": "CULVSHK2623123",
+      "office": "ULSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHK",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHK",
+      "status": "W"
+    },
+    {
+      "id": 583,
+      "bookingNo": "CULVBKK2600212",
+      "blNo": "CULVBKK2600212",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THBKK",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 584,
+      "bookingNo": "CULVBKK2600213",
+      "blNo": "CULVBKK2600213",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THBKK",
+      "pod": "OMSOH",
+      "delivery": "OMSOH",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 585,
+      "bookingNo": "CULVSHA2613623",
+      "blNo": "CULVSHA2613623",
+      "office": "ULSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNSHA",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 11,
+      "teu": 22,
+      "category": "CNSHA",
+      "status": "W"
+    },
+    {
+      "id": 586,
+      "bookingNo": "CULVBKK2600214",
+      "blNo": "CULVBKK2600214",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THBKK",
+      "pod": "AEKLF",
+      "delivery": "AEKLF",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 587,
+      "bookingNo": "CULVBKK2600215",
+      "blNo": "CULVBKK2600215",
+      "office": "SDGTH",
+      "pol": "THLCH",
+      "por": "THBKK",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "tsCnPort": "-",
+      "baseCategory": "OTHER",
+      "tsMergeApplied": false,
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "OTHER",
+      "status": "W"
+    },
+    {
+      "id": 588,
+      "bookingNo": "CULVXGG2600528",
+      "blNo": "CULVXGG2600528",
+      "office": "ULTNJ",
+      "pol": "CNXGG",
+      "por": "CNXGG",
+      "pod": "AEKLF",
+      "delivery": "AEJEA",
+      "tsPrev": "CNNGB",
+      "tsPost": "-",
+      "tsCnPort": "CNNGB",
+      "baseCategory": "CNXGG",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 6,
+      "teu": 12,
+      "category": "CNXGG",
       "status": "W"
     }
   ]
