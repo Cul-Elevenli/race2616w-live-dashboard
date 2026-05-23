@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-23T08:53:05.984Z",
-  "sourceUpdatedAt": "2026-05-23T08:46:03.965Z",
+  "generatedAt": "2026-05-23T16:54:57.422Z",
+  "sourceUpdatedAt": "2026-05-23T16:46:54.086Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
   "voyage": "2623W",
-  "bookingCount": 639,
+  "bookingCount": 640,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNTAO / CNSHA / CNNGB / CNSHK / CNNAS / CNXGG / CNXMN / CNSWA，或 VN / JP / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5700,
-    "current": 2126,
-    "gap": -3574,
+    "current": 2128,
+    "gap": -3572,
     "completionRate": 37.3,
     "ft20": 404,
-    "ft40": 861,
-    "teu": 2126,
-    "displayCurrent": 1731,
-    "displayGap": -3969,
+    "ft40": 862,
+    "teu": 2128,
+    "displayCurrent": 1733,
+    "displayGap": -3967,
     "displayCompletionRate": 30.4,
     "otherBookingCount": 110,
     "otherTeu": 395,
@@ -87,9 +87,9 @@
       "code": "CNNAS",
       "label": "CNNAS",
       "allocation": 1016,
-      "current": 46,
-      "gap": -970,
-      "completionRate": 4.5,
+      "current": 48,
+      "gap": -968,
+      "completionRate": 4.7,
       "status": "需加紧",
       "etd": "2026-06-19"
     },
@@ -162,7 +162,7 @@
     {
       "rank": 3,
       "pod": "AESCT",
-      "teu": 152
+      "teu": 154
     },
     {
       "rank": 4,
@@ -12978,6 +12978,26 @@
       "ft40": 0,
       "teu": 2,
       "category": "CNXGG",
+      "status": "W"
+    },
+    {
+      "id": 640,
+      "bookingNo": "CULVNAS2622784",
+      "blNo": "CULVNAS2622784",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "AEKLF",
+      "delivery": "AESCT",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
       "status": "W"
     }
   ]
