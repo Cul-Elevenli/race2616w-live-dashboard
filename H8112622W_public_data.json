@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T01:45:13.628Z",
+  "generatedAt": "2026-05-25T02:02:23.959Z",
   "sourceUpdatedAt": "2026-05-25T01:35:12.907Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "H8112622W",
@@ -7,16 +7,16 @@
   "bookingCount": 1,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 850,
+    "allocation": 1080,
     "current": 10,
-    "gap": -840,
-    "completionRate": 1.2,
+    "gap": -1070,
+    "completionRate": 0.9,
     "ft20": 0,
     "ft40": 5,
     "teu": 10,
     "displayCurrent": 10,
-    "displayGap": -840,
-    "displayCompletionRate": 1.2,
+    "displayGap": -1070,
+    "displayCompletionRate": 0.9,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -42,7 +42,7 @@
     },
     {
       "code": "CNSWA",
-      "label": "CNSWA",
+      "label": "CNSWA (via NAS)",
       "allocation": 30,
       "current": 10,
       "gap": -20,
@@ -51,10 +51,64 @@
     },
     {
       "code": "CNXMN",
-      "label": "CNXMN",
+      "label": "CNXMN (via NAS)",
       "allocation": 30,
       "current": 0,
       "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNXGG",
+      "label": "CNXGG (via NGB)",
+      "allocation": 50,
+      "current": 0,
+      "gap": -50,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "THLCH",
+      "label": "THLCH (via NAS)",
+      "allocation": 20,
+      "current": 0,
+      "gap": -20,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "VNHPH",
+      "label": "VNHPH (via NAS)",
+      "allocation": 10,
+      "current": 0,
+      "gap": -10,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "VNHCM",
+      "label": "VNHCM (via NAS)",
+      "allocation": 20,
+      "current": 0,
+      "gap": -20,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "TWN",
+      "label": "TWN (via NAS)",
+      "allocation": 80,
+      "current": 0,
+      "gap": -80,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "JP",
+      "label": "JP (via NAS)",
+      "allocation": 50,
+      "current": 0,
+      "gap": -50,
       "completionRate": 0,
       "status": "未开始"
     }
