@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-05-25T10:02:01.784Z",
+  "sourceUpdatedAt": "2026-05-25T10:01:28.823Z",
+  "refreshPlan": "建议后台每 1 小时同步一次",
+  "vvd": "CUHM2623W",
+  "voyage": "2623W",
+  "bookingCount": 3,
+  "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 CNSHK 的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
+  "totals": {
+    "allocation": 1050,
+    "current": 53,
+    "gap": -997,
+    "completionRate": 5,
+    "ft20": 1,
+    "ft40": 26,
+    "teu": 53,
+    "displayCurrent": 53,
+    "displayGap": -997,
+    "displayCompletionRate": 5,
+    "otherBookingCount": 0,
+    "otherTeu": 0,
+    "otherPols": []
+  },
+  "categoryRows": [
+    {
+      "code": "CNSHA",
+      "label": "CNSHA",
+      "allocation": 500,
+      "current": 0,
+      "gap": -500,
+      "completionRate": 0,
+      "status": "未开始",
+      "etd": "2026-06-09"
+    },
+    {
+      "code": "CNSHK",
+      "label": "CNSHK",
+      "allocation": 470,
+      "current": 12,
+      "gap": -458,
+      "completionRate": 2.6,
+      "status": "需加紧",
+      "etd": "2026-06-12"
+    },
+    {
+      "code": "CNSWA",
+      "label": "CNSWA (via SHK)",
+      "allocation": 30,
+      "current": 0,
+      "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNXMN",
+      "label": "CNXMN (via SHK)",
+      "allocation": 50,
+      "current": 41,
+      "gap": -9,
+      "completionRate": 82,
+      "status": "推进中"
+    }
+  ],
+  "topPods": [
+    {
+      "rank": 1,
+      "pod": "SAJED",
+      "teu": 52
+    },
+    {
+      "rank": 2,
+      "pod": "SARUH",
+      "teu": 1
+    }
+  ],
+  "notes": [
+    "Allocation 合计 1050 TEU。",
+    "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 CNSHK 的归入对应直挂港。",
+    "TEU 计算口径：20ft + 2 × 40ft。",
+    "公开页默认不展示 shipper 等敏感客户字段。"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "bookingNo": "CULVSHK2613666",
+      "blNo": "CULVSHK2613666",
+      "office": "CUSNZ",
+      "pol": "CNSHK",
+      "por": "CNSHK",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNSHK",
+      "ft20": 0,
+      "ft40": 6,
+      "teu": 12,
+      "category": "CNSHK",
+      "status": "F",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
+      "bookingNo": "CULVXMN2601997",
+      "blNo": "CULVXMN2601997",
+      "office": "ULXMN",
+      "pol": "CNXMN",
+      "por": "CNXMN",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "CNSHK",
+      "tsPost": "-",
+      "baseCategory": "CNXMN",
+      "ft20": 0,
+      "ft40": 20,
+      "teu": 40,
+      "category": "CNXMN",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 3,
+      "bookingNo": "CULVXMN2602098",
+      "blNo": "CULVXMN2602098",
+      "office": "ULXMN",
+      "pol": "CNXMN",
+      "por": "CNXMN",
+      "pod": "SAJED",
+      "delivery": "SARUH",
+      "tsPrev": "CNSHK",
+      "tsPost": "-",
+      "baseCategory": "CNXMN",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNXMN",
+      "status": "W",
+      "excludeFromDisplay": false
+    }
+  ]
+}
