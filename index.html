@@ -408,22 +408,22 @@
               <span class="vdp-name">HUA DONG 811</span>
               <span class="vdp-svc sgx">SGX</span>
             </div>
+            <div class="vdp-item" data-vvd="FUYU2622W" data-service="sgx" data-name="FU YU" onclick="selectVessel('FUYU2622W')">
+              <span class="vdp-vvd">FUYU2622W</span>
+              <span class="vdp-name">FU YU</span>
+              <span class="vdp-svc sgx">SGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="ZYHS2620W" data-service="sgx" data-name="ZHI YING HE SHUN" onclick="selectVessel('ZYHS2620W')">
+              <span class="vdp-vvd">ZYHS2620W</span>
+              <span class="vdp-name">ZHI YING HE SHUN</span>
+              <span class="vdp-svc sgx">SGX</span>
+            </div>
 
             <!-- REX -->
             <div class="vdp-group-label" data-group="REX">REX Service</div>
-            <div class="vdp-item" data-vvd="FUYU2622W" data-service="rex" data-name="FU YU" onclick="selectVessel('FUYU2622W')">
-              <span class="vdp-vvd">FUYU2622W</span>
-              <span class="vdp-name">FU YU</span>
-              <span class="vdp-svc rex">REX</span>
-            </div>
             <div class="vdp-item" data-vvd="BZCF2621W" data-service="rex" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2621W')">
               <span class="vdp-vvd">BZCF2621W</span>
               <span class="vdp-name">BZ CHONGFU</span>
-              <span class="vdp-svc rex">REX</span>
-            </div>
-            <div class="vdp-item" data-vvd="ZYHS2620W" data-service="rex" data-name="ZHI YING HE SHUN" onclick="selectVessel('ZYHS2620W')">
-              <span class="vdp-vvd">ZYHS2620W</span>
-              <span class="vdp-name">ZHI YING HE SHUN</span>
               <span class="vdp-svc rex">REX</span>
             </div>
             <div class="vdp-item" data-vvd="H7282620W" data-service="rex" data-name="HONG DA XIN 728" onclick="selectVessel('H7282620W')">
@@ -442,7 +442,7 @@
         <button class="nav-chip active" data-tab="RACE2623W" onclick="selectVessel('RACE2623W')">RACE2623W</button>
         <button class="nav-chip" data-tab="CUHC2620W" onclick="selectVessel('CUHC2620W')">CUHC2620W</button>
         <button class="nav-chip sgx" data-tab="H8112622W" onclick="selectVessel('H8112622W')">H8112622W</button>
-        <button class="nav-chip rex" data-tab="FUYU2622W" onclick="selectVessel('FUYU2622W')">FUYU2622W</button>
+        <button class="nav-chip sgx" data-tab="FUYU2622W" onclick="selectVessel('FUYU2622W')">FUYU2622W</button>
         <button class="nav-chip rex" data-tab="BZCF2621W" onclick="selectVessel('BZCF2621W')">BZCF2621W</button>
         <button class="nav-chip rex" data-tab="H7282620W" onclick="selectVessel('H7282620W')">H7282620W</button>
         <button class="nav-chip aem" data-tab="ZGCD2619W" onclick="selectVessel('ZGCD2619W')">ZGCD2619W</button>
@@ -541,7 +541,7 @@
     <section class="page">
       <div class="watermark" id="wm-ZYHS">ZYHS2620W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-ZYHS">REX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-ZYHS">SGX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -625,7 +625,7 @@
     <section class="page">
       <div class="watermark" id="wm-FUYU">FUYU2622W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-FUYU">REX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-FUYU">SGX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -1430,11 +1430,11 @@
       XPBL2618W: { name: 'EXPRESS BERLIN',service: 'cgx' },
       RACE2616W: { name: 'RACINE',        service: 'cgx' },
       H7282620W: { name: 'HONG DA XIN 728', service: 'rex' },
-      ZYHS2620W: { name: 'ZHI YING HE SHUN', service: 'rex' },
+      ZYHS2620W: { name: 'ZHI YING HE SHUN', service: 'sgx' },
       BZCF2621W: { name: 'BZ CHONGFU',   service: 'rex' },
       ZGCD2619W: { name: 'ZHONG GU CHENG DU', service: 'aem' },
       SHTG2620W: { name: 'SHENGTANG',    service: 'aem' },
-      FUYU2622W: { name: 'FU YU',        service: 'rex' },
+      FUYU2622W: { name: 'FU YU',        service: 'sgx' },
       H8112622W: { name: 'HUA DONG 811', service: 'sgx' },
     };
 
