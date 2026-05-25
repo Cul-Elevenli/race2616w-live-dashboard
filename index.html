@@ -400,6 +400,16 @@
               <span class="vdp-name">SHENGTANG</span>
               <span class="vdp-svc aem">AEM</span>
             </div>
+            <div class="vdp-item" data-vvd="CUSK2623W" data-service="aem" data-name="CUL SHEKOU" onclick="selectVessel('CUSK2623W')">
+              <span class="vdp-vvd">CUSK2623W</span>
+              <span class="vdp-name">CUL SHEKOU</span>
+              <span class="vdp-svc aem">AEM</span>
+            </div>
+            <div class="vdp-item" data-vvd="CUKL2625W" data-service="aem" data-name="CUL KLANG" onclick="selectVessel('CUKL2625W')">
+              <span class="vdp-vvd">CUKL2625W</span>
+              <span class="vdp-name">CUL KLANG</span>
+              <span class="vdp-svc aem">AEM</span>
+            </div>
 
             <!-- SGX -->
             <div class="vdp-group-label" data-group="SGX">SGX Service</div>
@@ -453,6 +463,8 @@
         <button class="nav-chip rex" data-tab="H7282620W" onclick="selectVessel('H7282620W')">H7282620W</button>
         <button class="nav-chip aem" data-tab="ZGCD2619W" onclick="selectVessel('ZGCD2619W')">ZGCD2619W</button>
         <button class="nav-chip aem" data-tab="SHTG2620W" onclick="selectVessel('SHTG2620W')">SHTG2620W</button>
+        <button class="nav-chip aem" data-tab="CUSK2623W" onclick="selectVessel('CUSK2623W')">CUSK2623W</button>
+        <button class="nav-chip aem" data-tab="CUKL2625W" onclick="selectVessel('CUKL2625W')">CUKL2625W</button>
       </div>
     </div>
   </div>
@@ -1213,6 +1225,174 @@
     </section>
   </div>
 
+  <!-- ====== CUSK2623W 面板 ====== -->
+  <div class="tab-panel" id="panel-CUSK2623W">
+
+    <section class="page">
+      <div class="watermark" id="wm-CUSK">CUSK2623W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-CUSK">AEM Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-CUSK">CUSK2623W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-CUSK">2623W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-CUSK">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-CUSK"></div>
+      <div class="completion-strip" id="completionStrip-CUSK"></div>
+      <div class="region-strip" id="regionStrip-CUSK"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-CUSK"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-CUSK">--</span>
+        <span>AEM Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-CUSK">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">CUSK2623W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-CUSK">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-CUSK"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-CUSK"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ====== CUKL2625W 面板 ====== -->
+  <div class="tab-panel" id="panel-CUKL2625W">
+
+    <section class="page">
+      <div class="watermark" id="wm-CUKL">CUKL2625W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-CUKL">AEM Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-CUKL">CUKL2625W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-CUKL">2625W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-CUKL">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-CUKL"></div>
+      <div class="completion-strip" id="completionStrip-CUKL"></div>
+      <div class="region-strip" id="regionStrip-CUKL"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-CUKL"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-CUKL">--</span>
+        <span>AEM Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-CUKL">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">CUKL2625W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-CUKL">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-CUKL"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-CUKL"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
   <!-- ====== RACE2616W 面板 ====== -->
   <div class="tab-panel" id="panel-RACE2616W">
 
@@ -1509,6 +1689,8 @@
       FUYU2622W: { jsonFile: 'FUYU2622W_public_data.json', prefix: 'FUYU' },
       H8112622W: { jsonFile: 'H8112622W_public_data.json', prefix: 'H811' },
       CUHM2623W: { jsonFile: 'CUHM2623W_public_data.json', prefix: 'CUHM' },
+      CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK' },
+      CUKL2625W: { jsonFile: 'CUKL2625W_public_data.json', prefix: 'CUKL' },
     };
 
     let currentTab = 'RACE2623W';
@@ -1528,6 +1710,8 @@
       FUYU2622W: { name: 'FU YU',        service: 'sgx' },
       H8112622W: { name: 'HUA DONG 811', service: 'sgx' },
       CUHM2623W: { name: 'CUL HUMEN',    service: 'rex' },
+      CUSK2623W: { name: 'CUL SHEKOU',   service: 'aem' },
+      CUKL2625W: { name: 'CUL KLANG',    service: 'aem' },
     };
 
     function toggleDropdown() {
