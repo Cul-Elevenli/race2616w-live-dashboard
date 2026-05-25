@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-05-25T01:45:13.628Z",
+  "sourceUpdatedAt": "2026-05-25T01:35:12.907Z",
+  "refreshPlan": "建议后台每 1 小时同步一次",
+  "vvd": "H8112622W",
+  "voyage": "2622W",
+  "bookingCount": 1,
+  "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
+  "totals": {
+    "allocation": 850,
+    "current": 10,
+    "gap": -840,
+    "completionRate": 1.2,
+    "ft20": 0,
+    "ft40": 5,
+    "teu": 10,
+    "displayCurrent": 10,
+    "displayGap": -840,
+    "displayCompletionRate": 1.2,
+    "otherBookingCount": 0,
+    "otherTeu": 0,
+    "otherPols": []
+  },
+  "categoryRows": [
+    {
+      "code": "CNNGB",
+      "label": "CNNGB",
+      "allocation": 410,
+      "current": 0,
+      "gap": -410,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNNAS",
+      "label": "CNNAS",
+      "allocation": 380,
+      "current": 0,
+      "gap": -380,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNSWA",
+      "label": "CNSWA",
+      "allocation": 30,
+      "current": 10,
+      "gap": -20,
+      "completionRate": 33.3,
+      "status": "推进中"
+    },
+    {
+      "code": "CNXMN",
+      "label": "CNXMN",
+      "allocation": 30,
+      "current": 0,
+      "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    }
+  ],
+  "topPods": [
+    {
+      "rank": 1,
+      "pod": "SAJED",
+      "teu": 10
+    }
+  ],
+  "notes": [
+    "Allocation 合计 1080 TEU。",
+    "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港。",
+    "TEU 计算口径：20ft + 2 × 40ft。",
+    "公开页默认不展示 shipper 等敏感客户字段。"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "bookingNo": "CULVSWA2601797",
+      "blNo": "CULVSWA2601797",
+      "office": "CUSWA",
+      "pol": "CNSWA",
+      "por": "CNSWA",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "CNNAS",
+      "tsPost": "-",
+      "baseCategory": "CNSWA",
+      "ft20": 0,
+      "ft40": 5,
+      "teu": 10,
+      "category": "CNSWA",
+      "status": "W",
+      "excludeFromDisplay": false
+    }
+  ]
+}
