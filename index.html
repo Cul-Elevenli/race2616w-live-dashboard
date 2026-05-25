@@ -417,6 +417,11 @@
               <span class="vdp-name">FU YU</span>
               <span class="vdp-svc rex">REX</span>
             </div>
+            <div class="vdp-item" data-vvd="H8112622W" data-service="rex" data-name="HUA DONG 811" onclick="selectVessel('H8112622W')">
+              <span class="vdp-vvd">H8112622W</span>
+              <span class="vdp-name">HUA DONG 811</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
 
             <div class="vdp-no-result" id="noResult">无匹配结果</div>
           </div>
@@ -430,6 +435,7 @@
         <button class="nav-chip rex" data-tab="BZCF2621W" onclick="selectVessel('BZCF2621W')">BZCF2621W</button>
         <button class="nav-chip rex" data-tab="H7282620W" onclick="selectVessel('H7282620W')">H7282620W</button>
         <button class="nav-chip rex" data-tab="FUYU2622W" onclick="selectVessel('FUYU2622W')">FUYU2622W</button>
+        <button class="nav-chip rex" data-tab="H8112622W" onclick="selectVessel('H8112622W')">H8112622W</button>
         <button class="nav-chip aem" data-tab="ZGCD2619W" onclick="selectVessel('ZGCD2619W')">ZGCD2619W</button>
         <button class="nav-chip aem" data-tab="SHTG2620W" onclick="selectVessel('SHTG2620W')">SHTG2620W</button>
       </div>
@@ -678,6 +684,90 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-FUYU"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ====== H8112622W 面板 ====== -->
+  <div class="tab-panel" id="panel-H8112622W">
+
+    <section class="page">
+      <div class="watermark" id="wm-H811">H8112622W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-H811">REX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-H811">H8112622W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-H811">2622W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-H811">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-H811"></div>
+      <div class="completion-strip" id="completionStrip-H811"></div>
+      <div class="region-strip" id="regionStrip-H811"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-H811"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-H811">--</span>
+        <span>REX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-H811">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">H8112622W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-H811">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-H811"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-H811"></tbody></table>
         </div>
       </div>
 
@@ -1318,6 +1408,7 @@
       ZGCD2619W: { jsonFile: 'ZGCD2619W_public_data.json', prefix: 'ZGCD' },
       SHTG2620W: { jsonFile: 'SHTG2620W_public_data.json', prefix: 'SHTG' },
       FUYU2622W: { jsonFile: 'FUYU2622W_public_data.json', prefix: 'FUYU' },
+      H8112622W: { jsonFile: 'H8112622W_public_data.json', prefix: 'H811' },
     };
 
     let currentTab = 'RACE2623W';
@@ -1335,6 +1426,7 @@
       ZGCD2619W: { name: 'ZHONG GU CHENG DU', service: 'aem' },
       SHTG2620W: { name: 'SHENGTANG',    service: 'aem' },
       FUYU2622W: { name: 'FU YU',        service: 'rex' },
+      H8112622W: { name: 'HUA DONG 811', service: 'rex' },
     };
 
     function toggleDropdown() {
