@@ -6,9 +6,9 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta property="og:title" content="CGX & REX & AEM service Booking" />
-  <meta property="og:description" content="CGX & REX & AEM service Live Booking Dashboard" />
-  <title>CGX & REX & AEM service Booking</title>
+  <meta property="og:title" content="CGX & REX & AEM & SGX service Booking" />
+  <meta property="og:description" content="CGX & REX & AEM & SGX service Live Booking Dashboard" />
+  <title>CGX & REX & AEM & SGX service Booking</title>
   <style>
     :root {
       --navy: #17365d;
@@ -25,6 +25,8 @@
       --rex-blue: #b5652f;
       --aem-navy: #1a5b3c;
       --aem-blue: #2fb574;
+      --sgx-navy: #4a1a5b;
+      --sgx-blue: #9b59b6;
     }
     * { box-sizing: border-box; }
     body {
@@ -203,6 +205,7 @@
     }
     .vdt-badge.rex { background: var(--rex-blue); }
     .vdt-badge.aem { background: var(--aem-blue); }
+    .vdt-badge.sgx { background: var(--sgx-blue); }
     .vdt-arrow {
       color: rgba(255,255,255,0.7);
       font-size: 11px;
@@ -288,7 +291,9 @@
     .vdp-svc.cgx { background: #dbeaf7; color: var(--navy); }
     .vdp-svc.rex { background: #f4e4da; color: var(--rex-navy); }
     .vdp-svc.aem { background: #daf4e4; color: var(--aem-navy); }
+    .vdp-svc.sgx { background: #f0daf7; color: var(--sgx-navy); }
     .nav-chip.aem { background: var(--aem-navy); color: #fff; }
+    .nav-chip.sgx { background: var(--sgx-navy); color: #fff; }
     .vdp-no-result {
       padding: 14px; text-align: center; color: var(--muted); font-size: 13px; display: none;
     }
@@ -321,6 +326,7 @@
       border-color: #fff;
     }
     .nav-chip.active.rex { color: var(--rex-navy); }
+    .nav-chip.active.sgx { color: var(--sgx-navy); }
 
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
@@ -395,13 +401,16 @@
               <span class="vdp-svc aem">AEM</span>
             </div>
 
-            <!-- REX -->
-            <div class="vdp-group-label" data-group="REX">REX Service</div>
-            <div class="vdp-item" data-vvd="H8112622W" data-service="rex" data-name="HUA DONG 811" onclick="selectVessel('H8112622W')">
+            <!-- SGX -->
+            <div class="vdp-group-label" data-group="SGX">SGX Service</div>
+            <div class="vdp-item" data-vvd="H8112622W" data-service="sgx" data-name="HUA DONG 811" onclick="selectVessel('H8112622W')">
               <span class="vdp-vvd">H8112622W</span>
               <span class="vdp-name">HUA DONG 811</span>
-              <span class="vdp-svc rex">REX</span>
+              <span class="vdp-svc sgx">SGX</span>
             </div>
+
+            <!-- REX -->
+            <div class="vdp-group-label" data-group="REX">REX Service</div>
             <div class="vdp-item" data-vvd="FUYU2622W" data-service="rex" data-name="FU YU" onclick="selectVessel('FUYU2622W')">
               <span class="vdp-vvd">FUYU2622W</span>
               <span class="vdp-name">FU YU</span>
@@ -432,7 +441,7 @@
       <div class="nav-chips" id="navChips">
         <button class="nav-chip active" data-tab="RACE2623W" onclick="selectVessel('RACE2623W')">RACE2623W</button>
         <button class="nav-chip" data-tab="CUHC2620W" onclick="selectVessel('CUHC2620W')">CUHC2620W</button>
-        <button class="nav-chip rex" data-tab="H8112622W" onclick="selectVessel('H8112622W')">H8112622W</button>
+        <button class="nav-chip sgx" data-tab="H8112622W" onclick="selectVessel('H8112622W')">H8112622W</button>
         <button class="nav-chip rex" data-tab="FUYU2622W" onclick="selectVessel('FUYU2622W')">FUYU2622W</button>
         <button class="nav-chip rex" data-tab="BZCF2621W" onclick="selectVessel('BZCF2621W')">BZCF2621W</button>
         <button class="nav-chip rex" data-tab="H7282620W" onclick="selectVessel('H7282620W')">H7282620W</button>
@@ -700,7 +709,7 @@
     <section class="page">
       <div class="watermark" id="wm-H811">H8112622W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-H811">REX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-H811">SGX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -1426,7 +1435,7 @@
       ZGCD2619W: { name: 'ZHONG GU CHENG DU', service: 'aem' },
       SHTG2620W: { name: 'SHENGTANG',    service: 'aem' },
       FUYU2622W: { name: 'FU YU',        service: 'rex' },
-      H8112622W: { name: 'HUA DONG 811', service: 'rex' },
+      H8112622W: { name: 'HUA DONG 811', service: 'sgx' },
     };
 
     function toggleDropdown() {
