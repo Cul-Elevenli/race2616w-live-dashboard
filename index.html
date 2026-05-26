@@ -365,13 +365,15 @@
           </div>
 
           <div id="dropdownList">
-            <!-- CGX -->
-            <div class="vdp-group-label" data-group="CGX">CGX Service</div>
-            <div class="vdp-item selected" data-vvd="RACE2623W" data-service="cgx" data-name="RACINE" onclick="selectVessel('RACE2623W')">
+            <!-- SGX -->
+            <div class="vdp-group-label" data-group="SGX">SGX Service</div>
+            <div class="vdp-item selected" data-vvd="RACE2623W" data-service="sgx" data-name="RACINE" onclick="selectVessel('RACE2623W')">
               <span class="vdp-vvd">RACE2623W</span>
               <span class="vdp-name">RACINE</span>
-              <span class="vdp-svc cgx">CGX</span>
+              <span class="vdp-svc sgx">SGX</span>
             </div>
+            <!-- CGX -->
+            <div class="vdp-group-label" data-group="CGX">CGX Service</div>
             <div class="vdp-item" data-vvd="CUHC2620W" data-service="cgx" data-name="CUHC" onclick="selectVessel('CUHC2620W')">
               <span class="vdp-vvd">CUHC2620W</span>
               <span class="vdp-name">CUHC</span>
@@ -461,7 +463,7 @@
     <section class="page">
       <div class="watermark" id="wm-RACE2623">RACE2623W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-RACE2623">CGX service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-RACE2623">SGX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -505,7 +507,7 @@
 
       <div class="footer">
         <span id="footer-time-RACE2623">--</span>
-        <span>CGX Service Live View</span>
+        <span>SGX Service Live View</span>
       </div>
     </section>
 
@@ -1684,7 +1686,7 @@
 
     // ===== 下拉导航逻辑 =====
     const VESSEL_META = {
-      RACE2623W: { name: 'RACINE',        service: 'cgx' },
+      RACE2623W: { name: 'RACINE',        service: 'sgx' },
       CUHC2620W: { name: 'CUHC',          service: 'cgx' },
       XPBL2618W: { name: 'EXPRESS BERLIN',service: 'cgx' },
       RACE2616W: { name: 'RACINE',        service: 'cgx' },
