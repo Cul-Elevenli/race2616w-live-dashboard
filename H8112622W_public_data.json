@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-25T10:02:01.637Z",
-  "sourceUpdatedAt": "2026-05-25T09:59:28.215Z",
+  "generatedAt": "2026-05-26T00:56:16.215Z",
+  "sourceUpdatedAt": "2026-05-26T00:52:02.361Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "H8112622W",
   "voyage": "2622W",
-  "bookingCount": 24,
+  "bookingCount": 26,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1080,
-    "current": 111,
-    "gap": -969,
-    "completionRate": 10.3,
-    "ft20": 23,
-    "ft40": 44,
-    "teu": 111,
-    "displayCurrent": 111,
-    "displayGap": -969,
-    "displayCompletionRate": 10.3,
+    "current": 118,
+    "gap": -962,
+    "completionRate": 10.9,
+    "ft20": 28,
+    "ft40": 45,
+    "teu": 118,
+    "displayCurrent": 118,
+    "displayGap": -962,
+    "displayCompletionRate": 10.9,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -64,10 +64,10 @@
       "code": "CNXGG",
       "label": "CNXGG (via NGB)",
       "allocation": 50,
-      "current": 0,
-      "gap": -50,
-      "completionRate": 0,
-      "status": "未开始"
+      "current": 7,
+      "gap": -43,
+      "completionRate": 14,
+      "status": "需加紧"
     },
     {
       "code": "THLCH",
@@ -128,6 +128,16 @@
     },
     {
       "rank": 3,
+      "pod": "DJJIB",
+      "teu": 5
+    },
+    {
+      "rank": 4,
+      "pod": "EGSOK",
+      "teu": 2
+    },
+    {
+      "rank": 5,
       "pod": "SDPZU",
       "teu": 2
     }
@@ -592,6 +602,44 @@
       "ft40": 0,
       "teu": 1,
       "category": "TWN",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 25,
+      "bookingNo": "CULVXGG2600657",
+      "blNo": "CULVXGG2600657",
+      "office": "ULTNJ",
+      "pol": "CNXGG",
+      "por": "CNXGG",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "CNNGB",
+      "baseCategory": "CNXGG",
+      "ft20": 2,
+      "ft40": 0,
+      "teu": 2,
+      "category": "CNXGG",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 26,
+      "bookingNo": "CULVXGG2600663",
+      "blNo": "CULVXGG2600663",
+      "office": "ULTNJ",
+      "pol": "CNXGG",
+      "por": "CNXGG",
+      "pod": "DJJIB",
+      "delivery": "DJJIB",
+      "tsPrev": "-",
+      "tsPost": "CNNGB",
+      "baseCategory": "CNXGG",
+      "ft20": 3,
+      "ft40": 1,
+      "teu": 5,
+      "category": "CNXGG",
       "status": "W",
       "excludeFromDisplay": false
     }
