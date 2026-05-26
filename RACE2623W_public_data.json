@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T08:56:08.518Z",
+  "generatedAt": "2026-05-26T10:42:28.626Z",
   "sourceUpdatedAt": "2026-05-26T08:46:06.237Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
@@ -7,16 +7,16 @@
   "bookingCount": 653,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNTAO / CNSHA / CNNGB / CNSHK / CNNAS / CNXGG / CNXMN / CNSWA，或 VN / JP / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 5700,
+    "allocation": 0,
     "current": 2198,
-    "gap": -3502,
-    "completionRate": 38.6,
+    "gap": 2198,
+    "completionRate": 0,
     "ft20": 412,
     "ft40": 893,
     "teu": 2198,
     "displayCurrent": 2198,
-    "displayGap": -3502,
-    "displayCompletionRate": 38.6,
+    "displayGap": 2198,
+    "displayCompletionRate": 0,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -43,79 +43,79 @@
     {
       "code": "CNTAO",
       "label": "CNTAO",
-      "allocation": 1038,
+      "allocation": 0,
       "current": 213,
-      "gap": -825,
-      "completionRate": 20.5,
-      "status": "需加紧",
+      "gap": 213,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE",
       "etd": "2026-06-10"
     },
     {
       "code": "CNSHA",
       "label": "CNSHA",
-      "allocation": 1017,
+      "allocation": 0,
       "current": 163,
-      "gap": -854,
-      "completionRate": 16,
-      "status": "需加紧",
+      "gap": 163,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE",
       "etd": "2026-06-13"
     },
     {
       "code": "CNNGB",
       "label": "CNNGB",
-      "allocation": 1016,
+      "allocation": 0,
       "current": 63,
-      "gap": -953,
-      "completionRate": 6.2,
-      "status": "需加紧",
+      "gap": 63,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE",
       "etd": "2026-06-14"
     },
     {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 1016,
+      "allocation": 0,
       "current": 136,
-      "gap": -880,
-      "completionRate": 13.4,
-      "status": "需加紧",
+      "gap": 136,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE",
       "etd": "2026-06-18"
     },
     {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 1016,
+      "allocation": 0,
       "current": 52,
-      "gap": -964,
-      "completionRate": 5.1,
-      "status": "需加紧",
+      "gap": 52,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE",
       "etd": "2026-06-19"
     },
     {
       "code": "CNXGG",
       "label": "CNXGG (via NGB)",
-      "allocation": 100,
+      "allocation": 0,
       "current": 173,
-      "gap": 73,
-      "completionRate": 173,
-      "status": "推进中"
+      "gap": 173,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "CNXMN",
       "label": "CNXMN (via NAS)",
-      "allocation": 85,
+      "allocation": 0,
       "current": 50,
-      "gap": -35,
-      "completionRate": 58.8,
-      "status": "推进中"
+      "gap": 50,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "CNSWA",
       "label": "CNSWA (via NAS)",
-      "allocation": 100,
+      "allocation": 0,
       "current": 10,
-      "gap": -90,
-      "completionRate": 10,
-      "status": "需加紧"
+      "gap": 10,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "TH",
@@ -124,34 +124,34 @@
       "current": 442,
       "gap": 442,
       "completionRate": 0,
-      "status": "需加紧"
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "VN",
       "label": "VNHPH (via NAS)",
-      "allocation": 40,
+      "allocation": 0,
       "current": 73,
-      "gap": 33,
-      "completionRate": 182.5,
-      "status": "推进中"
+      "gap": 73,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "JP",
       "label": "JP (via NAS)",
-      "allocation": 222,
+      "allocation": 0,
       "current": 765,
-      "gap": 543,
-      "completionRate": 344.6,
-      "status": "推进中"
+      "gap": 765,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     },
     {
       "code": "TW",
       "label": "TW (via NAS)",
-      "allocation": 50,
+      "allocation": 0,
       "current": 58,
-      "gap": 8,
-      "completionRate": 116,
-      "status": "推进中"
+      "gap": 58,
+      "completionRate": 0,
+      "status": "TO BE CONTINUE"
     }
   ],
   "topPods": [
@@ -192,11 +192,12 @@
     }
   ],
   "notes": [
-    "当前 allocation 按 2026-05-20 分配表，总 Allocation = 5,700 TEU。",
+    "RACE2623W 已迁移至 SGX 航线。",
+    "当前 Allocation 尚未分配（TO BE CONTINUE）。",
     "归类规则：若 booking 原始 POL 已有单独分类，则保留在原 POL bucket；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计。",
     "TEU 计算口径：20ft + 2 × 40ft。",
-    "公开页默认不展示 shipper 等敏感客户字段。",
-    "另有 374 条 booking（1109 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。"
+    "另有 374 条 booking（1109 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
     {
