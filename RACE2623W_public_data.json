@@ -1,41 +1,41 @@
 {
-  "generatedAt": "2026-05-27T00:59:23.350Z",
-  "sourceUpdatedAt": "2026-05-27T00:56:04.899Z",
+  "generatedAt": "2026-05-27T01:50:43.960Z",
+  "sourceUpdatedAt": "2026-05-27T01:40:05.129Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
   "voyage": "2623W",
-  "bookingCount": 648,
+  "bookingCount": 649,
   "ruleText": "归类规则：若 booking 原始 POL 已有单独分类（精确匹配 CNTAO / CNSHA / CNNGB / CNSHK / CNNAS / CNXGG / CNXMN / CNSWA，或 VN / JP / TW bucket），则保留在原 POL 统计；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 0,
-    "current": 2163,
-    "gap": 2163,
+    "current": 2179,
+    "gap": 2179,
     "completionRate": 0,
     "ft20": 385,
-    "ft40": 889,
-    "teu": 2163,
-    "displayCurrent": 2163,
-    "displayGap": 2163,
+    "ft40": 897,
+    "teu": 2179,
+    "displayCurrent": 2179,
+    "displayGap": 2179,
     "displayCompletionRate": 0,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
   },
   "transshipmentSummary": {
-    "totalCnTsBookingCount": 373,
-    "totalCnTsTeu": 1082,
+    "totalCnTsBookingCount": 374,
+    "totalCnTsTeu": 1098,
     "mergedBookingCount": 0,
     "mergedTeu": 0,
     "mergedByCategory": {},
-    "retainedBookingCount": 373,
-    "retainedTeu": 1082,
+    "retainedBookingCount": 374,
+    "retainedTeu": 1098,
     "retainedByCategory": {
       "CNSWA": 10,
       "CNXGG": 146,
       "CNXMN": 50,
       "JP": 765,
       "TH": 4,
-      "TW": 58,
+      "TW": 74,
       "VN": 49
     }
   },
@@ -148,8 +148,8 @@
       "code": "TW",
       "label": "TW (via NAS)",
       "allocation": 0,
-      "current": 58,
-      "gap": 58,
+      "current": 74,
+      "gap": 74,
       "completionRate": 0,
       "status": "TO BE CONTINUE"
     }
@@ -182,11 +182,16 @@
     },
     {
       "rank": 6,
+      "pod": "SAJED",
+      "teu": 16
+    },
+    {
+      "rank": 7,
       "pod": "MYPKG",
       "teu": 8
     },
     {
-      "rank": 7,
+      "rank": 8,
       "pod": "SARUH",
       "teu": 7
     }
@@ -196,7 +201,7 @@
     "当前 Allocation 尚未分配（TO BE CONTINUE）。",
     "归类规则：若 booking 原始 POL 已有单独分类，则保留在原 POL bucket；仅当原始 POL 没有单独分类时，若 prev/post T/S Port 出现中国口岸，才并入该中国口岸的 POL 统计。",
     "TEU 计算口径：20ft + 2 × 40ft。",
-    "另有 373 条 booking（1082 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "另有 374 条 booking（1098 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
@@ -13158,6 +13163,26 @@
       "ft40": 1,
       "teu": 2,
       "category": "JP",
+      "status": "W"
+    },
+    {
+      "id": 649,
+      "bookingNo": "CULVTYN2600314",
+      "blNo": "CULVTYN2600314",
+      "office": "CUTPE",
+      "pol": "TWKEL",
+      "por": "TWTYN",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "CNNAS",
+      "tsCnPort": "CNNAS",
+      "baseCategory": "TW",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 8,
+      "teu": 16,
+      "category": "TW",
       "status": "W"
     }
   ]
