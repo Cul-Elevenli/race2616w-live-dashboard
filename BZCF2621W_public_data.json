@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-28T08:55:51.166Z",
+  "generatedAt": "2026-05-28T09:35:14.978Z",
   "sourceUpdatedAt": "2026-05-28T08:49:57.940Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "BZCF2621W",
@@ -7,19 +7,24 @@
   "bookingCount": 1819,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；TW/TH/ID/VN 按 POL 前缀归类；via MYPKG 的归入对应 MYPKG bucket；via NAS/SHK 的归入对应 NAS bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 5010,
-    "current": 6641,
-    "gap": 1631,
-    "completionRate": 132.6,
-    "ft20": 979,
-    "ft40": 2831,
-    "teu": 6641,
-    "displayCurrent": 6573,
-    "displayGap": 1563,
-    "displayCompletionRate": 131.2,
-    "otherBookingCount": 12,
-    "otherTeu": 68,
+    "allocation": 5000,
+    "current": 5396,
+    "gap": 396,
+    "completionRate": 107.9,
+    "ft20": 904,
+    "ft40": 2246,
+    "teu": 5396,
+    "displayCurrent": 4954,
+    "displayGap": -46,
+    "displayCompletionRate": 99.1,
+    "otherBookingCount": 83,
+    "otherTeu": 442,
     "otherPols": [
+      "CNNGB",
+      "IDBLW",
+      "IDJKT",
+      "IDSRG",
+      "IDSUB",
       "MYPEN",
       "MYPGU",
       "VNSGN"
@@ -29,74 +34,64 @@
     {
       "code": "CNTAO",
       "label": "CNTAO",
-      "allocation": 860,
+      "allocation": 600,
       "current": 859,
-      "gap": -1,
-      "completionRate": 99.9,
+      "gap": 259,
+      "completionRate": 143.2,
       "status": "推进中",
       "etd": "2026-05-22"
     },
     {
       "code": "CNSHA",
       "label": "CNSHA",
-      "allocation": 960,
+      "allocation": 995,
       "current": 1217,
-      "gap": 257,
-      "completionRate": 126.8,
+      "gap": 222,
+      "completionRate": 122.3,
       "status": "推进中",
       "etd": "2026-05-24"
     },
     {
-      "code": "CNNGB",
-      "label": "CNNGB",
-      "allocation": 1030,
-      "current": 1367,
-      "gap": 337,
-      "completionRate": 132.7,
-      "status": "推进中",
-      "etd": "2026-05-26"
-    },
-    {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 940,
+      "allocation": 1451,
       "current": 1492,
-      "gap": 552,
-      "completionRate": 158.7,
+      "gap": 41,
+      "completionRate": 102.8,
       "status": "推进中",
       "etd": "2026-05-28"
     },
     {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 560,
+      "allocation": 1033,
       "current": 1061,
-      "gap": 501,
-      "completionRate": 189.5,
+      "gap": 28,
+      "completionRate": 102.7,
       "status": "推进中",
       "etd": "2026-05-30"
     },
     {
       "code": "CNXMN",
-      "label": "CNXMN (via NAS/SHK)",
-      "allocation": 80,
+      "label": "CNXMN (via NAS)",
+      "allocation": 110,
       "current": 67,
-      "gap": -13,
-      "completionRate": 83.8,
+      "gap": -43,
+      "completionRate": 60.9,
       "status": "推进中"
     },
     {
       "code": "CNSWA",
-      "label": "CNSWA (via NAS/SHK)",
-      "allocation": 30,
+      "label": "CNSWA (via NAS)",
+      "allocation": 67,
       "current": 55,
-      "gap": 25,
-      "completionRate": 183.3,
+      "gap": -12,
+      "completionRate": 82.1,
       "status": "推进中"
     },
     {
       "code": "THLCH",
-      "label": "THLCH (via MYPKG)",
+      "label": "THLCH (via PKG)",
       "allocation": 270,
       "current": 37,
       "gap": -233,
@@ -105,7 +100,7 @@
     },
     {
       "code": "VNHPH",
-      "label": "VNHPH (via MYPKG)",
+      "label": "VNHPH (via NAS)",
       "allocation": 20,
       "current": 6,
       "gap": -14,
@@ -114,7 +109,7 @@
     },
     {
       "code": "VNHCM",
-      "label": "VNHCM (via MYPKG)",
+      "label": "VNHCM (via PKG)",
       "allocation": 40,
       "current": 0,
       "gap": -40,
@@ -122,17 +117,17 @@
       "status": "未开始"
     },
     {
-      "code": "ID",
-      "label": "ID (via MYPKG)",
+      "code": "INDIA",
+      "label": "India (via PKG)",
       "allocation": 50,
-      "current": 252,
-      "gap": 202,
-      "completionRate": 504,
-      "status": "推进中"
+      "current": 0,
+      "gap": -50,
+      "completionRate": 0,
+      "status": "未开始"
     },
     {
       "code": "TWN",
-      "label": "TWN (via CNNAS)",
+      "label": "TWN (via NAS)",
       "allocation": 50,
       "current": 56,
       "gap": 6,
@@ -148,18 +143,27 @@
       "completionRate": 86.7,
       "status": "推进中",
       "etd": "2026-06-02"
+    },
+    {
+      "code": "NASROLL",
+      "label": "NAS t/s roll",
+      "allocation": 194,
+      "current": 0,
+      "gap": -194,
+      "completionRate": 0,
+      "status": "未开始"
     }
   ],
   "topPods": [
     {
       "rank": 1,
       "pod": "SAJED",
-      "teu": 3847
+      "teu": 3495
     },
     {
       "rank": 2,
       "pod": "EGSOK",
-      "teu": 1692
+      "teu": 850
     },
     {
       "rank": 3,
@@ -169,12 +173,12 @@
     {
       "rank": 4,
       "pod": "SDPZU",
-      "teu": 307
+      "teu": 281
     },
     {
       "rank": 5,
       "pod": "YEADE",
-      "teu": 157
+      "teu": 144
     },
     {
       "rank": 6,
@@ -189,7 +193,7 @@
     {
       "rank": 8,
       "pod": "DJJIB",
-      "teu": 39
+      "teu": 27
     },
     {
       "rank": 9,
@@ -203,11 +207,11 @@
     }
   ],
   "notes": [
-    "Allocation 合计 5,010 TEU。",
+    "Allocation 合计 5,000 TEU。",
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；TW/TH/ID/VN 按 POL 前缀归类；via MYPKG 的归入对应 MYPKG bucket；via NAS/SHK 的归入对应 NAS bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。",
-    "当前总 booking 中含 12 条未落入 allocation bucket 的 OTHER booking（68 TEU），POL：MYPEN, MYPGU, VNSGN。"
+    "当前总 booking 中含 83 条未落入 allocation bucket 的 OTHER booking（442 TEU），POL：CNNGB, IDBLW, IDJKT, IDSRG, IDSUB, MYPEN, MYPGU, VNSGN。"
   ],
   "rows": [
     {
@@ -221,13 +225,13 @@
       "delivery": "SAJED",
       "tsPrev": "CNNGB",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 2,
@@ -278,13 +282,13 @@
       "delivery": "YEADE",
       "tsPrev": "CNNGB",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 11,
       "ft40": 0,
       "teu": 11,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 5,
@@ -411,11 +415,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -430,11 +434,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -468,11 +472,11 @@
       "delivery": "EGSOK",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -544,11 +548,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -658,11 +662,11 @@
       "delivery": "DJJIB",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -734,11 +738,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -753,11 +757,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -848,11 +852,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -1038,13 +1042,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 45,
@@ -1057,11 +1061,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1076,11 +1080,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1095,11 +1099,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1133,11 +1137,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1190,11 +1194,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1209,11 +1213,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1437,13 +1441,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 66,
@@ -1456,13 +1460,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 67,
@@ -1475,13 +1479,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 68,
@@ -1684,13 +1688,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 79,
@@ -1703,13 +1707,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 80,
@@ -1722,11 +1726,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -1741,11 +1745,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -1988,13 +1992,13 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 95,
@@ -2007,11 +2011,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -2026,11 +2030,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -2083,13 +2087,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 100,
@@ -2102,13 +2106,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 101,
@@ -2159,13 +2163,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 104,
@@ -2178,13 +2182,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 105,
@@ -2254,11 +2258,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -2273,11 +2277,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -2425,13 +2429,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "F",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 118,
@@ -2672,11 +2676,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -2710,11 +2714,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -2919,11 +2923,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3052,11 +3056,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3071,11 +3075,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3090,11 +3094,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -3166,11 +3170,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3185,11 +3189,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3204,11 +3208,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 12,
       "teu": 24,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3223,11 +3227,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3242,11 +3246,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -3318,11 +3322,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -3337,11 +3341,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -3356,11 +3360,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 9,
       "ft40": 0,
       "teu": 9,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3375,11 +3379,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 3,
       "ft40": 0,
       "teu": 3,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3603,11 +3607,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3774,11 +3778,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3812,11 +3816,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3831,11 +3835,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -3964,11 +3968,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -3983,11 +3987,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -4059,13 +4063,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 204,
@@ -4097,13 +4101,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 206,
@@ -4116,13 +4120,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 207,
@@ -4135,13 +4139,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 208,
@@ -4154,13 +4158,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 209,
@@ -4173,13 +4177,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 210,
@@ -4192,13 +4196,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 211,
@@ -4230,13 +4234,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 213,
@@ -4249,13 +4253,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 214,
@@ -4268,13 +4272,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 215,
@@ -4287,13 +4291,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 216,
@@ -4306,13 +4310,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 217,
@@ -4363,13 +4367,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 220,
@@ -4382,13 +4386,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 221,
@@ -4401,13 +4405,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 222,
@@ -4420,13 +4424,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 223,
@@ -4686,13 +4690,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 237,
@@ -4705,13 +4709,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 238,
@@ -4743,13 +4747,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 240,
@@ -4762,13 +4766,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 241,
@@ -4857,13 +4861,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 10,
       "ft40": 0,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 246,
@@ -4895,13 +4899,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 248,
@@ -4914,11 +4918,11 @@
       "delivery": "DJJIB",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -4952,13 +4956,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 251,
@@ -4971,13 +4975,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 252,
@@ -4990,13 +4994,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 253,
@@ -5009,13 +5013,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 1,
       "teu": 3,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 254,
@@ -5028,13 +5032,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 255,
@@ -5047,13 +5051,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 256,
@@ -5066,13 +5070,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 257,
@@ -5085,13 +5089,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 258,
@@ -5104,13 +5108,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 259,
@@ -5123,13 +5127,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 260,
@@ -5142,13 +5146,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 261,
@@ -5161,13 +5165,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 262,
@@ -5180,13 +5184,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 263,
@@ -5199,13 +5203,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 264,
@@ -5218,13 +5222,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 265,
@@ -5237,13 +5241,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 266,
@@ -5256,13 +5260,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 267,
@@ -5351,13 +5355,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 272,
@@ -5370,13 +5374,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 273,
@@ -5389,13 +5393,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 274,
@@ -5408,13 +5412,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 275,
@@ -5427,13 +5431,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 276,
@@ -5446,13 +5450,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 277,
@@ -5465,13 +5469,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 278,
@@ -5484,13 +5488,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 279,
@@ -5503,13 +5507,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 280,
@@ -5522,13 +5526,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 281,
@@ -5541,13 +5545,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 282,
@@ -5560,13 +5564,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 283,
@@ -5598,13 +5602,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 285,
@@ -5636,13 +5640,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 287,
@@ -5655,13 +5659,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 288,
@@ -5826,13 +5830,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 297,
@@ -5845,13 +5849,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 298,
@@ -5864,13 +5868,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 299,
@@ -5883,13 +5887,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 300,
@@ -5902,13 +5906,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 301,
@@ -5940,13 +5944,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 303,
@@ -5959,13 +5963,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 304,
@@ -5978,13 +5982,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 305,
@@ -6016,13 +6020,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 307,
@@ -6035,13 +6039,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 308,
@@ -6054,13 +6058,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 309,
@@ -6092,13 +6096,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 311,
@@ -6168,13 +6172,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 315,
@@ -6187,13 +6191,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 316,
@@ -6263,13 +6267,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 320,
@@ -6301,13 +6305,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 322,
@@ -6320,13 +6324,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 323,
@@ -6510,11 +6514,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "ID",
+      "category": "OTHER",
       "status": "F",
       "excludeFromDisplay": false
     },
@@ -6776,13 +6780,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 347,
@@ -6928,13 +6932,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 355,
@@ -7004,13 +7008,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 359,
@@ -7023,13 +7027,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 360,
@@ -7061,13 +7065,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 362,
@@ -7080,13 +7084,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 363,
@@ -7099,13 +7103,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 364,
@@ -7118,13 +7122,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 365,
@@ -7137,13 +7141,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 366,
@@ -7156,13 +7160,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 367,
@@ -7270,13 +7274,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 373,
@@ -7460,13 +7464,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 383,
@@ -7479,13 +7483,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 384,
@@ -7498,13 +7502,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 385,
@@ -7555,13 +7559,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 388,
@@ -7574,13 +7578,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 389,
@@ -7593,13 +7597,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 390,
@@ -7612,13 +7616,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 391,
@@ -7650,13 +7654,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 393,
@@ -7688,13 +7692,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 395,
@@ -7707,13 +7711,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 396,
@@ -7745,13 +7749,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 398,
@@ -7783,13 +7787,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 400,
@@ -7821,13 +7825,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 402,
@@ -7859,13 +7863,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 404,
@@ -7916,13 +7920,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 407,
@@ -7935,13 +7939,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 408,
@@ -8220,13 +8224,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 423,
@@ -8239,13 +8243,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 424,
@@ -8277,13 +8281,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 426,
@@ -8296,13 +8300,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 427,
@@ -8353,13 +8357,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 430,
@@ -9531,13 +9535,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 492,
@@ -9550,13 +9554,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 493,
@@ -9569,13 +9573,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 494,
@@ -9626,13 +9630,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 497,
@@ -9645,13 +9649,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 498,
@@ -9664,13 +9668,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 499,
@@ -9683,13 +9687,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 500,
@@ -9702,13 +9706,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 501,
@@ -9721,13 +9725,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 502,
@@ -9873,13 +9877,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 510,
@@ -11602,11 +11606,11 @@
       "delivery": "DJJIB",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 10,
       "ft40": 0,
       "teu": 10,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -11659,13 +11663,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 604,
@@ -11678,13 +11682,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 605,
@@ -11697,13 +11701,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 606,
@@ -11716,13 +11720,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 607,
@@ -11735,13 +11739,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 608,
@@ -11773,13 +11777,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 610,
@@ -11792,13 +11796,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 611,
@@ -11811,13 +11815,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 612,
@@ -11830,13 +11834,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 613,
@@ -11849,13 +11853,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 614,
@@ -11868,13 +11872,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 615,
@@ -11887,13 +11891,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 616,
@@ -11925,13 +11929,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 618,
@@ -12001,13 +12005,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 622,
@@ -12039,13 +12043,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 624,
@@ -12077,13 +12081,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 626,
@@ -12134,13 +12138,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 629,
@@ -12172,13 +12176,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 631,
@@ -12191,13 +12195,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 632,
@@ -12210,13 +12214,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 633,
@@ -12229,13 +12233,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 634,
@@ -12248,13 +12252,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 635,
@@ -12267,13 +12271,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 6,
       "teu": 12,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 636,
@@ -12286,13 +12290,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 637,
@@ -12305,13 +12309,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 638,
@@ -12324,13 +12328,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 639,
@@ -12343,13 +12347,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 640,
@@ -12362,13 +12366,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 641,
@@ -12400,13 +12404,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 643,
@@ -12419,13 +12423,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 644,
@@ -12438,13 +12442,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 645,
@@ -12457,13 +12461,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 646,
@@ -12476,13 +12480,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 647,
@@ -12495,13 +12499,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 648,
@@ -12533,13 +12537,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 650,
@@ -12571,13 +12575,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 652,
@@ -12590,13 +12594,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 653,
@@ -12609,13 +12613,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 654,
@@ -12628,13 +12632,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 655,
@@ -12647,13 +12651,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 656,
@@ -12666,13 +12670,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 657,
@@ -12685,13 +12689,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 658,
@@ -12761,13 +12765,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 662,
@@ -12818,13 +12822,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 665,
@@ -12837,13 +12841,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 666,
@@ -12856,13 +12860,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 667,
@@ -12875,13 +12879,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 668,
@@ -12894,13 +12898,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 669,
@@ -13464,13 +13468,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 699,
@@ -13483,13 +13487,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 700,
@@ -13977,13 +13981,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 726,
@@ -13996,13 +14000,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 727,
@@ -14091,13 +14095,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 732,
@@ -14547,13 +14551,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 756,
@@ -14604,13 +14608,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 759,
@@ -14680,11 +14684,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 10,
       "ft40": 0,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -14832,13 +14836,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 771,
@@ -14965,11 +14969,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 9,
       "ft40": 1,
       "teu": 11,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -14984,13 +14988,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 779,
@@ -15364,11 +15368,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -15421,13 +15425,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 802,
@@ -15440,13 +15444,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 803,
@@ -15459,13 +15463,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 804,
@@ -15478,13 +15482,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 805,
@@ -15497,13 +15501,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 806,
@@ -15516,13 +15520,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 807,
@@ -15535,13 +15539,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 808,
@@ -15554,13 +15558,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 809,
@@ -15592,13 +15596,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 811,
@@ -15611,13 +15615,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 812,
@@ -15725,13 +15729,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 818,
@@ -15953,13 +15957,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 830,
@@ -15972,13 +15976,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 831,
@@ -16466,11 +16470,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -16846,13 +16850,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 877,
@@ -16865,13 +16869,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 878,
@@ -16884,13 +16888,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 879,
@@ -17131,13 +17135,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 892,
@@ -17150,13 +17154,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 893,
@@ -17169,13 +17173,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 894,
@@ -17188,13 +17192,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 895,
@@ -17207,11 +17211,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -17226,11 +17230,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -17245,11 +17249,11 @@
       "delivery": "SDPZU",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -17701,13 +17705,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 922,
@@ -18632,13 +18636,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 971,
@@ -18651,13 +18655,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 972,
@@ -18670,13 +18674,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 973,
@@ -18727,13 +18731,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 976,
@@ -18746,13 +18750,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 977,
@@ -18765,13 +18769,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 978,
@@ -18784,13 +18788,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 979,
@@ -18879,13 +18883,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 984,
@@ -18917,13 +18921,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 986,
@@ -18936,13 +18940,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 987,
@@ -18955,13 +18959,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 988,
@@ -18974,13 +18978,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 989,
@@ -18993,13 +18997,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 990,
@@ -19164,13 +19168,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 999,
@@ -19240,13 +19244,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1003,
@@ -19753,13 +19757,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1030,
@@ -19962,13 +19966,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1041,
@@ -20000,13 +20004,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1043,
@@ -20019,13 +20023,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1044,
@@ -20304,13 +20308,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1059,
@@ -20323,13 +20327,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1060,
@@ -20342,13 +20346,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1061,
@@ -20361,13 +20365,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1062,
@@ -20380,13 +20384,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1063,
@@ -20399,13 +20403,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1064,
@@ -20418,13 +20422,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1065,
@@ -20437,13 +20441,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1066,
@@ -20456,13 +20460,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1067,
@@ -20475,13 +20479,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1068,
@@ -20494,13 +20498,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1069,
@@ -20513,13 +20517,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1070,
@@ -21064,13 +21068,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1099,
@@ -21083,13 +21087,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1100,
@@ -21121,11 +21125,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -21140,11 +21144,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -21197,13 +21201,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1106,
@@ -21311,13 +21315,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1112,
@@ -21330,13 +21334,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1113,
@@ -21349,13 +21353,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1114,
@@ -21406,13 +21410,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1117,
@@ -21482,11 +21486,11 @@
       "delivery": "AESCT",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -22166,13 +22170,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1157,
@@ -22185,13 +22189,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1158,
@@ -22394,13 +22398,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1169,
@@ -22413,13 +22417,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1170,
@@ -22432,13 +22436,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1171,
@@ -22622,13 +22626,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1181,
@@ -22698,13 +22702,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1185,
@@ -22755,13 +22759,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1188,
@@ -22774,13 +22778,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1189,
@@ -22869,13 +22873,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1194,
@@ -23002,13 +23006,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1201,
@@ -23040,13 +23044,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1203,
@@ -23059,13 +23063,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1204,
@@ -23078,13 +23082,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1205,
@@ -23097,13 +23101,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1206,
@@ -23382,13 +23386,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1221,
@@ -23496,11 +23500,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -23553,13 +23557,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1230,
@@ -23781,13 +23785,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1242,
@@ -23800,13 +23804,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1243,
@@ -23819,13 +23823,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1244,
@@ -23914,11 +23918,11 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -23933,11 +23937,11 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -23952,11 +23956,11 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -23971,13 +23975,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1252,
@@ -23990,13 +23994,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1253,
@@ -24313,11 +24317,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -24503,13 +24507,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1280,
@@ -24522,13 +24526,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1281,
@@ -24560,13 +24564,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1283,
@@ -24579,13 +24583,13 @@
       "delivery": "SDPZU",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1284,
@@ -24598,13 +24602,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1285,
@@ -24617,13 +24621,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1286,
@@ -24636,13 +24640,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1287,
@@ -24655,13 +24659,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 3,
       "ft40": 0,
       "teu": 3,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1288,
@@ -24864,13 +24868,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1299,
@@ -24883,13 +24887,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1300,
@@ -25130,13 +25134,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1313,
@@ -25149,13 +25153,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1314,
@@ -25168,13 +25172,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1315,
@@ -25187,13 +25191,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1316,
@@ -25396,11 +25400,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -25586,13 +25590,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1337,
@@ -25605,13 +25609,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1338,
@@ -25624,13 +25628,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1339,
@@ -25643,13 +25647,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1340,
@@ -25681,13 +25685,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1342,
@@ -26156,13 +26160,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1367,
@@ -26213,13 +26217,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1370,
@@ -26289,13 +26293,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1374,
@@ -26308,13 +26312,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1375,
@@ -26327,13 +26331,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1376,
@@ -26384,13 +26388,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1379,
@@ -26441,13 +26445,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1382,
@@ -26460,13 +26464,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1383,
@@ -26479,13 +26483,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1384,
@@ -26517,13 +26521,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1386,
@@ -26688,13 +26692,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1395,
@@ -26707,13 +26711,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 3,
       "ft40": 0,
       "teu": 3,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1396,
@@ -26973,13 +26977,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1410,
@@ -26992,11 +26996,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -27011,13 +27015,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1412,
@@ -27030,13 +27034,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1413,
@@ -27049,13 +27053,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1414,
@@ -27068,13 +27072,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1415,
@@ -27106,13 +27110,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1417,
@@ -27144,13 +27148,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1419,
@@ -27163,13 +27167,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1420,
@@ -27353,13 +27357,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1430,
@@ -27391,13 +27395,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1432,
@@ -27524,13 +27528,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1439,
@@ -27543,13 +27547,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1440,
@@ -27562,13 +27566,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1441,
@@ -27600,13 +27604,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1443,
@@ -27619,13 +27623,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 2,
       "teu": 5,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1444,
@@ -27657,13 +27661,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1446,
@@ -27733,13 +27737,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1450,
@@ -27923,13 +27927,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1460,
@@ -28056,13 +28060,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1467,
@@ -28094,13 +28098,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1469,
@@ -28151,13 +28155,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1472,
@@ -28284,13 +28288,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1479,
@@ -28322,13 +28326,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1481,
@@ -28493,13 +28497,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1490,
@@ -28512,13 +28516,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1491,
@@ -28550,13 +28554,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1493,
@@ -28664,13 +28668,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1499,
@@ -28683,13 +28687,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1500,
@@ -28702,11 +28706,11 @@
       "delivery": "AESCT",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 11,
       "teu": 22,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -28740,13 +28744,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1503,
@@ -28759,13 +28763,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1504,
@@ -28778,13 +28782,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1505,
@@ -28797,13 +28801,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1506,
@@ -28816,13 +28820,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1507,
@@ -28835,13 +28839,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1508,
@@ -28873,13 +28877,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1510,
@@ -28892,13 +28896,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1511,
@@ -28930,13 +28934,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1513,
@@ -28968,13 +28972,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1515,
@@ -29101,13 +29105,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1522,
@@ -29120,13 +29124,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1523,
@@ -29158,13 +29162,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1525,
@@ -29177,13 +29181,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1526,
@@ -29196,13 +29200,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1527,
@@ -29215,13 +29219,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1528,
@@ -29234,13 +29238,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1529,
@@ -29253,13 +29257,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1530,
@@ -29272,13 +29276,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1531,
@@ -29291,13 +29295,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1532,
@@ -29310,13 +29314,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1533,
@@ -29329,13 +29333,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1534,
@@ -29348,13 +29352,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1535,
@@ -29367,13 +29371,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1536,
@@ -29405,13 +29409,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1538,
@@ -29424,13 +29428,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1539,
@@ -29443,13 +29447,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1540,
@@ -29462,13 +29466,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1541,
@@ -29481,13 +29485,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1542,
@@ -29500,13 +29504,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1543,
@@ -29519,13 +29523,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 7,
       "ft40": 0,
       "teu": 7,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1544,
@@ -29538,13 +29542,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1545,
@@ -29557,13 +29561,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1546,
@@ -29576,13 +29580,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1547,
@@ -29595,13 +29599,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1548,
@@ -30184,11 +30188,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -30203,11 +30207,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -30944,13 +30948,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1619,
@@ -31020,11 +31024,11 @@
       "delivery": "SAJED",
       "tsPrev": "MYPKG",
       "tsPost": "-",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -31115,13 +31119,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1628,
@@ -31134,13 +31138,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1629,
@@ -31704,13 +31708,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1659,
@@ -31761,13 +31765,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1662,
@@ -31780,13 +31784,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "SAJED",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 1663,
@@ -32559,11 +32563,11 @@
       "delivery": "AEKLF",
       "tsPrev": "-",
       "tsPost": "MYPKG",
-      "baseCategory": "CNNGB",
+      "baseCategory": "OTHER",
       "ft20": 10,
       "ft40": 0,
       "teu": 10,
-      "category": "CNNGB",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -34497,11 +34501,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -34516,11 +34520,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -34535,11 +34539,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -34554,11 +34558,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
@@ -34573,11 +34577,11 @@
       "delivery": "YEADE",
       "tsPrev": "MYPKG",
       "tsPost": "SAJED",
-      "baseCategory": "ID",
+      "baseCategory": "OTHER",
       "ft20": 5,
       "ft40": 0,
       "teu": 5,
-      "category": "ID",
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     },
