@@ -1,48 +1,54 @@
 {
-  "generatedAt": "2026-05-28T01:47:52.924Z",
-  "sourceUpdatedAt": "2026-05-28T01:40:12.031Z",
+  "generatedAt": "2026-05-28T09:44:38.117Z",
+  "sourceUpdatedAt": "2026-05-28T08:52:22.460Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "CUHM2623W",
   "voyage": "2623W",
-  "bookingCount": 6,
+  "bookingCount": 5,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 CNSHK 的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 1050,
-    "current": 61,
-    "gap": -989,
-    "completionRate": 5.8,
-    "ft20": 1,
-    "ft40": 30,
-    "teu": 61,
-    "displayCurrent": 55,
-    "displayGap": -995,
-    "displayCompletionRate": 5.2,
-    "otherBookingCount": 2,
-    "otherTeu": 6,
-    "otherPols": [
-      "VNHPH"
-    ]
+    "allocation": 1000,
+    "current": 77,
+    "gap": -923,
+    "completionRate": 7.7,
+    "ft20": 9,
+    "ft40": 34,
+    "teu": 77,
+    "displayCurrent": 77,
+    "displayGap": -923,
+    "displayCompletionRate": 7.7,
+    "otherBookingCount": 0,
+    "otherTeu": 0,
+    "otherPols": []
   },
   "categoryRows": [
     {
-      "code": "CNSHA",
-      "label": "CNSHA",
-      "allocation": 500,
+      "code": "CNNGB",
+      "label": "CNNGB",
+      "allocation": 420,
       "current": 0,
-      "gap": -500,
+      "gap": -420,
       "completionRate": 0,
-      "status": "未开始",
-      "etd": "2026-06-09"
+      "status": "未开始"
     },
     {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 470,
+      "allocation": 370,
       "current": 12,
-      "gap": -458,
-      "completionRate": 2.6,
+      "gap": -358,
+      "completionRate": 3.2,
       "status": "需加紧",
       "etd": "2026-06-12"
+    },
+    {
+      "code": "CNXMN",
+      "label": "CNXMN (via SHK)",
+      "allocation": 30,
+      "current": 59,
+      "gap": 29,
+      "completionRate": 196.7,
+      "status": "推进中"
     },
     {
       "code": "CNSWA",
@@ -54,43 +60,68 @@
       "status": "未开始"
     },
     {
-      "code": "CNXMN",
-      "label": "CNXMN (via SHK)",
-      "allocation": 50,
-      "current": 43,
-      "gap": -7,
-      "completionRate": 86,
+      "code": "THLCH",
+      "label": "THLCH (via SHK)",
+      "allocation": 20,
+      "current": 0,
+      "gap": -20,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "VNHPH",
+      "label": "VNHPH (via SHK)",
+      "allocation": 10,
+      "current": 6,
+      "gap": -4,
+      "completionRate": 60,
       "status": "推进中"
+    },
+    {
+      "code": "VNHCM",
+      "label": "VNHCM (via SHK)",
+      "allocation": 20,
+      "current": 0,
+      "gap": -20,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "JP",
+      "label": "JP (via NGB)",
+      "allocation": 50,
+      "current": 0,
+      "gap": -50,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "XSG",
+      "label": "XSG (via NGB)",
+      "allocation": 50,
+      "current": 0,
+      "gap": -50,
+      "completionRate": 0,
+      "status": "未开始"
     }
   ],
   "topPods": [
     {
       "rank": 1,
       "pod": "SAJED",
-      "teu": 56
+      "teu": 66
     },
     {
       "rank": 2,
-      "pod": "EGSOK",
-      "teu": 2
-    },
-    {
-      "rank": 3,
       "pod": "JOAQJ",
-      "teu": 2
-    },
-    {
-      "rank": 4,
-      "pod": "SARUH",
-      "teu": 1
+      "teu": 11
     }
   ],
   "notes": [
-    "Allocation 合计 1050 TEU。",
-    "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 CNSHK 的归入对应直挂港。",
+    "Allocation 合计 1,000 TEU。",
+    "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 CNSHK 的归入对应 SHK bucket；T/S 经 CNNGB 的归入对应 NGB bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
-    "公开页默认不展示 shipper 等敏感客户字段。",
-    "当前总 booking 中含 2 条未落入 allocation bucket 的 OTHER booking（6 TEU），POL：VNHPH。"
+    "公开页默认不展示 shipper 等敏感客户字段。"
   ],
   "rows": [
     {
@@ -114,25 +145,6 @@
     },
     {
       "id": 2,
-      "bookingNo": "CULVXMN2601997",
-      "blNo": "CULVXMN2601997",
-      "office": "ULXMN",
-      "pol": "CNXMN",
-      "por": "CNXMN",
-      "pod": "SAJED",
-      "delivery": "SAJED",
-      "tsPrev": "CNSHK",
-      "tsPost": "-",
-      "baseCategory": "CNXMN",
-      "ft20": 0,
-      "ft40": 20,
-      "teu": 40,
-      "category": "CNXMN",
-      "status": "W",
-      "excludeFromDisplay": false
-    },
-    {
-      "id": 3,
       "bookingNo": "CULVHPH2601912",
       "blNo": "CULVHPH2601912",
       "office": "CUHPH",
@@ -142,16 +154,16 @@
       "delivery": "SAJED",
       "tsPrev": "CNSHK",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "VNHPH",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "VNHPH",
       "status": "W",
       "excludeFromDisplay": false
     },
     {
-      "id": 4,
+      "id": 3,
       "bookingNo": "CULVHPH2601917",
       "blNo": "CULVHPH2601917",
       "office": "CUHPH",
@@ -161,48 +173,48 @@
       "delivery": "JOAQJ",
       "tsPrev": "CNSHK",
       "tsPost": "SAJED",
-      "baseCategory": "OTHER",
+      "baseCategory": "VNHPH",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "VNHPH",
       "status": "W",
       "excludeFromDisplay": false
     },
     {
-      "id": 5,
-      "bookingNo": "CULVXMN2602098",
-      "blNo": "CULVXMN2602098",
+      "id": 4,
+      "bookingNo": "CULVXMN2602114",
+      "blNo": "CULVXMN2602114",
       "office": "ULXMN",
       "pol": "CNXMN",
       "por": "CNXMN",
       "pod": "SAJED",
-      "delivery": "SARUH",
+      "delivery": "SAJED",
       "tsPrev": "CNSHK",
       "tsPost": "-",
       "baseCategory": "CNXMN",
-      "ft20": 1,
-      "ft40": 0,
-      "teu": 1,
+      "ft20": 0,
+      "ft40": 25,
+      "teu": 50,
       "category": "CNXMN",
       "status": "W",
       "excludeFromDisplay": false
     },
     {
-      "id": 6,
-      "bookingNo": "CULVXMN2602100",
-      "blNo": "CULVXMN2602100",
+      "id": 5,
+      "bookingNo": "CULVXMN2602120",
+      "blNo": "CULVXMN2602120",
       "office": "ULXMN",
       "pol": "CNXMN",
       "por": "CNXMN",
-      "pod": "EGSOK",
-      "delivery": "EGSOK",
+      "pod": "JOAQJ",
+      "delivery": "JOAQJ",
       "tsPrev": "CNSHK",
-      "tsPost": "-",
+      "tsPost": "SAJED",
       "baseCategory": "CNXMN",
-      "ft20": 0,
-      "ft40": 1,
-      "teu": 2,
+      "ft20": 9,
+      "ft40": 0,
+      "teu": 9,
       "category": "CNXMN",
       "status": "W",
       "excludeFromDisplay": false
