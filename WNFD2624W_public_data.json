@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-06-01T02:32:27.732Z",
-  "sourceUpdatedAt": "2026-06-01T02:02:03.546Z",
+  "generatedAt": "2026-06-01T09:59:45.730Z",
+  "sourceUpdatedAt": "2026-06-01T08:56:19.730Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "WNFD2624W",
   "voyage": "2624W",
-  "bookingCount": 78,
+  "bookingCount": 80,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 NAS 的归入对应 NAS bucket；T/S 经 NGB 的归入对应 NGB bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1520,
-    "current": 264,
-    "gap": -1256,
-    "completionRate": 17.4,
-    "ft20": 72,
+    "current": 268,
+    "gap": -1252,
+    "completionRate": 17.6,
+    "ft20": 76,
     "ft40": 96,
-    "teu": 264,
+    "teu": 268,
     "displayCurrent": 225,
     "displayGap": -1295,
     "displayCompletionRate": 14.8,
-    "otherBookingCount": 18,
-    "otherTeu": 39,
+    "otherBookingCount": 20,
+    "otherTeu": 43,
     "otherPols": [
       "CNXGG"
     ]
@@ -128,12 +128,12 @@
     {
       "rank": 1,
       "pod": "SAJED",
-      "teu": 216
+      "teu": 219
     },
     {
       "rank": 2,
       "pod": "EGSOK",
-      "teu": 28
+      "teu": 29
     },
     {
       "rank": 3,
@@ -151,7 +151,7 @@
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 NAS 的归入对应 NAS bucket；T/S 经 NGB 的归入对应 NGB bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。",
-    "当前总 booking 中含 18 条未落入 allocation bucket 的 OTHER booking（39 TEU），POL：CNXGG。"
+    "当前总 booking 中含 20 条未落入 allocation bucket 的 OTHER booking（43 TEU），POL：CNXGG。"
   ],
   "rows": [
     {
@@ -1633,6 +1633,44 @@
       "ft40": 1,
       "teu": 2,
       "category": "VNHPH",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 79,
+      "bookingNo": "CULVXGG2600704",
+      "blNo": "CULVXGG2600704",
+      "office": "ULTNJ",
+      "pol": "CNXGG",
+      "por": "CNXGG",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "CNNGB",
+      "baseCategory": "OTHER",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "OTHER",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 80,
+      "bookingNo": "CULVXGG2600705",
+      "blNo": "CULVXGG2600705",
+      "office": "ULTNJ",
+      "pol": "CNXGG",
+      "por": "CNXGG",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "CNNGB",
+      "baseCategory": "OTHER",
+      "ft20": 3,
+      "ft40": 0,
+      "teu": 3,
+      "category": "OTHER",
       "status": "W",
       "excludeFromDisplay": false
     }
