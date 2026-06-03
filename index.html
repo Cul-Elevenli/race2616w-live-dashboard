@@ -373,6 +373,11 @@
               <span class="vdp-name">CUHC</span>
               <span class="vdp-svc cgx">CGX</span>
             </div>
+            <div class="vdp-item" data-vvd="HYBM2624W" data-service="cgx" data-name="HYBM" onclick="selectVessel('HYBM2624W')">
+              <span class="vdp-vvd">HYBM2624W</span>
+              <span class="vdp-name">HYBM</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
             <div class="vdp-item" data-vvd="XPBL2618W" data-service="cgx" data-name="EXPRESS BERLIN" onclick="selectVessel('XPBL2618W')">
               <span class="vdp-vvd">XPBL2618W</span>
               <span class="vdp-name">EXPRESS BERLIN</span>
@@ -1721,6 +1726,90 @@
     </section>
   </div>
 
+  <!-- ====== HYBM2624W 面板 ====== -->
+  <div class="tab-panel" id="panel-HYBM2624W">
+
+    <section class="page">
+      <div class="watermark" id="wm-HYBM">HYBM2624W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-HYBM">CGX service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-HYBM">HYBM2624W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-HYBM">2624W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-HYBM">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-HYBM"></div>
+      <div class="completion-strip" id="completionStrip-HYBM"></div>
+      <div class="region-strip" id="regionStrip-HYBM"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-HYBM"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-HYBM">--</span>
+        <span>CGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-HYBM">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">HYBM2624W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-HYBM">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-HYBM"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-HYBM"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
   <style>
     /* 截图模式：展开所有内容，不限制高度，压缩间距以适配视口 */
     .screenshot-mode .detail-table-wrap { max-height: none !important; overflow: visible !important; }
@@ -1768,6 +1857,7 @@
       CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK' },
       CUKL2625W: { jsonFile: 'CUKL2625W_public_data.json', prefix: 'CUKL' },
       WNFD2624W: { jsonFile: 'WNFD2624W_public_data.json', prefix: 'WNFD' },
+      HYBM2624W: { jsonFile: 'HYBM2624W_public_data.json', prefix: 'HYBM' },
     };
 
     let currentTab = 'RACE2623W';
@@ -1777,6 +1867,7 @@
     const VESSEL_META = {
       RACE2623W: { name: 'RACINE',        service: 'sgx' },
       CUHC2620W: { name: 'CUHC',          service: 'cgx' },
+      HYBM2624W: { name: 'HIRANYA BHUM', service: 'cgx' },
       XPBL2618W: { name: 'EXPRESS BERLIN',service: 'cgx' },
       RACE2616W: { name: 'RACINE',        service: 'cgx' },
       H7282620W: { name: 'HONG DA XIN 728', service: 'rex' },
