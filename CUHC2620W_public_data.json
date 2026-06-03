@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-03T01:10:54.321Z",
-  "sourceUpdatedAt": "2026-06-03T00:54:02.175Z",
+  "generatedAt": "2026-06-03T06:39:30.745Z",
+  "sourceUpdatedAt": "2026-06-03T06:37:41.795Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "CUHC2620W",
   "voyage": "2620W",
@@ -8,12 +8,12 @@
   "ruleText": "归类规则：直挂港精确匹配；via 港按中转口归类；TEU = 20ft + 2×40ft。",
   "totals": {
     "allocation": 2258,
-    "current": 2257,
-    "gap": -1,
-    "completionRate": 100,
+    "current": 2271,
+    "gap": 13,
+    "completionRate": 100.6,
     "ft20": 309,
-    "ft40": 974,
-    "teu": 2257,
+    "ft40": 981,
+    "teu": 2271,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -103,18 +103,36 @@
       "gap": 10,
       "completionRate": 109.7,
       "status": "推进中"
+    },
+    {
+      "code": "CNQZH",
+      "label": "CNQZH (via NAS)",
+      "allocation": 0,
+      "current": 10,
+      "gap": 10,
+      "completionRate": 0,
+      "status": "需加紧"
+    },
+    {
+      "code": "CNNJG",
+      "label": "CNNJG (via SHA)",
+      "allocation": 0,
+      "current": 4,
+      "gap": 4,
+      "completionRate": 0,
+      "status": "需加紧"
     }
   ],
   "topPods": [
     {
       "rank": 1,
       "pod": "AEJEA",
-      "teu": 1385
+      "teu": 1393
     },
     {
       "rank": 2,
       "pod": "AEKLF",
-      "teu": 496
+      "teu": 502
     },
     {
       "rank": 3,
@@ -1377,7 +1395,7 @@
       "ft40": 0,
       "teu": 4,
       "category": "OTHER",
-      "status": "W",
+      "status": "F",
       "excludeFromDisplay": true
     },
     {
@@ -1520,9 +1538,9 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNNJG",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 78,
@@ -1538,9 +1556,9 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNNJG",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 79,
@@ -2204,9 +2222,9 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNQZH",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 116,
@@ -2222,9 +2240,9 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNQZH",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 117,
@@ -6380,9 +6398,9 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNQZH",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 348,
@@ -6578,9 +6596,9 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNQZH",
       "status": "F",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 359,
@@ -10089,7 +10107,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "OTHER",
-      "status": "W",
+      "status": "F",
       "excludeFromDisplay": true
     },
     {
@@ -10107,7 +10125,7 @@
       "ft40": 0,
       "teu": 3,
       "category": "OTHER",
-      "status": "W",
+      "status": "F",
       "excludeFromDisplay": true
     },
     {
