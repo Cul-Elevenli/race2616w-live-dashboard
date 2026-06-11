@@ -2256,6 +2256,7 @@
 
     const SHARJAH_ICD_DEL_CODES = ['AESCT'];
     const NAF_DEL_CODES = ['LYMRA', 'LYBEM', 'ALGER'];
+    const EAST_MED_DEL_CODES = ['TRALI', 'TRIST', 'TRIZT', 'TRMER', 'EGALY'];
 
     function renderRegionStrip(prefix, payload, vvd) {
       const el = document.getElementById('regionStrip-' + prefix);
@@ -2264,6 +2265,26 @@
       const meta = VESSEL_META[vvd] || {};
       const service = meta.service || 'cgx';
       let blocksHtml = '';
+
+      // AEM Service：East Med 区域（TRALI / TRIST / TRIZT / TRMER / EGALY）— 放在最前
+      if (service === 'aem') {
+        const eastMedSet = new Set(EAST_MED_DEL_CODES);
+        const eastMedRows = rows.filter(r => {
+          const del = (r.delivery || '').substring(0, 5);
+          return eastMedSet.has(del);
+        });
+        const eastMedTeu = eastMedRows.reduce((s, r) => s + (r.teu || 0), 0);
+        const eastMedCount = eastMedRows.length;
+        const eastMedFt20 = eastMedRows.reduce((s, r) => s + (r.ft20 || 0), 0);
+        const eastMedFt40 = eastMedRows.reduce((s, r) => s + (r.ft40 || 0), 0);
+        blocksHtml += `
+          <div class="region-block" style="border-left:3px solid #0891b2;">
+            <span class="region-label">East Med</span>
+            <span class="region-value">${formatNumber(eastMedTeu)}<span class="subvalue">TEU</span></span>
+            <span class="region-meta">${eastMedCount} bk · 20ft ${eastMedFt20} / 40ft ${eastMedFt40}</span>
+          </div>`;
+      }
+
       Object.entries(REGION_PODS).forEach(([regionName, podList]) => {
         const podSet = new Set(podList);
         const matchedRows = rows.filter(r => {
