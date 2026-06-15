@@ -373,11 +373,6 @@
               <span class="vdp-name">HIRANYA BHUM</span>
               <span class="vdp-svc cgx">CGX</span>
             </div>
-            <div class="vdp-item" data-vvd="CUHC2620W" data-service="cgx" data-name="CUHC" onclick="selectVessel('CUHC2620W')">
-              <span class="vdp-vvd">CUHC2620W</span>
-              <span class="vdp-name">CUHC</span>
-              <span class="vdp-svc cgx">CGX</span>
-            </div>
             <!-- AEM -->
             <div class="vdp-group-label" data-group="AEM">AEM Service</div>
             <div class="vdp-item" data-vvd="CUKL2625W" data-service="aem" data-name="CUL KLANG" onclick="selectVessel('CUKL2625W')">
@@ -413,16 +408,6 @@
               <span class="vdp-name">HUA DONG 811</span>
               <span class="vdp-svc sgx">SGX</span>
             </div>
-            <div class="vdp-item" data-vvd="FUYU2622W" data-service="sgx" data-name="FU YU" onclick="selectVessel('FUYU2622W')">
-              <span class="vdp-vvd">FUYU2622W</span>
-              <span class="vdp-name">FU YU</span>
-              <span class="vdp-svc sgx">SGX</span>
-            </div>
-            <div class="vdp-item" data-vvd="ZYHS2620W" data-service="sgx" data-name="ZHI YING HE SHUN" onclick="selectVessel('ZYHS2620W')">
-              <span class="vdp-vvd">ZYHS2620W</span>
-              <span class="vdp-name">ZHI YING HE SHUN</span>
-              <span class="vdp-svc sgx">SGX</span>
-            </div>
             <div class="vdp-item" data-vvd="KDHZ2623W" data-service="sgx" data-name="KAI DA HONG ZHOU" onclick="selectVessel('KDHZ2623W')">
               <span class="vdp-vvd">KDHZ2623W</span>
               <span class="vdp-name">KAI DA HONG ZHOU</span>
@@ -434,16 +419,6 @@
             <div class="vdp-item" data-vvd="CUHM2623W" data-service="rex" data-name="CUL HUMEN" onclick="selectVessel('CUHM2623W')">
               <span class="vdp-vvd">CUHM2623W</span>
               <span class="vdp-name">CUL HUMEN</span>
-              <span class="vdp-svc rex">REX</span>
-            </div>
-            <div class="vdp-item" data-vvd="BZCF2621W" data-service="rex" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2621W')">
-              <span class="vdp-vvd">BZCF2621W</span>
-              <span class="vdp-name">BZ CHONGFU</span>
-              <span class="vdp-svc rex">REX</span>
-            </div>
-            <div class="vdp-item" data-vvd="H7282620W" data-service="rex" data-name="HONG DA XIN 728" onclick="selectVessel('H7282620W')">
-              <span class="vdp-vvd">H7282620W</span>
-              <span class="vdp-name">HONG DA XIN 728</span>
               <span class="vdp-svc rex">REX</span>
             </div>
             <div class="vdp-item" data-vvd="WNFD2624W" data-service="rex" data-name="WAN FU DA" onclick="selectVessel('WNFD2624W')">
@@ -539,174 +514,6 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-RACE2623"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== ZYHS2620W 面板 ====== -->
-  <div class="tab-panel" id="panel-ZYHS2620W">
-
-    <section class="page">
-      <div class="watermark" id="wm-ZYHS">ZYHS2620W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-ZYHS">SGX Service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-ZYHS">ZYHS2620W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-ZYHS">2620W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-ZYHS">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-ZYHS"></div>
-      <div class="completion-strip" id="completionStrip-ZYHS"></div>
-      <div class="region-strip" id="regionStrip-ZYHS"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>20' / 40'</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-ZYHS"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-ZYHS">--</span>
-        <span>REX Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">DEL TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-ZYHS">目的地分布 (DEL) - Top 10</h1>
-        <div class="subtitle">ZYHS2620W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 DEL:</strong> <span id="pod-count-ZYHS">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-ZYHS"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-ZYHS"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== FUYU2622W 面板 ====== -->
-  <div class="tab-panel" id="panel-FUYU2622W">
-
-    <section class="page">
-      <div class="watermark" id="wm-FUYU">FUYU2622W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-FUYU">SGX Service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-FUYU">FUYU2622W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-FUYU">2622W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-FUYU">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-FUYU"></div>
-      <div class="completion-strip" id="completionStrip-FUYU"></div>
-      <div class="region-strip" id="regionStrip-FUYU"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>20' / 40'</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-FUYU"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-FUYU">--</span>
-        <span>REX Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">DEL TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-FUYU">目的地分布 (DEL) - Top 10</h1>
-        <div class="subtitle">FUYU2622W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 DEL:</strong> <span id="pod-count-FUYU">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-FUYU"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-FUYU"></tbody></table>
         </div>
       </div>
 
@@ -875,174 +682,6 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-CUHM"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== BZCF2621W 面板 ====== -->
-  <div class="tab-panel" id="panel-BZCF2621W">
-
-    <section class="page">
-      <div class="watermark" id="wm-BZCF">BZCF2621W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-BZCF">REX Service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-BZCF">BZCF2621W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-BZCF">2621W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-BZCF">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-BZCF"></div>
-      <div class="completion-strip" id="completionStrip-BZCF"></div>
-      <div class="region-strip" id="regionStrip-BZCF"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>20' / 40'</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-BZCF"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-BZCF">--</span>
-        <span>REX Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">DEL TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-BZCF">目的地分布 (DEL) - Top 10</h1>
-        <div class="subtitle">BZCF2621W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 DEL:</strong> <span id="pod-count-BZCF">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-BZCF"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-BZCF"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- ====== H7282620W 面板 ====== -->
-  <div class="tab-panel" id="panel-H7282620W">
-
-    <section class="page">
-      <div class="watermark" id="wm-H728">H7282620W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-H728">REX Service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-H728">H7282620W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-H728">2620W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-H728">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-H728"></div>
-      <div class="completion-strip" id="completionStrip-H728"></div>
-      <div class="region-strip" id="regionStrip-H728"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>20' / 40'</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-H728"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-H728">--</span>
-        <span>REX Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">DEL TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-H728">目的地分布 (DEL) - Top 10</h1>
-        <div class="subtitle">H7282620W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 DEL:</strong> <span id="pod-count-H728">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-H728"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-H728"></tbody></table>
         </div>
       </div>
 
@@ -1473,90 +1112,6 @@
     </section>
   </div>
 
-  <!-- ====== CUHC2620W 面板 ====== -->
-  <div class="tab-panel" id="panel-CUHC2620W">
-
-    <section class="page">
-      <div class="watermark" id="wm-CUHC">CUHC2620W UPDATE</div>
-      <header class="header">
-        <h1 class="title" id="title-CUHC">CGX service Booking Update / Live Dashboard</h1>
-        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
-        <div class="subtitle">Public Live View · 近实时数据快照</div>
-        <div class="meta">
-          <div><strong>VVD:</strong> <span id="meta-vvd-CUHC">CUHC2620W</span></div>
-          <div><strong>Voyage:</strong> <span id="meta-voyage-CUHC">2620W</span></div>
-          <div><strong>公开页刷新:</strong> 每 60 秒</div>
-        </div>
-      </header>
-
-      <div class="toolbar-bar">
-        <div class="toolbar-left">
-          <span class="chip">对外只显示非敏感字段</span>
-          <span class="chip" id="booking-chip-CUHC">Booking 0 条</span>
-        </div>
-        <div class="toolbar-right">
-          <span class="chip">页面版式：PDF 风格</span>
-        </div>
-      </div>
-
-      <div class="summary-grid" id="summaryGrid-CUHC"></div>
-      <div class="completion-strip" id="completionStrip-CUHC"></div>
-      <div class="region-strip" id="regionStrip-CUHC"></div>
-
-      <div class="section-title">各口岸舱位分配与完成进度</div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>口岸 (POL)</th>
-            <th>ETD</th>
-            <th>分配舱位<br>(TEU)</th>
-            <th>当前订舱<br>(TEU)</th>
-            <th>20' / 40'</th>
-            <th>差距<br>(TEU)</th>
-            <th>完成率</th>
-            <th>进度</th>
-            <th>状态</th>
-          </tr>
-        </thead>
-        <tbody id="categoryBody-CUHC"></tbody>
-      </table>
-
-      <div class="footer">
-        <span id="footer-time-CUHC">--</span>
-        <span>CGX Service Live View</span>
-      </div>
-    </section>
-
-    <section class="page">
-      <div class="watermark">DEL TOP 10</div>
-      <header class="header">
-        <h1 class="title" id="pod-title-CUHC">目的地分布 (DEL) - Top 10</h1>
-        <div class="subtitle">CUHC2620W Latest Distribution Snapshot</div>
-        <div class="meta">
-          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
-          <div><strong>唯一 DEL:</strong> <span id="pod-count-CUHC">-</span></div>
-          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
-        </div>
-      </header>
-
-      <div class="pod-grid">
-        <div class="pod-card">
-          <h3>Top 1 - Top 5</h3>
-          <table class="pod-table"><tbody id="podLeft-CUHC"></tbody></table>
-        </div>
-        <div class="pod-card">
-          <h3>Top 6 - Top 10</h3>
-          <table class="pod-table"><tbody id="podRight-CUHC"></tbody></table>
-        </div>
-      </div>
-
-      <div class="footer">
-        <span></span>
-        <span>Preview Version</span>
-      </div>
-    </section>
-  </div>
-
   <!-- ====== HYBM2624W 面板 ====== -->
   <div class="tab-panel" id="panel-HYBM2624W">
 
@@ -1842,13 +1397,8 @@
     // ===== Vessel 配置 =====
     const VESSELS = {
       RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623' },
-      H7282620W: { jsonFile: 'H7282620W_public_data.json', prefix: 'H728' },
-      ZYHS2620W: { jsonFile: 'ZYHS2620W_public_data.json', prefix: 'ZYHS' },
-      BZCF2621W: { jsonFile: 'BZCF2621W_public_data.json', prefix: 'BZCF' },
-      CUHC2620W: { jsonFile: 'CUHC2620W_public_data.json', prefix: 'CUHC' },
       ZGCD2619W: { jsonFile: 'ZGCD2619W_public_data.json', prefix: 'ZGCD' },
       SHTG2620W: { jsonFile: 'SHTG2620W_public_data.json', prefix: 'SHTG' },
-      FUYU2622W: { jsonFile: 'FUYU2622W_public_data.json', prefix: 'FUYU' },
       H8112622W: { jsonFile: 'H8112622W_public_data.json', prefix: 'H811' },
       CUHM2623W: { jsonFile: 'CUHM2623W_public_data.json', prefix: 'CUHM' },
       CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK' },
@@ -1865,14 +1415,9 @@
     // ===== 下拉导航逻辑 =====
     const VESSEL_META = {
       RACE2623W: { name: 'RACINE',        service: 'sgx' },
-      CUHC2620W: { name: 'CUHC',          service: 'cgx' },
       HYBM2624W: { name: 'HIRANYA BHUM', service: 'cgx' },
-      H7282620W: { name: 'HONG DA XIN 728', service: 'rex' },
-      ZYHS2620W: { name: 'ZHI YING HE SHUN', service: 'sgx' },
-      BZCF2621W: { name: 'BZ CHONGFU',   service: 'rex' },
       ZGCD2619W: { name: 'ZHONG GU CHENG DU', service: 'aem' },
       SHTG2620W: { name: 'SHENGTANG',    service: 'aem' },
-      FUYU2622W: { name: 'FU YU',        service: 'sgx' },
       H8112622W: { name: 'HUA DONG 811', service: 'sgx' },
       CUHM2623W: { name: 'CUL HUMEN',    service: 'rex' },
       CUSK2623W: { name: 'CUL HOCHIMINH',service: 'aem' },
