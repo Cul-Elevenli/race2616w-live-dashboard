@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-17T00:51:22.398Z",
-  "sourceUpdatedAt": "2026-06-17T00:45:06.762Z",
+  "generatedAt": "2026-06-17T02:37:26.741Z",
+  "sourceUpdatedAt": "2026-06-17T00:52:51.473Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "WNFD2624W",
   "voyage": "2624W",
@@ -8,15 +8,15 @@
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 NAS 的归入对应 NAS bucket；T/S 经 NGB 的归入对应 NGB bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1520,
-    "current": 1105,
-    "gap": -415,
-    "completionRate": 72.7,
-    "ft20": 305,
-    "ft40": 400,
-    "teu": 1105,
-    "displayCurrent": 926,
-    "displayGap": -594,
-    "displayCompletionRate": 60.9,
+    "current": 1255,
+    "gap": -265,
+    "completionRate": 82.6,
+    "ft20": 345,
+    "ft40": 455,
+    "teu": 1255,
+    "displayCurrent": 1076,
+    "displayGap": -444,
+    "displayCompletionRate": 70.8,
     "otherBookingCount": 61,
     "otherTeu": 179,
     "otherPols": [
@@ -27,23 +27,24 @@
   },
   "categoryRows": [
     {
+      "code": "CNSHA",
+      "label": "CNSHA",
+      "allocation": 350,
+      "current": 152,
+      "gap": -198,
+      "completionRate": 43.4,
+      "status": "推进中",
+      "etd": "2026-06-20"
+    },
+    {
       "code": "CNNGB",
       "label": "CNNGB",
       "allocation": 730,
       "current": 707,
       "gap": -23,
       "completionRate": 96.8,
-      "status": "推进中"
-    },
-    {
-      "code": "CNSHK",
-      "label": "CNSHK",
-      "allocation": 350,
-      "current": 2,
-      "gap": -348,
-      "completionRate": 0.6,
-      "status": "需加紧",
-      "etd": "2026-06-25"
+      "status": "推进中",
+      "etd": "2026-06-17"
     },
     {
       "code": "CNNAS",
@@ -52,7 +53,8 @@
       "current": 11,
       "gap": -299,
       "completionRate": 3.5,
-      "status": "需加紧"
+      "status": "需加紧",
+      "etd": "2026-06-22"
     },
     {
       "code": "CNXMN",
@@ -110,7 +112,7 @@
     },
     {
       "code": "JP",
-      "label": "JP (via NGB)",
+      "label": "JP (via NAS)",
       "allocation": 20,
       "current": 20,
       "gap": 0,
@@ -131,22 +133,22 @@
     {
       "rank": 1,
       "pod": "EGSOK",
-      "teu": 647
+      "teu": 759
     },
     {
       "rank": 2,
       "pod": "YEADE",
-      "teu": 187
+      "teu": 217
     },
     {
       "rank": 3,
       "pod": "SAJED",
-      "teu": 170
+      "teu": 168
     },
     {
       "rank": 4,
       "pod": "DJJIB",
-      "teu": 89
+      "teu": 99
     },
     {
       "rank": 5,
@@ -1356,13 +1358,13 @@
       "delivery": "SAJED",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "CNSHK",
+      "baseCategory": "OTHER",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "CNSHK",
+      "category": "OTHER",
       "status": "W",
-      "excludeFromDisplay": false
+      "excludeFromDisplay": true
     },
     {
       "id": 64,
@@ -2230,13 +2232,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 110,
@@ -2249,13 +2251,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 111,
@@ -2268,13 +2270,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 112,
@@ -2287,13 +2289,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 113,
@@ -2306,13 +2308,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 114,
@@ -2325,13 +2327,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 115,
@@ -2344,13 +2346,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 116,
@@ -2363,13 +2365,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 117,
@@ -2382,13 +2384,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 118,
@@ -2401,13 +2403,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 119,
@@ -2420,13 +2422,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 120,
@@ -2439,13 +2441,13 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 26,
       "ft40": 0,
       "teu": 26,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 121,
@@ -2610,13 +2612,13 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 130,
@@ -2629,13 +2631,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 131,
@@ -2686,13 +2688,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 134,
@@ -2724,13 +2726,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 136,
@@ -2781,13 +2783,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 139,
@@ -2838,13 +2840,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 142,
@@ -3693,13 +3695,13 @@
       "delivery": "YEADE",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 187,
@@ -7854,13 +7856,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 406,
@@ -7892,13 +7894,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 408,
@@ -8120,13 +8122,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 420,
@@ -8177,13 +8179,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 423,
@@ -8234,13 +8236,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 426,
@@ -8291,13 +8293,13 @@
       "delivery": "DJJIB",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 429,
@@ -8329,13 +8331,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 20,
       "teu": 40,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 431,
@@ -8405,13 +8407,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 435,
@@ -8785,13 +8787,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 455,
@@ -8861,13 +8863,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 10,
       "teu": 20,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 459,
@@ -8918,13 +8920,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 462,
@@ -8937,13 +8939,13 @@
       "delivery": "EGSOK",
       "tsPrev": "-",
       "tsPost": "-",
-      "baseCategory": "OTHER",
+      "baseCategory": "CNSHA",
       "ft20": 0,
       "ft40": 10,
       "teu": 20,
-      "category": "OTHER",
+      "category": "CNSHA",
       "status": "W",
-      "excludeFromDisplay": true
+      "excludeFromDisplay": false
     },
     {
       "id": 463,
