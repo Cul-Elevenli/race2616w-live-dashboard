@@ -137,6 +137,8 @@
     .detail-table tbody tr:nth-child(even) { background: #f8fbfe; }
     .align-left { text-align: left !important; }
     .empty { padding: 24px 12px; text-align: center; color: var(--muted); display: none; }
+    .pickup-cell { text-align: right; font-weight: 700; color: #d97706; font-size: 14px; white-space: nowrap; }
+    .pickup-total { color: #b45309; font-size: 15px; background: #fffbeb; }
     .footer { margin-top: 16px; display: flex; justify-content: space-between; color: #708090; font-size: 12px; border-top: 1px solid #e3ebf3; padding-top: 10px; }
     .watermark {
       position: absolute; top: 52%; left: 50%;
@@ -1167,6 +1169,7 @@
             <th>完成率</th>
             <th>进度</th>
             <th>状态</th>
+            <th>Container<br>PickUp<br>(TEU)</th>
           </tr>
         </thead>
         <tbody id="categoryBody-HYBM"></tbody>
@@ -1800,6 +1803,7 @@
       const displayCompletionRate = totals.displayCompletionRate ?? totals.completionRate;
       const totalRowStatus = displayCompletionRate < 30 ? '需加紧' : '推进中';
       const body = document.getElementById('categoryBody-' + prefix);
+      const hasPickUp = categoryRows.some(r => r.pickUpTeus != null) || totals.pickUpTeus != null;
 
       // 按 category 聚合 ft20 / ft40
       const ftMap = {};
@@ -1822,6 +1826,7 @@
         const rate = Number(row.completionRate || 0);
         const etdDisplay = row.etd ? `<span class="etd-tag">${row.etd}</span>` : '<span class="etd-tag etd-none">—</span>';
         const ft = ftMap[row.code] || { ft20: 0, ft40: 0 };
+        const puCell = hasPickUp ? `<td class="pickup-cell">${row.pickUpTeus != null ? formatNumber(row.pickUpTeus) : '—'}</td>` : '';
         return `<tr>
           <td class="pol">${row.label || row.code}</td>
           <td class="etd-cell">${etdDisplay}</td>
@@ -1832,6 +1837,7 @@
           <td>${formatPercent(rate)}</td>
           <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div></td>
           <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
+          ${puCell}
         </tr>`;
       }).join('');
       const totalFt20 = (bookingRows || []).reduce((s, r) => s + (r.excludeFromDisplay ? 0 : (r.ft20 || 0)), 0);
@@ -1846,6 +1852,7 @@
         <td>${formatPercent(displayCompletionRate)}</td>
         <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div></div></td>
         <td><span class="status ${statusClass(totalRowStatus)}">${totalRowStatus}</span></td>
+        ${hasPickUp ? `<td class="pickup-cell pickup-total">${formatNumber(totals.pickUpTeus)}</td>` : ''}
       </tr>`;
       body.innerHTML = bodyRows + totalRow;
     }
