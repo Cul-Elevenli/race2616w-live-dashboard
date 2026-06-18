@@ -1166,10 +1166,10 @@
             <th>当前订舱<br>(TEU)</th>
             <th>20' / 40'</th>
             <th>差距<br>(TEU)</th>
+            <th>Container<br>PickUp<br>(TEU)</th>
             <th>完成率</th>
             <th>进度</th>
             <th>状态</th>
-            <th>Container<br>PickUp<br>(TEU)</th>
           </tr>
         </thead>
         <tbody id="categoryBody-HYBM"></tbody>
@@ -1834,10 +1834,10 @@
           <td>${formatNumber(row.current)}</td>
           <td class="ft-cell">${formatNumber(ft.ft20)} / ${formatNumber(ft.ft40)}</td>
           <td>${formatNumber(row.gap)}</td>
+          ${puCell}
           <td>${formatPercent(rate)}</td>
           <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div></td>
           <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
-          ${puCell}
         </tr>`;
       }).join('');
       const totalFt20 = (bookingRows || []).reduce((s, r) => s + (r.excludeFromDisplay ? 0 : (r.ft20 || 0)), 0);
@@ -1849,10 +1849,10 @@
         <td>${formatNumber(displayCurrent)}</td>
         <td class="ft-cell">${formatNumber(totalFt20)} / ${formatNumber(totalFt40)}</td>
         <td>${formatNumber(displayGap)}</td>
+        ${hasPickUp ? `<td class="pickup-cell pickup-total">${formatNumber(totals.pickUpTeus)}</td>` : ''}
         <td>${formatPercent(displayCompletionRate)}</td>
         <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(displayCompletionRate)}" style="width:${Math.max(0, Math.min(displayCompletionRate, 100))}%"></span></div></div></td>
         <td><span class="status ${statusClass(totalRowStatus)}">${totalRowStatus}</span></td>
-        ${hasPickUp ? `<td class="pickup-cell pickup-total">${formatNumber(totals.pickUpTeus)}</td>` : ''}
       </tr>`;
       body.innerHTML = bodyRows + totalRow;
     }
