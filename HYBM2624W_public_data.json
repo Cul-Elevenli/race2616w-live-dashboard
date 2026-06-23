@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-23T08:50:54.000Z",
-  "sourceUpdatedAt": "2026-06-23T08:46:54.953Z",
+  "generatedAt": "2026-06-23T09:29:26.666Z",
+  "sourceUpdatedAt": "2026-06-23T09:28:59.947Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "HYBM2624W",
   "voyage": "2624W",
   "bookingCount": 332,
   "ruleText": "归类规则：直挂港精确匹配（CNSHA/CNNGB/CNSHK/CNNAS/CNSWA）；via 港按 POL 前缀（JP/TW/TH/VN）+ prev/post 中转港（SHA/NGB/SHK/NAS）归类到对应 via bucket。TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 1001,
+    "allocation": 1000,
     "current": 999,
-    "gap": -2,
-    "completionRate": 99.8,
+    "gap": -1,
+    "completionRate": 99.9,
     "ft20": 89,
     "ft40": 455,
     "teu": 999,
     "displayCurrent": 999,
-    "displayGap": -2,
-    "displayCompletionRate": 99.8,
+    "displayGap": -1,
+    "displayCompletionRate": 99.9,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": [],
@@ -35,24 +35,6 @@
       "pickUpTeus": 85
     },
     {
-      "code": "JPSHA",
-      "label": "JP (via SHA)",
-      "allocation": 319,
-      "current": 309,
-      "gap": -10,
-      "completionRate": 96.9,
-      "status": "推进中"
-    },
-    {
-      "code": "VNSHA",
-      "label": "VN (via SHA)",
-      "allocation": 2,
-      "current": 2,
-      "gap": 0,
-      "completionRate": 100,
-      "status": "推进中"
-    },
-    {
       "code": "CNNGB",
       "label": "CNNGB",
       "allocation": 118,
@@ -64,51 +46,33 @@
       "pickUpTeus": 108
     },
     {
-      "code": "JPNGB",
-      "label": "JP (via NGB)",
-      "allocation": 109,
-      "current": 109,
-      "gap": 0,
-      "completionRate": 100,
-      "status": "推进中"
-    },
-    {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 109,
+      "allocation": 122,
       "current": 132,
-      "gap": 23,
-      "completionRate": 121.1,
+      "gap": 10,
+      "completionRate": 108.2,
       "status": "推进中",
       "etd": "2026-06-19"
     },
     {
-      "code": "THSHK",
-      "label": "TH (via SHK)",
-      "allocation": 4,
-      "current": 4,
-      "gap": 0,
-      "completionRate": 100,
-      "status": "推进中"
-    },
-    {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 64,
+      "allocation": 113,
       "current": 114,
-      "gap": 50,
-      "completionRate": 178.1,
+      "gap": 1,
+      "completionRate": 100.9,
       "status": "推进中",
       "etd": "2026-06-21",
       "pickUpTeus": 114
     },
     {
-      "code": "JPNAS",
-      "label": "JP (via NAS)",
-      "allocation": 101,
-      "current": 68,
-      "gap": -33,
-      "completionRate": 67.3,
+      "code": "JP",
+      "label": "JP (via SHA/NGB/NAS)",
+      "allocation": 499,
+      "current": 486,
+      "gap": -13,
+      "completionRate": 97.4,
       "status": "推进中"
     },
     {
@@ -121,21 +85,39 @@
       "status": "推进中"
     },
     {
-      "code": "TWNNAS",
+      "code": "VNSHA",
+      "label": "VN (via SHA)",
+      "allocation": 2,
+      "current": 2,
+      "gap": 0,
+      "completionRate": 100,
+      "status": "推进中"
+    },
+    {
+      "code": "THSHK",
+      "label": "TH (via SHK)",
+      "allocation": 4,
+      "current": 4,
+      "gap": 0,
+      "completionRate": 100,
+      "status": "推进中"
+    },
+    {
+      "code": "TWNAS",
       "label": "TW (via NAS)",
-      "allocation": 45,
+      "allocation": 24,
       "current": 24,
-      "gap": -21,
-      "completionRate": 53.3,
+      "gap": 0,
+      "completionRate": 100,
       "status": "推进中"
     },
     {
       "code": "VNNAS",
       "label": "VN (via NAS)",
-      "allocation": 36,
+      "allocation": 24,
       "current": 34,
-      "gap": -2,
-      "completionRate": 94.4,
+      "gap": 10,
+      "completionRate": 141.7,
       "status": "推进中"
     }
   ],
@@ -163,8 +145,8 @@
   ],
   "notes": [
     "HYBM2624W (HIRANYA BHUM) — CGX 航线。",
-    "Total Allocation: 1,001 TEU。直挂港：CNSHA(84)/CNNGB(118)/CNSHK(109)/CNNAS(64)。",
-    "Via SHA：JP(319) / VN(2)；Via NGB：JP(109)；Via SHK：TH(4)；Via NAS：JP(101) / CNSWA(10) / TW(45) / VN(36)。",
+    "Total Allocation: 1,000 TEU。直挂港：CNSHA(84)/CNNGB(118)/CNSHK(122)/CNNAS(113)。",
+    "Via SHA/NGB/NAS：JP(499)；Via NAS：CNSWA(10) / TW(24) / VN(24)；Via SHA：VN(2)；Via SHK：TH(4)。",
     "归类规则：直挂港精确匹配 + via 港按 POL 前缀 + prev/post 中转港归类。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
@@ -185,7 +167,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -203,7 +185,7 @@
       "ft20": 0,
       "ft40": 5,
       "teu": 10,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -221,7 +203,7 @@
       "ft20": 1,
       "ft40": 3,
       "teu": 7,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -239,7 +221,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -257,7 +239,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -275,7 +257,7 @@
       "ft20": 1,
       "ft40": 1,
       "teu": 3,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -311,7 +293,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -329,7 +311,7 @@
       "ft20": 0,
       "ft40": 7,
       "teu": 14,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -347,7 +329,7 @@
       "ft20": 0,
       "ft40": 8,
       "teu": 16,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -365,7 +347,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -383,7 +365,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -401,7 +383,7 @@
       "ft20": 16,
       "ft40": 0,
       "teu": 16,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -419,7 +401,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -437,7 +419,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -455,7 +437,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -473,7 +455,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -491,7 +473,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -509,7 +491,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -527,7 +509,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -545,7 +527,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -563,7 +545,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -581,7 +563,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -599,7 +581,7 @@
       "ft20": 0,
       "ft40": 7,
       "teu": 14,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -617,7 +599,7 @@
       "ft20": 1,
       "ft40": 3,
       "teu": 7,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -635,7 +617,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -653,7 +635,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -671,7 +653,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -689,7 +671,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -743,7 +725,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -779,7 +761,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -797,7 +779,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -815,7 +797,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -833,7 +815,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -851,7 +833,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -869,7 +851,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -887,7 +869,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -905,7 +887,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -923,7 +905,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -941,7 +923,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -959,7 +941,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -977,7 +959,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -995,7 +977,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1013,7 +995,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1031,7 +1013,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1049,7 +1031,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1067,7 +1049,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1085,7 +1067,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1103,7 +1085,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1121,7 +1103,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1139,7 +1121,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -1157,7 +1139,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1175,7 +1157,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1193,7 +1175,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1211,7 +1193,7 @@
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1229,7 +1211,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1247,7 +1229,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1265,7 +1247,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1283,7 +1265,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1301,7 +1283,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1319,7 +1301,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1337,7 +1319,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1355,7 +1337,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1373,7 +1355,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1391,7 +1373,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1409,7 +1391,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1427,7 +1409,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1445,7 +1427,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1463,7 +1445,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1481,7 +1463,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1499,7 +1481,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -1517,7 +1499,7 @@
       "ft20": 1,
       "ft40": 9,
       "teu": 19,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1535,7 +1517,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1553,7 +1535,7 @@
       "ft20": 0,
       "ft40": 7,
       "teu": 14,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1571,7 +1553,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1589,7 +1571,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1607,7 +1589,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1625,7 +1607,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1643,7 +1625,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1661,7 +1643,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1679,7 +1661,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1697,7 +1679,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1733,7 +1715,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1751,7 +1733,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1769,7 +1751,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1787,7 +1769,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1805,7 +1787,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1823,7 +1805,7 @@
       "ft20": 0,
       "ft40": 3,
       "teu": 6,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1841,7 +1823,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1859,7 +1841,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1877,7 +1859,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1895,7 +1877,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1913,7 +1895,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1931,7 +1913,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1949,7 +1931,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1967,7 +1949,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -1985,7 +1967,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2003,7 +1985,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2021,7 +2003,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2039,7 +2021,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2057,7 +2039,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2075,7 +2057,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2111,7 +2093,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2129,7 +2111,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2165,7 +2147,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2183,7 +2165,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2201,7 +2183,7 @@
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2219,7 +2201,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2237,7 +2219,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2255,7 +2237,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2273,7 +2255,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2291,7 +2273,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2309,7 +2291,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2327,7 +2309,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2345,7 +2327,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2363,7 +2345,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2381,7 +2363,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2399,7 +2381,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2417,7 +2399,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2435,7 +2417,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2453,7 +2435,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2471,7 +2453,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2489,7 +2471,7 @@
       "ft20": 0,
       "ft40": 2,
       "teu": 4,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2507,7 +2489,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2525,7 +2507,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2543,7 +2525,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2561,7 +2543,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2579,7 +2561,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2597,7 +2579,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2615,7 +2597,7 @@
       "ft20": 0,
       "ft40": 4,
       "teu": 8,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2633,7 +2615,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2651,7 +2633,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2669,7 +2651,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2687,7 +2669,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2705,7 +2687,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2723,7 +2705,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2741,7 +2723,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2759,7 +2741,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2777,7 +2759,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2795,7 +2777,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2813,7 +2795,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2831,7 +2813,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2849,7 +2831,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2867,7 +2849,7 @@
       "ft20": 0,
       "ft40": 15,
       "teu": 30,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2903,7 +2885,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2921,7 +2903,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -2957,7 +2939,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -2975,7 +2957,7 @@
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -2993,7 +2975,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3011,7 +2993,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3029,7 +3011,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3047,7 +3029,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3065,7 +3047,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3083,7 +3065,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3101,7 +3083,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3119,7 +3101,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3137,7 +3119,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3155,7 +3137,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3173,7 +3155,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNGB",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3191,7 +3173,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3209,7 +3191,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3227,7 +3209,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3245,7 +3227,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3263,7 +3245,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3281,7 +3263,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3299,7 +3281,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3317,7 +3299,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3335,7 +3317,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3353,7 +3335,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3389,7 +3371,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3407,7 +3389,7 @@
       "ft20": 1,
       "ft40": 0,
       "teu": 1,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3425,7 +3407,7 @@
       "ft20": 0,
       "ft40": 0,
       "teu": 0,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3443,7 +3425,7 @@
       "ft20": 0,
       "ft40": 0,
       "teu": 0,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3533,7 +3515,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3551,7 +3533,7 @@
       "ft20": 2,
       "ft40": 0,
       "teu": 2,
-      "category": "TWNNAS",
+      "category": "TWNAS",
       "status": "F"
     },
     {
@@ -3695,7 +3677,7 @@
       "ft20": 1,
       "ft40": 1,
       "teu": 3,
-      "category": "JPSHA",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3713,7 +3695,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3731,7 +3713,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3785,7 +3767,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
@@ -3803,7 +3785,7 @@
       "ft20": 0,
       "ft40": 1,
       "teu": 2,
-      "category": "JPNAS",
+      "category": "JP",
       "status": "F"
     },
     {
