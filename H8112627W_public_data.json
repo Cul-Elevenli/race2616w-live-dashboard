@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-23T07:41:44.106Z",
-  "sourceUpdatedAt": "2026-06-23T07:41:14.419Z",
+  "generatedAt": "2026-06-23T08:00:05.583Z",
+  "sourceUpdatedAt": "2026-06-23T07:58:50.661Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "H8112627W",
   "voyage": "2627W",
-  "bookingCount": 0,
+  "bookingCount": 4,
   "ruleText": "归类规则：直挂港精确匹配（CNSHA/CNNAS）；via 港按 POL 前缀 + T/S 港归类；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1100,
-    "current": 0,
-    "gap": -1100,
-    "completionRate": 0,
-    "ft20": 0,
-    "ft40": 0,
-    "teu": 0,
-    "displayCurrent": 0,
-    "displayGap": -1100,
-    "displayCompletionRate": 0,
+    "current": 8,
+    "gap": -1092,
+    "completionRate": 0.7,
+    "ft20": 2,
+    "ft40": 3,
+    "teu": 8,
+    "displayCurrent": 8,
+    "displayGap": -1092,
+    "displayCompletionRate": 0.7,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -35,11 +35,11 @@
       "code": "CNNAS",
       "label": "CNNAS",
       "allocation": 460,
-      "current": 0,
-      "gap": -460,
-      "completionRate": 0,
-      "status": "未开始",
-      "etd": "2026-06-17"
+      "current": 8,
+      "gap": -452,
+      "completionRate": 1.7,
+      "status": "需加紧",
+      "etd": "2026-07-09"
     },
     {
       "code": "CNXMN",
@@ -87,12 +87,95 @@
       "status": "未开始"
     }
   ],
-  "topPods": [],
+  "topPods": [
+    {
+      "rank": 1,
+      "pod": "SAJED",
+      "teu": 8
+    }
+  ],
   "notes": [
     "Allocation 合计 1,100 TEU（含直挂港 SHA/NAS 及 via 港）。",
     "归类规则：直挂港精确匹配；via 港按 POL 前缀及中转港（NAS/NGB）归类。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
-  "rows": []
+  "rows": [
+    {
+      "id": 1,
+      "bookingNo": "CULVNAS2622348",
+      "blNo": "CULVNAS2622348",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "baseCategory": "CNNAS",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
+      "bookingNo": "CULVNAS2622349",
+      "blNo": "CULVNAS2622349",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "baseCategory": "CNNAS",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNNAS",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 3,
+      "bookingNo": "CULVNAS2622538",
+      "blNo": "CULVNAS2622538",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "baseCategory": "CNNAS",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNNAS",
+      "status": "F",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 4,
+      "bookingNo": "CULVNAS2620850",
+      "blNo": "CULVNAS2620850",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "baseCategory": "CNNAS",
+      "ft20": 1,
+      "ft40": 1,
+      "teu": 3,
+      "category": "CNNAS",
+      "status": "F",
+      "excludeFromDisplay": false
+    }
+  ]
 }
