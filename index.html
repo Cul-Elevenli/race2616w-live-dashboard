@@ -385,6 +385,11 @@
               <span class="vdp-name">ZHONG GU YIN CHUN</span>
               <span class="vdp-svc cgx">CGX</span>
             </div>
+            <div class="vdp-item" data-vvd="CSJ72630W" data-service="cgx" data-name="CHANG SHENG JI 7" onclick="selectVessel('CSJ72630W')">
+              <span class="vdp-vvd">CSJ72630W</span>
+              <span class="vdp-name">CHANG SHENG JI 7</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
             <!-- AEM -->
             <div class="vdp-group-label" data-group="AEM">AEM Service</div>
             <div class="vdp-item" data-vvd="CUSK2623W" data-service="aem" data-name="CUL HOCHIMINH" onclick="selectVessel('CUSK2623W')">
@@ -412,6 +417,11 @@
             <div class="vdp-item" data-vvd="FUYU2626W" data-service="sgx" data-name="FU YU" onclick="selectVessel('FUYU2626W')">
               <span class="vdp-vvd">FUYU2626W</span>
               <span class="vdp-name">FU YU</span>
+              <span class="vdp-svc sgx">SGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="ZYHS2628W" data-service="sgx" data-name="ZHI YING HE SUN" onclick="selectVessel('ZYHS2628W')">
+              <span class="vdp-vvd">ZYHS2628W</span>
+              <span class="vdp-name">ZHI YING HE SUN</span>
               <span class="vdp-svc sgx">SGX</span>
             </div>
 
@@ -1032,6 +1042,90 @@
     </section>
   </div>
 
+  <!-- ====== CSJ72630W 面板 ====== -->
+  <div class="tab-panel" id="panel-CSJ72630W">
+
+    <section class="page">
+      <div class="watermark" id="wm-CSJ7">CSJ72630W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-CSJ7">CGX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-CSJ7">CSJ72630W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-CSJ7">2630W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-CSJ7">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-CSJ7"></div>
+      <div class="completion-strip" id="completionStrip-CSJ7"></div>
+      <div class="region-strip" id="regionStrip-CSJ7"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-CSJ7"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-CSJ7">--</span>
+        <span>CGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-CSJ7">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">CSJ72630W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-CSJ7">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-CSJ7"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-CSJ7"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
   <!-- ====== H8112627W 面板 ====== -->
   <div class="tab-panel" id="panel-H8112627W">
 
@@ -1284,6 +1378,90 @@
     </section>
   </div>
 
+  <!-- ====== ZYHS2628W 面板 ====== -->
+  <div class="tab-panel" id="panel-ZYHS2628W">
+
+    <section class="page">
+      <div class="watermark" id="wm-ZYHS">ZYHS2628W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-ZYHS">SGX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-ZYHS">ZYHS2628W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-ZYHS">2628W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-ZYHS">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-ZYHS"></div>
+      <div class="completion-strip" id="completionStrip-ZYHS"></div>
+      <div class="region-strip" id="regionStrip-ZYHS"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-ZYHS"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-ZYHS">--</span>
+        <span>SGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-ZYHS">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">ZYHS2628W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-ZYHS">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-ZYHS"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-ZYHS"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
   <!-- ====== EVHA2626W 面板 ====== -->
   <div class="tab-panel" id="panel-EVHA2626W">
 
@@ -1411,6 +1589,8 @@
       H8112627W: { jsonFile: 'H8112627W_public_data.json', prefix: 'H811' },
       FUYU2626W: { jsonFile: 'FUYU2626W_public_data.json', prefix: 'FUYU' },
       CSQC2625W: { jsonFile: 'CSQC2625W_public_data.json', prefix: 'CSQC' },
+      ZYHS2628W: { jsonFile: 'ZYHS2628W_public_data.json', prefix: 'ZYHS' },
+      CSJ72630W: { jsonFile: 'CSJ72630W_public_data.json', prefix: 'CSJ7' },
     };
 
     let currentTab = 'RACE2623W';
@@ -1429,6 +1609,8 @@
       H8112627W: { name: 'HUA DONG 811', service: 'sgx' },
       FUYU2626W: { name: 'FU YU', service: 'sgx' },
       CSQC2625W: { name: 'CHANG SHUN QIAN CHENG', service: 'rex' },
+      ZYHS2628W: { name: 'ZHI YING HE SUN', service: 'sgx' },
+      CSJ72630W: { name: 'CHANG SHENG JI 7', service: 'cgx' },
     };
 
     function toggleDropdown() {
