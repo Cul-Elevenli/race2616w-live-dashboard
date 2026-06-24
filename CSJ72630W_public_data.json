@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-06-24T10:05:02.443Z",
+  "sourceUpdatedAt": "2026-06-24T10:04:16.654Z",
+  "refreshPlan": "建议后台每 1 小时同步一次",
+  "vvd": "CSJ72630W",
+  "voyage": "2630W",
+  "bookingCount": 3,
+  "ruleText": "归类规则：直挂港精确匹配（CNSHA/CNTAO/CNSHK）；via 港按 POL 前缀 + T/S 港归类；TEU 按 20ft + 2×40ft 计算。",
+  "totals": {
+    "allocation": 1050,
+    "current": 48,
+    "gap": -1002,
+    "completionRate": 4.6,
+    "ft20": 40,
+    "ft40": 4,
+    "teu": 48,
+    "otherBookingCount": 0,
+    "otherTeu": 0,
+    "otherPols": []
+  },
+  "categoryRows": [
+    {
+      "code": "CNSHA",
+      "label": "CNSHA",
+      "allocation": 320,
+      "current": 0,
+      "gap": -320,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNTAO",
+      "label": "CNTAO",
+      "allocation": 370,
+      "current": 40,
+      "gap": -330,
+      "completionRate": 10.8,
+      "status": "需加紧",
+      "etd": "2026-07-12"
+    },
+    {
+      "code": "CNSHK",
+      "label": "CNSHK",
+      "allocation": 215,
+      "current": 0,
+      "gap": -215,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNXMN",
+      "label": "CNXMN (via NAS)",
+      "allocation": 80,
+      "current": 0,
+      "gap": -80,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNSWA",
+      "label": "CNSWA (via NAS)",
+      "allocation": 30,
+      "current": 0,
+      "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "JPNAS",
+      "label": "JP (via NAS)",
+      "allocation": 35,
+      "current": 8,
+      "gap": -27,
+      "completionRate": 22.9,
+      "status": "需加紧"
+    }
+  ],
+  "topPods": [
+    {
+      "rank": 1,
+      "pod": "SAJED",
+      "teu": 48
+    }
+  ],
+  "notes": [
+    "Allocation 合计 1,050 TEU（含直挂港 SHA/TAO/SHK 及 via 港）。",
+    "归类规则：直挂港精确匹配；via 港按 POL 前缀及中转港归类。",
+    "TEU 计算口径：20ft + 2 × 40ft。",
+    "公开页默认不展示 shipper 等敏感客户字段。"
+  ],
+  "rows": [
+    {
+      "id": 1,
+      "bookingNo": "CULVUKB2600387",
+      "blNo": "CULVUKB2600387",
+      "office": "BENJP",
+      "pol": "JPUKB",
+      "por": "JPUKB",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "CNSHA",
+      "tsPost": "-",
+      "baseCategory": "JPNAS",
+      "ft20": 0,
+      "ft40": 4,
+      "teu": 8,
+      "category": "JPNAS",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
+      "bookingNo": "CULVTAO2609689",
+      "blNo": "CULVTAO2609689",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 20,
+      "ft40": 0,
+      "teu": 20,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 3,
+      "bookingNo": "CULVTAO2609691",
+      "blNo": "CULVTAO2609691",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 20,
+      "ft40": 0,
+      "teu": 20,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    }
+  ]
+}
