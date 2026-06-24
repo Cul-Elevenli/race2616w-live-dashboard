@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-24T00:52:50.910Z",
-  "sourceUpdatedAt": "2026-06-24T00:46:03.086Z",
+  "generatedAt": "2026-06-24T08:51:11.593Z",
+  "sourceUpdatedAt": "2026-06-24T08:46:32.312Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
   "voyage": "2623W",
-  "bookingCount": 1312,
+  "bookingCount": 1311,
   "ruleText": "归类规则：booking 原始 POL 已有单独分类（精确匹配 CNTAO/CNSHA/CNNGB/CNNAS/CNXMN/CNSWA/THLCH/VNHPH/VNHCM/CNXGG，或 TW/JP/TH 区域 bucket）则保留在原 bucket；仅当原始 POL 无单独分类时，若 prev/post T/S Port 出现 NAS 或 NGB 口岸，才按 POL 区域归类到对应 via bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
@@ -27,15 +27,15 @@
     ]
   },
   "transshipmentSummary": {
-    "totalCnTsBookingCount": 122,
-    "totalCnTsTeu": 373,
+    "totalCnTsBookingCount": 127,
+    "totalCnTsTeu": 403,
     "mergedBookingCount": 0,
     "mergedTeu": 0,
     "mergedByCategory": {},
-    "retainedBookingCount": 122,
-    "retainedTeu": 373,
+    "retainedBookingCount": 127,
+    "retainedTeu": 403,
     "retainedByCategory": {
-      "CNSWA": 42,
+      "CNSWA": 72,
       "CNXMN": 44,
       "OTHER": 108,
       "TWN": 179
@@ -228,7 +228,7 @@
     "Total Allocation: 5,500 TEU（含 Clear t/s 21 TEU + KR via TAO 49 TEU）。",
     "直挂港：CNTAO(1200) / CNSHA(1160) / CNNGB(1160) / CNNAS(1060)；Via NAS：CNXMN(215) / CNSWA(150) / THLCH(20) / VNHPH(10) / VNHCM(20) / TWN(80) / JP(305)；Via NGB：CNXGG(50)。",
     "归类规则：booking 原始 POL 已有单独分类（精确匹配/区域前缀），则保留在原 bucket；仅当原始 POL 无单独分类时，若 prev/post 出现 NAS 或 NGB 口岸，才按 POL 区域归类到对应 via bucket。",
-    "另有 122 条 booking（373 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
+    "另有 127 条 booking（403 TEU）虽存在中国 T/S Port，但因原始 POL 已有独立 bucket，仍保留在原 POL 统计。",
     "当前总 booking 中含 46 条未落入 allocation bucket 的 OTHER booking（202 TEU），POL：AEKLF, CNNJG, CNQZH, VNSGN。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
@@ -2652,7 +2652,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 122,
@@ -4852,7 +4852,7 @@
       "ft40": 18,
       "teu": 36,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 232,
@@ -4912,7 +4912,7 @@
       "ft40": 9,
       "teu": 18,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 235,
@@ -4952,7 +4952,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 237,
@@ -4972,7 +4972,7 @@
       "ft40": 8,
       "teu": 16,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 238,
@@ -5032,7 +5032,7 @@
       "ft40": 12,
       "teu": 24,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 241,
@@ -5052,7 +5052,7 @@
       "ft40": 6,
       "teu": 12,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 242,
@@ -5072,7 +5072,7 @@
       "ft40": 6,
       "teu": 12,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 243,
@@ -5092,7 +5092,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 244,
@@ -5112,7 +5112,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 245,
@@ -5132,7 +5132,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 246,
@@ -5152,7 +5152,7 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 247,
@@ -5172,7 +5172,7 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 248,
@@ -5192,7 +5192,7 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 249,
@@ -5212,7 +5212,7 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 250,
@@ -5232,7 +5232,7 @@
       "ft40": 20,
       "teu": 40,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 251,
@@ -5392,7 +5392,7 @@
       "ft40": 2,
       "teu": 5,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 259,
@@ -5592,7 +5592,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 269,
@@ -7252,7 +7252,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 352,
@@ -7292,7 +7292,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 354,
@@ -7312,7 +7312,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 355,
@@ -7332,7 +7332,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 356,
@@ -7352,7 +7352,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 357,
@@ -7372,7 +7372,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 358,
@@ -8712,7 +8712,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 425,
@@ -8992,7 +8992,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 439,
@@ -9352,7 +9352,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 457,
@@ -9372,7 +9372,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 458,
@@ -9392,7 +9392,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 459,
@@ -9412,7 +9412,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 460,
@@ -9432,7 +9432,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 461,
@@ -9452,7 +9452,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 462,
@@ -9472,7 +9472,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 463,
@@ -9492,7 +9492,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 464,
@@ -9512,7 +9512,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 465,
@@ -9532,7 +9532,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 466,
@@ -9552,7 +9552,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 467,
@@ -9572,7 +9572,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 468,
@@ -10372,7 +10372,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 508,
@@ -10392,7 +10392,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 509,
@@ -10412,7 +10412,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 510,
@@ -10432,7 +10432,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 511,
@@ -10452,7 +10452,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 512,
@@ -10472,7 +10472,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 513,
@@ -10492,7 +10492,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 514,
@@ -10552,7 +10552,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 517,
@@ -11263,9 +11263,9 @@
       "por": "CNSWA",
       "pod": "SAJED",
       "delivery": "SAJED",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
+      "tsPrev": "CNNAS",
+      "tsPost": "MYPKG",
+      "tsCnPort": "NAS",
       "baseCategory": "CNSWA",
       "tsMergeApplied": false,
       "ft20": 0,
@@ -11283,9 +11283,9 @@
       "por": "CNSWA",
       "pod": "SAJED",
       "delivery": "SAJED",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
+      "tsPrev": "CNNAS",
+      "tsPost": "MYPKG",
+      "tsCnPort": "NAS",
       "baseCategory": "CNSWA",
       "tsMergeApplied": false,
       "ft20": 0,
@@ -11303,9 +11303,9 @@
       "por": "CNSWA",
       "pod": "SAJED",
       "delivery": "SAJED",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
+      "tsPrev": "CNNAS",
+      "tsPost": "MYPKG",
+      "tsCnPort": "NAS",
       "baseCategory": "CNSWA",
       "tsMergeApplied": false,
       "ft20": 0,
@@ -11323,9 +11323,9 @@
       "por": "CNSWA",
       "pod": "SAJED",
       "delivery": "SAJED",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
+      "tsPrev": "CNNAS",
+      "tsPost": "MYPKG",
+      "tsCnPort": "NAS",
       "baseCategory": "CNSWA",
       "tsMergeApplied": false,
       "ft20": 0,
@@ -11892,7 +11892,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "OTHER",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 584,
@@ -13123,9 +13123,9 @@
       "por": "CNSWA",
       "pod": "SAJED",
       "delivery": "SAJED",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
+      "tsPrev": "CNNAS",
+      "tsPost": "MYPKG",
+      "tsCnPort": "NAS",
       "baseCategory": "CNSWA",
       "tsMergeApplied": false,
       "ft20": 0,
@@ -13932,7 +13932,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 686,
@@ -14372,7 +14372,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 708,
@@ -15012,7 +15012,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 740,
@@ -19632,7 +19632,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 971,
@@ -19652,7 +19652,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 972,
@@ -19672,7 +19672,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 973,
@@ -19692,7 +19692,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 974,
@@ -20152,7 +20152,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 997,
@@ -20252,7 +20252,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1002,
@@ -20312,7 +20312,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1005,
@@ -20332,7 +20332,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1006,
@@ -21052,7 +21052,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1042,
@@ -21452,7 +21452,7 @@
       "ft40": 9,
       "teu": 18,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1062,
@@ -21472,7 +21472,7 @@
       "ft40": 7,
       "teu": 14,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1063,
@@ -21652,7 +21652,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1072,
@@ -21672,7 +21672,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1073,
@@ -21692,7 +21692,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1074,
@@ -21712,7 +21712,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1075,
@@ -21772,7 +21772,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1078,
@@ -21892,7 +21892,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1084,
@@ -22292,7 +22292,7 @@
       "ft40": 4,
       "teu": 8,
       "category": "OTHER",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1104,
@@ -22332,7 +22332,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1106,
@@ -22352,7 +22352,7 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1107,
@@ -22712,7 +22712,7 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1125,
@@ -22732,7 +22732,7 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1126,
@@ -22832,7 +22832,7 @@
       "ft40": 15,
       "teu": 30,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1131,
@@ -22956,26 +22956,6 @@
     },
     {
       "id": 1137,
-      "bookingNo": "CULVNAS2626815",
-      "blNo": "CULVNAS2626815",
-      "office": "CUGGZ",
-      "pol": "CNNAS",
-      "por": "CNNAS",
-      "pod": "SAJED",
-      "delivery": "SAJED",
-      "tsPrev": "-",
-      "tsPost": "MYPKG",
-      "tsCnPort": "-",
-      "baseCategory": "CNNAS",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 15,
-      "teu": 30,
-      "category": "CNNAS",
-      "status": "W"
-    },
-    {
-      "id": 1138,
       "bookingNo": "CULVNAS2626856",
       "blNo": "CULVNAS2626856",
       "office": "CUGGZ",
@@ -22992,10 +22972,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1139,
+      "id": 1138,
       "bookingNo": "CULVNAS2626857",
       "blNo": "CULVNAS2626857",
       "office": "CUGGZ",
@@ -23012,10 +22992,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1140,
+      "id": 1139,
       "bookingNo": "CULVSHA2616425",
       "blNo": "CULVSHA2616425",
       "office": "ULSHA",
@@ -23035,7 +23015,7 @@
       "status": "F"
     },
     {
-      "id": 1141,
+      "id": 1140,
       "bookingNo": "CULVSWA2602037",
       "blNo": "CULVSWA2602037",
       "office": "CUSWA",
@@ -23055,7 +23035,7 @@
       "status": "F"
     },
     {
-      "id": 1142,
+      "id": 1141,
       "bookingNo": "CULVNGB2623058",
       "blNo": "CULVNGB2623058",
       "office": "CUNGB",
@@ -23075,7 +23055,7 @@
       "status": "F"
     },
     {
-      "id": 1143,
+      "id": 1142,
       "bookingNo": "CULVNGB2623060",
       "blNo": "CULVNGB2623060",
       "office": "ULNGB",
@@ -23095,7 +23075,7 @@
       "status": "F"
     },
     {
-      "id": 1144,
+      "id": 1143,
       "bookingNo": "CULVNGB2623061",
       "blNo": "CULVNGB2623061",
       "office": "ULNGB",
@@ -23115,7 +23095,7 @@
       "status": "F"
     },
     {
-      "id": 1145,
+      "id": 1144,
       "bookingNo": "CULVTYN2600335",
       "blNo": "CULVTYN2600335",
       "office": "CUTPE",
@@ -23135,7 +23115,7 @@
       "status": "F"
     },
     {
-      "id": 1146,
+      "id": 1145,
       "bookingNo": "CULVTYN2600376",
       "blNo": "CULVTYN2600376",
       "office": "CUTPE",
@@ -23155,7 +23135,7 @@
       "status": "F"
     },
     {
-      "id": 1147,
+      "id": 1146,
       "bookingNo": "CULVTYN2600377",
       "blNo": "CULVTYN2600377",
       "office": "CUTPE",
@@ -23175,7 +23155,7 @@
       "status": "F"
     },
     {
-      "id": 1148,
+      "id": 1147,
       "bookingNo": "CULVNAS2623863",
       "blNo": "CULVNAS2623863",
       "office": "CUGGZ",
@@ -23195,7 +23175,7 @@
       "status": "F"
     },
     {
-      "id": 1149,
+      "id": 1148,
       "bookingNo": "CULVNAS2624332",
       "blNo": "CULVNAS2624332",
       "office": "CUGGZ",
@@ -23215,7 +23195,7 @@
       "status": "W"
     },
     {
-      "id": 1150,
+      "id": 1149,
       "bookingNo": "CULVNAS2626883",
       "blNo": "CULVNAS2626883",
       "office": "CUGGZ",
@@ -23232,10 +23212,10 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1151,
+      "id": 1150,
       "bookingNo": "CULVNAS2626884",
       "blNo": "CULVNAS2626884",
       "office": "CUGGZ",
@@ -23252,10 +23232,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1152,
+      "id": 1151,
       "bookingNo": "CULVNAS2626885",
       "blNo": "CULVNAS2626885",
       "office": "CUGGZ",
@@ -23272,10 +23252,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1153,
+      "id": 1152,
       "bookingNo": "CULVNAS2626886",
       "blNo": "CULVNAS2626886",
       "office": "CUGGZ",
@@ -23292,10 +23272,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1154,
+      "id": 1153,
       "bookingNo": "CULVNAS2626887",
       "blNo": "CULVNAS2626887",
       "office": "CUGGZ",
@@ -23312,10 +23292,10 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1155,
+      "id": 1154,
       "bookingNo": "CULVNAS2626888",
       "blNo": "CULVNAS2626888",
       "office": "CUGGZ",
@@ -23332,10 +23312,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1156,
+      "id": 1155,
       "bookingNo": "CULVNAS2626913",
       "blNo": "CULVNAS2626913",
       "office": "CUGGZ",
@@ -23352,10 +23332,10 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1157,
+      "id": 1156,
       "bookingNo": "CULVNGB2623066",
       "blNo": "CULVNGB2623066",
       "office": "ULNGB",
@@ -23375,7 +23355,7 @@
       "status": "F"
     },
     {
-      "id": 1158,
+      "id": 1157,
       "bookingNo": "CULVNGB2623067",
       "blNo": "CULVNGB2623067",
       "office": "ULNGB",
@@ -23395,7 +23375,7 @@
       "status": "F"
     },
     {
-      "id": 1159,
+      "id": 1158,
       "bookingNo": "CULVNGB2623068",
       "blNo": "CULVNGB2623068",
       "office": "ULNGB",
@@ -23415,7 +23395,7 @@
       "status": "F"
     },
     {
-      "id": 1160,
+      "id": 1159,
       "bookingNo": "CULVNAS2624637",
       "blNo": "CULVNAS2624637",
       "office": "CUGGZ",
@@ -23435,7 +23415,7 @@
       "status": "F"
     },
     {
-      "id": 1161,
+      "id": 1160,
       "bookingNo": "CULVNGB2623072",
       "blNo": "CULVNGB2623072",
       "office": "ULNGB",
@@ -23455,7 +23435,7 @@
       "status": "F"
     },
     {
-      "id": 1162,
+      "id": 1161,
       "bookingNo": "CULVNAS2625256",
       "blNo": "CULVNAS2625256",
       "office": "CUGGZ",
@@ -23475,7 +23455,7 @@
       "status": "F"
     },
     {
-      "id": 1163,
+      "id": 1162,
       "bookingNo": "CULVNAS2625395",
       "blNo": "CULVNAS2625395",
       "office": "CUGGZ",
@@ -23495,7 +23475,7 @@
       "status": "F"
     },
     {
-      "id": 1164,
+      "id": 1163,
       "bookingNo": "CULVNAS2626965",
       "blNo": "CULVNAS2626965",
       "office": "CUGGZ",
@@ -23515,7 +23495,7 @@
       "status": "F"
     },
     {
-      "id": 1165,
+      "id": 1164,
       "bookingNo": "CULVSHA2616488",
       "blNo": "CULVSHA2616488",
       "office": "CUSHA",
@@ -23535,7 +23515,7 @@
       "status": "F"
     },
     {
-      "id": 1166,
+      "id": 1165,
       "bookingNo": "CULVSHA2616490",
       "blNo": "CULVSHA2616490",
       "office": "CUSHA",
@@ -23555,7 +23535,7 @@
       "status": "F"
     },
     {
-      "id": 1167,
+      "id": 1166,
       "bookingNo": "CULVNAS2624630",
       "blNo": "CULVNAS2624630",
       "office": "CUGGZ",
@@ -23572,10 +23552,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1168,
+      "id": 1167,
       "bookingNo": "CULVNAS2626973",
       "blNo": "CULVNAS2626973",
       "office": "CUGGZ",
@@ -23592,10 +23572,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1169,
+      "id": 1168,
       "bookingNo": "CULVNAS2626974",
       "blNo": "CULVNAS2626974",
       "office": "CUGGZ",
@@ -23612,10 +23592,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1170,
+      "id": 1169,
       "bookingNo": "CULVNAS2626975",
       "blNo": "CULVNAS2626975",
       "office": "CUGGZ",
@@ -23632,10 +23612,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1171,
+      "id": 1170,
       "bookingNo": "CULVNAS2626976",
       "blNo": "CULVNAS2626976",
       "office": "CUGGZ",
@@ -23652,10 +23632,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1172,
+      "id": 1171,
       "bookingNo": "CULVNAS2626977",
       "blNo": "CULVNAS2626977",
       "office": "CUGGZ",
@@ -23672,10 +23652,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1173,
+      "id": 1172,
       "bookingNo": "CULVNAS2626978",
       "blNo": "CULVNAS2626978",
       "office": "CUGGZ",
@@ -23692,10 +23672,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1174,
+      "id": 1173,
       "bookingNo": "CULVNAS2626979",
       "blNo": "CULVNAS2626979",
       "office": "CUGGZ",
@@ -23712,10 +23692,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1175,
+      "id": 1174,
       "bookingNo": "CULVNAS2626980",
       "blNo": "CULVNAS2626980",
       "office": "CUGGZ",
@@ -23735,7 +23715,7 @@
       "status": "W"
     },
     {
-      "id": 1176,
+      "id": 1175,
       "bookingNo": "CULVNAS2626991",
       "blNo": "CULVNAS2626991",
       "office": "CUGGZ",
@@ -23752,10 +23732,10 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1177,
+      "id": 1176,
       "bookingNo": "CULVNAS2626993",
       "blNo": "CULVNAS2626993",
       "office": "CUGGZ",
@@ -23775,7 +23755,7 @@
       "status": "W"
     },
     {
-      "id": 1178,
+      "id": 1177,
       "bookingNo": "CULVNAS2626998",
       "blNo": "CULVNAS2626998",
       "office": "CUGGZ",
@@ -23792,10 +23772,10 @@
       "ft40": 0,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1179,
+      "id": 1178,
       "bookingNo": "CULVSHA2616494",
       "blNo": "CULVSHA2616494",
       "office": "CUSHA",
@@ -23815,7 +23795,7 @@
       "status": "F"
     },
     {
-      "id": 1180,
+      "id": 1179,
       "bookingNo": "CULVNAS2627001",
       "blNo": "CULVNAS2627001",
       "office": "CUGGZ",
@@ -23832,10 +23812,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1181,
+      "id": 1180,
       "bookingNo": "CULVNAS2627006",
       "blNo": "CULVNAS2627006",
       "office": "CUGGZ",
@@ -23852,10 +23832,10 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1182,
+      "id": 1181,
       "bookingNo": "CULVNAS2627008",
       "blNo": "CULVNAS2627008",
       "office": "CUGGZ",
@@ -23872,10 +23852,10 @@
       "ft40": 0,
       "teu": 5,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1183,
+      "id": 1182,
       "bookingNo": "CULVSWA2601958",
       "blNo": "CULVSWA2601958",
       "office": "CUSWA",
@@ -23895,7 +23875,7 @@
       "status": "F"
     },
     {
-      "id": 1184,
+      "id": 1183,
       "bookingNo": "CULVNAS2627095",
       "blNo": "CULVNAS2627095",
       "office": "CUGGZ",
@@ -23912,10 +23892,10 @@
       "ft40": 28,
       "teu": 56,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1185,
+      "id": 1184,
       "bookingNo": "CULVTAO2609035",
       "blNo": "CULVTAO2609035",
       "office": "CUTAO",
@@ -23935,7 +23915,7 @@
       "status": "F"
     },
     {
-      "id": 1186,
+      "id": 1185,
       "bookingNo": "CULVSHA2616517",
       "blNo": "CULVSHA2616517",
       "office": "CUSHA",
@@ -23955,7 +23935,7 @@
       "status": "F"
     },
     {
-      "id": 1187,
+      "id": 1186,
       "bookingNo": "CULVNAS2627114",
       "blNo": "CULVNAS2627114",
       "office": "CUGGZ",
@@ -23972,10 +23952,10 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1188,
+      "id": 1187,
       "bookingNo": "CULVSHA2616018",
       "blNo": "CULVSHA2616018",
       "office": "CUSHA",
@@ -23995,7 +23975,7 @@
       "status": "F"
     },
     {
-      "id": 1189,
+      "id": 1188,
       "bookingNo": "CULVSHA2616535",
       "blNo": "CULVSHA2616535",
       "office": "CUSHA",
@@ -24015,7 +23995,7 @@
       "status": "F"
     },
     {
-      "id": 1190,
+      "id": 1189,
       "bookingNo": "CULVNAS2627126",
       "blNo": "CULVNAS2627126",
       "office": "CUGGZ",
@@ -24035,7 +24015,7 @@
       "status": "F"
     },
     {
-      "id": 1191,
+      "id": 1190,
       "bookingNo": "CULVSHA2616565",
       "blNo": "CULVSHA2616565",
       "office": "CUSHA",
@@ -24055,7 +24035,7 @@
       "status": "F"
     },
     {
-      "id": 1192,
+      "id": 1191,
       "bookingNo": "CULVNGB2623214",
       "blNo": "CULVNGB2623214",
       "office": "CUNGB",
@@ -24075,7 +24055,7 @@
       "status": "F"
     },
     {
-      "id": 1193,
+      "id": 1192,
       "bookingNo": "CULVSHA2616570",
       "blNo": "CULVSHA2616570",
       "office": "CUSHA",
@@ -24095,7 +24075,7 @@
       "status": "F"
     },
     {
-      "id": 1194,
+      "id": 1193,
       "bookingNo": "CULVNAS2627167",
       "blNo": "CULVNAS2627167",
       "office": "ULSNZ",
@@ -24115,7 +24095,7 @@
       "status": "F"
     },
     {
-      "id": 1195,
+      "id": 1194,
       "bookingNo": "CULVSHA2616578",
       "blNo": "CULVSHA2616578",
       "office": "CUSHA",
@@ -24135,7 +24115,7 @@
       "status": "F"
     },
     {
-      "id": 1196,
+      "id": 1195,
       "bookingNo": "CULVNAS2627169",
       "blNo": "CULVNAS2627169",
       "office": "ULSNZ",
@@ -24155,7 +24135,7 @@
       "status": "F"
     },
     {
-      "id": 1197,
+      "id": 1196,
       "bookingNo": "CULVXMN2602395",
       "blNo": "CULVXMN2602395",
       "office": "ULXMN",
@@ -24175,7 +24155,7 @@
       "status": "F"
     },
     {
-      "id": 1198,
+      "id": 1197,
       "bookingNo": "CULVNGB2623219",
       "blNo": "CULVNGB2623219",
       "office": "CUNGB",
@@ -24195,7 +24175,7 @@
       "status": "F"
     },
     {
-      "id": 1199,
+      "id": 1198,
       "bookingNo": "CULVSHA2616589",
       "blNo": "CULVSHA2616589",
       "office": "ULSHA",
@@ -24215,7 +24195,7 @@
       "status": "F"
     },
     {
-      "id": 1200,
+      "id": 1199,
       "bookingNo": "CULVNGB2623228",
       "blNo": "CULVNGB2623228",
       "office": "ULNGB",
@@ -24235,7 +24215,7 @@
       "status": "F"
     },
     {
-      "id": 1201,
+      "id": 1200,
       "bookingNo": "CULVNGB2623229",
       "blNo": "CULVNGB2623229",
       "office": "ULNGB",
@@ -24255,7 +24235,7 @@
       "status": "F"
     },
     {
-      "id": 1202,
+      "id": 1201,
       "bookingNo": "CULVNAS2627189",
       "blNo": "CULVNAS2627189",
       "office": "CUGGZ",
@@ -24275,7 +24255,7 @@
       "status": "F"
     },
     {
-      "id": 1203,
+      "id": 1202,
       "bookingNo": "CULVNAS2627197",
       "blNo": "CULVNAS2627197",
       "office": "CUGGZ",
@@ -24295,7 +24275,7 @@
       "status": "F"
     },
     {
-      "id": 1204,
+      "id": 1203,
       "bookingNo": "CULVNAS2627211",
       "blNo": "CULVNAS2627211",
       "office": "CUGGZ",
@@ -24312,10 +24292,10 @@
       "ft40": 4,
       "teu": 8,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1205,
+      "id": 1204,
       "bookingNo": "CULVNAS2627222",
       "blNo": "CULVNAS2627222",
       "office": "ULSNZ",
@@ -24335,7 +24315,7 @@
       "status": "F"
     },
     {
-      "id": 1206,
+      "id": 1205,
       "bookingNo": "CULVNAS2626029",
       "blNo": "CULVNAS2626029",
       "office": "ULSNZ",
@@ -24355,7 +24335,7 @@
       "status": "F"
     },
     {
-      "id": 1207,
+      "id": 1206,
       "bookingNo": "CULVNAS2627225",
       "blNo": "CULVNAS2627225",
       "office": "ULSNZ",
@@ -24375,7 +24355,7 @@
       "status": "F"
     },
     {
-      "id": 1208,
+      "id": 1207,
       "bookingNo": "CULVNAS2627226",
       "blNo": "CULVNAS2627226",
       "office": "ULSNZ",
@@ -24395,7 +24375,7 @@
       "status": "F"
     },
     {
-      "id": 1209,
+      "id": 1208,
       "bookingNo": "CULVNAS2627227",
       "blNo": "CULVNAS2627227",
       "office": "ULSNZ",
@@ -24415,7 +24395,7 @@
       "status": "F"
     },
     {
-      "id": 1210,
+      "id": 1209,
       "bookingNo": "CULVNAS2627228",
       "blNo": "CULVNAS2627228",
       "office": "ULSNZ",
@@ -24435,7 +24415,7 @@
       "status": "F"
     },
     {
-      "id": 1211,
+      "id": 1210,
       "bookingNo": "CULVNAS2627229",
       "blNo": "CULVNAS2627229",
       "office": "ULSNZ",
@@ -24455,7 +24435,7 @@
       "status": "F"
     },
     {
-      "id": 1212,
+      "id": 1211,
       "bookingNo": "CULVNGB2622438",
       "blNo": "CULVNGB2622438",
       "office": "CUNGB",
@@ -24475,7 +24455,7 @@
       "status": "F"
     },
     {
-      "id": 1213,
+      "id": 1212,
       "bookingNo": "CULVNGB2623254",
       "blNo": "CULVNGB2623254",
       "office": "CUNGB",
@@ -24495,7 +24475,7 @@
       "status": "F"
     },
     {
-      "id": 1214,
+      "id": 1213,
       "bookingNo": "CULVNGB2623255",
       "blNo": "CULVNGB2623255",
       "office": "CUNGB",
@@ -24515,7 +24495,7 @@
       "status": "F"
     },
     {
-      "id": 1215,
+      "id": 1214,
       "bookingNo": "CULVNAS2627232",
       "blNo": "CULVNAS2627232",
       "office": "ULSNZ",
@@ -24532,10 +24512,10 @@
       "ft40": 1,
       "teu": 3,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1216,
+      "id": 1215,
       "bookingNo": "CULVNAS2627237",
       "blNo": "CULVNAS2627237",
       "office": "CUGGZ",
@@ -24552,10 +24532,10 @@
       "ft40": 0,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1217,
+      "id": 1216,
       "bookingNo": "CULVNAS2624386",
       "blNo": "CULVNAS2624386",
       "office": "CUGGZ",
@@ -24575,7 +24555,7 @@
       "status": "F"
     },
     {
-      "id": 1218,
+      "id": 1217,
       "bookingNo": "CULVNAS2627246",
       "blNo": "CULVNAS2627246",
       "office": "CUGGZ",
@@ -24595,7 +24575,7 @@
       "status": "F"
     },
     {
-      "id": 1219,
+      "id": 1218,
       "bookingNo": "CULVNGB2622345",
       "blNo": "CULVNGB2622345",
       "office": "CUNGB",
@@ -24615,7 +24595,7 @@
       "status": "F"
     },
     {
-      "id": 1220,
+      "id": 1219,
       "bookingNo": "CULVNAS2627251",
       "blNo": "CULVNAS2627251",
       "office": "CUGGZ",
@@ -24632,10 +24612,10 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1221,
+      "id": 1220,
       "bookingNo": "CULVNAS2627252",
       "blNo": "CULVNAS2627252",
       "office": "ULSNZ",
@@ -24655,7 +24635,7 @@
       "status": "F"
     },
     {
-      "id": 1222,
+      "id": 1221,
       "bookingNo": "CULVNAS2627259",
       "blNo": "CULVNAS2627259",
       "office": "ULSNZ",
@@ -24675,7 +24655,7 @@
       "status": "F"
     },
     {
-      "id": 1223,
+      "id": 1222,
       "bookingNo": "CULVNAS2627261",
       "blNo": "CULVNAS2627261",
       "office": "ULSNZ",
@@ -24695,7 +24675,7 @@
       "status": "F"
     },
     {
-      "id": 1224,
+      "id": 1223,
       "bookingNo": "CULVNGB2622352",
       "blNo": "CULVNGB2622352",
       "office": "CUNGB",
@@ -24715,7 +24695,7 @@
       "status": "F"
     },
     {
-      "id": 1225,
+      "id": 1224,
       "bookingNo": "CULVNAS2626981",
       "blNo": "CULVNAS2626981",
       "office": "CUGGZ",
@@ -24732,10 +24712,10 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1226,
+      "id": 1225,
       "bookingNo": "CULVNAS2627268",
       "blNo": "CULVNAS2627268",
       "office": "ULSNZ",
@@ -24755,7 +24735,7 @@
       "status": "F"
     },
     {
-      "id": 1227,
+      "id": 1226,
       "bookingNo": "CULVNAS2624629",
       "blNo": "CULVNAS2624629",
       "office": "CUGGZ",
@@ -24772,10 +24752,10 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1228,
+      "id": 1227,
       "bookingNo": "CULVNAS2627271",
       "blNo": "CULVNAS2627271",
       "office": "ULSNZ",
@@ -24795,7 +24775,7 @@
       "status": "F"
     },
     {
-      "id": 1229,
+      "id": 1228,
       "bookingNo": "CULVNGB2622441",
       "blNo": "CULVNGB2622441",
       "office": "CUNGB",
@@ -24815,7 +24795,7 @@
       "status": "F"
     },
     {
-      "id": 1230,
+      "id": 1229,
       "bookingNo": "CULVNAS2627306",
       "blNo": "CULVNAS2627306",
       "office": "CUGGZ",
@@ -24832,10 +24812,10 @@
       "ft40": 0,
       "teu": 20,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1231,
+      "id": 1230,
       "bookingNo": "CULVNGB2622431",
       "blNo": "CULVNGB2622431",
       "office": "CUNGB",
@@ -24855,7 +24835,7 @@
       "status": "F"
     },
     {
-      "id": 1232,
+      "id": 1231,
       "bookingNo": "CULVNGB2623299",
       "blNo": "CULVNGB2623299",
       "office": "CUNGB",
@@ -24875,7 +24855,7 @@
       "status": "F"
     },
     {
-      "id": 1233,
+      "id": 1232,
       "bookingNo": "CULVSHA2616673",
       "blNo": "CULVSHA2616673",
       "office": "ULSHA",
@@ -24895,7 +24875,7 @@
       "status": "F"
     },
     {
-      "id": 1234,
+      "id": 1233,
       "bookingNo": "CULVNGB2623314",
       "blNo": "CULVNGB2623314",
       "office": "CUNGB",
@@ -24915,7 +24895,7 @@
       "status": "F"
     },
     {
-      "id": 1235,
+      "id": 1234,
       "bookingNo": "CULVNGB2623318",
       "blNo": "CULVNGB2623318",
       "office": "CUNGB",
@@ -24935,7 +24915,7 @@
       "status": "F"
     },
     {
-      "id": 1236,
+      "id": 1235,
       "bookingNo": "CULVNGB2622457",
       "blNo": "CULVNGB2622457",
       "office": "CUNGB",
@@ -24955,7 +24935,7 @@
       "status": "F"
     },
     {
-      "id": 1237,
+      "id": 1236,
       "bookingNo": "CULVNAS2627351",
       "blNo": "CULVNAS2627351",
       "office": "CUGGZ",
@@ -24972,10 +24952,10 @@
       "ft40": 0,
       "teu": 1,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1238,
+      "id": 1237,
       "bookingNo": "CULVNGB2623330",
       "blNo": "CULVNGB2623330",
       "office": "ULNGB",
@@ -24995,7 +24975,7 @@
       "status": "F"
     },
     {
-      "id": 1239,
+      "id": 1238,
       "bookingNo": "CULVNAS2625153",
       "blNo": "CULVNAS2625153",
       "office": "CUGGZ",
@@ -25015,7 +24995,7 @@
       "status": "F"
     },
     {
-      "id": 1240,
+      "id": 1239,
       "bookingNo": "CULVNAS2625157",
       "blNo": "CULVNAS2625157",
       "office": "CUGGZ",
@@ -25035,7 +25015,7 @@
       "status": "F"
     },
     {
-      "id": 1241,
+      "id": 1240,
       "bookingNo": "CULVNAS2627360",
       "blNo": "CULVNAS2627360",
       "office": "CUGGZ",
@@ -25055,7 +25035,7 @@
       "status": "W"
     },
     {
-      "id": 1242,
+      "id": 1241,
       "bookingNo": "CULVNAS2624423",
       "blNo": "CULVNAS2624423",
       "office": "CUGGZ",
@@ -25075,7 +25055,7 @@
       "status": "F"
     },
     {
-      "id": 1243,
+      "id": 1242,
       "bookingNo": "CULVNAS2625160",
       "blNo": "CULVNAS2625160",
       "office": "CUGGZ",
@@ -25095,7 +25075,7 @@
       "status": "F"
     },
     {
-      "id": 1244,
+      "id": 1243,
       "bookingNo": "CULVNAS2627521",
       "blNo": "CULVNAS2627521",
       "office": "CUGGZ",
@@ -25115,7 +25095,7 @@
       "status": "W"
     },
     {
-      "id": 1245,
+      "id": 1244,
       "bookingNo": "CULVNAS2624643",
       "blNo": "CULVNAS2624643",
       "office": "CUGGZ",
@@ -25135,7 +25115,7 @@
       "status": "F"
     },
     {
-      "id": 1246,
+      "id": 1245,
       "bookingNo": "CULVNAS2624647",
       "blNo": "CULVNAS2624647",
       "office": "CUGGZ",
@@ -25155,7 +25135,7 @@
       "status": "F"
     },
     {
-      "id": 1247,
+      "id": 1246,
       "bookingNo": "CULVNGB2623359",
       "blNo": "CULVNGB2623359",
       "office": "ULNGB",
@@ -25175,7 +25155,7 @@
       "status": "F"
     },
     {
-      "id": 1248,
+      "id": 1247,
       "bookingNo": "CULVNGB2623362",
       "blNo": "CULVNGB2623362",
       "office": "ULNGB",
@@ -25195,7 +25175,7 @@
       "status": "F"
     },
     {
-      "id": 1249,
+      "id": 1248,
       "bookingNo": "CULVNGB2622136",
       "blNo": "CULVNGB2622136",
       "office": "CUNGB",
@@ -25215,7 +25195,7 @@
       "status": "F"
     },
     {
-      "id": 1250,
+      "id": 1249,
       "bookingNo": "CULVNGB2622138",
       "blNo": "CULVNGB2622138",
       "office": "CUNGB",
@@ -25235,7 +25215,7 @@
       "status": "F"
     },
     {
-      "id": 1251,
+      "id": 1250,
       "bookingNo": "CULVSHA2615757",
       "blNo": "CULVSHA2615757",
       "office": "CUSHA",
@@ -25255,7 +25235,7 @@
       "status": "F"
     },
     {
-      "id": 1252,
+      "id": 1251,
       "bookingNo": "CULVNAS2625255",
       "blNo": "CULVNAS2625255",
       "office": "CUGGZ",
@@ -25275,7 +25255,7 @@
       "status": "F"
     },
     {
-      "id": 1253,
+      "id": 1252,
       "bookingNo": "CULVNAS2625904",
       "blNo": "CULVNAS2625904",
       "office": "ULSNZ",
@@ -25295,7 +25275,7 @@
       "status": "F"
     },
     {
-      "id": 1254,
+      "id": 1253,
       "bookingNo": "CULVNAS2627577",
       "blNo": "CULVNAS2627577",
       "office": "CUGGZ",
@@ -25315,7 +25295,7 @@
       "status": "F"
     },
     {
-      "id": 1255,
+      "id": 1254,
       "bookingNo": "CULVNGB2622563",
       "blNo": "CULVNGB2622563",
       "office": "CUNGB",
@@ -25335,7 +25315,7 @@
       "status": "F"
     },
     {
-      "id": 1256,
+      "id": 1255,
       "bookingNo": "CULVNAS2627687",
       "blNo": "CULVNAS2627687",
       "office": "CUGGZ",
@@ -25355,7 +25335,7 @@
       "status": "F"
     },
     {
-      "id": 1257,
+      "id": 1256,
       "bookingNo": "CULVNAS2627688",
       "blNo": "CULVNAS2627688",
       "office": "CUGGZ",
@@ -25375,7 +25355,7 @@
       "status": "F"
     },
     {
-      "id": 1258,
+      "id": 1257,
       "bookingNo": "CULVNGB2623614",
       "blNo": "CULVNGB2623614",
       "office": "CUNGB",
@@ -25395,7 +25375,7 @@
       "status": "F"
     },
     {
-      "id": 1259,
+      "id": 1258,
       "bookingNo": "CULVNAS2625990",
       "blNo": "CULVNAS2625990",
       "office": "CUGGZ",
@@ -25412,10 +25392,10 @@
       "ft40": 5,
       "teu": 10,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1260,
+      "id": 1259,
       "bookingNo": "CULVNGB2622115",
       "blNo": "CULVNGB2622115",
       "office": "CUNGB",
@@ -25435,7 +25415,7 @@
       "status": "F"
     },
     {
-      "id": 1261,
+      "id": 1260,
       "bookingNo": "CULVNGB2622324",
       "blNo": "CULVNGB2622324",
       "office": "CUNGB",
@@ -25455,7 +25435,7 @@
       "status": "F"
     },
     {
-      "id": 1262,
+      "id": 1261,
       "bookingNo": "CULVNGB2622356",
       "blNo": "CULVNGB2622356",
       "office": "CUNGB",
@@ -25475,7 +25455,7 @@
       "status": "F"
     },
     {
-      "id": 1263,
+      "id": 1262,
       "bookingNo": "CULVNGB2622349",
       "blNo": "CULVNGB2622349",
       "office": "CUNGB",
@@ -25495,7 +25475,7 @@
       "status": "F"
     },
     {
-      "id": 1264,
+      "id": 1263,
       "bookingNo": "CULVNGB2622364",
       "blNo": "CULVNGB2622364",
       "office": "CUNGB",
@@ -25515,7 +25495,7 @@
       "status": "F"
     },
     {
-      "id": 1265,
+      "id": 1264,
       "bookingNo": "CULVNGB2622355",
       "blNo": "CULVNGB2622355",
       "office": "CUNGB",
@@ -25535,7 +25515,7 @@
       "status": "F"
     },
     {
-      "id": 1266,
+      "id": 1265,
       "bookingNo": "CULVNAS2627736",
       "blNo": "CULVNAS2627736",
       "office": "CUGGZ",
@@ -25552,10 +25532,10 @@
       "ft40": 0,
       "teu": 3,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1267,
+      "id": 1266,
       "bookingNo": "CULVNAS2627741",
       "blNo": "CULVNAS2627741",
       "office": "ULSNZ",
@@ -25575,7 +25555,7 @@
       "status": "F"
     },
     {
-      "id": 1268,
+      "id": 1267,
       "bookingNo": "CULVNAS2623991",
       "blNo": "CULVNAS2623991",
       "office": "CUGGZ",
@@ -25595,7 +25575,7 @@
       "status": "F"
     },
     {
-      "id": 1269,
+      "id": 1268,
       "bookingNo": "CULVNAS2627761",
       "blNo": "CULVNAS2627761",
       "office": "CUGGZ",
@@ -25615,7 +25595,7 @@
       "status": "W"
     },
     {
-      "id": 1270,
+      "id": 1269,
       "bookingNo": "CULVNAS2627762",
       "blNo": "CULVNAS2627762",
       "office": "CUGGZ",
@@ -25635,7 +25615,7 @@
       "status": "W"
     },
     {
-      "id": 1271,
+      "id": 1270,
       "bookingNo": "CULVNAS2627773",
       "blNo": "CULVNAS2627773",
       "office": "CUGGZ",
@@ -25655,7 +25635,7 @@
       "status": "F"
     },
     {
-      "id": 1272,
+      "id": 1271,
       "bookingNo": "CULVNAS2627781",
       "blNo": "CULVNAS2627781",
       "office": "CUGGZ",
@@ -25672,10 +25652,10 @@
       "ft40": 7,
       "teu": 14,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1273,
+      "id": 1272,
       "bookingNo": "CULVNGB2622423",
       "blNo": "CULVNGB2622423",
       "office": "CUNGB",
@@ -25695,7 +25675,7 @@
       "status": "F"
     },
     {
-      "id": 1274,
+      "id": 1273,
       "bookingNo": "CULVNAS2627823",
       "blNo": "CULVNAS2627823",
       "office": "ULSNZ",
@@ -25715,7 +25695,7 @@
       "status": "F"
     },
     {
-      "id": 1275,
+      "id": 1274,
       "bookingNo": "CULVNAS2627888",
       "blNo": "CULVNAS2627888",
       "office": "CUGGZ",
@@ -25732,10 +25712,10 @@
       "ft40": 8,
       "teu": 16,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1276,
+      "id": 1275,
       "bookingNo": "CULVNGB2622334",
       "blNo": "CULVNGB2622334",
       "office": "CUNGB",
@@ -25755,7 +25735,7 @@
       "status": "F"
     },
     {
-      "id": 1277,
+      "id": 1276,
       "bookingNo": "CULVNGB2622637",
       "blNo": "CULVNGB2622637",
       "office": "CUNGB",
@@ -25775,7 +25755,7 @@
       "status": "F"
     },
     {
-      "id": 1278,
+      "id": 1277,
       "bookingNo": "CULVNGB2622145",
       "blNo": "CULVNGB2622145",
       "office": "CUNGB",
@@ -25795,7 +25775,7 @@
       "status": "F"
     },
     {
-      "id": 1279,
+      "id": 1278,
       "bookingNo": "CULVNGB2622169",
       "blNo": "CULVNGB2622169",
       "office": "CUNGB",
@@ -25815,7 +25795,7 @@
       "status": "F"
     },
     {
-      "id": 1280,
+      "id": 1279,
       "bookingNo": "CULVNGB2622377",
       "blNo": "CULVNGB2622377",
       "office": "CUNGB",
@@ -25835,7 +25815,7 @@
       "status": "F"
     },
     {
-      "id": 1281,
+      "id": 1280,
       "bookingNo": "CULVNGB2622754",
       "blNo": "CULVNGB2622754",
       "office": "ULNGB",
@@ -25855,7 +25835,7 @@
       "status": "F"
     },
     {
-      "id": 1282,
+      "id": 1281,
       "bookingNo": "CULVNGB2622768",
       "blNo": "CULVNGB2622768",
       "office": "ULNGB",
@@ -25875,7 +25855,7 @@
       "status": "F"
     },
     {
-      "id": 1283,
+      "id": 1282,
       "bookingNo": "CULVNGB2622672",
       "blNo": "CULVNGB2622672",
       "office": "ULNGB",
@@ -25895,7 +25875,7 @@
       "status": "F"
     },
     {
-      "id": 1284,
+      "id": 1283,
       "bookingNo": "CULVNAS2628002",
       "blNo": "CULVNAS2628002",
       "office": "ULSNZ",
@@ -25915,7 +25895,7 @@
       "status": "F"
     },
     {
-      "id": 1285,
+      "id": 1284,
       "bookingNo": "CULVNGB2622157",
       "blNo": "CULVNGB2622157",
       "office": "CUNGB",
@@ -25935,7 +25915,7 @@
       "status": "F"
     },
     {
-      "id": 1286,
+      "id": 1285,
       "bookingNo": "CULVNGB2622701",
       "blNo": "CULVNGB2622701",
       "office": "CUNGB",
@@ -25955,7 +25935,7 @@
       "status": "F"
     },
     {
-      "id": 1287,
+      "id": 1286,
       "bookingNo": "CULVNGB2624120",
       "blNo": "CULVNGB2624120",
       "office": "CUNGB",
@@ -25975,7 +25955,7 @@
       "status": "F"
     },
     {
-      "id": 1288,
+      "id": 1287,
       "bookingNo": "CULVNAS2628032",
       "blNo": "CULVNAS2628032",
       "office": "ULSNZ",
@@ -25995,7 +25975,7 @@
       "status": "F"
     },
     {
-      "id": 1289,
+      "id": 1288,
       "bookingNo": "CULVNGB2622097",
       "blNo": "CULVNGB2622097",
       "office": "CUNGB",
@@ -26015,7 +25995,7 @@
       "status": "F"
     },
     {
-      "id": 1290,
+      "id": 1289,
       "bookingNo": "CULVNAS2628121",
       "blNo": "CULVNAS2628121",
       "office": "CUGGZ",
@@ -26035,7 +26015,7 @@
       "status": "F"
     },
     {
-      "id": 1291,
+      "id": 1290,
       "bookingNo": "CULVNGB2622871",
       "blNo": "CULVNGB2622871",
       "office": "ULNGB",
@@ -26055,7 +26035,7 @@
       "status": "F"
     },
     {
-      "id": 1292,
+      "id": 1291,
       "bookingNo": "CULVNGB2624366",
       "blNo": "CULVNGB2624366",
       "office": "ULNGB",
@@ -26075,7 +26055,7 @@
       "status": "F"
     },
     {
-      "id": 1293,
+      "id": 1292,
       "bookingNo": "CULVNGB2622869",
       "blNo": "CULVNGB2622869",
       "office": "ULNGB",
@@ -26095,7 +26075,7 @@
       "status": "F"
     },
     {
-      "id": 1294,
+      "id": 1293,
       "bookingNo": "CULVNGB2622353",
       "blNo": "CULVNGB2622353",
       "office": "CUNGB",
@@ -26115,7 +26095,7 @@
       "status": "F"
     },
     {
-      "id": 1295,
+      "id": 1294,
       "bookingNo": "CULVNAS2628152",
       "blNo": "CULVNAS2628152",
       "office": "CUGGZ",
@@ -26135,7 +26115,7 @@
       "status": "F"
     },
     {
-      "id": 1296,
+      "id": 1295,
       "bookingNo": "CULVKLF2600091",
       "blNo": "CULVKLF2600091",
       "office": "NSSAE",
@@ -26155,7 +26135,7 @@
       "status": "F"
     },
     {
-      "id": 1297,
+      "id": 1296,
       "bookingNo": "CULVNAS2627260",
       "blNo": "CULVNAS2627260",
       "office": "ULSNZ",
@@ -26175,7 +26155,7 @@
       "status": "F"
     },
     {
-      "id": 1298,
+      "id": 1297,
       "bookingNo": "CULVNAS2628444",
       "blNo": "CULVNAS2628444",
       "office": "ULSNZ",
@@ -26192,10 +26172,10 @@
       "ft40": 1,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1299,
+      "id": 1298,
       "bookingNo": "CULVNAS2626812",
       "blNo": "CULVNAS2626812",
       "office": "CUGGZ",
@@ -26212,30 +26192,10 @@
       "ft40": 8,
       "teu": 16,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1300,
-      "bookingNo": "CULVNAS2628447",
-      "blNo": "CULVNAS2628447",
-      "office": "CUGGZ",
-      "pol": "CNNAS",
-      "por": "CNNAS",
-      "pod": "SAJED",
-      "delivery": "SAJED",
-      "tsPrev": "-",
-      "tsPost": "MYPKG",
-      "tsCnPort": "-",
-      "baseCategory": "CNNAS",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 5,
-      "teu": 10,
-      "category": "CNNAS",
-      "status": "W"
-    },
-    {
-      "id": 1301,
+      "id": 1299,
       "bookingNo": "CULVNAS2627296",
       "blNo": "CULVNAS2627296",
       "office": "ULSNZ",
@@ -26255,7 +26215,7 @@
       "status": "F"
     },
     {
-      "id": 1302,
+      "id": 1300,
       "bookingNo": "CULVNAS2627570",
       "blNo": "CULVNAS2627570",
       "office": "CUGGZ",
@@ -26272,10 +26232,10 @@
       "ft40": 5,
       "teu": 10,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1303,
+      "id": 1301,
       "bookingNo": "CULVNAS2628122",
       "blNo": "CULVNAS2628122",
       "office": "CUGGZ",
@@ -26295,7 +26255,7 @@
       "status": "F"
     },
     {
-      "id": 1304,
+      "id": 1302,
       "bookingNo": "CULVNAS2627162",
       "blNo": "CULVNAS2627162",
       "office": "CUGGZ",
@@ -26315,7 +26275,7 @@
       "status": "F"
     },
     {
-      "id": 1305,
+      "id": 1303,
       "bookingNo": "CULVNAS2626758",
       "blNo": "CULVNAS2626758",
       "office": "CUGGZ",
@@ -26332,10 +26292,10 @@
       "ft40": 0,
       "teu": 2,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1306,
+      "id": 1304,
       "bookingNo": "CULVNAS2626837",
       "blNo": "CULVNAS2626837",
       "office": "CUGGZ",
@@ -26352,10 +26312,10 @@
       "ft40": 1,
       "teu": 3,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1307,
+      "id": 1305,
       "bookingNo": "CULVNAS2627285",
       "blNo": "CULVNAS2627285",
       "office": "CUGGZ",
@@ -26372,10 +26332,10 @@
       "ft40": 5,
       "teu": 10,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1308,
+      "id": 1306,
       "bookingNo": "CULVNAS2627121",
       "blNo": "CULVNAS2627121",
       "office": "CUGGZ",
@@ -26392,10 +26352,10 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1309,
+      "id": 1307,
       "bookingNo": "CULVNAS2627275",
       "blNo": "CULVNAS2627275",
       "office": "CUGGZ",
@@ -26412,10 +26372,10 @@
       "ft40": 14,
       "teu": 28,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1310,
+      "id": 1308,
       "bookingNo": "CULVNAS2626742",
       "blNo": "CULVNAS2626742",
       "office": "CUGGZ",
@@ -26432,10 +26392,10 @@
       "ft40": 3,
       "teu": 6,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
-      "id": 1311,
+      "id": 1309,
       "bookingNo": "CULVNAS2627176",
       "blNo": "CULVNAS2627176",
       "office": "CUGGZ",
@@ -26455,7 +26415,7 @@
       "status": "F"
     },
     {
-      "id": 1312,
+      "id": 1310,
       "bookingNo": "CULVNAS2627898",
       "blNo": "CULVNAS2627898",
       "office": "ULSNZ",
@@ -26471,6 +26431,26 @@
       "ft20": 1,
       "ft40": 1,
       "teu": 3,
+      "category": "CNNAS",
+      "status": "F"
+    },
+    {
+      "id": 1311,
+      "bookingNo": "CULVNAS2626815",
+      "blNo": "CULVNAS2626815",
+      "office": "CUGGZ",
+      "pol": "CNNAS",
+      "por": "CNNAS",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "-",
+      "tsPost": "MYPKG",
+      "tsCnPort": "-",
+      "baseCategory": "CNNAS",
+      "tsMergeApplied": false,
+      "ft20": 0,
+      "ft40": 20,
+      "teu": 40,
       "category": "CNNAS",
       "status": "F"
     }
