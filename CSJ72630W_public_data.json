@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-06-24T10:05:02.443Z",
-  "sourceUpdatedAt": "2026-06-24T10:04:16.654Z",
+  "generatedAt": "2026-06-25T00:57:59.129Z",
+  "sourceUpdatedAt": "2026-06-25T00:48:49.215Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "CSJ72630W",
   "voyage": "2630W",
-  "bookingCount": 3,
+  "bookingCount": 4,
   "ruleText": "归类规则：直挂港精确匹配（CNSHA/CNTAO/CNSHK）；via 港按 POL 前缀 + T/S 港归类；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1050,
-    "current": 48,
-    "gap": -1002,
-    "completionRate": 4.6,
+    "current": 78,
+    "gap": -972,
+    "completionRate": 7.4,
     "ft20": 40,
-    "ft40": 4,
-    "teu": 48,
+    "ft40": 19,
+    "teu": 78,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -69,17 +69,17 @@
       "code": "JPNAS",
       "label": "JP (via NAS)",
       "allocation": 35,
-      "current": 8,
-      "gap": -27,
-      "completionRate": 22.9,
-      "status": "需加紧"
+      "current": 38,
+      "gap": 3,
+      "completionRate": 108.6,
+      "status": "推进中"
     }
   ],
   "topPods": [
     {
       "rank": 1,
       "pod": "SAJED",
-      "teu": 48
+      "teu": 78
     }
   ],
   "notes": [
@@ -91,6 +91,25 @@
   "rows": [
     {
       "id": 1,
+      "bookingNo": "CULVUKB2600377",
+      "blNo": "CULVUKB2600377",
+      "office": "KWAJP",
+      "pol": "JPUKB",
+      "por": "JPUKB",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "CNSHA",
+      "tsPost": "-",
+      "baseCategory": "JPNAS",
+      "ft20": 0,
+      "ft40": 15,
+      "teu": 30,
+      "category": "JPNAS",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
       "bookingNo": "CULVUKB2600387",
       "blNo": "CULVUKB2600387",
       "office": "BENJP",
@@ -109,7 +128,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 2,
+      "id": 3,
       "bookingNo": "CULVTAO2609689",
       "blNo": "CULVTAO2609689",
       "office": "CUTAO",
@@ -128,7 +147,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 3,
+      "id": 4,
       "bookingNo": "CULVTAO2609691",
       "blNo": "CULVTAO2609691",
       "office": "CUTAO",
