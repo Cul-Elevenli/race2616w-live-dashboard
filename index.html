@@ -380,16 +380,6 @@
               <span class="vdp-name">EXPRESS BERLIN</span>
               <span class="vdp-svc cgx">CGX</span>
             </div>
-            <div class="vdp-item" data-vvd="ZGYC2627W" data-service="cgx" data-name="ZHONG GU YIN CHUN" onclick="selectVessel('ZGYC2627W')">
-              <span class="vdp-vvd">ZGYC2627W</span>
-              <span class="vdp-name">ZHONG GU YIN CHUN</span>
-              <span class="vdp-svc cgx">CGX</span>
-            </div>
-            <div class="vdp-item" data-vvd="CSJ72630W" data-service="cgx" data-name="CHANG SHENG JI 7" onclick="selectVessel('CSJ72630W')">
-              <span class="vdp-vvd">CSJ72630W</span>
-              <span class="vdp-name">CHANG SHENG JI 7</span>
-              <span class="vdp-svc cgx">CGX</span>
-            </div>
             <!-- AEM -->
             <div class="vdp-group-label" data-group="AEM">AEM Service</div>
             <div class="vdp-item" data-vvd="CUSK2623W" data-service="aem" data-name="CUL HOCHIMINH" onclick="selectVessel('CUSK2623W')">
@@ -440,6 +430,16 @@
             <div class="vdp-item" data-vvd="CSQC2625W" data-service="rex" data-name="CHANG SHUN QIAN CHENG" onclick="selectVessel('CSQC2625W')">
               <span class="vdp-vvd">CSQC2625W</span>
               <span class="vdp-name">CHANG SHUN QIAN CHENG</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
+            <div class="vdp-item" data-vvd="ZGYC2627W" data-service="rex" data-name="ZHONG GU YIN CHUN" onclick="selectVessel('ZGYC2627W')">
+              <span class="vdp-vvd">ZGYC2627W</span>
+              <span class="vdp-name">ZHONG GU YIN CHUN</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
+            <div class="vdp-item" data-vvd="CSJ72630W" data-service="rex" data-name="CHANG SHENG JI 7" onclick="selectVessel('CSJ72630W')">
+              <span class="vdp-vvd">CSJ72630W</span>
+              <span class="vdp-name">CHANG SHENG JI 7</span>
               <span class="vdp-svc rex">REX</span>
             </div>
 
@@ -964,7 +964,7 @@
     <section class="page">
       <div class="watermark" id="wm-ZGYC">ZGYC2627W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-ZGYC">CGX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-ZGYC">REX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -1008,7 +1008,7 @@
 
       <div class="footer">
         <span id="footer-time-ZGYC">--</span>
-        <span>CGX Service Live View</span>
+        <span>REX Service Live View</span>
       </div>
     </section>
 
@@ -1048,7 +1048,7 @@
     <section class="page">
       <div class="watermark" id="wm-CSJ7">CSJ72630W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-CSJ7">CGX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-CSJ7">REX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -1092,7 +1092,7 @@
 
       <div class="footer">
         <span id="footer-time-CSJ7">--</span>
-        <span>CGX Service Live View</span>
+        <span>REX Service Live View</span>
       </div>
     </section>
 
@@ -1605,12 +1605,12 @@
       EVHA2626W: { name: 'EVERLASTING HARVEST', service: 'rex' },
       XPYS2626W: { name: 'X-PRESS ODYSSEY', service: 'aem' },
       XPBL2625W: { name: 'EXPRESS BERLIN',  service: 'cgx' },
-      ZGYC2627W: { name: 'ZHONG GU YIN CHUN', service: 'cgx' },
+      ZGYC2627W: { name: 'ZHONG GU YIN CHUN', service: 'rex' },
       H8112627W: { name: 'HUA DONG 811', service: 'sgx' },
       FUYU2626W: { name: 'FU YU', service: 'sgx' },
       CSQC2625W: { name: 'CHANG SHUN QIAN CHENG', service: 'rex' },
       ZYHS2628W: { name: 'ZHI YING HE SUN', service: 'sgx' },
-      CSJ72630W: { name: 'CHANG SHENG JI 7', service: 'cgx' },
+      CSJ72630W: { name: 'CHANG SHENG JI 7', service: 'rex' },
     };
 
     function toggleDropdown() {
