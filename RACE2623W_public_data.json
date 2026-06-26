@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-25T08:56:55.135Z",
-  "sourceUpdatedAt": "2026-06-25T08:46:32.869Z",
+  "generatedAt": "2026-06-26T00:47:07.611Z",
+  "sourceUpdatedAt": "2026-06-26T00:46:03.491Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "RACE2623W",
   "voyage": "2623W",
-  "bookingCount": 1314,
+  "bookingCount": 1313,
   "ruleText": "归类规则：booking 原始 POL 已有单独分类（精确匹配 CNTAO/CNSHA/CNNGB/CNNAS/CNXMN/CNSWA/THLCH/VNHPH/VNHCM/CNXGG，或 TW/JP/TH 区域 bucket）则保留在原 bucket；仅当原始 POL 无单独分类时，若 prev/post T/S Port 出现 NAS 或 NGB 口岸，才按 POL 区域归类到对应 via bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 5500,
-    "current": 5462,
-    "gap": -38,
+    "current": 5460,
+    "gap": -40,
     "completionRate": 99.3,
     "ft20": 1088,
-    "ft40": 2187,
-    "teu": 5462,
-    "displayCurrent": 5258,
-    "displayGap": -242,
+    "ft40": 2186,
+    "teu": 5460,
+    "displayCurrent": 5256,
+    "displayGap": -244,
     "displayCompletionRate": 95.6,
     "otherBookingCount": 48,
     "otherTeu": 204,
@@ -65,9 +65,9 @@
       "code": "CNNGB",
       "label": "CNNGB",
       "allocation": 1160,
-      "current": 1202,
-      "gap": 42,
-      "completionRate": 103.6,
+      "current": 1200,
+      "gap": 40,
+      "completionRate": 103.4,
       "status": "推进中",
       "etd": "2026-06-19"
     },
@@ -25073,7 +25073,7 @@
       "ft40": 2,
       "teu": 4,
       "category": "CNNAS",
-      "status": "W"
+      "status": "F"
     },
     {
       "id": 1243,
@@ -26494,26 +26494,6 @@
       "teu": 40,
       "category": "CNNAS",
       "status": "F"
-    },
-    {
-      "id": 1314,
-      "bookingNo": "CULVNGB2626164",
-      "blNo": "CULVNGB2626164",
-      "office": "CUNGB",
-      "pol": "CNNGB",
-      "por": "CNNGB",
-      "pod": "OMSOH",
-      "delivery": "OMSOH",
-      "tsPrev": "MYPKG",
-      "tsPost": "-",
-      "tsCnPort": "-",
-      "baseCategory": "CNNGB",
-      "tsMergeApplied": false,
-      "ft20": 0,
-      "ft40": 1,
-      "teu": 2,
-      "category": "CNNGB",
-      "status": "W"
     }
   ]
 }
