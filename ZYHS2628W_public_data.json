@@ -1,19 +1,22 @@
 {
-  "generatedAt": "2026-06-25T03:46:01.833Z",
-  "sourceUpdatedAt": "2026-06-24T10:03:02.301Z",
+  "generatedAt": "2026-06-29T08:12:01.293Z",
+  "sourceUpdatedAt": "2026-06-29T00:56:40.743Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "ZYHS2628W",
   "voyage": "2628W",
-  "bookingCount": 0,
+  "bookingCount": 3,
   "ruleText": "归类规则：直挂港精确匹配（CNNGB/CNSHK）；via 港按 POL 前缀 + T/S 港归类；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 1100,
-    "current": 0,
-    "gap": -1100,
-    "completionRate": 0,
-    "ft20": 0,
+    "current": 116,
+    "gap": -984,
+    "completionRate": 10.5,
+    "ft20": 16,
     "ft40": 0,
-    "teu": 0,
+    "teu": 16,
+    "displayCurrent": 116,
+    "displayGap": -984,
+    "displayCompletionRate": 10.5,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -70,10 +73,10 @@
       "code": "VNHPHNAS",
       "label": "VNHPH (via NAS)",
       "allocation": 5,
-      "current": 0,
-      "gap": -5,
-      "completionRate": 0,
-      "status": "未开始"
+      "current": 16,
+      "gap": 11,
+      "completionRate": 320,
+      "status": "推进中"
     },
     {
       "code": "VNHCMNAS",
@@ -115,19 +118,83 @@
       "code": "SOC",
       "label": "SOC",
       "allocation": 100,
-      "current": 0,
-      "gap": -100,
-      "completionRate": 0,
-      "status": "未开始",
+      "current": 100,
+      "gap": 0,
+      "completionRate": 100,
+      "status": "已满",
       "fullSlot": true
     }
   ],
-  "topPods": [],
+  "topPods": [
+    {
+      "rank": 1,
+      "pod": "SAJED",
+      "teu": 16
+    }
+  ],
   "notes": [
     "Allocation 合计 1,100 TEU（含直挂港 NGB/SHK 及 via 港，SOC 代理舱位）。",
     "归类规则：直挂港精确匹配；via 港按 POL 前缀及中转港归类。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
   ],
-  "rows": []
+  "rows": [
+    {
+      "id": 1,
+      "bookingNo": "CULVHPH2602205",
+      "blNo": "CULVHPH2602205",
+      "office": "CUHPH",
+      "pol": "VNHPH",
+      "por": "VNHPH",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "baseCategory": "VNHPHNAS",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "VNHPHNAS",
+      "status": "F",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
+      "bookingNo": "CULVHPH2602207",
+      "blNo": "CULVHPH2602207",
+      "office": "CUHPH",
+      "pol": "VNHPH",
+      "por": "VNHPH",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "baseCategory": "VNHPHNAS",
+      "ft20": 7,
+      "ft40": 0,
+      "teu": 7,
+      "category": "VNHPHNAS",
+      "status": "F",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 3,
+      "bookingNo": "CULVHPH2602209",
+      "blNo": "CULVHPH2602209",
+      "office": "CUHPH",
+      "pol": "VNHPH",
+      "por": "VNHPH",
+      "pod": "SAJED",
+      "delivery": "SAJED",
+      "tsPrev": "MYPKG",
+      "tsPost": "-",
+      "baseCategory": "VNHPHNAS",
+      "ft20": 8,
+      "ft40": 0,
+      "teu": 8,
+      "category": "VNHPHNAS",
+      "status": "F",
+      "excludeFromDisplay": false
+    }
+  ]
 }
