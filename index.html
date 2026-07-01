@@ -1767,7 +1767,7 @@
       const currentNote = payload.totals.otherTeu > 0
         ? `${formatNumber(payload.bookingCount)} 条 Booking（含 OTHER ${formatNumber(payload.totals.otherTeu)} TEU）`
         : `${formatNumber(payload.bookingCount)} 条 Booking`;
-      const socNote = payload.vvd === 'XPBL2625W' ? '<br><span style="color:#666;font-size:12px;">(含 1,762 TEUS SOC)</span>' : '';
+      const socNote = payload.vvd === 'XPBL2625W' ? '<br><span style="color:#d97706;font-size:13px;font-weight:600;">(含 1,762 TEUS SOC)</span>' : '';
       const items = [
         { label: 'TOTAL ALLOCATION', value: formatNumber(payload.totals.allocation), sub: 'TEU', className: '' },
         { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: currentNote + socNote },
