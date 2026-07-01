@@ -1821,16 +1821,21 @@
         const etdDisplay = row.etd ? `<span class="etd-tag">${row.etd}</span>` : '<span class="etd-tag etd-none">—</span>';
         const ft = ftMap[row.code] || { ft20: 0, ft40: 0 };
         const puCell = hasPickUp ? `<td class="pickup-cell">${row.pickUpTeus != null ? formatNumber(row.pickUpTeus) : '—'}</td>` : '';
+        // current 为 null 时显示 "-"（如 RACE Roll，实际量已归入各口岸）
+        const currentDisplay = row.current == null ? '—' : formatNumber(row.current);
+        const gapDisplay = row.gap == null ? '—' : formatNumber(row.gap);
+        const rateDisplay = row.completionRate == null ? '—' : formatPercent(rate);
+        const progressDisplay = row.completionRate == null ? '' : `<div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div>`;
         return `<tr>
           <td class="pol">${row.label || row.code}</td>
           <td class="etd-cell">${etdDisplay}</td>
           <td>${formatNumber(row.allocation)}</td>
-          <td>${formatNumber(row.current)}</td>
+          <td>${currentDisplay}</td>
           <td class="ft-cell">${formatNumber(ft.ft20)} / ${formatNumber(ft.ft40)}</td>
-          <td>${formatNumber(row.gap)}</td>
+          <td>${gapDisplay}</td>
           ${puCell}
-          <td>${formatPercent(rate)}</td>
-          <td><div class="progress-wrap"><div class="progress"><span class="${progressClass(rate)}" style="width:${Math.max(0, Math.min(rate, 100))}%"></span></div></div></td>
+          <td>${rateDisplay}</td>
+          <td>${progressDisplay}</td>
           <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
         </tr>`;
       }).join('');
