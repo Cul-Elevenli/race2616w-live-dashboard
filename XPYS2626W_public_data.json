@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T07:07:15.009Z",
+  "generatedAt": "2026-07-02T07:38:47.680Z",
   "sourceUpdatedAt": "2026-07-02T06:28:01.487Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "XPYS2626W",
@@ -7,16 +7,16 @@
   "bookingCount": 961,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 3063,
+    "allocation": 3255,
     "current": 3228,
-    "gap": 165,
-    "completionRate": 105.4,
+    "gap": -27,
+    "completionRate": 99.2,
     "ft20": 344,
     "ft40": 1442,
     "teu": 3228,
     "displayCurrent": 3228,
-    "displayGap": 165,
-    "displayCompletionRate": 105.4,
+    "displayGap": -27,
+    "displayCompletionRate": 99.2,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -25,40 +25,49 @@
     {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 900,
+      "allocation": 840,
       "current": 1252,
-      "gap": 352,
-      "completionRate": 139.1,
+      "gap": 412,
+      "completionRate": 149,
       "status": "推进中",
       "etd": "2026-07-01"
     },
     {
       "code": "CNNGB",
       "label": "CNNGB",
-      "allocation": 659,
+      "allocation": 658,
       "current": 724,
-      "gap": 65,
-      "completionRate": 109.9,
+      "gap": 66,
+      "completionRate": 110,
       "status": "推进中",
       "etd": "2026-06-28"
     },
     {
       "code": "CNSHA",
       "label": "CNSHA",
-      "allocation": 602,
+      "allocation": 704,
       "current": 563,
-      "gap": -39,
-      "completionRate": 93.5,
+      "gap": -141,
+      "completionRate": 80,
       "status": "推进中",
       "etd": "2026-06-26"
     },
     {
+      "code": "CNSWA",
+      "label": "CNSWA",
+      "allocation": 30,
+      "current": 0,
+      "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
       "code": "CNTAO",
       "label": "CNTAO",
-      "allocation": 791,
+      "allocation": 734,
       "current": 626,
-      "gap": -165,
-      "completionRate": 79.1,
+      "gap": -108,
+      "completionRate": 85.3,
       "status": "推进中",
       "etd": "2026-06-24"
     },
@@ -74,20 +83,38 @@
     {
       "code": "CNXMN",
       "label": "CNXMN (via NAS)",
-      "allocation": 10,
+      "allocation": 52,
       "current": 0,
-      "gap": -10,
+      "gap": -52,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "EGALY",
+      "label": "EGALY",
+      "allocation": 150,
+      "current": 0,
+      "gap": -150,
       "completionRate": 0,
       "status": "未开始"
     },
     {
       "code": "JPTYO",
       "label": "JPTYO (via NAS)",
-      "allocation": 50,
+      "allocation": 36,
       "current": 23,
-      "gap": -27,
-      "completionRate": 46,
+      "gap": -13,
+      "completionRate": 63.9,
       "status": "推进中"
+    },
+    {
+      "code": "SAJED",
+      "label": "SAJED",
+      "allocation": 0,
+      "current": 0,
+      "gap": 0,
+      "completionRate": 0,
+      "status": "未开始"
     },
     {
       "code": "THLCH",
@@ -174,7 +201,7 @@
     }
   ],
   "notes": [
-    "Allocation 合计 3,063 TEU。",
+    "Allocation 合计 3,255 TEU。",
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
