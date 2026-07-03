@@ -353,11 +353,11 @@
       <div class="vessel-dropdown" id="vesselDropdown">
         <div class="vessel-dropdown-trigger" id="dropdownTrigger" onclick="toggleDropdown()">
           <div class="vdt-left">
-            <span class="vdt-vvd" id="triggerVvd">RACE2623W</span>
-            <span class="vdt-sub" id="triggerSub">RACINE</span>
+            <span class="vdt-vvd" id="triggerVvd">XPBL2625W</span>
+            <span class="vdt-sub" id="triggerSub">EXPRESS BERLIN</span>
           </div>
           <div style="display:flex;align-items:center;gap:8px;">
-            <span class="vdt-badge" id="triggerBadge">SGX</span>
+            <span class="vdt-badge" id="triggerBadge">CGX</span>
             <span class="vdt-arrow">▼</span>
           </div>
         </div>
@@ -371,7 +371,7 @@
             <!-- CGX -->
             <div class="vdp-group-label" data-group="CGX">CGX Service</div>
             <!-- HYBM2624W 已隐藏 -->
-            <div class="vdp-item" data-vvd="XPBL2625W" data-service="cgx" data-name="EXPRESS BERLIN" onclick="selectVessel('XPBL2625W')">
+            <div class="vdp-item selected" data-vvd="XPBL2625W" data-service="cgx" data-name="EXPRESS BERLIN" onclick="selectVessel('XPBL2625W')">
               <span class="vdp-vvd">XPBL2625W</span>
               <span class="vdp-name">EXPRESS BERLIN</span>
               <span class="vdp-svc cgx">CGX</span>
@@ -395,16 +395,13 @@
             </div>
             <!-- SGX -->
             <div class="vdp-group-label" data-group="SGX">SGX Service</div>
-            <div class="vdp-item selected" data-vvd="RACE2623W" data-service="sgx" data-name="RACINE" onclick="selectVessel('RACE2623W')">
-              <span class="vdp-vvd">RACE2623W</span>
+            <!-- RACE2623W 已隐藏 -->
+            <div class="vdp-item" data-vvd="RACE2628W" data-service="sgx" data-name="RACINE" onclick="selectVessel('RACE2628W')">
+              <span class="vdp-vvd">RACE2628W</span>
               <span class="vdp-name">RACINE</span>
               <span class="vdp-svc sgx">SGX</span>
             </div>
-            <div class="vdp-item" data-vvd="H8112627W" data-service="sgx" data-name="HUA DONG 811" onclick="selectVessel('H8112627W')">
-              <span class="vdp-vvd">H8112627W</span>
-              <span class="vdp-name">HUA DONG 811</span>
-              <span class="vdp-svc sgx">SGX</span>
-            </div>
+            <!-- H8112627W 已隐藏 -->
             <div class="vdp-item" data-vvd="FUYU2626W" data-service="sgx" data-name="FU YU" onclick="selectVessel('FUYU2626W')">
               <span class="vdp-vvd">FUYU2626W</span>
               <span class="vdp-name">FU YU</span>
@@ -453,7 +450,7 @@
   </div>
 
   <!-- ====== RACE2623W 面板 ====== -->
-  <div class="tab-panel active" id="panel-RACE2623W">
+  <div class="tab-panel" id="panel-RACE2623W">
 
     <section class="page">
       <div class="watermark" id="wm-RACE2623">RACE2623W UPDATE</div>
@@ -959,7 +956,7 @@
   </div>
 
   <!-- ====== XPBL2625W 面板 ====== -->
-  <div class="tab-panel" id="panel-XPBL2625W">
+  <div class="tab-panel active" id="panel-XPBL2625W">
 
     <section class="page">
       <div class="watermark" id="wm-XPBL">XPBL2625W UPDATE</div>
@@ -1285,6 +1282,90 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-H811"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ====== RACE2628W 面板 ====== -->
+  <div class="tab-panel" id="panel-RACE2628W">
+
+    <section class="page">
+      <div class="watermark" id="wm-RACE2628">RACE2628W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-RACE2628">SGX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-RACE2628">RACE2628W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-RACE2628">2628W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-RACE2628">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-RACE2628"></div>
+      <div class="completion-strip" id="completionStrip-RACE2628"></div>
+      <div class="region-strip" id="regionStrip-RACE2628"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-RACE2628"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-RACE2628">--</span>
+        <span>SGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-RACE2628">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">RACE2628W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-RACE2628">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-RACE2628"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-RACE2628"></tbody></table>
         </div>
       </div>
 
@@ -1663,7 +1744,8 @@
 
     // ===== Vessel 配置 =====
     const VESSELS = {
-      RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623' },
+      RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623', hidden: true },
+      RACE2628W: { jsonFile: 'RACE2628W_public_data.json', prefix: 'RACE2628' },
       CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK' },
       WNFD2624W: { jsonFile: 'WNFD2624W_public_data.json', prefix: 'WNFD' },
       HYBM2624W: { jsonFile: 'HYBM2624W_public_data.json', prefix: 'HYBM', hidden: true },
@@ -1672,19 +1754,20 @@
       GFPS2619W: { jsonFile: 'GFPS2619W_public_data.json', prefix: 'GFPS' },
       XPBL2625W: { jsonFile: 'XPBL2625W_public_data.json', prefix: 'XPBL' },
       ZGYC2627W: { jsonFile: 'ZGYC2627W_public_data.json', prefix: 'ZGYC' },
-      H8112627W: { jsonFile: 'H8112627W_public_data.json', prefix: 'H811' },
+      H8112627W: { jsonFile: 'H8112627W_public_data.json', prefix: 'H811', hidden: true },
       FUYU2626W: { jsonFile: 'FUYU2626W_public_data.json', prefix: 'FUYU' },
       CSQC2625W: { jsonFile: 'CSQC2625W_public_data.json', prefix: 'CSQC' },
       ZYHS2628W: { jsonFile: 'ZYHS2628W_public_data.json', prefix: 'ZYHS' },
       CSJ72630W: { jsonFile: 'CSJ72630W_public_data.json', prefix: 'CSJ7' },
     };
 
-    let currentTab = 'RACE2623W';
+    let currentTab = 'XPBL2625W';
     const payloads = {};
 
     // ===== 下拉导航逻辑 =====
     const VESSEL_META = {
-      RACE2623W: { name: 'RACINE',        service: 'sgx' },
+      RACE2623W: { name: 'RACINE',        service: 'sgx', hidden: true },
+      RACE2628W: { name: 'RACINE (2628W)', service: 'sgx' },
       HYBM2624W: { name: 'HIRANYA BHUM', service: 'cgx', hidden: true },
       CUSK2623W: { name: 'CUL HOCHIMINH',service: 'aem' },
       WNFD2624W: { name: 'WAN FU DA',    service: 'rex' },
@@ -1693,7 +1776,7 @@
       GFPS2619W:  { name: 'GFS PRESTIGE',  service: 'aem' },
       XPBL2625W: { name: 'EXPRESS BERLIN',  service: 'cgx' },
       ZGYC2627W: { name: 'ZHONG GU YIN CHUN', service: 'rex' },
-      H8112627W: { name: 'HUA DONG 811', service: 'sgx' },
+      H8112627W: { name: 'HUA DONG 811', service: 'sgx', hidden: true },
       FUYU2626W: { name: 'FU YU', service: 'sgx' },
       CSQC2625W: { name: 'CHANG SHUN QIAN CHENG', service: 'rex' },
       ZYHS2628W: { name: 'ZHI YING HE SUN', service: 'sgx' },
@@ -1821,7 +1904,7 @@
       if (tabParam && VESSELS[tabParam]) {
         selectVessel(tabParam);
       } else {
-        selectVessel('RACE2623W');
+        selectVessel('XPBL2625W');
       }
     })();
 
