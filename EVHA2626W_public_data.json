@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T09:12:40.159Z",
+  "generatedAt": "2026-07-03T09:54:30.586Z",
   "sourceUpdatedAt": "2026-07-03T09:05:49.092Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "EVHA2626W",
@@ -7,16 +7,16 @@
   "bookingCount": 294,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 NAS 的归入对应 NAS bucket；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 1520,
+    "allocation": 2174,
     "current": 1402,
-    "gap": -118,
-    "completionRate": 92.2,
+    "gap": -772,
+    "completionRate": 64.5,
     "ft20": 296,
     "ft40": 553,
     "teu": 1402,
     "displayCurrent": 1402,
-    "displayGap": -118,
-    "displayCompletionRate": 92.2,
+    "displayGap": -772,
+    "displayCompletionRate": 64.5,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -25,20 +25,20 @@
     {
       "code": "CNSHK",
       "label": "CNSHK",
-      "allocation": 320,
+      "allocation": 390,
       "current": 428,
-      "gap": 108,
-      "completionRate": 133.8,
+      "gap": 38,
+      "completionRate": 109.7,
       "status": "推进中",
       "etd": "2026-06-24"
     },
     {
       "code": "CNNAS",
       "label": "CNNAS",
-      "allocation": 480,
+      "allocation": 580,
       "current": 570,
-      "gap": 90,
-      "completionRate": 118.8,
+      "gap": -10,
+      "completionRate": 98.3,
       "status": "推进中",
       "etd": "2026-06-24"
     },
@@ -53,20 +53,38 @@
       "etd": "2026-06-30"
     },
     {
+      "code": "CNNGB",
+      "label": "CNNGB",
+      "allocation": 644,
+      "current": 0,
+      "gap": -644,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
       "code": "CNXMN",
       "label": "CNXMN (via NAS)",
-      "allocation": 130,
+      "allocation": 30,
       "current": 8,
-      "gap": -122,
-      "completionRate": 6.2,
+      "gap": -22,
+      "completionRate": 26.7,
       "status": "需加紧"
     },
     {
       "code": "CNSWA",
       "label": "CNSWA (via NAS)",
-      "allocation": 100,
+      "allocation": 30,
       "current": 0,
-      "gap": -100,
+      "gap": -30,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
+      "code": "CNXGG",
+      "label": "CNXGG (via NAS)",
+      "allocation": 10,
+      "current": 0,
+      "gap": -10,
       "completionRate": 0,
       "status": "未开始"
     },
@@ -149,7 +167,7 @@
     }
   ],
   "notes": [
-    "Allocation 合计 1,520 TEU。",
+    "Allocation 合计 2,174 TEU。",
     "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经 NAS 的归入对应 NAS bucket。",
     "TEU 计算口径：20ft + 2 × 40ft。",
     "公开页默认不展示 shipper 等敏感客户字段。"
