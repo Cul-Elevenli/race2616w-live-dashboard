@@ -378,11 +378,6 @@
             </div>
             <!-- AEM -->
             <div class="vdp-group-label" data-group="AEM">AEM Service</div>
-            <div class="vdp-item" data-vvd="CUSK2623W" data-service="aem" data-name="CUL HOCHIMINH" onclick="selectVessel('CUSK2623W')">
-              <span class="vdp-vvd">CUSK2623W</span>
-              <span class="vdp-name">CUL HOCHIMINH</span>
-              <span class="vdp-svc aem">AEM</span>
-            </div>
             <div class="vdp-item" data-vvd="XPYS2626W" data-service="aem" data-name="X-PRESS ODYSSEY" onclick="selectVessel('XPYS2626W')">
               <span class="vdp-vvd">XPYS2626W</span>
               <span class="vdp-name">X-PRESS ODYSSEY</span>
@@ -1741,7 +1736,7 @@
     const VESSELS = {
       RACE2623W: { jsonFile: 'RACE2623W_public_data.json', prefix: 'RACE2623', hidden: true },
       RACE2628W: { jsonFile: 'RACE2628W_public_data.json', prefix: 'RACE2628' },
-      CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK' },
+      CUSK2623W: { jsonFile: 'CUSK2623W_public_data.json', prefix: 'CUSK', hidden: true },
       WNFD2624W: { jsonFile: 'WNFD2624W_public_data.json', prefix: 'WNFD' },
       HYBM2624W: { jsonFile: 'HYBM2624W_public_data.json', prefix: 'HYBM', hidden: true },
       EVHA2626W: { jsonFile: 'EVHA2626W_public_data.json', prefix: 'EVHA2', hidden: true },
@@ -1764,7 +1759,7 @@
       RACE2623W: { name: 'RACINE',        service: 'sgx', hidden: true },
       RACE2628W: { name: 'RACINE (2628W)', service: 'sgx' },
       HYBM2624W: { name: 'HIRANYA BHUM', service: 'cgx', hidden: true },
-      CUSK2623W: { name: 'CUL HOCHIMINH',service: 'aem' },
+      CUSK2623W: { name: 'CUL SHEKOU', service: 'aem', hidden: true },
       WNFD2624W: { name: 'WAN FU DA',    service: 'rex' },
       EVHA2626W: { name: 'EVERLASTING HARVEST', service: 'rex', hidden: true },
       XPYS2626W: { name: 'X-PRESS ODYSSEY', service: 'aem' },
