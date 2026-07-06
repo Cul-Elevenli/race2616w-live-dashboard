@@ -1512,17 +1512,22 @@
           <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
         </div>
       </header>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>DEL Code</th>
-            <th>TEU</th>
-          </tr>
-        </thead>
-        <tbody id="podBody-FUYU2"></tbody>
-      </table>
-      <div class="footer"><span>Preview Version</span></div>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-FUYU2"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-FUYU2"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span id="footer-time-FUYU2">--</span>
+        <span>SGX Service Live View</span>
+      </div>
     </section>
   </div>
 
