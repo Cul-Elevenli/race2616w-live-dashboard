@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T04:09:33.411Z",
+  "generatedAt": "2026-07-08T05:56:10.167Z",
   "sourceUpdatedAt": "2026-07-08T04:09:17.980Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "GFPS2627W",
@@ -7,16 +7,16 @@
   "bookingCount": 421,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
-    "allocation": 1421,
+    "allocation": 1521,
     "current": 1470,
-    "gap": 49,
-    "completionRate": 103.4,
+    "gap": -51,
+    "completionRate": 96.6,
     "ft20": 126,
     "ft40": 672,
     "teu": 1470,
     "displayCurrent": 1470,
-    "displayGap": 49,
-    "displayCompletionRate": 103.4,
+    "displayGap": -51,
+    "displayCompletionRate": 96.6,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -34,11 +34,11 @@
     },
     {
       "code": "CNNGB",
-      "label": "CNNGB",
-      "allocation": 349,
+      "label": "CNINGB",
+      "allocation": 366,
       "current": 331,
-      "gap": -18,
-      "completionRate": 94.8,
+      "gap": -35,
+      "completionRate": 90.4,
       "status": "推进中",
       "etd": "2026-07-07"
     },
@@ -53,15 +53,6 @@
       "etd": "2026-07-05"
     },
     {
-      "code": "CNSWA",
-      "label": "CNSWA",
-      "allocation": 0,
-      "current": 0,
-      "gap": 0,
-      "completionRate": 0,
-      "status": "未开始"
-    },
-    {
       "code": "CNTAO",
       "label": "CNTAO",
       "allocation": 305,
@@ -74,9 +65,9 @@
     {
       "code": "CNXGG",
       "label": "CNXGG (via NAS)",
-      "allocation": 17,
+      "allocation": 0,
       "current": 0,
-      "gap": -17,
+      "gap": 0,
       "completionRate": 0,
       "status": "未开始"
     },
@@ -92,15 +83,24 @@
     {
       "code": "JPTYO",
       "label": "JP",
-      "allocation": 10,
+      "allocation": 2,
       "current": 7,
-      "gap": -3,
-      "completionRate": 70,
+      "gap": 5,
+      "completionRate": 350,
       "status": "推进中"
     },
     {
+      "code": "SAJED",
+      "label": "SAJED",
+      "allocation": 100,
+      "current": 0,
+      "gap": -100,
+      "completionRate": 0,
+      "status": "未开始"
+    },
+    {
       "code": "THLCH",
-      "label": "THLCH (via NAS)",
+      "label": "THLCH",
       "allocation": 10,
       "current": 77,
       "gap": 67,
@@ -128,10 +128,10 @@
     {
       "code": "VNSGN",
       "label": "VNSGN (via NAS)",
-      "allocation": 2,
+      "allocation": 10,
       "current": 6,
-      "gap": 4,
-      "completionRate": 300,
+      "gap": -4,
+      "completionRate": 60,
       "status": "推进中"
     }
   ],
