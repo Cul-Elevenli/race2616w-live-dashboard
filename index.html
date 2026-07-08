@@ -2118,9 +2118,10 @@
           <div class="summary-note">${item.note || '&nbsp;'}</div>
         </div>
       `).join('');
+      const completionLabel = payload.tailPortLabel ? `${payload.tailPortLabel} Completion` : 'Overall Completion';
       strip.innerHTML = `
         <div class="completion-head">
-          <span>Overall Completion</span>
+          <span>${completionLabel}</span>
           <span class="completion-percent">${formatPercent(payload.totals.completionRate)}</span>
         </div>
         <div class="completion-track">
