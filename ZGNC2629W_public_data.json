@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-07-08T08:40:31.000Z",
-  "sourceUpdatedAt": "2026-07-08T08:39:31.066Z",
+  "generatedAt": "2026-07-09T08:16:29.810Z",
+  "sourceUpdatedAt": "2026-07-09T01:38:15.368Z",
   "refreshPlan": "建议后台每 1 小时同步一次",
   "vvd": "ZGNC2629W",
   "voyage": "2629W",
-  "bookingCount": 94,
+  "bookingCount": 108,
   "ruleText": "归类规则：booking 原始 POL 匹配 allocation bucket 则保留原分类；T/S 经中国港口的归入对应直挂港；TEU 按 20ft + 2×40ft 计算。",
   "totals": {
     "allocation": 2981,
-    "current": 668,
-    "gap": -2313,
-    "completionRate": 22.4,
-    "ft20": 186,
-    "ft40": 241,
-    "teu": 668,
-    "displayCurrent": 668,
-    "displayGap": -2313,
-    "displayCompletionRate": 22.4,
+    "current": 725,
+    "gap": -2256,
+    "completionRate": 24.3,
+    "ft20": 213,
+    "ft40": 256,
+    "teu": 725,
+    "displayCurrent": 725,
+    "displayGap": -2256,
+    "displayCompletionRate": 24.3,
     "otherBookingCount": 0,
     "otherTeu": 0,
     "otherPols": []
@@ -46,9 +46,9 @@
       "code": "CNSHA",
       "label": "CNSHA",
       "allocation": 555,
-      "current": 17,
-      "gap": -538,
-      "completionRate": 3.1,
+      "current": 23,
+      "gap": -532,
+      "completionRate": 4.1,
       "status": "需加紧",
       "etd": "2026-07-22"
     },
@@ -56,9 +56,9 @@
       "code": "CNTAO",
       "label": "CNTAO",
       "allocation": 675,
-      "current": 465,
-      "gap": -210,
-      "completionRate": 68.9,
+      "current": 516,
+      "gap": -159,
+      "completionRate": 76.4,
       "status": "推进中",
       "etd": "2026-07-20"
     },
@@ -144,17 +144,17 @@
     {
       "rank": 2,
       "pod": "EGALY",
-      "teu": 93
+      "teu": 104
     },
     {
       "rank": 3,
       "pod": "EGSOK",
-      "teu": 66
+      "teu": 96
     },
     {
       "rank": 4,
       "pod": "TRMER",
-      "teu": 62
+      "teu": 74
     },
     {
       "rank": 5,
@@ -164,7 +164,7 @@
     {
       "rank": 6,
       "pod": "TRALI",
-      "teu": 16
+      "teu": 20
     }
   ],
   "notes": [
@@ -176,6 +176,25 @@
   "rows": [
     {
       "id": 1,
+      "bookingNo": "CULVTAO2610015",
+      "blNo": "CULVTAO2610015",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 2,
+      "ft40": 0,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 2,
       "bookingNo": "CULVTAO2610053",
       "blNo": "CULVTAO2610053",
       "office": "CUTAO",
@@ -194,7 +213,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 2,
+      "id": 3,
       "bookingNo": "CULVTAO2610142",
       "blNo": "CULVTAO2610142",
       "office": "CUTAO",
@@ -213,7 +232,26 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 3,
+      "id": 4,
+      "bookingNo": "CULVTAO2610154",
+      "blNo": "CULVTAO2610154",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 5,
       "bookingNo": "CULVTAO2610210",
       "blNo": "CULVTAO2610210",
       "office": "CUTAO",
@@ -232,7 +270,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 4,
+      "id": 6,
       "bookingNo": "CULVTAO2610257",
       "blNo": "CULVTAO2610257",
       "office": "CUTAO",
@@ -251,7 +289,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 5,
+      "id": 7,
       "bookingNo": "CULVTAO2610259",
       "blNo": "CULVTAO2610259",
       "office": "CUTAO",
@@ -262,15 +300,15 @@
       "tsPrev": "-",
       "tsPost": "-",
       "baseCategory": "CNTAO",
-      "ft20": 4,
+      "ft20": 2,
       "ft40": 0,
-      "teu": 4,
+      "teu": 2,
       "category": "CNTAO",
       "status": "W",
       "excludeFromDisplay": false
     },
     {
-      "id": 6,
+      "id": 8,
       "bookingNo": "CULVTAO2610261",
       "blNo": "CULVTAO2610261",
       "office": "CUTAO",
@@ -289,7 +327,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 7,
+      "id": 9,
       "bookingNo": "CULVTAO2610264",
       "blNo": "CULVTAO2610264",
       "office": "CUTAO",
@@ -308,7 +346,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 8,
+      "id": 10,
       "bookingNo": "CULVTAO2610266",
       "blNo": "CULVTAO2610266",
       "office": "CUTAO",
@@ -327,7 +365,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 9,
+      "id": 11,
       "bookingNo": "CULVTAO2610267",
       "blNo": "CULVTAO2610267",
       "office": "CUTAO",
@@ -346,7 +384,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 10,
+      "id": 12,
       "bookingNo": "CULVTAO2610269",
       "blNo": "CULVTAO2610269",
       "office": "CUTAO",
@@ -365,7 +403,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 11,
+      "id": 13,
       "bookingNo": "CULVTAO2610273",
       "blNo": "CULVTAO2610273",
       "office": "CUTAO",
@@ -384,26 +422,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 12,
-      "bookingNo": "CULVTAO2610276",
-      "blNo": "CULVTAO2610276",
-      "office": "CUTAO",
-      "pol": "CNTAO",
-      "por": "CNTAO",
-      "pod": "TRMER",
-      "delivery": "TRMER",
-      "tsPrev": "-",
-      "tsPost": "-",
-      "baseCategory": "CNTAO",
-      "ft20": 1,
-      "ft40": 1,
-      "teu": 3,
-      "category": "CNTAO",
-      "status": "W",
-      "excludeFromDisplay": false
-    },
-    {
-      "id": 13,
+      "id": 14,
       "bookingNo": "CULVTAO2610277",
       "blNo": "CULVTAO2610277",
       "office": "CUTAO",
@@ -422,7 +441,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 14,
+      "id": 15,
       "bookingNo": "CULVTAO2610291",
       "blNo": "CULVTAO2610291",
       "office": "CUTAO",
@@ -441,7 +460,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 15,
+      "id": 16,
       "bookingNo": "CULVTAO2610307",
       "blNo": "CULVTAO2610307",
       "office": "CUTAO",
@@ -460,7 +479,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 16,
+      "id": 17,
       "bookingNo": "CULVTAO2610308",
       "blNo": "CULVTAO2610308",
       "office": "CUTAO",
@@ -479,7 +498,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 17,
+      "id": 18,
       "bookingNo": "CULVTAO2610318",
       "blNo": "CULVTAO2610318",
       "office": "CUTAO",
@@ -498,7 +517,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 18,
+      "id": 19,
       "bookingNo": "CULVTAO2610356",
       "blNo": "CULVTAO2610356",
       "office": "CUTAO",
@@ -517,7 +536,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 19,
+      "id": 20,
       "bookingNo": "CULVTAO2610361",
       "blNo": "CULVTAO2610361",
       "office": "CUTAO",
@@ -536,7 +555,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 20,
+      "id": 21,
       "bookingNo": "CULVTAO2610366",
       "blNo": "CULVTAO2610366",
       "office": "CUTAO",
@@ -555,7 +574,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 21,
+      "id": 22,
       "bookingNo": "CULVTAO2610371",
       "blNo": "CULVTAO2610371",
       "office": "CUTAO",
@@ -574,7 +593,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 22,
+      "id": 23,
       "bookingNo": "CULVTAO2610389",
       "blNo": "CULVTAO2610389",
       "office": "CUTAO",
@@ -593,7 +612,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 23,
+      "id": 24,
       "bookingNo": "CULVTAO2610391",
       "blNo": "CULVTAO2610391",
       "office": "CUTAO",
@@ -612,7 +631,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 24,
+      "id": 25,
       "bookingNo": "CULVTAO2610392",
       "blNo": "CULVTAO2610392",
       "office": "CUTAO",
@@ -631,7 +650,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 25,
+      "id": 26,
       "bookingNo": "CULVTAO2610393",
       "blNo": "CULVTAO2610393",
       "office": "CUTAO",
@@ -650,7 +669,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 26,
+      "id": 27,
       "bookingNo": "CULVTAO2610394",
       "blNo": "CULVTAO2610394",
       "office": "CUTAO",
@@ -669,7 +688,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 27,
+      "id": 28,
       "bookingNo": "CULVTAO2610396",
       "blNo": "CULVTAO2610396",
       "office": "CUTAO",
@@ -688,7 +707,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 28,
+      "id": 29,
       "bookingNo": "CULVTAO2610397",
       "blNo": "CULVTAO2610397",
       "office": "CUTAO",
@@ -707,7 +726,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 29,
+      "id": 30,
       "bookingNo": "CULVTAO2610398",
       "blNo": "CULVTAO2610398",
       "office": "CUTAO",
@@ -726,7 +745,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 30,
+      "id": 31,
       "bookingNo": "CULVTAO2610399",
       "blNo": "CULVTAO2610399",
       "office": "CUTAO",
@@ -745,7 +764,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 31,
+      "id": 32,
       "bookingNo": "CULVTAO2610400",
       "blNo": "CULVTAO2610400",
       "office": "CUTAO",
@@ -764,7 +783,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 32,
+      "id": 33,
       "bookingNo": "CULVTAO2610416",
       "blNo": "CULVTAO2610416",
       "office": "CUTAO",
@@ -783,7 +802,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 33,
+      "id": 34,
       "bookingNo": "CULVTAO2610427",
       "blNo": "CULVTAO2610427",
       "office": "CUTAO",
@@ -802,7 +821,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 34,
+      "id": 35,
       "bookingNo": "CULVTAO2610432",
       "blNo": "CULVTAO2610432",
       "office": "CUTAO",
@@ -821,7 +840,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 35,
+      "id": 36,
       "bookingNo": "CULVTAO2610434",
       "blNo": "CULVTAO2610434",
       "office": "CUTAO",
@@ -840,7 +859,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 36,
+      "id": 37,
       "bookingNo": "CULVTAO2610435",
       "blNo": "CULVTAO2610435",
       "office": "CUTAO",
@@ -859,7 +878,26 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 37,
+      "id": 38,
+      "bookingNo": "CULVPKG2601640",
+      "blNo": "CULVPKG2601640",
+      "office": "CUPKG",
+      "pol": "MYPKG",
+      "por": "MYPKG",
+      "pod": "TRALI",
+      "delivery": "TRALI",
+      "tsPrev": "CNTAO",
+      "tsPost": "-",
+      "baseCategory": "OTHER",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 39,
       "bookingNo": "CULVTAO2610467",
       "blNo": "CULVTAO2610467",
       "office": "CUTAO",
@@ -878,7 +916,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 38,
+      "id": 40,
       "bookingNo": "CULVTAO2610469",
       "blNo": "CULVTAO2610469",
       "office": "CUTAO",
@@ -897,7 +935,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 39,
+      "id": 41,
       "bookingNo": "CULVTAO2610476",
       "blNo": "CULVTAO2610476",
       "office": "CUTAO",
@@ -916,7 +954,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 40,
+      "id": 42,
       "bookingNo": "CULVTAO2610485",
       "blNo": "CULVTAO2610485",
       "office": "CUTAO",
@@ -935,7 +973,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 41,
+      "id": 43,
       "bookingNo": "CULVTAO2610486",
       "blNo": "CULVTAO2610486",
       "office": "CUTAO",
@@ -954,7 +992,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 42,
+      "id": 44,
       "bookingNo": "CULVTAO2610498",
       "blNo": "CULVTAO2610498",
       "office": "CUTAO",
@@ -973,7 +1011,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 43,
+      "id": 45,
       "bookingNo": "CULVTAO2610514",
       "blNo": "CULVTAO2610514",
       "office": "CUTAO",
@@ -992,7 +1030,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 44,
+      "id": 46,
       "bookingNo": "CULVTAO2610515",
       "blNo": "CULVTAO2610515",
       "office": "CUTAO",
@@ -1011,7 +1049,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 45,
+      "id": 47,
       "bookingNo": "CULVTAO2610516",
       "blNo": "CULVTAO2610516",
       "office": "CUTAO",
@@ -1030,7 +1068,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 46,
+      "id": 48,
       "bookingNo": "CULVTAO2610530",
       "blNo": "CULVTAO2610530",
       "office": "CUTAO",
@@ -1049,7 +1087,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 47,
+      "id": 49,
       "bookingNo": "CULVTAO2610551",
       "blNo": "CULVTAO2610551",
       "office": "CUTAO",
@@ -1068,7 +1106,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 48,
+      "id": 50,
       "bookingNo": "CULVTAO2610552",
       "blNo": "CULVTAO2610552",
       "office": "CUTAO",
@@ -1087,7 +1125,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 49,
+      "id": 51,
       "bookingNo": "CULVTAO2610555",
       "blNo": "CULVTAO2610555",
       "office": "CUTAO",
@@ -1106,7 +1144,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 50,
+      "id": 52,
       "bookingNo": "CULVTAO2610560",
       "blNo": "CULVTAO2610560",
       "office": "CUTAO",
@@ -1125,7 +1163,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 51,
+      "id": 53,
       "bookingNo": "CULVTAO2610561",
       "blNo": "CULVTAO2610561",
       "office": "CUTAO",
@@ -1144,7 +1182,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 52,
+      "id": 54,
       "bookingNo": "CULVTAO2610562",
       "blNo": "CULVTAO2610562",
       "office": "CUTAO",
@@ -1163,7 +1201,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 53,
+      "id": 55,
       "bookingNo": "CULVTAO2610563",
       "blNo": "CULVTAO2610563",
       "office": "CUTAO",
@@ -1182,7 +1220,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 54,
+      "id": 56,
       "bookingNo": "CULVTAO2610564",
       "blNo": "CULVTAO2610564",
       "office": "CUTAO",
@@ -1201,7 +1239,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 55,
+      "id": 57,
       "bookingNo": "CULVTAO2610567",
       "blNo": "CULVTAO2610567",
       "office": "CUTAO",
@@ -1220,7 +1258,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 56,
+      "id": 58,
       "bookingNo": "CULVTAO2610570",
       "blNo": "CULVTAO2610570",
       "office": "CUTAO",
@@ -1239,7 +1277,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 57,
+      "id": 59,
       "bookingNo": "CULVTAO2610571",
       "blNo": "CULVTAO2610571",
       "office": "CUTAO",
@@ -1258,7 +1296,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 58,
+      "id": 60,
       "bookingNo": "CULVTAO2610574",
       "blNo": "CULVTAO2610574",
       "office": "CUTAO",
@@ -1277,7 +1315,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 59,
+      "id": 61,
       "bookingNo": "CULVTAO2610575",
       "blNo": "CULVTAO2610575",
       "office": "ULTAO",
@@ -1296,7 +1334,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 60,
+      "id": 62,
       "bookingNo": "CULVTAO2610577",
       "blNo": "CULVTAO2610577",
       "office": "ULTAO",
@@ -1315,7 +1353,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 61,
+      "id": 63,
       "bookingNo": "CULVTAO2610578",
       "blNo": "CULVTAO2610578",
       "office": "ULTAO",
@@ -1334,7 +1372,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 62,
+      "id": 64,
       "bookingNo": "CULVTAO2610579",
       "blNo": "CULVTAO2610579",
       "office": "ULTAO",
@@ -1353,7 +1391,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 63,
+      "id": 65,
       "bookingNo": "CULVTAO2610580",
       "blNo": "CULVTAO2610580",
       "office": "CUTAO",
@@ -1372,7 +1410,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 64,
+      "id": 66,
       "bookingNo": "CULVTAO2610581",
       "blNo": "CULVTAO2610581",
       "office": "CUTAO",
@@ -1391,7 +1429,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 65,
+      "id": 67,
       "bookingNo": "CULVTAO2610582",
       "blNo": "CULVTAO2610582",
       "office": "CUTAO",
@@ -1410,7 +1448,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 66,
+      "id": 68,
       "bookingNo": "CULVTAO2610583",
       "blNo": "CULVTAO2610583",
       "office": "CUTAO",
@@ -1429,7 +1467,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 67,
+      "id": 69,
       "bookingNo": "CULVTAO2610584",
       "blNo": "CULVTAO2610584",
       "office": "CUTAO",
@@ -1448,7 +1486,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 68,
+      "id": 70,
       "bookingNo": "CULVTAO2610585",
       "blNo": "CULVTAO2610585",
       "office": "ULTAO",
@@ -1467,7 +1505,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 69,
+      "id": 71,
       "bookingNo": "CULVTAO2610586",
       "blNo": "CULVTAO2610586",
       "office": "ULTAO",
@@ -1486,7 +1524,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 70,
+      "id": 72,
       "bookingNo": "CULVTAO2610587",
       "blNo": "CULVTAO2610587",
       "office": "ULTAO",
@@ -1497,15 +1535,15 @@
       "tsPrev": "-",
       "tsPost": "-",
       "baseCategory": "CNTAO",
-      "ft20": 4,
+      "ft20": 3,
       "ft40": 0,
-      "teu": 4,
+      "teu": 3,
       "category": "CNTAO",
       "status": "W",
       "excludeFromDisplay": false
     },
     {
-      "id": 71,
+      "id": 73,
       "bookingNo": "CULVTAO2610589",
       "blNo": "CULVTAO2610589",
       "office": "ULTAO",
@@ -1524,7 +1562,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 72,
+      "id": 74,
       "bookingNo": "CULVTAO2610592",
       "blNo": "CULVTAO2610592",
       "office": "ULTAO",
@@ -1543,7 +1581,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 73,
+      "id": 75,
       "bookingNo": "CULVTAO2610593",
       "blNo": "CULVTAO2610593",
       "office": "CUTAO",
@@ -1562,7 +1600,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 74,
+      "id": 76,
       "bookingNo": "CULVTAO2610599",
       "blNo": "CULVTAO2610599",
       "office": "CUTAO",
@@ -1581,7 +1619,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 75,
+      "id": 77,
       "bookingNo": "CULVTAO2610602",
       "blNo": "CULVTAO2610602",
       "office": "ULTAO",
@@ -1600,7 +1638,197 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 76,
+      "id": 78,
+      "bookingNo": "CULVTAO2610604",
+      "blNo": "CULVTAO2610604",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 0,
+      "ft40": 10,
+      "teu": 20,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 79,
+      "bookingNo": "CULVTAO2610605",
+      "blNo": "CULVTAO2610605",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 4,
+      "ft40": 0,
+      "teu": 4,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 80,
+      "bookingNo": "CULVTAO2610612",
+      "blNo": "CULVTAO2610612",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGSOK",
+      "delivery": "EGSOK",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 81,
+      "bookingNo": "CULVTAO2610614",
+      "blNo": "CULVTAO2610614",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "TRMER",
+      "delivery": "TRMER",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 2,
+      "ft40": 0,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 82,
+      "bookingNo": "CULVTAO2610615",
+      "blNo": "CULVTAO2610615",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "TRALI",
+      "delivery": "TRALI",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 83,
+      "bookingNo": "CULVTAO2610616",
+      "blNo": "CULVTAO2610616",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGALY",
+      "delivery": "EGALY",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 84,
+      "bookingNo": "CULVTAO2610617",
+      "blNo": "CULVTAO2610617",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGALY",
+      "delivery": "EGALY",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 1,
+      "ft40": 0,
+      "teu": 1,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 85,
+      "bookingNo": "CULVTAO2610618",
+      "blNo": "CULVTAO2610618",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGALY",
+      "delivery": "EGALY",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 10,
+      "ft40": 0,
+      "teu": 10,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 86,
+      "bookingNo": "CULVTAO2610619",
+      "blNo": "CULVTAO2610619",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "EGALY",
+      "delivery": "EGALY",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 87,
+      "bookingNo": "CULVTAO2610621",
+      "blNo": "CULVTAO2610621",
+      "office": "CUTAO",
+      "pol": "CNTAO",
+      "por": "CNTAO",
+      "pod": "TRMER",
+      "delivery": "TRMER",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNTAO",
+      "ft20": 7,
+      "ft40": 0,
+      "teu": 7,
+      "category": "CNTAO",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 88,
       "bookingNo": "CULVSHA2619902",
       "blNo": "CULVSHA2619902",
       "office": "ULSHA",
@@ -1619,7 +1847,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 77,
+      "id": 89,
       "bookingNo": "CULVSHA2619915",
       "blNo": "CULVSHA2619915",
       "office": "CUSHA",
@@ -1638,7 +1866,45 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 78,
+      "id": 90,
+      "bookingNo": "CULVSHA2619982",
+      "blNo": "CULVSHA2619982",
+      "office": "ULSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "TRMER",
+      "delivery": "TRMER",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNSHA",
+      "ft20": 4,
+      "ft40": 0,
+      "teu": 4,
+      "category": "CNSHA",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 91,
+      "bookingNo": "CULVSHA2619984",
+      "blNo": "CULVSHA2619984",
+      "office": "ULSHA",
+      "pol": "CNSHA",
+      "por": "CNSHA",
+      "pod": "TRMER",
+      "delivery": "TRMER",
+      "tsPrev": "-",
+      "tsPost": "-",
+      "baseCategory": "CNSHA",
+      "ft20": 0,
+      "ft40": 1,
+      "teu": 2,
+      "category": "CNSHA",
+      "status": "W",
+      "excludeFromDisplay": false
+    },
+    {
+      "id": 92,
       "bookingNo": "CULVKEL2601032",
       "blNo": "CULVKEL2601032",
       "office": "CUTPE",
@@ -1657,7 +1923,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 79,
+      "id": 93,
       "bookingNo": "CULVKEL2601059",
       "blNo": "CULVKEL2601059",
       "office": "CUTPE",
@@ -1676,7 +1942,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 80,
+      "id": 94,
       "bookingNo": "CULVKEL2601075",
       "blNo": "CULVKEL2601075",
       "office": "CUTPE",
@@ -1695,7 +1961,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 81,
+      "id": 95,
       "bookingNo": "CULVKHH2602258",
       "blNo": "CULVKHH2602258",
       "office": "CUTPE",
@@ -1714,7 +1980,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 82,
+      "id": 96,
       "bookingNo": "CULVKEL2601135",
       "blNo": "CULVKEL2601135",
       "office": "CUTPE",
@@ -1733,7 +1999,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 83,
+      "id": 97,
       "bookingNo": "CULVTXG2601727",
       "blNo": "CULVTXG2601727",
       "office": "CUTPE",
@@ -1752,7 +2018,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 84,
+      "id": 98,
       "bookingNo": "CULVKHH2602368",
       "blNo": "CULVKHH2602368",
       "office": "CUTPE",
@@ -1771,7 +2037,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 85,
+      "id": 99,
       "bookingNo": "CULVSCS2600816",
       "blNo": "CULVSCS2600816",
       "office": "SDGTH",
@@ -1790,7 +2056,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 86,
+      "id": 100,
       "bookingNo": "CULVKHH2602380",
       "blNo": "CULVKHH2602380",
       "office": "CUTPE",
@@ -1809,7 +2075,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 87,
+      "id": 101,
       "bookingNo": "CULVNAS2631534",
       "blNo": "CULVNAS2631534",
       "office": "CUGGZ",
@@ -1828,7 +2094,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 88,
+      "id": 102,
       "bookingNo": "CULVTXG2601630",
       "blNo": "CULVTXG2601630",
       "office": "CUTPE",
@@ -1847,7 +2113,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 89,
+      "id": 103,
       "bookingNo": "CULVTXG2601769",
       "blNo": "CULVTXG2601769",
       "office": "CUTPE",
@@ -1866,7 +2132,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 90,
+      "id": 104,
       "bookingNo": "CULVTXG2601770",
       "blNo": "CULVTXG2601770",
       "office": "CUTPE",
@@ -1885,7 +2151,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 91,
+      "id": 105,
       "bookingNo": "CULVTXG2601775",
       "blNo": "CULVTXG2601775",
       "office": "CUTPE",
@@ -1904,7 +2170,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 92,
+      "id": 106,
       "bookingNo": "CULVTXG2601782",
       "blNo": "CULVTXG2601782",
       "office": "CUTPE",
@@ -1923,7 +2189,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 93,
+      "id": 107,
       "bookingNo": "CULVKHH2602452",
       "blNo": "CULVKHH2602452",
       "office": "CUTPE",
@@ -1942,7 +2208,7 @@
       "excludeFromDisplay": false
     },
     {
-      "id": 94,
+      "id": 108,
       "bookingNo": "CULVKHH2602454",
       "blNo": "CULVKHH2602454",
       "office": "CUTPE",
