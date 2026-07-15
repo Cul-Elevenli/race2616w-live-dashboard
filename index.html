@@ -6,10 +6,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta property="og:title" content="CGX & REX & AEM & SGX service Booking" />
+  <meta property="og:title" content="CGX & CGS & REX & AEM & SGX service Booking" />
   <meta property="og:description" content="CGX & REX & AEM & SGX service Live Booking Dashboard" />
   <meta name="deploy-version" content="2026-05-27-race2623w-sgx-merge" />
-  <title>CGX & REX & AEM & SGX service Booking</title>
+  <title>CGX & CGS & REX & AEM & SGX service Booking</title>
   <style>
     :root {
       --navy: #17365d;
@@ -28,6 +28,8 @@
       --aem-blue: #2fb574;
       --sgx-navy: #4a1a5b;
       --sgx-blue: #9b59b6;
+      --cgs-navy: #0d4a4a;
+      --cgs-blue: #2ab5b5;
     }
     * { box-sizing: border-box; }
     body {
@@ -209,6 +211,7 @@
     .vdt-badge.rex { background: var(--rex-blue); }
     .vdt-badge.aem { background: var(--aem-blue); }
     .vdt-badge.sgx { background: var(--sgx-blue); }
+    .vdt-badge.cgs { background: var(--cgs-blue); }
     .vdt-arrow {
       color: rgba(255,255,255,0.7);
       font-size: 11px;
@@ -295,6 +298,7 @@
     .vdp-svc.rex { background: #f4e4da; color: var(--rex-navy); }
     .vdp-svc.aem { background: #daf4e4; color: var(--aem-navy); }
     .vdp-svc.sgx { background: #f0daf7; color: var(--sgx-navy); }
+    .vdp-svc.cgs { background: #daf4f4; color: var(--cgs-navy); }
     .nav-chip.aem { background: var(--aem-navy); color: #fff; }
     .nav-chip.sgx { background: var(--sgx-navy); color: #fff; }
     .vdp-no-result {
@@ -346,7 +350,7 @@
 
   <!-- ====== 下拉导航 ====== -->
   <div class="vessel-nav" id="vesselNav">
-    <div class="nav-brand">CGX &amp; REX &amp; AEM</div>
+    <div class="nav-brand">CGX &amp; CGS &amp; REX &amp; AEM</div>
 
     <div class="nav-selector-wrap">
       <!-- 自定义可搜索下拉 -->
@@ -368,13 +372,23 @@
           </div>
 
           <div id="dropdownList">
-            <!-- CGX -->
-            <div class="vdp-group-label" data-group="CGX">CGX Service</div>
+            <!-- CGX & CGS -->
+            <div class="vdp-group-label" data-group="CGX">CGX &amp; CGS Service</div>
             <!-- HYBM2624W 已隐藏 -->
             <div class="vdp-item selected" data-vvd="XPBL2625W" data-service="cgx" data-name="EXPRESS BERLIN" onclick="selectVessel('XPBL2625W')">
               <span class="vdp-vvd">XPBL2625W</span>
               <span class="vdp-name">EXPRESS BERLIN</span>
               <span class="vdp-svc cgx">CGX</span>
+            </div>
+            <div class="vdp-item" data-vvd="DFMH2627W" data-service="cgx" data-name="DONG FANG MING HAI" onclick="selectVessel('DFMH2627W')">
+              <span class="vdp-vvd">DFMH2627W</span>
+              <span class="vdp-name">DONG FANG MING HAI</span>
+              <span class="vdp-svc cgs">CGS</span>
+            </div>
+            <div class="vdp-item" data-vvd="NHZY2624W" data-service="cgx" data-name="NAN HAI ZHI YUAN" onclick="selectVessel('NHZY2624W')">
+              <span class="vdp-vvd">NHZY2624W</span>
+              <span class="vdp-name">NAN HAI ZHI YUAN</span>
+              <span class="vdp-svc cgs">CGS</span>
             </div>
             <!-- AEM -->
             <div class="vdp-group-label" data-group="AEM">AEM Service</div>
@@ -392,21 +406,6 @@
               <span class="vdp-vvd">ZGNC2628W</span>
               <span class="vdp-name">ZHONG GU NAN</span>
               <span class="vdp-svc aem">AEM</span>
-            </div>
-            <div class="vdp-item" data-vvd="BZCF2627W" data-service="cgx" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2627W')">
-              <span class="vdp-vvd">BZCF2627W</span>
-              <span class="vdp-name">BZ CHONGFU</span>
-              <span class="vdp-svc cgx">CGX</span>
-            </div>
-            <div class="vdp-item" data-vvd="DFMH2627W" data-service="cgs" data-name="DONG FANG MING HAI" onclick="selectVessel('DFMH2627W')">
-              <span class="vdp-vvd">DFMH2627W</span>
-              <span class="vdp-name">DONG FANG MING HAI</span>
-              <span class="vdp-svc cgs">CGS</span>
-            </div>
-            <div class="vdp-item" data-vvd="NHZY2624W" data-service="cgs" data-name="NAN HAI ZHI YUAN" onclick="selectVessel('NHZY2624W')">
-              <span class="vdp-vvd">NHZY2624W</span>
-              <span class="vdp-name">NAN HAI ZHI YUAN</span>
-              <span class="vdp-svc cgs">CGS</span>
             </div>
             <!-- SGX -->
             <div class="vdp-group-label" data-group="SGX">SGX Service</div>
@@ -445,6 +444,11 @@
             <div class="vdp-item" data-vvd="CSJ72630W" data-service="rex" data-name="CHANG SHENG JI 7" onclick="selectVessel('CSJ72630W')">
               <span class="vdp-vvd">CSJ72630W</span>
               <span class="vdp-name">CHANG SHENG JI 7</span>
+              <span class="vdp-svc rex">REX</span>
+            </div>
+            <div class="vdp-item" data-vvd="BZCF2627W" data-service="rex" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2627W')">
+              <span class="vdp-vvd">BZCF2627W</span>
+              <span class="vdp-name">BZ CHONGFU</span>
               <span class="vdp-svc rex">REX</span>
             </div>
 
@@ -1052,7 +1056,7 @@
     <section class="page">
       <div class="watermark" id="wm-BZCF">BZCF2627W UPDATE</div>
       <header class="header">
-        <h1 class="title" id="title-BZCF">CGX Service Booking Update / Live Dashboard</h1>
+        <h1 class="title" id="title-BZCF">REX Service Booking Update / Live Dashboard</h1>
         <div class="notice">仅供内部参考 · For Internal Reference Only</div>
         <div class="subtitle">Public Live View · 近实时数据快照</div>
         <div class="meta">
@@ -1096,7 +1100,7 @@
 
       <div class="footer">
         <span id="footer-time-BZCF">--</span>
-        <span>CGX Service Live View</span>
+        <span>REX Service Live View</span>
       </div>
     </section>
 
@@ -2205,7 +2209,7 @@
       XPYS2626W: { name: 'X-PRESS ODYSSEY', service: 'aem' },
       GFPS2627W:  { name: 'GFS PRESTIGE',  service: 'aem' },
       ZGNC2628W:  { name: 'ZHONG GU NAN', service: 'aem' },
-      BZCF2627W:  { name: 'BZ CHONGFU', service: 'cgx' },
+      BZCF2627W:  { name: 'BZ CHONGFU', service: 'rex' },
       DFMH2627W:  { name: 'DONG FANG MING HAI', service: 'cgs' },
       NHZY2624W:  { name: 'NAN HAI ZHI YUAN', service: 'cgs' },
       XPBL2625W: { name: 'EXPRESS BERLIN',  service: 'cgx' },
@@ -2500,7 +2504,7 @@
       document.getElementById('booking-chip-' + prefix).textContent = `Booking ${formatNumber(payload.bookingCount)} 条`;
       document.getElementById('pod-count-' + prefix).textContent = formatNumber((payload.topPods || []).length);
       document.getElementById('footer-time-' + prefix).textContent = '数据更新: ' + formatDateTime(payload.generatedAt);
-      document.title = 'CGX & REX & AEM service Booking Update / Live Dashboard';
+      document.title = 'CGX & CGS & REX & AEM service Booking Update / Live Dashboard';
     }
 
     // ===== Middle East & Red Sea 统计 =====
