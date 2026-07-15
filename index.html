@@ -393,6 +393,11 @@
               <span class="vdp-name">ZHONG GU NAN</span>
               <span class="vdp-svc aem">AEM</span>
             </div>
+            <div class="vdp-item" data-vvd="BZCF2627W" data-service="cgx" data-name="BZ CHONGFU" onclick="selectVessel('BZCF2627W')">
+              <span class="vdp-vvd">BZCF2627W</span>
+              <span class="vdp-name">BZ CHONGFU</span>
+              <span class="vdp-svc cgx">CGX</span>
+            </div>
             <!-- SGX -->
             <div class="vdp-group-label" data-group="SGX">SGX Service</div>
             <!-- RACE2623W 已隐藏 -->
@@ -1021,6 +1026,90 @@
         <div class="pod-card">
           <h3>Top 6 - Top 10</h3>
           <table class="pod-table"><tbody id="podRight-ZGNC"></tbody></table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span></span>
+        <span>Preview Version</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- ====== BZCF2627W 面板 ====== -->
+  <div class="tab-panel" id="panel-BZCF2627W">
+
+    <section class="page">
+      <div class="watermark" id="wm-BZCF">BZCF2627W UPDATE</div>
+      <header class="header">
+        <h1 class="title" id="title-BZCF">CGX Service Booking Update / Live Dashboard</h1>
+        <div class="notice">仅供内部参考 · For Internal Reference Only</div>
+        <div class="subtitle">Public Live View · 近实时数据快照</div>
+        <div class="meta">
+          <div><strong>VVD:</strong> <span id="meta-vvd-BZCF">BZCF2627W</span></div>
+          <div><strong>Voyage:</strong> <span id="meta-voyage-BZCF">2627W</span></div>
+          <div><strong>公开页刷新:</strong> 每 60 秒</div>
+        </div>
+      </header>
+
+      <div class="toolbar-bar">
+        <div class="toolbar-left">
+          <span class="chip">对外只显示非敏感字段</span>
+          <span class="chip" id="booking-chip-BZCF">Booking 0 条</span>
+        </div>
+        <div class="toolbar-right">
+          <span class="chip">页面版式：PDF 风格</span>
+        </div>
+      </div>
+
+      <div class="summary-grid" id="summaryGrid-BZCF"></div>
+      <div class="completion-strip" id="completionStrip-BZCF"></div>
+      <div class="region-strip" id="regionStrip-BZCF"></div>
+
+      <div class="section-title">各口岸舱位分配与完成进度</div>
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th>口岸 (POL)</th>
+            <th>ETD</th>
+            <th>分配舱位<br>(TEU)</th>
+            <th>当前订舱<br>(TEU)</th>
+            <th>20' / 40'</th>
+            <th>差距<br>(TEU)</th>
+            <th>完成率</th>
+            <th>进度</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="categoryBody-BZCF"></tbody>
+      </table>
+
+      <div class="footer">
+        <span id="footer-time-BZCF">--</span>
+        <span>CGX Service Live View</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <div class="watermark">DEL TOP 10</div>
+      <header class="header">
+        <h1 class="title" id="pod-title-BZCF">目的地分布 (DEL) - Top 10</h1>
+        <div class="subtitle">BZCF2627W Latest Distribution Snapshot</div>
+        <div class="meta">
+          <div><strong>统计口径:</strong> TEU = 20ft + 2×40ft</div>
+          <div><strong>唯一 DEL:</strong> <span id="pod-count-BZCF">-</span></div>
+          <div><strong>数据版本:</strong> 读取公开 JSON 快照</div>
+        </div>
+      </header>
+
+      <div class="pod-grid">
+        <div class="pod-card">
+          <h3>Top 1 - Top 5</h3>
+          <table class="pod-table"><tbody id="podLeft-BZCF"></tbody></table>
+        </div>
+        <div class="pod-card">
+          <h3>Top 6 - Top 10</h3>
+          <table class="pod-table"><tbody id="podRight-BZCF"></tbody></table>
         </div>
       </div>
 
@@ -1913,6 +2002,7 @@
       XPYS2626W: { jsonFile: 'XPYS2626W_public_data.json', prefix: 'XPYS' },
       GFPS2627W: { jsonFile: 'GFPS2627W_public_data.json', prefix: 'GFPS' },
       ZGNC2628W: { jsonFile: 'ZGNC2628W_public_data.json', prefix: 'ZGNC' },
+      BZCF2627W: { jsonFile: 'BZCF2627W_public_data.json', prefix: 'BZCF' },
       XPBL2625W: { jsonFile: 'XPBL2625W_public_data.json', prefix: 'XPBL' },
       ZGYC2627W: { jsonFile: 'ZGYC2627W_public_data.json', prefix: 'ZGYC' },
       H8112627W: { jsonFile: 'H8112627W_public_data.json', prefix: 'H811', hidden: true },
@@ -1937,6 +2027,7 @@
       XPYS2626W: { name: 'X-PRESS ODYSSEY', service: 'aem' },
       GFPS2627W:  { name: 'GFS PRESTIGE',  service: 'aem' },
       ZGNC2628W:  { name: 'ZHONG GU NAN', service: 'aem' },
+      BZCF2627W:  { name: 'BZ CHONGFU', service: 'cgx' },
       XPBL2625W: { name: 'EXPRESS BERLIN',  service: 'cgx' },
       ZGYC2627W: { name: 'ZHONG GU YIN CHUN', service: 'rex' },
       H8112627W: { name: 'HUA DONG 811', service: 'sgx', hidden: true },
