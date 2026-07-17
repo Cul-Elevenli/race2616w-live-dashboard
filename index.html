@@ -124,6 +124,7 @@
     .status-idle { background: #eef2f7; color: #64748b; }
     .status-warning { background: #fff3d6; color: #b45309; }
     .status-good { background: #dcfce7; color: #047857; }
+    .status-done { background: #bbf7d0; color: #14532d; border: 1px solid #16a34a; }
     .pod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
     .pod-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #fff; }
     .pod-card h3 { margin: 0; padding: 12px 14px; background: #e9f1f8; color: var(--navy); font-size: 16px; }
@@ -2352,6 +2353,7 @@
       return `${Number(value || 0).toFixed(1)}%`;
     }
     function statusClass(text) {
+      if (text === '全完成') return 'status-done';
       if (text === '推进中') return 'status-good';
       if (text === '需加紧') return 'status-warning';
       return 'status-idle';
@@ -2377,7 +2379,9 @@
       const currentNote = payload.totals.otherTeu > 0
         ? `${formatNumber(payload.bookingCount)} 条 Booking（含 OTHER ${formatNumber(payload.totals.otherTeu)} TEU）`
         : `${formatNumber(payload.bookingCount)} 条 Booking`;
-      const socNote = ''; // SOC 代理舱位已从 allocation 表格中移除
+      const socNote = (payload.totals.current != null && payload.categoryRows?.some(r => r.fixed))
+        ? `（含固定 SOC 货 ${formatNumber(400)} TEU）`
+        : '';
       const items = [
         { label: 'TOTAL ALLOCATION', value: formatNumber(payload.totals.allocation), sub: 'TEU', className: '' },
         { label: 'CURRENT BOOKING', value: formatNumber(payload.totals.current), sub: 'TEU', className: 'is-good', note: currentNote + socNote },
